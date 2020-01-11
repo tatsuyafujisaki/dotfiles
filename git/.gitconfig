@@ -1,0 +1,80 @@
+[user]
+    name = Tatsuya Fujisaki
+    email = tatsuya.fujisaki@example.com
+[core]
+    excludesfile = /Users/tatsuyafujisaki/.gitignore
+    editor = code -w
+    # pager = cat
+    autocrlf = input # Set "input" on Linux/Mac. Set "true" on Windows. https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+    whitespace = cr-at-eol # Prevent "git diff" on Windows from showing "^M".
+[credential]
+    helper = osxkeychain # Set "osxkeychain" on Mac. Set "wincred" on Windows.
+[http]
+    sslVerify = false
+    # Setting it true prevents "remote: HTTP Basic: Accesss denied" when cloning a repository.
+    # https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
+    emptyAuth = true
+[pull]
+    rebase = true
+[rebase]
+    autosquash = true
+[diff]
+    tool = vscode
+[difftool]
+    prompt = false
+[difftool "vscode"]
+    cmd = code -w -d $LOCAL $REMOTE
+[merge]
+    tool = vscode
+[mergetool]
+    prompt = false
+[mergetool "vscode"]
+    cmd = code -w $MERGED
+[alias]
+    a = add --all
+    ar = archive -o output.zip HEAD
+    ba = branch -a
+    bd = branch -d
+    bl = blame -L # <line-number> <file>
+    bm = branch -m
+    caam = commit -a --amend -m
+    caan = commit -a --amend --no-edit
+    cam = commit -am
+    cb = clone -b
+    cge = config --global -e # Open ~/.gitconfig
+    cgl = config --global -l # List all the variables in ~/.gitconfig
+    cm = commit -m
+    co = checkout
+    csol = config --show-origin -l
+    d = diff
+    dns = diff --name-status
+    dt = difftool
+    l = log --graph --decorate --oneline
+    lp = log -p --
+    m = merge --no-edit # merge --no-edit --squash # Squash is not used in the current workplace.
+    mt = mergetool
+    p = push
+    pt = push --tags
+    puo = push -u origin
+    r = rebase
+    ra = rebase --abort
+    rgo = remote get-url origin
+    ri = rebase -i
+    rs = restore --staged --worktree # restores both the index and the working tree.
+    rso = remote set-url origin
+    sb = show-branch
+    sh = show
+    sns = show --name-status
+    st = stash
+    stlist = stash list
+    stpop = stash pop
+    stshow = stash show
+    stat = status
+    sw = switch
+    swc = switch -c
+    # "git clean -df" removes untracked folders and files from the working tree.
+    # "git restore ." restores tracked unstaged files in the current directory to the version in HEAD.
+    # "git pull -r" = git fetch + git rebase
+    # "git fetch -p" deletes all the local branches that don't exist on the remote any more.
+    # "git fetch -t" fetches all the tags from the remote.
+    up = !git clean -df && git restore . && git pull -r && git fetch -pt

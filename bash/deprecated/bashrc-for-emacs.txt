@@ -1,0 +1,12 @@
+alias e='emacs -nw'
+alias ee='emacs -nw ~/.emacs.d/init.el'
+
+er()
+{
+  if [ ${#} -ne 1 ]; then
+    echo "Usage: ${FUNCNAME[0]} <file>"
+    return
+  fi
+
+  emacs -nw ${1} --eval '(setq buffer-read-only t)'
+}

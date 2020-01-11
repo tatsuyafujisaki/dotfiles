@@ -1,0 +1,51 @@
+<!-- Place me in ~\.m2 -->
+<settings>
+  <!-- The default location of a local repository is ${user.home}\.m2\repository. -->
+  <!-- Uncomment the following if your company synchronizes everything under ${user.home} with an Active Directory server because it slows down your login to and logoff from Windows. -->
+  <!-- <localRepository>C:\temp\.maven-repository</localRepository> -->
+  <mirrors>
+    <mirror>
+      <id>repository1</id>
+      <url>http://repository.example.com</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+  <proxies>
+    <proxy>
+      <id>proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <port>80</port>
+      <nonProxyHosts>*.mycompany.com|localhost</nonProxyHosts>
+    </proxy>
+  </proxies>
+  <servers>
+    <server>
+      <id>repository1</id>
+      <username>username1</username>
+      <password>password1</password>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>repository1</id>
+          <url>http://repository.example.com</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>repository1</id>
+          <url>http://repository.example.com</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>

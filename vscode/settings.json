@@ -1,0 +1,38 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true,
+  },
+  "editor.find.globalFindClipboard": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.cls": "vb"
+  },
+  "files.autoGuessEncoding": true,
+  "files.hotExit": "off",
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "html.format.preserveNewLines": false,
+  "http.proxy": "http://proxy.example.com:80",
+  "http.proxyStrictSSL": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "search.globalFindClipboard": true,
+  "search.smartCase": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.nativeTabs": true,
+  "window.restoreWindows": "none",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.restoreViewState": false,
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultSettings": true,  
+  "workbench.startupEditor": "none"
+}

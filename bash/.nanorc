@@ -1,0 +1,6 @@
+set autoindent
+set constantshow
+set morespace
+set smooth
+set tabsize 2
+set tabstospaces
