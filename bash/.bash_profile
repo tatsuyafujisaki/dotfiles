@@ -363,7 +363,7 @@ cleanup() {
 }
 
 upb() {
-  local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/cross-platform/bash/.bash_profile
+  local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/bash/.bash_profile
 
   pushd ~
 
