@@ -22,7 +22,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "html.format.preserveNewLines": false,
-  "http.proxy": "http://proxy.example.com:80",
   "http.proxyStrictSSL": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
