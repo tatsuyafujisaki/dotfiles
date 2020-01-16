@@ -4,20 +4,19 @@
 [core]
     excludesfile = /Users/tatsuyafujisaki/.gitignore
     editor = code -w
-    # pager = cat
     autocrlf = input # Set "input" on Linux/Mac. Set "true" on Windows. https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     whitespace = cr-at-eol # Prevent "git diff" on Windows from showing "^M".
 [credential]
     helper = osxkeychain # Set "osxkeychain" on Mac. Set "wincred" on Windows.
 [http]
     sslVerify = false
-    # Setting it true prevents "remote: HTTP Basic: Accesss denied" when cloning a repository.
+    # The following prevents "remote: HTTP Basic: Accesss denied" when cloning a repository.
     # https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
     emptyAuth = true
 [pull]
     rebase = true
-[rebase]
-    autosquash = true
+#[rebase]
+#    autosquash = true
 [diff]
     tool = vscode
 [difftool]
