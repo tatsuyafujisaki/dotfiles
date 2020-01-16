@@ -2,7 +2,7 @@
     name = Tatsuya Fujisaki
     email = tatsuya.fujisaki@example.com
 [core]
-    excludesfile = /Users/tatsuyafujisaki/.gitignore
+    excludesfile = ~/.gitignore
     editor = code -w
     autocrlf = input # Set "input" on Linux/Mac. Set "true" on Windows. https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     whitespace = cr-at-eol # Prevent "git diff" on Windows from showing "^M".
