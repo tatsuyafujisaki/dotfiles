@@ -17,7 +17,7 @@ touch ~/.hushlogin
 2. Select `Quick Action`
 3. Set `Workflow receives current "files or folders" in "Finder"`
 4. Double-click `Open Finder Items` on the left list
-5. Set `Visual Studio Code` in `open with`
+5. Set `Visual Studio Code` in `Open with`
 6. Cmd+S and save quick action as "Open in Visual Studio Code"
 
 ## Add "Open in Android Studio" to the context menu
