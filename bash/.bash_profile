@@ -59,7 +59,6 @@ then
   # Add GNU tools, installed by Homebrew, to PATH.
   export PATH="/usr/local/opt/binutils/bin:$PATH"
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  export PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
   export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
   # "brew doctor" warns as follows if coreutils and findutils are in PATH.
