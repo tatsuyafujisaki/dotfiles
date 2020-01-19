@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "module": "commonjs",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "plugins": [
+            {
+                "name": "typescript-tslint-plugin"
+            }
+        ],
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "esnext"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
