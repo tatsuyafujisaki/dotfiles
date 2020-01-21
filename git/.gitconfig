@@ -44,6 +44,7 @@
     cgl = config --global -l # List all the variables in ~/.gitconfig
     cm = commit -m
     co = checkout
+    cp = cherry-pick
     csol = config --show-origin -l
     d = diff
     dns = diff --name-status
