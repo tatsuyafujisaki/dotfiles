@@ -59,6 +59,7 @@
     puo = push -u origin
     r = rebase
     ra = rebase --abort
+    rc = rebase --continue
     rgo = remote get-url origin
     ri = rebase -i
     rs = restore --staged --worktree # restores both the index and the working tree.
