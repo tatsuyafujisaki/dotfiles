@@ -14,10 +14,11 @@
     # Cloning a repository, "emptyAuth = true" prevents "remote: HTTP Basic: Accesss denied".
     # https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
     emptyAuth = true
-[pull]
-    rebase = true
-#[rebase]
-#    autosquash = true
+#[pull]
+#    rebase = true
+[rebase]
+    autosquash = true
+    autostash = true
 [diff]
     tool = vscode
 [difftool]
