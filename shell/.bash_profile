@@ -4,6 +4,4 @@ is_mac() {
   [ $(uname) == Darwin ]
 }
 
-unset HISTFILE # avoids creating ~/.bash_history
-
 . ~/.profile
