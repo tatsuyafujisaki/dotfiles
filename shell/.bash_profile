@@ -6,4 +6,4 @@ is_mac() {
 
 unset HISTFILE # avoids creating ~/.bash_history
 
-source ~/.profile
+. ~/.profile
