@@ -1,15 +1,10 @@
-# Prevent Ctrl+S from disabling keyboard on Linux. It is unnecessary on macOS or WSL.
-# stty stop undef
+PS1='\[\e];[\u@\h] $(pwd)\a\]\[\e[1;32m\]$(pwd)\[\e[m\n\$ '
 
 is_mac() {
   [ $(uname) == Darwin ]
 }
 
-# Prompt
-PS1='\[\e];[\u@\h] $(pwd)\a\]\[\e[1;32m\]$(pwd)\[\e[m\n\$ '
-
-# Avoid creating ~/.bash_history
-unset HISTFILE
+unset HISTFILE # avoids creating ~/.bash_history
 
 export EDITOR=nano # Make 'crontab -e' use nano instead of the default editor vim
 export HISTCONTROL=ignoreboth
