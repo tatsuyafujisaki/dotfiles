@@ -1,4 +1,4 @@
-# Prevent Ctrl+S disabling keyboard on Linux. It is unnecessary on macOS or WSL.
+# Prevent Ctrl+S from disabling keyboard on Linux. It is unnecessary on macOS or WSL.
 # stty stop undef
 
 is_mac() {
