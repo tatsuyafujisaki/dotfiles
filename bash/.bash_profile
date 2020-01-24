@@ -88,7 +88,6 @@ alias npmu='npm uninstall --save-dev'
 # Misc aliases
 alias ..='cd ..'
 alias check_if_port_is_reachable='nc -zv' # Sample usage: check_if_port_is_reachable example.com 80
-alias gc='git config --global -e' # Open ~/.gitconfig
 alias gh='cd ~/Documents/GitHub'
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
