@@ -111,18 +111,18 @@ alias sg='cd ~/Documents/GitHub/Shop-and-Go_Android'
 c() {
   if [ ${#} -eq 0 ]
   then
-    code .
+    cd && l
   else
-    code "${1}"
+    cd "${1}" && l
   fi
 }
 
-cd() {
+cc() {
   if [ ${#} -eq 0 ]
   then
-    command cd && l
+    code .
   else
-    command cd "${1}" && l
+    code "${1}"
   fi
 }
 
