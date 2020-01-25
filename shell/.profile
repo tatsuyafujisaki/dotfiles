@@ -351,12 +351,12 @@ cleanup() {
 
 # Update shell resources
 ups() {
-  local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/shell/.bash_profile
-
   pushd ~
 
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.profile
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.zshrc
+
+  local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.bash_profile
 
   if is_mac
   then
