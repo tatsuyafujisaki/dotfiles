@@ -56,15 +56,23 @@ then
   # export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
   # export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
+  # -G is equivalent to --color of the GNU-ls.
+  # --group-directories-first is not availalble on the BSD-ls.
+  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
+  alias myls='ls -dFGhlv'
+
   # Python
   alias pip=pip3 # to use pip3, installed by Homebrew, as pip
   alias python=python3 # to use python3, installed by Homebrew, as python
 
   alias b='code ~/.bash_profile && . ~/.bash_profile'
-  alias z='code ~/.bashrc && . ~/.bashrc'
-else
+  alias z='code ~/.zshrc && . ~/.zshrc'
+else  
+  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
+  alias myls='ls -dFhlv --color --group-directories-first'
+
   alias b='nano ~/.bash_aliases && . ~/.bash_aliases'
-  alias z='nano ~/.bashrc && . ~/.bashrc'
+  alias z='nano ~/.zshrc && . ~/.zshrc'
 fi
 
 # npm
@@ -85,16 +93,6 @@ alias lns='ln -s $(pwd) ~'
 alias mybc='bc -lq' # -l is to show decimals. -q is to suppress a welcome message.
 alias myobjdump='objdump -d -M intel'
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
-if is_mac
-then
-  # -G is equivalent to --color of the GNU-ls.
-  # --group-directories-first is not availalble on the BSD-ls.
-  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
-  alias myls='ls -dFGhlv'
-else
-  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
-  alias myls='ls -dFhlv --color --group-directories-first'
-fi
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
