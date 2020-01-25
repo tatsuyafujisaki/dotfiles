@@ -61,10 +61,10 @@ then
   alias python=python3 # to use python3, installed by Homebrew, as python
 
   alias b='code ~/.bash_profile && . ~/.bash_profile'
-  alias bb='. ~/.bash_profile'
+  alias z='code ~/.bashrc && . ~/.bashrc'
 else
   alias b='nano ~/.bash_aliases && . ~/.bash_aliases'
-  alias bb='. ~/.bash_aliases'
+  alias z='nano ~/.bashrc && . ~/.bashrc'
 fi
 
 # npm
