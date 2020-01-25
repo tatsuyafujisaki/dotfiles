@@ -347,10 +347,17 @@ cleanup() {
   up
 }
 
-upb() {
-  local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/bash/.bash_profile
+# Update shell
+ups() {
+  local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/shell/.bash_profile
 
   pushd ~
+
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.profile
+  . .profile
+
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.zshrc
+  . .zshrc
 
   if is_mac
   then
