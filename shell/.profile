@@ -65,14 +65,14 @@ then
   alias pip=pip3 # to use pip3, installed by Homebrew, as pip
   alias python=python3 # to use python3, installed by Homebrew, as python
 
-  alias b='code ~/.bash_profile && . ~/.bash_profile'
-  alias z='code ~/.zshrc && . ~/.zshrc'
+  alias b='code ~/.bash_profile'
+  alias z='code ~/.zshrc'
 else  
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFhlv --color --group-directories-first'
 
-  alias b='nano ~/.bash_aliases && . ~/.bash_aliases'
-  alias z='nano ~/.zshrc && . ~/.zshrc'
+  alias b='nano ~/.bash_aliases'
+  alias z='nano ~/.zshrc'
 fi
 
 # npm
@@ -96,6 +96,7 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
+alias p='. ~/.profile'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
