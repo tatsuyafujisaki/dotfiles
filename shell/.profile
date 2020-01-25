@@ -66,12 +66,14 @@ then
   alias python=python3 # to use python3, installed by Homebrew, as python
 
   alias b='code ~/.bash_profile'
+  alias p='code ~/.profile'
   alias z='code ~/.zshrc'
 else  
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFhlv --color --group-directories-first'
 
   alias b='nano ~/.bash_aliases'
+  alias p='nano ~/.profile'
   alias z='nano ~/.zshrc'
 fi
 
@@ -96,7 +98,6 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
-alias p='. ~/.profile'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -348,25 +349,20 @@ cleanup() {
   up
 }
 
-# Update shell
+# Update shell resources
 ups() {
   local url=https://raw.githubusercontent.com/tatsuya-fujisaki/dotfiles/master/shell/.bash_profile
 
   pushd ~
 
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.profile
-  . .profile
-
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.zshrc
-  . .zshrc
 
   if is_mac
   then
     curl -O ${url}
-    . .bash_profile
   else
     curl ${url} -o .bash_aliases
-    . .bash_aliases
   fi
 
   popd
