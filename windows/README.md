@@ -27,7 +27,7 @@ reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer /v link /t REG_B
 rem Make Caps Lock a Control key
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 0000000000000000020000001D003A0000000000 /f
 
-rem Set US keyboard
+rem Set US keyboard (unnecessary if your physical keyboard is US layout)
 reg add HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters /v "LayerDriver JPN" /d kbd101.dll /f
 reg add HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters /v OverrideKeyboardIdentifier /d PCAT_101KEY /f
 reg add HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters /v OverrideKeyboardSubtype /t REG_DWORD /d 0 /f
