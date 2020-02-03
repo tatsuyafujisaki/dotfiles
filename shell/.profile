@@ -373,7 +373,7 @@ ups() {
 #
 
 # Add adb to PATH
-[ -d ~/Library/Android/sdk/platform-tools ] && export PATH="${PATH}:~/Library/Android/sdk/platform-tools"
+[ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
 alias adb_plug='adb shell dumpsys battery reset'
 alias adb_unplug='adb shell dumpsys battery unplug'
