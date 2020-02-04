@@ -14,7 +14,7 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.cls": "vb"
+    "*.kml": "xml"
   },
   "files.autoGuessEncoding": true,
   "files.hotExit": "off",
