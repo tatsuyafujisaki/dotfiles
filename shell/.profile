@@ -84,9 +84,16 @@ alias npmls='npm ls --depth 0'
 alias npmlsg='npm ls --depth 0 -g'
 alias npmu='npm uninstall --save-dev'
 
-# Misc aliases
+#
+# Other aliases
+#
+
 alias ..='cd ..'
-alias check_if_port_is_reachable='nc -zv' # Sample usage: check_if_port_is_reachable example.com 80
+
+# Usage: check_if_port_is_reachable example.com 80
+# Without -v, neither success or failure is printed.
+alias check_if_port_is_reachable='nc -vz'
+
 alias gh='cd ~/Documents/GitHub'
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
@@ -98,6 +105,13 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
+
+# Usage: port_scan example.com 1-65535.
+# Without -v, neither success or failure is printed.
+# "-z" is port scanning.
+# "-w 1" is to timeout after a second.
+alias port_scan='nc -vzw 1'
+
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
