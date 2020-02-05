@@ -106,11 +106,11 @@ alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
 
-# Usage: port_scan example.com 1-65535.
+# Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
 # "-z" is port scanning.
 # "-w 1" is to timeout after a second.
-alias port_scan='nc -vzw 1'
+alias portscan='nc -vzw 1'
 
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
