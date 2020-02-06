@@ -39,8 +39,8 @@
     bd = branch -d
     bl = blame -L # <line-number> <file>
     bm = branch -m
-    caam = commit -a --amend -m
-    caan = commit -a --amend --no-edit
+    caam = commit -a --amend -m # amends the previous commit using the given new commit message.
+    caan = commit -a --amend --no-edit # amends the previous commit without editing the existing commit message.
     cam = commit -am
     cb = clone -b
     cge = config --global -e # opens ~/.gitconfig
