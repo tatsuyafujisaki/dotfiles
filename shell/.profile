@@ -364,7 +364,7 @@ cleanup() {
 }
 
 # Update shell resources
-ups() {
+upp() {
   pushd ~
 
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.profile
@@ -467,3 +467,18 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 
 alias sg='cd ~/Documents/GitHub/Shop-and-Go_Android'
+
+update_branches() {
+  cd ~/Documents/GitHub/Shop-and-Go_Android
+
+  git switch develop
+  git pull
+
+  git switch feature/rm1204_add_opencoupon
+  git merge develop
+  git push
+
+  git switch feature/rm1605_tablet_and_handheld_barcode_scanner
+  git merge develop
+  git push
+}
