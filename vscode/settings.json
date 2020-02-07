@@ -3,7 +3,7 @@
     "source.fixAll": true,
     "source.organizeImports": true,
   },
-  "editor.find.autoFindInSelection": "always"
+  "editor.find.autoFindInSelection": "always",
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
