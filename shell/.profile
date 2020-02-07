@@ -475,10 +475,12 @@ update_branches() {
   git pull
 
   git switch feature/rm1204_add_opencoupon
+  git pull
   git merge develop
   git push
 
   git switch feature/rm1605_tablet_and_handheld_barcode_scanner
+  git pull
   git merge develop
   git push
 }
