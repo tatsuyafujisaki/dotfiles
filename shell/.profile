@@ -154,7 +154,7 @@ clean() {
   done
 
   # Delete unnecessary files
-  files=(.CFUserTextEncoding .emulator_console_auth_token .viminfo)
+  files=(.bash_history .CFUserTextEncoding .emulator_console_auth_token .viminfo .zsh_history)  
   for file in "${files[@]}"
   do
     rm -f ${file}
