@@ -144,7 +144,13 @@ clean() {
   # Delete .DS_Store
   sudo find / -type f -iname .DS_Store -delete 2> /dev/null
 
+  # Delete .localized
+  sudo find / -type f -iname .localized -delete 2> /dev/null
+
   pushd ~ > /dev/null # Avoid showing the pushed directory stack
+  
+  # Delete unnecessary directories that require root privileges.
+  sudo rm -fr Downloads
 
   # Delete unnecessary directories
   directories=(.bash_sessions .dvdcss .emulator_console_auth_toke .gradle/caches .gradle/daemon .gradle/native .gradle/wrapper .local .m2 .oracle_jre_usage .Trash)
