@@ -17,5 +17,8 @@ module.exports = {
     ecmaFeatures: {
       impliedStrict: true
     }
+  },
+  rules: {
+    'no-console': 'off' // allows console.log()
   }
 };
