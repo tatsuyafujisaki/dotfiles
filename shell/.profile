@@ -403,10 +403,10 @@ alias adb_plug='adb shell dumpsys battery reset'
 alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 
-alias t1='adb emu geo fix 139.699583 35.578114'
-alias t2='adb emu geo fix 139.698913 35.579381'
-alias k1='adb emu geo fix 139.718635 35.665216'
-alias k2='adb emu geo fix 139.717603 35.665694'
+alias teraoka1='adb emu geo fix 139.699583 35.578114'
+alias teraoka2='adb emu geo fix 139.698913 35.579381'
+alias kakusin1='adb emu geo fix 139.718635 35.665216'
+alias kakusin2='adb emu geo fix 139.717603 35.665694'
 
 adb_pull() {
   if [ ${#} -ne 1 ]
