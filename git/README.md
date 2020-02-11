@@ -1,11 +1,11 @@
 # How to create `.gitignore`
 ## macOS
 ```shell
-curl -o ~/.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,macos,visualstudiocode
+curl -o ~/.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,macos,node,visualstudiocode
 ```
 ## Windows
 ```batchfile
-curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,visualstudiocode,windows
+curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,node,visualstudiocode,windows
 ```
 ## Alternatively, you can interactively create and download `.gitignore`
 1. Create a consolidated .gitignore at [gitignore.io](https://www.gitignore.io) using the keywords below.
