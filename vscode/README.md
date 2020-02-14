@@ -21,4 +21,4 @@
 * [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 * [tsconfig.json with Visual Studio Code](https://code.visualstudio.com/docs/languages/typescript#_tsconfigjson)
 * [jsconfig.json with Visual studio Code](https://code.visualstudio.com/docs/languages/jsconfig)
-* [TypeScrip Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+* [TypeScript Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
