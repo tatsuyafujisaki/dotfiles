@@ -1,8 +1,16 @@
-# `tsconfig.json`
+# settings.json
+`editor.formatOnSave": true` should be avoided because it conflicts with the following:
+```
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+}
+```
+
+# tsconfig.json
 * is placed in the root direcotry of a TypeScript Project.
 * produces no effect being placed in the home directory.
 
-# `jsconfig.json`
+# jsconfig.json
 * is only recognized by Visual Studio Code.
 * is `tsconfig.json` with `allowJs` true
 * disallows `importHelpers`.
