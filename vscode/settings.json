@@ -1,6 +1,7 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
+    "source.fixAll.eslint": true,
     "source.organizeImports": true,
   },
   "editor.find.autoFindInSelection": "always",
@@ -11,6 +12,7 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.wordWrap": "on",
+  
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
