@@ -97,6 +97,7 @@ alias check_if_port_is_reachable='nc -vz'
 alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
+alias js='code ~/Documents/GitHub/js-playground'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias list_installed_jdks='/usr/libexec/java_home -V'
 alias lns='ln -s $(pwd) ~'
