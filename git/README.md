@@ -15,6 +15,8 @@ curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,grad
 * Intellij+all
   * to ignore the entire `.idea` directory, which is not ignored by Intellij or Intellij+iml.
 * macOS or Windows
+* Node
+  * to ignore the `node_modules` directory.
 * VisualStudioCode
 
 2. Additionally, if you develop ClickOnce applications, remove `*.pfx` from `.gitignore` because it is used for signing ClickOnce applications.
