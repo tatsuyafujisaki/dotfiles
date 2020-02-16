@@ -1,7 +1,6 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
-    "source.fixAll.eslint": true,
     "source.organizeImports": true,
   },
   "editor.find.autoFindInSelection": "always",
