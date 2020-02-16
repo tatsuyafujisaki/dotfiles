@@ -13,7 +13,8 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.wordWrap": "on",
-  
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
