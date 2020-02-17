@@ -65,16 +65,12 @@ then
   alias pip=pip3 # to use pip3, installed by Homebrew, as pip
   alias python=python3 # to use python3, installed by Homebrew, as python
 
-  alias b='code ~/.bash_profile'
   alias p='code ~/.profile'
-  alias z='code ~/.zshrc'
 else  
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFhlv --color --group-directories-first'
 
-  alias b='nano ~/.bash_aliases'
   alias p='nano ~/.profile'
-  alias z='nano ~/.zshrc'
 fi
 
 # npm
@@ -312,7 +308,7 @@ prefix_file_name()
 rename_branch() {
   if [ ${#} -ne 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <oldBranch> <newBranch>"
+    echo "Usage: ${FUNCNAME[0]} <old-branch> <new-branch>"
     return
   fi
 
