@@ -1,4 +1,4 @@
-# Set `ANDROID_HOME`
+# Set ANDROID_HOME
 ```shell
 launchctl setenv ANDROID_HOME ~/Library/Android/sdk
 ```
