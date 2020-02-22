@@ -9,13 +9,13 @@
     whitespace = cr-at-eol # Prevent "git diff" on Windows from showing "^M".
 [credential]
     helper = osxkeychain # Set "osxkeychain" on Mac. Set "wincred" on Windows.
+[fetch]
+    recurseSubmodules = true
 [http]
     sslVerify = false
-    # Cloning a repository, "emptyAuth = true" prevents "remote: HTTP Basic: Accesss denied".
-    # https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
-    emptyAuth = true
-#[pull]
-#    rebase = true
+    emptyAuth = true # Cloning a repository, "emptyAuth = true" prevents "remote: HTTP Basic: Accesss denied". https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
+[pull]
+    rebase = true
 [rebase]
     autosquash = true
     autostash = true
