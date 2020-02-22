@@ -1,13 +1,11 @@
 # tsconfig.json
 * is placed in the root direcotry of a TypeScript Project.
-* produces no effect being placed in the home directory.
 
 # jsconfig.json
+* is placed in the root directory of a JavaScript Project
 * is only recognized by Visual Studio Code.
 * is `tsconfig.json` with `allowJs` true
 * disallows `importHelpers`.
-* is placed in the root directory of a JavaScript Project.
-* produces no effect being placed in the home directory.
 
 # References
 * [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
