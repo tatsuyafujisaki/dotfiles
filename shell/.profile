@@ -396,7 +396,9 @@ upp() {
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
+alias adb_list_packages='adb shell pm list package -3 | sort'
 alias adb_plug='adb shell dumpsys battery reset'
+alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
 alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 
