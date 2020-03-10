@@ -1,4 +1,8 @@
 {
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "debug.console.historySuggestions" : false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
@@ -27,6 +31,9 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "html.format.preserveNewLines": false,
+  "[html]": {
+    "editor.tabSize": 2
+  },
   "http.proxyStrictSSL": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
@@ -37,6 +44,6 @@
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
-  "workbench.settings.openDefaultSettings": true,  
+  "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none"
 }
