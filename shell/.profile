@@ -12,8 +12,11 @@ export NODE_REPL_HISTORY='' # Avoid creating ~/.node_repl_history
 
 if is_mac
 then
-  # Add the executable "java_home", which return a value for $JAVA_HOME, to PATH.
+  # Add the executable "java_home", which returns the value of $JAVA_HOME.
   export PATH="/usr/libexec:$PATH"
+  
+  # Set JDK 8 as the default JDK
+  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
   #
   # Homebrew
