@@ -148,6 +148,13 @@ clean() {
   # Delete .localized
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
+  # Delete Android-related directories
+  rm -fr /Users/tatsuyafujisaki/Library/Android/sdk/.downloadIntermediates
+  rm -fr /Users/tatsuyafujisaki/Library/Android/sdk/.temp
+
+  # Delete an Android-related file
+  rm -f /Users/tatsuyafujisaki/Library/Android/sdk/.knownPackages
+
   pushd ~ > /dev/null # Avoid showing the pushed directory stack
   
   # Delete unnecessary directories that require root privileges.
