@@ -14,9 +14,8 @@ if is_mac
 then
   # Add the executable "java_home", which returns the value of $JAVA_HOME.
   export PATH="/usr/libexec:$PATH"
-  
-  # Set JDK 8 as the default JDK
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+  alias java8='/usr/libexec/java_home -v 1.8' # shows the path to JDK 8.
+  alias java9='/usr/libexec/java_home -v 9' # shows the path to JDK 9.
 
   #
   # Homebrew
