@@ -54,7 +54,8 @@
     dt = difftool
     l = log --graph --decorate --oneline
     lp = log -p --
-    m = merge --no-edit --squash
+    m = merge --no-edit
+    ms = merge --no-edit --squash
     mt = mergetool
     p = push
     pt = push --tags
