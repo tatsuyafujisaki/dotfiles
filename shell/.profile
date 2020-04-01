@@ -120,9 +120,6 @@ alias rot47="tr '\!-~' 'P-~\!-O'"
 alias show_function_definition='type -a'
 alias show_path='echo ${PATH} | tr : \\n'
 
-# For current client work
-alias sg='cd ~/Documents/GitHub/Shop-and-Go_Android'
-
 c() {
   if [ ${#} -eq 0 ]
   then
@@ -443,7 +440,7 @@ adb_push() {
 
 firebase_log() {
   # Enable DebugView
-  adb shell setprop debug.firebase.analytics.app com.digi.shopandgo.dev
+  adb shell setprop debug.firebase.analytics.app com.example.myapplication
 
   # Enable verbose logging
   adb shell setprop log.tag.FA VERBOSE
@@ -477,26 +474,3 @@ docker_clean() {
 #
 
 alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean'
-
-#
-# Client work
-#
-
-alias sg='cd ~/Documents/GitHub/Shop-and-Go_Android'
-
-update_branches() {
-  cd ~/Documents/GitHub/Shop-and-Go_Android
-
-  git switch develop
-  git pull
-
-  git switch feature/rm1204_add_opencoupon
-  git pull
-  git merge develop
-  git push
-
-  git switch feature/rm1605_tablet_and_handheld_barcode_scanner
-  git pull
-  git merge develop
-  git push
-}
