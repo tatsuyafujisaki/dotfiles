@@ -1,8 +1,3 @@
-# Set ANDROID_HOME
-```shell
-launchctl setenv ANDROID_HOME ~/Library/Android/sdk
-```
-
 # Create `.hushlogin`
 ```shell
 # Prevents Terminal from printing "Last login" when opening bash.
