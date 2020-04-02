@@ -478,4 +478,5 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 # Marui
 #
+
 alias m='cd /Users/fujisakitatsuya/Documents/GitHub/marui-android-app'
