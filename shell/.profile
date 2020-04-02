@@ -403,16 +403,13 @@ upp() {
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
-alias adb_list_packages='adb shell pm list package -3 | sort'
+alias adbu='adb uninstall'
+alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
 alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
 alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
-
-alias teraoka1='adb emu geo fix 139.699583 35.578114'
-alias teraoka2='adb emu geo fix 139.698913 35.579381'
-alias kakusin1='adb emu geo fix 139.718635 35.665216'
-alias kakusin2='adb emu geo fix 139.717603 35.665694'
+alias adb_listadb shell pm list packages
 
 adb_pull() {
   if [ ${#} -ne 1 ]
@@ -480,3 +477,4 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 
 alias m='cd /Users/fujisakitatsuya/Documents/GitHub/marui-android-app'
+alias um='adb uninstall jp.co.marui0101.android.develop'
