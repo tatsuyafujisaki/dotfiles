@@ -281,7 +281,8 @@ find_directory() {
   find  -type d -iname "*${1}*" -print 2> /dev/null
 }
 
-list_module_dependencies() {
+# List module dependencies
+lmd() {
   if [ ${#} -ne 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <module>"
@@ -291,7 +292,7 @@ list_module_dependencies() {
   # -q is to suppress non-error logs.
   # --configuration is to filter only "implementation".
   # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
-  ./gradlew -q ${1}:dependencies --configuration implementation
+  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
 mkdircd() {
