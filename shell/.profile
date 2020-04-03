@@ -281,6 +281,16 @@ find_directory() {
   find  -type d -iname "*${1}*" -print 2> /dev/null
 }
 
+list_dependencies_of_module() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <module>"
+    return
+  fi
+
+  ./gradlew -q ${1}:dependencies --configuration implementation
+}
+
 mkdircd() {
   if [ ${#} -ne 1 ]
   then
