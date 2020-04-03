@@ -288,6 +288,9 @@ list_dependencies_of_module() {
     return
   fi
 
+  # -q is to suppress non-error logs.
+  # --configuration is to filter only "implementation".
+  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
   ./gradlew -q ${1}:dependencies --configuration implementation
 }
 
