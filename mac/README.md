@@ -1,7 +1,9 @@
-# How to set ANDROID_HOME
+# How to set ANDROID_SDK_ROOT
 ```shell
-launchctl setenv ANDROID_HOME ~/Library/Android/sdk
+launchctl setenv ANDROID_SDK_ROOT ~/Library/Android/sdk
 ```
+
+To create `app-debug-androidTest.apk`, trying to run `./gradlew assembleAndroidTest`  without defining ANDROID_SDK_ROOT throws an error.
 
 # Create `.hushlogin`
 ```shell
