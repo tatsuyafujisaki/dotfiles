@@ -414,6 +414,7 @@ upp() {
 # Add adb to PATH
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
+alias adba='adb shell dumpsys activity | grep Hist | grep ' # Usage: adba <package>
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
@@ -491,4 +492,5 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 
 alias m='cd /Users/fujisakitatsuya/Documents/GitHub/marui-android-app'
+alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop'
 alias um='adb uninstall jp.co.marui0101.android.develop'
