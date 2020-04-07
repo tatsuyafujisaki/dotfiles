@@ -426,6 +426,18 @@ alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 alias adb_listadb shell pm list packages
 
+# "am" stands for Activity Manager.
+# https://developer.android.com/training/app-links/deep-linking#testing-filters
+adb_test_deeplink() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <action> <data-uri> <package>"
+    return
+  fi
+
+  adb shell am start -W -a ${1} -d ${2} ${3}
+}
+
 adb_pull() {
   if [ ${#} -ne 1 ]
   then
@@ -494,3 +506,4 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 alias m='cd /Users/fujisakitatsuya/Documents/GitHub/marui-android-app'
 alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop'
 alias um='adb uninstall jp.co.marui0101.android.develop'
+alias test_deeplink='adb shell am start -W -a android.intent.action.VIEW -d marui0101://top jp.co.marui0101.android.develop'
