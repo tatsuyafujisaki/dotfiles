@@ -429,7 +429,7 @@ alias adb_listadb shell pm list packages
 # "am" stands for Activity Manager.
 # https://developer.android.com/training/app-links/deep-linking#testing-filters
 adb_test_deeplink() {
-  if [ ${#} -ne 1 ]
+  if [ ${#} -ne 3 ]
   then
     echo "Usage: ${FUNCNAME[0]} <action> <data-uri> <package>"
     return
