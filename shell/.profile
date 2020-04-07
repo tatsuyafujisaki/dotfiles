@@ -503,7 +503,7 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 # Marui
 #
 
-alias m='cd /Users/fujisakitatsuya/Documents/GitHub/marui-android-app'
+alias m='cd ~/Documents/GitHub/marui-android-app'
 alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop'
 alias um='adb uninstall jp.co.marui0101.android.develop'
 alias test_deeplink='adb shell am start -W -a android.intent.action.VIEW -d marui0101://top jp.co.marui0101.android.develop'
