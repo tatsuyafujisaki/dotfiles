@@ -414,7 +414,6 @@ upp() {
 # Add adb to PATH
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
-alias adba='adb shell dumpsys activity | grep Hist | grep ' # Usage: adba <package>
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
@@ -426,6 +425,16 @@ alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 alias adb_listadb shell pm list packages
 
+adb_activities_back_stack() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <package> ."
+    return
+  fi
+
+  adb shell dumpsys activity | grep Hist | grep ${1} | awk '{$1=$1};1' # awk is to remove leading and trailing spaces.
+}
+ 
 # "am" stands for Activity Manager.
 # https://developer.android.com/training/app-links/deep-linking#testing-filters
 adb_test_deeplink() {
@@ -504,6 +513,6 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 
 alias m='cd ~/Documents/GitHub/marui-android-app'
-alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop'
+alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop | awk "{\$1=\$1};1"'
 alias um='adb uninstall jp.co.marui0101.android.develop'
 alias test_deeplink='adb shell am start -W -a android.intent.action.VIEW -d marui0101://top jp.co.marui0101.android.develop'
