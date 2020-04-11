@@ -3,10 +3,14 @@
 ```shell
 curl -o ~/.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,macos,node,visualstudiocode
 ```
+Add `google-services.json` at the end of generated `.gitignore`.
+
 ## Windows
 ```batchfile
 curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,node,visualstudiocode,windows
 ```
+Add `google-services.json` at the end of generated `.gitignore`.
+
 ## Alternatively, you can interactively create and download `.gitignore`
 1. Create a consolidated .gitignore at [gitignore.io](https://www.gitignore.io) using the keywords below.
 * AndroidStudio
@@ -18,5 +22,3 @@ curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,grad
 * Node
   * to ignore the `node_modules` directory.
 * VisualStudioCode
-
-2. Additionally, if you develop ClickOnce applications, remove `*.pfx` from `.gitignore` because it is used for signing ClickOnce applications.
