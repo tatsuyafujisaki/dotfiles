@@ -95,6 +95,7 @@ alias check_if_port_is_reachable='nc -vz'
 
 alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
+alias gwp=(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias js='code ~/Documents/GitHub/js-playground'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
@@ -126,15 +127,6 @@ c() {
     cd && l
   else
     cd "${1}" && l
-  fi
-}
-
-cc() {
-  if [ ${#} -eq 0 ]
-  then
-    code .
-  else
-    code "${1}"
   fi
 }
 
