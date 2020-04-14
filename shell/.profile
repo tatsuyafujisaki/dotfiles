@@ -95,7 +95,7 @@ alias check_if_port_is_reachable='nc -vz'
 
 alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
-alias gwp=(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)
+alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias js='code ~/Documents/GitHub/js-playground'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
@@ -179,16 +179,6 @@ clean_android_or_intellij_project() {
   do
     find . -type f -name "${file}" -delete
   done
-}
-
-curl_upload() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file> <url>"
-    return
-  fi
-
-  curl -T ${1} ${2}
 }
 
 # Unalias "l" that is predefined in .bashrc of Windows Subsystem for Linux (WSL)
