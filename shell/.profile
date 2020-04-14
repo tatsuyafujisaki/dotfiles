@@ -107,19 +107,18 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
-
 # Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
 # "-z" is port scanning.
 # "-w 1" is to timeout after a second.
 alias portscan='nc -vzw 1'
-
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias rot47="tr '\!-~' 'P-~\!-O'"
 alias show_function_definition='type -a'
 alias show_path='echo ${PATH} | tr : \\n'
+alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 c() {
   if [ ${#} -eq 0 ]
