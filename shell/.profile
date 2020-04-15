@@ -413,7 +413,7 @@ adb_activities_back_stack() {
     return
   fi
 
-  adb shell dumpsys activity | grep Hist | grep ${1} | awk '{$1=$1};1' # awk is to remove leading and trailing spaces.
+  adb shell dumpsys activity -p ${1} | grep Hist | grep ${1} | awk '{$1=$1};1' # awk is to remove leading and trailing spaces.
 }
  
 # "am" stands for Activity Manager.
@@ -494,6 +494,6 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 #
 
 alias m='cd ~/Documents/GitHub/marui-android-app'
-alias aa='adb shell dumpsys activity | grep Hist | grep jp.co.marui0101.android.develop | awk "{\$1=\$1};1"'
+alias aa='adb shell dumpsys activity -p jp.co.marui0101.android.develop | grep Hist | grep jp.co.marui0101.android.develop | awk "{\$1=\$1};1"'
 alias um='adb uninstall jp.co.marui0101.android.develop'
 alias test_deeplink='adb shell am start -W -a android.intent.action.VIEW -d marui0101://top jp.co.marui0101.android.develop'
