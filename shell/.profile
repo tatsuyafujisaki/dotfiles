@@ -398,6 +398,7 @@ upp() {
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
+alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
 alias adbu='adb uninstall'
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
@@ -406,10 +407,10 @@ alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 alias adb_listadb shell pm list packages
 
-adb_activities_back_stack() {
+adb_show_activities() {
   if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <package> ."
+    echo "Usage: ${FUNCNAME[0]} <package>"
     return
   fi
 
