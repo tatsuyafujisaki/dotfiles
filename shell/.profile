@@ -412,6 +412,7 @@ alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is opti
 alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
+alias adbi='adb install'
 alias adbu='adb uninstall'
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
