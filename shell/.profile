@@ -1,10 +1,10 @@
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
 
-export EDITOR=nano # Make 'crontab -e' use nano instead of the default editor vim
+export EDITOR=nano # makes 'crontab -e' use nano instead of the default editor vim
 export HISTCONTROL=ignoreboth
 export LESS=IMRS
-export LESSHISTFILE=- # Avoid creating ~/.lesshst
-export NODE_REPL_HISTORY='' # Avoid creating ~/.node_repl_history
+export LESSHISTFILE=- # avoids creating ~/.lesshst
+export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 #
 # Add to PATH
@@ -12,8 +12,7 @@ export NODE_REPL_HISTORY='' # Avoid creating ~/.node_repl_history
 
 if is_mac
 then
-  # Add the executable "java_home", which returns the value of $JAVA_HOME.
-  export PATH="/usr/libexec:$PATH"
+  export PATH="/usr/libexec:$PATH" # adds the executable "java_home", which returns the value of $JAVA_HOME.
   export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) # is ensure that Gradle uses JDK 8 when multiple JDK versions are installed.
   alias java8='/usr/libexec/java_home -v 1.8' # shows the path to JDK 8.
   alias java9='/usr/libexec/java_home -v 9' # shows the path to JDK 9.
@@ -98,6 +97,7 @@ alias gp='code ~/.gradle/gradle.properties'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
 alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias js='code ~/Documents/GitHub/js-playground'
+alias ktlint='./gradlew ktlintCheck'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias list_installed_jdks='/usr/libexec/java_home -V'
 alias lns='ln -s $(pwd) ~'
