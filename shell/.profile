@@ -1,6 +1,6 @@
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
 
-export EDITOR=nano # makes 'crontab -e' use nano instead of the default editor vim
+export EDITOR=nano # makes 'crontab -e' use nano instead of vim
 export HISTCONTROL=ignoreboth
 export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
