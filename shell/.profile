@@ -396,7 +396,7 @@ upp() {
 
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
 alias adb_connecdt_via_wifi="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print $9}' | xargs adb connect"
-alias adbd='adb devices'
+alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
 alias adbi='adb install'
