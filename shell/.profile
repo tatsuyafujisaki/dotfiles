@@ -395,7 +395,6 @@ upp() {
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
 alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
-alias adb_connecdt_via_wifi="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print $9}' | xargs adb connect"
 alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
@@ -407,6 +406,7 @@ alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
 alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
 alias adb_listadb shell pm list packages
+alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
 adb_show_activities() {
   if [ ${#} -ne 1 ]
