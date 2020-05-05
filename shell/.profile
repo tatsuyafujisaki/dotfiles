@@ -492,23 +492,7 @@ docker_clean() {
 alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean'
 
 #
-# Marui
+# Read a private profile for client work
 #
 
-alias m='cd ~/Documents/GitHub/marui-android-app'
-alias aa='adb shell dumpsys activity -p jp.co.marui0101.android.develop | grep Hist | grep jp.co.marui0101.android.develop | awk "{\$1=\$1};1"'
-alias um='adb uninstall jp.co.marui0101.android.develop'
-alias test_deeplink='adb shell am start -W -a android.intent.action.VIEW -d marui0101://top jp.co.marui0101.android.develop'
-
-mm() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <module>"
-    return
-  fi
-
-  # -q is to suppress non-error logs.
-  # --configuration is to filter only "implementation".
-  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
-  (cd ~/Documents/GitHub/marui-android-app && ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort)
-}
+[ -f ~/.private_profile ] && . ~/.private_profile
