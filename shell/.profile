@@ -430,6 +430,7 @@ adb_test_deeplink() {
 
   # "am" stands for Activity Manager.
   # -W is to wait for launch to complete.
+  # Ensure <activity android:exported="true"> is in AndroidManifest.xml to avoid "java.lang.SecurityException: Permission Denial".
   # https://developer.android.com/training/app-links/deep-linking#testing-filters
   # https://codelabs.developers.google.com/codelabs/android-navigation/#10
   adb shell am start -W -a android.intent.action.VIEW -d ${1}
