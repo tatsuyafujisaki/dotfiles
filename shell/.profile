@@ -146,7 +146,7 @@ clean() {
   rm -f ~/.android/*.lock
   rm -f ~/Library/Android/sdk/.knownPackages
 
-  pushd ~ > /dev/null # Avoid showing the pushed directory stack
+  pushd ~ > /dev/null # avoids showing the pushed directory stack
   
   # Delete unnecessary directories that require root privileges.
   sudo rm -fr Downloads
@@ -165,7 +165,7 @@ clean() {
     rm -f ${file}
   done
 
-  popd > /dev/null # Avoid showing the pushed directory stack
+  popd > /dev/null # avoids showing the pushed directory stack
 }
 
 clean_android_or_intellij_project() {
