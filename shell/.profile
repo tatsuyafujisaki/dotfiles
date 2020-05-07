@@ -136,11 +136,14 @@ clean() {
   # Delete .localized
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
-  # Delete Android-related directories
+  # Delete directories for Android development.
+  rm -fr ~/.android/build-caches
+  rm -fr ~/.android/caches
   rm -fr ~/Library/Android/sdk/.downloadIntermediates
   rm -fr ~/Library/Android/sdk/.temp
 
-  # Delete an Android-related file
+  # Delete files for Android development.
+  rm -f ~/.android/*.lock
   rm -f ~/Library/Android/sdk/.knownPackages
 
   pushd ~ > /dev/null # Avoid showing the pushed directory stack
