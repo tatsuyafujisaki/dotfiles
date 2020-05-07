@@ -418,16 +418,18 @@ adb_show_activities() {
   adb shell dumpsys activity -p ${1} | grep Hist | grep ${1} | awk '{$1=$1};1' # awk is to remove leading and trailing spaces.
 }
  
-# "am" stands for Activity Manager.
-# https://developer.android.com/training/app-links/deep-linking#testing-filters
 adb_test_deeplink() {
-  if [ ${#} -ne 3 ]
+  if [ ${#} -ne 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <action> <data-uri> <package>"
+    echo "Usage: ${FUNCNAME[0]} <action> <uri>"
     return
   fi
 
-  adb shell am start -W -a ${1} -d ${2} ${3}
+  # "am" stands for Activity Manager.
+  # -W is to wait for launch to complete.
+  # https://developer.android.com/training/app-links/deep-linking#testing-filters
+  # https://codelabs.developers.google.com/codelabs/android-navigation/#10
+  adb shell am start -W -a ${1} -d ${2}
 }
 
 adb_pull() {
