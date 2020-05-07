@@ -419,9 +419,9 @@ adb_show_activities() {
 }
  
 adb_test_deeplink() {
-  if [ ${#} -ne 2 ]
+  if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <action> <uri>"
+    echo "Usage: ${FUNCNAME[0]} <uri>"
     return
   fi
 
@@ -429,7 +429,7 @@ adb_test_deeplink() {
   # -W is to wait for launch to complete.
   # https://developer.android.com/training/app-links/deep-linking#testing-filters
   # https://codelabs.developers.google.com/codelabs/android-navigation/#10
-  adb shell am start -W -a ${1} -d ${2}
+  adb shell am start -W -a android.intent.action.VIEW -d ${1}
 }
 
 adb_pull() {
