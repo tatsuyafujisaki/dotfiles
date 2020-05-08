@@ -3,6 +3,9 @@
     "editor.tabSize": 2
   },
   "debug.console.historySuggestions" : false,
+  "editor.quickSuggestions": {
+    "other": false
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
