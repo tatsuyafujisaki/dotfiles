@@ -149,7 +149,7 @@ clean() {
   pushd ~ > /dev/null # avoids showing the pushed directory stack
   
   # Delete unnecessary directories that require root privileges.
-  sudo rm -fr Downloads
+  sudo rm -fr Downloads Movies Music Pictures
 
   # Delete unnecessary directories
   directories=(.bash_sessions .dvdcss .emulator_console_auth_toke .gradle/caches .gradle/daemon .gradle/native .gradle/wrapper .local .m2 .oracle_jre_usage .Trash)
