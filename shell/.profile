@@ -111,7 +111,8 @@ alias myxxd='xxd -g1'
 # Without -v, neither success or failure is printed.
 # "-z" is port scanning.
 # "-w 1" is to timeout after a second.
-alias portscan='nc -vzw 1'
+alias port_scan='nc -vzw 1'
+alias pp='code ~/.private_profile'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -501,5 +502,4 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 # Private profile for client work
 #
 
-alias p='code ~/.private_profile'
 [ -f ~/.private_profile ] && . ~/.private_profile
