@@ -55,8 +55,8 @@
     lp = log -p --
     m = merge --no-edit --squash
     mt = mergetool
-    p = push
-    pt = push --tags
+    p = push --tags
+    pf = push -f
     puo = push -u origin
     r = rebase
     ra = rebase --abort
