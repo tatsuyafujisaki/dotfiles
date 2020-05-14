@@ -86,6 +86,7 @@ alias npmu='npm uninstall --save-dev'
 # Other aliases
 #
 
+alias adbp='code ~/.shell_profiles/adb.profile'
 alias ..='cd ..'
 # Usage: check_if_port_is_reachable example.com 80
 # Without -v, neither success or failure is printed.
@@ -115,7 +116,6 @@ alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias rot47="tr '\!-~' 'P-~\!-O'"
-alias show_alias_definition='alias'
 alias show_function_definition='type -a'
 alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
