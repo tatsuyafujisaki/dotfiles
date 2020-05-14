@@ -87,21 +87,19 @@ alias npmu='npm uninstall --save-dev'
 #
 
 alias ..='cd ..'
-
 # Usage: check_if_port_is_reachable example.com 80
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
-
 alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
-alias grepin='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias js='code ~/Documents/GitHub/js-playground'
 alias ktlint='./gradlew ktlintCheck'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias list_installed_jdks='/usr/libexec/java_home -V'
 alias lns='ln -s $(pwd) ~'
 alias mybc='bc -lq' # -l is to show decimals. -q is to suppress a welcome message.
+alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias myobjdump='objdump -d -M intel'
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
@@ -117,6 +115,7 @@ alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias rot47="tr '\!-~' 'P-~\!-O'"
+alias show_alias_definition='alias'
 alias show_function_definition='type -a'
 alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
