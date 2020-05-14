@@ -66,10 +66,7 @@
     rs = restore --staged --worktree # restores both the index and the working tree.
     rso = remote set-url origin
     sb = show-branch
-    sh = show
     sns = show --name-status
-    st = stash
-    stat = status
     sw = switch
     swc = switch -c
     # "git clean -df" removes untracked folders and files from the working tree.
