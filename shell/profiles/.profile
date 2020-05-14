@@ -375,10 +375,10 @@ cleanup() {
 upp() {
   pushd ~
 
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.zshrc
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.zshrc
 
-  local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/.bash_profile
+  local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.bash_profile
 
   if is_mac
   then
@@ -386,6 +386,8 @@ upp() {
   else
     curl ${url} -o .bash_aliases
   fi
+
+  curl https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/adb.profile --create-dirs -o ~/.shell_profiles/adb.profile
 
   popd
 }
