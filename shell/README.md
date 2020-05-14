@@ -2,3 +2,8 @@
 ```shell
 stty stop undef # unnecessary on macOS or WSL
 ```
+
+# How to show the definition of an alias.
+```shell
+alias <alias>
+```
