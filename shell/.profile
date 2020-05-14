@@ -110,7 +110,7 @@ alias myxxd='xxd -g1'
 # "-z" is port scanning.
 # "-w 1" is to timeout after a second.
 alias port_scan='nc -vzw 1'
-alias pp='code ~/.private_profile'
+alias pp='code ~/.myprofiles/private_profile'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -502,4 +502,5 @@ alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/j
 # Private profile for client work
 #
 
-[ -f ~/.private_profile ] && . ~/.private_profile
+[ -f ~/.myprofiles/adb_profile ] && . ~/.myprofiles/adb_profile
+[ -f ~/.myprofiles/private_profile ] && . ~/.myprofiles/private_profile
