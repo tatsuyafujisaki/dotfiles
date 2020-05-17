@@ -285,6 +285,18 @@ myfind() {
   find . -iname "*${1}*" -print 2> /dev/null
 }
 
+mysed() {
+  if [ ${#} -ne 3 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <string-before> <string-after> <file>"
+    return
+  fi
+
+  # -i is to edit a file in place instead of printing to standard output.
+  # g is to replace all the occurrences.
+  sed -i 's/${1}/${2}/g' ${3}
+}
+
 prefix_file_name()
 {
   if [ ${#} -ne 2 ]
@@ -306,16 +318,6 @@ rename_branch() {
   git branch -m ${1} ${2} # renames the old branch to the new branch on local.
   git push origin :${1} # deletes an old branch on remote.
   git push -u origin ${2} # creates the new branch on remote and resets the upstream branch to it.
-}
-
-replace_string_in_file() {
-  if [ ${#} -ne 3 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file> <old_string> <new_string>"
-    return
-  fi
-
-  sed "s/${2}/${3}/g" ${1}
 }
 
 show_modules() {
