@@ -4,4 +4,4 @@ is_mac() {
   [ $(uname) == Darwin ]
 }
 
-. ~/.shell_profiles/.profile
+. ~/.shell_profiles/common.profile
