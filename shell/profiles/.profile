@@ -294,10 +294,12 @@ mysed_delete() {
     return
   fi
 
-  sed "s/${1}//" ${2}
+  # -i is to edit a file in place instead of printing to standard output.
+  # g is to replace all the occurrences.
+  sed -i "s/${1}//g" ${2}
 }
 
-prefix_file_name()
+mysed_prefix_file_name()
 {
   if [ ${#} -ne 2 ]
   then
@@ -306,6 +308,16 @@ prefix_file_name()
   fi
 
   sed "s/^/${1}/" ${2}
+}
+
+mysed_suffix_file_name() {
+  if [ ${#} -ne 2 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <suffix> <file>"
+    return
+  fi
+
+  sed "s/$/${1}/" ${2}
 }
 
 rename_branch() {
@@ -331,16 +343,6 @@ show_modules() {
   # --configuration is to filter only "implementation".
   # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
   ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
-}
-
-suffix_file_name() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file> <suffix>"
-    return
-  fi
-
-  sed "s/$/${2}/" ${1}
 }
 
 up() {
