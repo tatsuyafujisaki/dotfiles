@@ -67,12 +67,12 @@ then
   alias pip=pip3 # to use pip3, installed by Homebrew, as pip
   alias python=python3 # to use python3, installed by Homebrew, as python
 
-  alias p='code ~/.profile'
+  alias p='code ~/.shell_profiles/common.profile'
 else
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFhlv --color --group-directories-first'
 
-  alias p='nano ~/.profile'
+  alias p='nano ~/.shell_profiles/common.profile'
 fi
 
 # npm
@@ -383,7 +383,7 @@ cleanup() {
 upp() {
   pushd ~
 
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/common.profile
   curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.zshrc
 
   local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.bash_profile
