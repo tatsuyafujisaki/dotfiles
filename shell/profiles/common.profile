@@ -381,21 +381,19 @@ cleanup() {
 
 # Update shell resources
 upp() {
-  pushd ~
-
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/common.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.zshrc
+  curl --create-dirs -o ~/.shell_profile/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/common.profile
+  curl  -o ~/.zshrc https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.zshrc
 
   local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.bash_profile
 
   if is_mac
   then
-    curl -O ${url}
+    curl ${url} -o ~/.bash_profile
   else
-    curl ${url} -o .bash_aliases
+    curl ${url} -o ~/.bash_aliases
   fi
 
-  curl https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/adb.profile --create-dirs -o ~/.shell_profiles/adb.profile
+  curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/adb.profile
 
   popd
 }
