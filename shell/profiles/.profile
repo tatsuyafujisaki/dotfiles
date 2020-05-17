@@ -225,16 +225,6 @@ decode_url() {
   echo ${1} | nkf --url-input
 }
 
-delete_string_in_file() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file> <string>"
-    return
-  fi
-
-  sed "s/${2}//" ${1}
-}
-
 exclude_column() {
   if [ ${#} -ne 2 ]
   then
@@ -295,6 +285,16 @@ mysed() {
   # -i is to edit a file in place instead of printing to standard output.
   # g is to replace all the occurrences.
   sed -i 's/${1}/${2}/g' ${3}
+}
+
+mysed_delete() {
+  if [ ${#} -ne 2 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <string> <file>"
+    return
+  fi
+
+  sed "s/${1}//" ${2}
 }
 
 prefix_file_name()
