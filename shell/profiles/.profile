@@ -299,25 +299,29 @@ mysed_delete() {
   sed -i "s/${1}//g" ${2}
 }
 
-mysed_prefix_file_name()
+mysed_add_leading_string()
 {
   if [ ${#} -ne 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <prefix> <file>"
+    echo "Usage: ${FUNCNAME[0]} <leading-string> <file>"
     return
   fi
 
-  sed "s/^/${1}/" ${2}
+  # -i is to edit a file in place instead of printing to standard output.
+  # g is to replace all the occurrences.
+  sed -i "s/^/${1}/g" ${2}
 }
 
-mysed_suffix_file_name() {
+mysed_add_trailing_string() {
   if [ ${#} -ne 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <suffix> <file>"
+    echo "Usage: ${FUNCNAME[0]} <trailing-string> <file>"
     return
   fi
 
-  sed "s/$/${1}/" ${2}
+  # -i is to edit a file in place instead of printing to standard output.
+  # g is to replace all the occurrences.
+  sed -i "s/$/${1}/g" ${2}
 }
 
 rename_branch() {
