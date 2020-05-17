@@ -283,7 +283,7 @@ mysed() {
   fi
 
   # -i is to edit a file in-place instead of printing to standard output.
-  # g is to replace all the occurrences.
+  # g is to enable more than one replacement in each line.
   sed -i 's/${1}/${2}/g' ${3}
 }
 
@@ -296,7 +296,7 @@ mysed_add_leading_string()
   fi
 
   # -i is to edit a file in-place instead of printing to standard output.
-  # g is to replace all the occurrences.
+  # g is to enable more than one replacement in each line.
   sed -i "s/^/${1}/g" ${2}
 }
 
@@ -308,7 +308,7 @@ mysed_add_trailing_string() {
   fi
 
   # -i is to edit a file in-place instead of printing to standard output.
-  # g is to replace all the occurrences.
+  # g is to enable more than one replacement in each line.
   sed -i "s/$/${1}/g" ${2}
 }
 
@@ -320,7 +320,7 @@ mysed_delete() {
   fi
 
   # -i is to edit a file in-place instead of printing to standard output.
-  # g is to replace all the occurrences.
+  # g is to enable more than one replacement in each line.
   sed -i "s/${1}//g" ${2}
 }
 
