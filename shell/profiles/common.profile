@@ -287,43 +287,6 @@ mysed() {
   sed -i 's/${1}/${2}/g' ${3}
 }
 
-mysed_add_leading_string()
-{
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <leading-string> <file>"
-    return
-  fi
-
-  # -i is to edit a file in-place instead of printing to standard output.
-  # g is to enable more than one replacement in each line.
-  sed -i "s/^/${1}/g" ${2}
-}
-
-mysed_add_trailing_string() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <trailing-string> <file>"
-    return
-  fi
-
-  # -i is to edit a file in-place instead of printing to standard output.
-  # g is to enable more than one replacement in each line.
-  sed -i "s/$/${1}/g" ${2}
-}
-
-mysed_delete() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <string> <file>"
-    return
-  fi
-
-  # -i is to edit a file in-place instead of printing to standard output.
-  # g is to enable more than one replacement in each line.
-  sed -i "s/${1}//g" ${2}
-}
-
 rename_branch() {
   if [ ${#} -ne 2 ]
   then
