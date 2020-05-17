@@ -287,18 +287,6 @@ mysed() {
   sed -i 's/${1}/${2}/g' ${3}
 }
 
-mysed_delete() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <string> <file>"
-    return
-  fi
-
-  # -i is to edit a file in place instead of printing to standard output.
-  # g is to replace all the occurrences.
-  sed -i "s/${1}//g" ${2}
-}
-
 mysed_add_leading_string()
 {
   if [ ${#} -ne 2 ]
@@ -322,6 +310,18 @@ mysed_add_trailing_string() {
   # -i is to edit a file in place instead of printing to standard output.
   # g is to replace all the occurrences.
   sed -i "s/$/${1}/g" ${2}
+}
+
+mysed_delete() {
+  if [ ${#} -ne 2 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <string> <file>"
+    return
+  fi
+
+  # -i is to edit a file in place instead of printing to standard output.
+  # g is to replace all the occurrences.
+  sed -i "s/${1}//g" ${2}
 }
 
 rename_branch() {
