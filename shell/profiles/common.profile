@@ -287,6 +287,18 @@ mysed() {
   sed -i 's/${1}/${2}/g' ${3}
 }
 
+myuniq() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <file>"
+    return
+  fi
+
+  # -f is to sort case-insensitively.
+  # uniq works only if the input is sorted.
+  cat ${1} | sort -f | uniq
+}
+
 rename_branch() {
   if [ ${#} -ne 2 ]
   then
