@@ -369,8 +369,6 @@ upp() {
   fi
 
   curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/adb.profile
-
-  popd
 }
 
 #
