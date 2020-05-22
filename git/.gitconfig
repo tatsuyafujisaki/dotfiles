@@ -55,8 +55,8 @@
     lp = log -p --
     m = merge --no-edit --squash
     mt = mergetool
-    p = push --tags
     pf = push -f
+    pt = push --tags
     puo = push -u origin
     r = rebase
     ra = rebase --abort
@@ -69,9 +69,4 @@
     sns = show --name-status
     sw = switch
     swc = switch -c
-    # "git clean -df" removes untracked folders and files from the working tree.
-    # "git restore ." restores tracked unstaged files in the current directory to the version in HEAD.
-    # "git pull -r" = git fetch + git rebase
-    # "git fetch -p" deletes all the local branches that don't exist on the remote any more.
-    # "git fetch -t" fetches all the tags from the remote.
-    up = !git clean -df && git restore . && git pull -r && git fetch -pt
+    up = !git gc --auto && git clean -d -f && git restore . && git pull --all --autostash -r && git fetch -p -t
