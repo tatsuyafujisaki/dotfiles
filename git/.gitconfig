@@ -71,3 +71,4 @@
     sw = switch
     swc = switch -c
     up = !git gc --auto && git clean -d -f && git restore . && git pull --all --autostash -r && git fetch -p -t
+    upfork = !git switch master && git rebase upstream/master
