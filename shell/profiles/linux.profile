@@ -3,6 +3,19 @@ alias myls='ls -dFhlv --color --group-directories-first'
 
 alias p='nano ~/.shell_profiles/common.profile'
 
+# Unalias "l" that is predefined in .bashrc of Windows Subsystem for Linux (WSL)
+unalias l 2> /dev/null
+
+l() {
+  clear
+
+  # Print dotfiles and dotdirectories, then print a blank line, redirecting errors to /dev/null when there are not such files and directories.
+  myls .[^.]* 2> /dev/null && echo
+
+  # Print non-dotfiles and non-dotdirectories, redirecting errors to /dev/null when there are not such files and directories.
+  myls * 2> /dev/null
+}
+
 up() {
   sudo apt update
   sudo apt full-upgrade -y
