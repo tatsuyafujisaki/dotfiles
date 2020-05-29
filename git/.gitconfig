@@ -33,7 +33,7 @@
 [alias]
     a = add --all
     ar = archive -o output.zip HEAD
-    b = rev-parse --abbrev-ref HEAD # shows the name of the current branch.
+    b = branch --show-current # has been available since 2.22.
     ba = branch -a
     bd = branch -D
     bl = blame -L # <line-number> <file>
