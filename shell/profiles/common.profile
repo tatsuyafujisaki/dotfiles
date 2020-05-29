@@ -115,19 +115,6 @@ clean_android_or_intellij_project() {
   done
 }
 
-# Unalias "l" that is predefined in .bashrc of Windows Subsystem for Linux (WSL)
-unalias l 2> /dev/null
-
-l() {
-  clear
-
-  # Print dotfiles and dotdirectories, then print a blank line, edirecting errors to /dev/null in case there are not such files and directories.
-  myls .[^.]* 2> /dev/null && echo
-
-  # Print non-dotfiles and non-dotdirectories, redirecting errors to /dev/null in case there are not such files and directories.
-  myls * 2> /dev/null
-}
-
 delete_android_studio_metadata() {
   # -delete works only for files
   find . -type f -iname *.iml -delete
