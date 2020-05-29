@@ -12,4 +12,13 @@ is_mac() {
   [[ $(uname) == Darwin ]]
 }
 
+. ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
+. ~/.shell_profiles/private.profile
+
+if [ $(uname) = Darwin ]
+then
+  . ~/.shell_profiles/mac.profile
+else
+  . ~/.shell_profiles/linux.profile
+fi
