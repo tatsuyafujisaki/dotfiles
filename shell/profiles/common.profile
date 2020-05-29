@@ -63,11 +63,7 @@ then
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFGhlv'
 
-  # Python
-  alias pip=pip3 # to use pip3, installed by Homebrew, as pip
-  alias python=python3 # to use python3, installed by Homebrew, as python
-
-  alias p='code ~/.shell_profiles/common.profile'
+alias p='code ~/.shell_profiles/common.profile'
 else
   # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   alias myls='ls -dFhlv --color --group-directories-first'
