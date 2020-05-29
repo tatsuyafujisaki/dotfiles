@@ -35,7 +35,7 @@
     ar = archive -o output.zip HEAD
     b = rev-parse --abbrev-ref HEAD # shows the name of the current branch.
     ba = branch -a
-    bd = branch -d
+    bd = branch -D
     bl = blame -L # <line-number> <file>
     bm = branch -m
     caam = commit -a --amend -m # amends the previous commit using the given new commit message.
