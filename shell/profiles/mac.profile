@@ -52,6 +52,16 @@ alias myls='ls -dFGhlv'
 
 alias p='code ~/.shell_profiles/common.profile'
 
+l() {
+  clear
+
+  # Print dotfiles and dotdirectories, then print a blank line, redirecting errors to /dev/null when there are not such files and directories.
+  myls .[^.]* 2> /dev/null && echo
+
+  # Print non-dotfiles and non-dotdirectories, redirecting errors to /dev/null when there are not such files and directories.
+  myls * 2> /dev/null
+}
+
 up() {
   brew upgrade
   brew cask upgrade --greedy
