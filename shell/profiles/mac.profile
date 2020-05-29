@@ -39,12 +39,6 @@ export PATH="/usr/local/opt/binutils/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
-# "brew doctor" warns as follows if coreutils and findutils are in PATH.
-# Warning: Putting non-prefixed coreutils in your path can cause gmp builds to fail.
-# Warning: Putting non-prefixed findutils in your path can cause python builds to fail.
-# export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-# export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
 # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
