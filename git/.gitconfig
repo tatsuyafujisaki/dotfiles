@@ -62,10 +62,10 @@
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
-    rgo = remote get-url origin
+    rgu = remote get-url # is normally followed by origin or upstream, which is an original repository you fork from.
     ri = rebase -i
     rs = restore --staged --worktree # restores both the index and the working tree.
-    rso = remote set-url origin
+    rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
     sb = show-branch
     sns = show --name-status
     sw = switch
