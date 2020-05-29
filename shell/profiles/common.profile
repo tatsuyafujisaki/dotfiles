@@ -261,23 +261,6 @@ cleanup() {
   up
 }
 
-# Update shell resources
-upp() {
-  curl --create-dirs -o ~/.shell_profile/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/common.profile
-  curl  -o ~/.zshrc https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.zshrc
-
-  local url=https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/.bash_profile
-
-  if is_mac
-  then
-    curl ${url} -o ~/.bash_profile
-  else
-    curl ${url} -o ~/.bash_aliases
-  fi
-
-  curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/master/shell/profiles/adb.profile
-}
-
 #
 # Docker
 #
@@ -304,10 +287,3 @@ docker_clean() {
 #
 
 alias jenkins_start='docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean'
-
-#
-# Read other profiles
-#
-
-[ -f ~/.shell_profiles/adb.profile ] && . ~/.shell_profiles/adb.profile
-[ -f ~/.shell_profiles/private.profile ] && . ~/.shell_profiles/private.profile
