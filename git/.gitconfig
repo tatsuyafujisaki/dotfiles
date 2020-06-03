@@ -69,5 +69,5 @@
     sns = show --name-status
     sw = switch
     swc = switch -c
-    up = !git gc --auto && git clean -d -f && git restore --staged --worktree . && git pull --all --autostash -r && git fetch -p -t
+    up = !git gc --auto && git clean -d -f && git restore --staged --worktree . && git pull --all --autostash -r --recurse-submodules && git fetch -p -t
     upfork = !git switch master && git rebase upstream/master
