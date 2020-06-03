@@ -1,6 +1,6 @@
 [user]
-    name = Tatsuya Fujisaki
-    email = tatsuya.fujisaki@example.com
+    name = John Smith
+    email = john.smith@example.com
 [core]
     excludesfile = ~/.gitignore
     editor = code -w
@@ -55,7 +55,7 @@
     lp = log -p --
     m = merge --no-edit --squash
     mt = mergetool
-    pb = !git pull --all --autostash -r && git rebase develop
+    pa = pull --all --autostash -r
     pf = push -f
     pt = push --tags
     puo = push -u origin
