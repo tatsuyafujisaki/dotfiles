@@ -224,8 +224,9 @@ rename_branch() {
     return
   fi
 
-  git branch -m ${1} ${2} # renames the old branch to the new branch on local.
-  git push origin :${1} # deletes an old branch on remote.
+  git switch ${1}
+  git branch -m ${2} # renames the current branch to the new branch on local.
+  git push origin :${1} # deletes the old branch on remote.
   git push -u origin ${2} # creates the new branch on remote and resets the upstream branch to it.
 }
 
