@@ -22,6 +22,7 @@ alias ..='cd ..'
 # Usage: check_if_port_is_reachable example.com 80
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
+alias d='cd ~/Desktop'
 alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
