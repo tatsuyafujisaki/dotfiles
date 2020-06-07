@@ -251,6 +251,34 @@ cleanup() {
 }
 
 #
+# Helper functions to create a temporary JSON/Markdown/XML file
+#
+
+json() {
+  folder=~/deleteme
+
+  [ -e ${folder} ] || mkdir -p ${folder}
+
+  code ${folder}/deleteme.json
+}
+
+md() {
+  folder=~/deleteme
+
+  [ -e ${folder} ] || mkdir -p ${folder}
+
+  code ${folder}/deleteme.md
+}
+
+xml() {
+  folder=~/deleteme
+
+  [ -e ${folder} ] || mkdir -p ${folder}
+
+  code ${folder}/deleteme.xml
+}
+
+#
 # Docker
 #
 
