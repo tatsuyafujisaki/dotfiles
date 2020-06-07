@@ -24,7 +24,6 @@ alias ..='cd ..'
 alias d='cd ~/Desktop'
 alias gh='cd ~/Documents/GitHub'
 
-# mkdir & cd
 mcd() {
   if [ ${#} -ne 1 ]
   then
