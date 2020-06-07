@@ -6,7 +6,10 @@ export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
+#
 # npm
+# 
+
 alias npmi='npm install --save-dev'
 alias npmin='npm init -y'
 alias npmls='npm ls --depth 0'
@@ -14,16 +17,32 @@ alias npmlsg='npm ls --depth 0 -g'
 alias npmu='npm uninstall --save-dev'
 
 #
-# Other aliases
+# cd-related
+#
+
+alias ..='cd ..'
+alias d='cd ~/Desktop'
+alias gh='cd ~/Documents/GitHub'
+
+# mkdir & cd
+mcd() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <directory>"
+    return
+  fi
+
+  mkdir ${1} && cd ${1}
+}
+
+#
+# Misc aliases
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
-alias ..='cd ..'
 # Usage: check_if_port_is_reachable example.com 80
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
-alias d='cd ~/Desktop'
-alias gh='cd ~/Documents/GitHub'
 alias gp='code ~/.gradle/gradle.properties'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
 alias js='code ~/Documents/GitHub/js-playground'
@@ -172,16 +191,6 @@ find_directory() {
   fi
 
   find  -type d -iname "*${1}*" -print 2> /dev/null
-}
-
-mkdircd() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <directory>"
-    return
-  fi
-
-  mkdir ${1} && cd ${1}
 }
 
 myfind() {
