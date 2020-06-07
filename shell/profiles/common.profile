@@ -134,14 +134,6 @@ clean_android_or_intellij_project() {
   done
 }
 
-delete_android_studio_metadata() {
-  # -delete works only for files
-  find . -type f -iname *.iml -delete
-
-  # Names that start with a dot needs to be quoted
-  find . -type d -iname '\.idea' -o -iname build -exec rm -r '{}' \;
-}
-
 decode_base64() {
   if [ ${#} -ne 2 ]
   then
