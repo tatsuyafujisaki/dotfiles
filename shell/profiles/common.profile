@@ -270,6 +270,14 @@ md() {
   code ${folder}/deleteme.md
 }
 
+txt() {
+  folder=~/deleteme
+
+  [ -e ${folder} ] || mkdir -p ${folder}
+
+  code ${folder}/deleteme.txt
+}
+
 xml() {
   folder=~/deleteme
 
