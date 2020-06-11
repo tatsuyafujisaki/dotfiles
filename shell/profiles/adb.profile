@@ -1,7 +1,6 @@
 # Add adb to PATH
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
-alias adb_deeplink='adb shell am start -W -a android.intent.action.VIEW -d' # Usage: adbdl <url>
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
 alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
@@ -14,10 +13,10 @@ alias adbs='adb exec-out screencap -p > ~/Desktop/screenshot.png && open ~/Deskt
 alias adbu='adb uninstall'
 alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
-adb_deeplink() {
-  if [ ${#} -ne 2 ]
+adb_deeplink_with() {
+  if [ ${#} -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <uri> <package>"
+    echo "Usage: ${FUNCNAME[0]} <uri> [package]"
     return
   fi
 
@@ -26,7 +25,12 @@ adb_deeplink() {
   # Ensure <activity android:exported="true"> is in AndroidManifest.xml to avoid "java.lang.SecurityException: Permission Denial".
   # https://developer.android.com/training/app-links/deep-linking#testing-filters
   # https://codelabs.developers.google.com/codelabs/android-navigation/#10
-  adb shell am start -W -a android.intent.action.VIEW -d ${1} ${2}
+  if [ ${#} -ge 2 ]
+  then
+    adb shell am start -W -a android.intent.action.VIEW -d ${1} ${2}
+  else
+    adb shell am start -W -a android.intent.action.VIEW -d ${1}
+  fi
 }
 
 adb_pull() {
