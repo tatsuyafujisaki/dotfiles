@@ -13,7 +13,7 @@ alias adbs='adb exec-out screencap -p > ~/Desktop/screenshot.png && open ~/Deskt
 alias adbu='adb uninstall'
 alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
-adb_deeplink_with() {
+adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <uri> [package]"
