@@ -71,11 +71,11 @@ alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 c() {
-  if [ ${#} -eq 0 ]
+  if [ ${#} -ge 1 ]
   then
-    cd && l
-  else
     cd "${1}" && l
+  else
+    cd && l
   fi
 }
 
@@ -249,41 +249,64 @@ cleanup() {
   clean
   up
 }
-
 #
-# Helper functions to create a temporary JSON/Markdown/XML file
+# Helper functions to create a temporary file
 #
 
 json() {
   folder=~/deleteme
-
   [ -e ${folder} ] || mkdir -p ${folder}
 
-  code ${folder}/deleteme.json
+  if [ ${#} -ge 1 ]
+  then
+    basename=${1}
+  else
+    basename=$(date +%Y%m%d-%H%M%S)
+  fi
+
+  code ${folder}/${basename}.json
 }
 
 md() {
   folder=~/deleteme
-
   [ -e ${folder} ] || mkdir -p ${folder}
 
-  code ${folder}/deleteme.md
+  if [ ${#} -ge 1 ]
+  then
+    basename=${1}
+  else
+    basename=$(date +%Y%m%d-%H%M%S)
+  fi
+
+  code ${folder}/${basename}.md
 }
 
 txt() {
   folder=~/deleteme
-
   [ -e ${folder} ] || mkdir -p ${folder}
 
-  code ${folder}/deleteme.txt
+  if [ ${#} -ge 1 ]
+  then
+    basename=${1}
+  else
+    basename=$(date +%Y%m%d-%H%M%S)
+  fi
+
+  code ${folder}/${basename}.txt
 }
 
 xml() {
   folder=~/deleteme
-
   [ -e ${folder} ] || mkdir -p ${folder}
 
-  code ${folder}/deleteme.xml
+  if [ ${#} -ge 1 ]
+  then
+    basename=${1}
+  else
+    basename=$(date +%Y%m%d-%H%M%S)
+  fi
+
+  code ${folder}/${basename}.xml
 }
 
 #
