@@ -1,19 +1,17 @@
 # Add adb to PATH
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
-alias adbc='adb connect' # Usage: adbc 192.168.0.1:5555 (The port number is optional and defaults to 5555.)
-alias adbd='adb devices -l'
-alias adbdl='adb shell am start -W -a android.intent.action.VIEW -d' # Usage: adbdl <url>
-alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
-alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
-alias adbi='adb install'
-alias adbu='adb uninstall'
+alias adb_deeplink='adb shell am start -W -a android.intent.action.VIEW -d' # Usage: adbdl <url>
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
 alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
-alias adbt='adb tcpip 5555'
 alias adb_unplug='adb shell dumpsys battery unplug'
-alias adb_listadb shell pm list packages
+alias adbd='adb devices -l'
+alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
+alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
+alias adbi='adb install'
+alias adbs='adb exec-out screencap -p > ~/Desktop/screenshot.png && open ~/Desktop/screenshot.png'
+alias adbu='adb uninstall'
 alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
 adb_deeplink() {
