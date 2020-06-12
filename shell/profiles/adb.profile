@@ -9,7 +9,6 @@ alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
 alias adbi='adb install'
-alias adbs='adb exec-out screencap -p > ~/Desktop/screenshot.png && open ~/Desktop/screenshot.png'
 alias adbu='adb uninstall'
 alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
@@ -51,6 +50,11 @@ adb_push() {
   fi
 
   adb push ${1} /sdcard
+}
+
+adb_screenshot() {
+  filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png
+  adb exec-out screencap -p > ${filepath} && open ${filepath}
 }
 
 adb_show_activities() {
