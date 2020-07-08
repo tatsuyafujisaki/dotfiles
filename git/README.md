@@ -1,7 +1,7 @@
 # How to create `.gitignore`
 ## macOS
 ```shell
-curl -o ~/.gitignore https://www.toptal.com/developers/gitignore/api/androidstudio,gradle,intellij+all,macos,node,visualstudiocode
+curl -o ~/.gitignore https://www.toptal.com/developers/gitignore/api/android,androidstudio,gradle,intellij+all,macos,node,visualstudiocode
 ```
 Add `google-services.json` at the end of generated `.gitignore`.
 
