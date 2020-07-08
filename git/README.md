@@ -1,15 +1,17 @@
 # How to create `.gitignore`
 ## macOS
+1. Run cURL.
 ```shell
 curl -o ~/.gitignore https://www.toptal.com/developers/gitignore/api/android,androidstudio,gradle,intellij+all,macos,node,visualstudiocode
 ```
-Add `google-services.json` at the end of generated `.gitignore`.
+2. Uncomment `google-services.json`.
 
 ## Windows
+1. Run cURL.
 ```batchfile
-curl -o %USERPROFILE%\.gitignore https://www.gitignore.io/api/androidstudio,gradle,intellij+all,node,visualstudiocode,windows
+curl -o %USERPROFILE%\.gitignore https://www.toptal.com/developers/gitignore/api/android,androidstudio,gradle,intellij+all,node,visualstudiocode,windows
 ```
-Add `google-services.json` at the end of generated `.gitignore`.
+2. Uncomment `google-services.json`.
 
 ## Alternatively, you can interactively create and download `.gitignore`
 1. Create a consolidated .gitignore at [gitignore.io](https://www.gitignore.io) using the keywords below.
