@@ -67,6 +67,7 @@
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
     sb = show-branch
     sns = show --name-status
+    st = stash -u # -u includes untracked files.
     sw = switch
     swc = switch -c
     up = !git gc --auto && git clean -d -f && git restore --staged --worktree . && git pull --all --autostash -r --recurse-submodules && git fetch -p -t
