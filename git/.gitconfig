@@ -9,6 +9,7 @@
 [credential]
     helper = osxkeychain # sets "osxkeychain" on Mac. Set "wincred" on Windows, instead.
 [fetch]
+    prune = true
     recurseSubmodules = true
 [http]
     sslVerify = false
