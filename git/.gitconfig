@@ -50,6 +50,7 @@
     cp = cherry-pick
     csol = config --show-origin -l
     d = diff
+    deletelocal = !git branch | grep -v master | grep -v develop | xargs git branch -D
     dns = diff --name-status
     dt = difftool
     l = log --graph --decorate --oneline
