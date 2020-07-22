@@ -66,6 +66,7 @@
     ri = rebase -i
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
     sb = show-branch
+    sno = show --name-only
     sns = show --name-status
     st = stash -u # -u includes untracked files.
     sw = switch
