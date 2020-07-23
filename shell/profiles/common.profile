@@ -6,6 +6,9 @@ export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
+# Add Flutter to PATH
+[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
+
 #
 # npm
 # 
