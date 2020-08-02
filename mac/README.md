@@ -3,7 +3,7 @@
 launchctl setenv ANDROID_SDK_ROOT ~/Library/Android/sdk
 ```
 
-To create `app-debug-androidTest.apk`, trying to run `./gradlew assembleAndroidTest`  without defining ANDROID_SDK_ROOT throws an error.
+Trying to run `./gradlew assembleAndroidTest` to create `app-debug-androidTest.apk` without defining ANDROID_SDK_ROOT throws an error.
 
 # Create `.hushlogin`
 ```shell
