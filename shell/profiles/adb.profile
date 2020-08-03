@@ -1,6 +1,7 @@
 # Add adb to PATH
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
+alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adb_plug='adb shell dumpsys battery reset'
 alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
@@ -55,16 +56,6 @@ adb_push() {
 adb_screenshot() {
   filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png
   adb exec-out screencap -p > ${filepath} && open ${filepath}
-}
-
-adb_show_activities() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <package>"
-    return
-  fi
-
-  adb shell dumpsys activity -p ${1} | grep Hist | grep ${1} | awk '{$1=$1};1' # awk is to remove leading and trailing spaces.
 }
 
 firebase_log() {
