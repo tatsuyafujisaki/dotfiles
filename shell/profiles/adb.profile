@@ -58,6 +58,20 @@ adb_screenshot() {
   adb exec-out screencap -p > ${filepath} && open ${filepath}
 }
 
+# Show what modules the given module depends on.
+adb_show_dependent_modules() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: $funcstack[1] <module>"
+    return
+  fi
+
+  # -q is to suppress non-error logs.
+  # --configuration is to filter only "implementation".
+  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
+  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
+}
+
 firebase_log() {
   # Enable DebugView
   adb shell setprop debug.firebase.analytics.app com.example.myapplication
