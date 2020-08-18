@@ -5,6 +5,9 @@ PS1=$'%B%F{green}%d%f%b\n$ '
 # Avoid printing "no matches found" to the standard output when using a glob, for example, in the "ls" command.
 setopt nonomatch
 
+# Avoid showing a confirmation when running rm.
+setopt rmstarsilent
+
 # Case-insensitive tab completion
 autoload -U compinit && compinit && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
