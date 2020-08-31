@@ -45,10 +45,6 @@ alias adbp='code ~/.shell_profiles/adb.profile'
 # Usage: check_if_port_is_reachable example.com 80
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
-alias gp='code ~/.gradle/gradle.properties'
-alias gw='./gradlew'
-alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
-alias ktlint='./gradlew ktlintCheck'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias list_installed_jdks='/usr/libexec/java_home -V'
 alias lns='ln -s $(pwd) ~'
@@ -310,6 +306,30 @@ xml() {
   fi
 
   code ${folder}/${basename}.xml
+}
+
+#
+# Gradle
+#
+
+alias deps='./gradlew app:dependencies' # shows dependencies as a tree.
+alias deps2='./gradlew app:androidDependencies' # shows dependencies as a list.
+alias gp='code ~/.gradle/gradle.properties'
+alias gw='./gradlew'
+alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
+alias ktlint='./gradlew ktlintCheck'
+
+show_modules() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <module>"
+    return
+  fi
+
+  # -q is to suppress non-error logs.
+  # --configuration is to filter only "implementation".
+  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
+  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
 #
