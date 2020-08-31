@@ -46,8 +46,8 @@ alias adbp='code ~/.shell_profiles/adb.profile'
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
 alias gp='code ~/.gradle/gradle.properties'
+alias gw='./gradlew'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
-alias js='code ~/Documents/GitHub/js-playground'
 alias ktlint='./gradlew ktlintCheck'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias list_installed_jdks='/usr/libexec/java_home -V'
