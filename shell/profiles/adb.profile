@@ -72,6 +72,32 @@ adb_show_dependent_modules() {
   ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
+#
+# Animations
+#
+
+adb_show_animation_settings() {
+  adb shell settings get global animator_duration_scale
+  adb shell settings get global transition_animation_scale
+  adb shell settings get global window_animation_scale
+}
+
+adb_disable_animations() {
+  adb shell settings put global animator_duration_scale 0
+  adb shell settings put global transition_animation_scale 0
+  adb shell settings put global window_animation_scale 0
+}
+
+adb_enable_animations() {
+  adb shell settings put global animator_duration_scale 1
+  adb shell settings put global transition_animation_scale 1
+  adb shell settings put global window_animation_scale 1
+}
+
+#
+# Firebase
+#
+
 firebase_log() {
   # Enable DebugView
   adb shell setprop debug.firebase.analytics.app com.example.myapplication
