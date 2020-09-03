@@ -6,9 +6,6 @@ export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
-# Add Flutter to PATH
-[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
-
 #
 # npm
 # 
@@ -332,6 +329,16 @@ show_modules() {
   # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
   ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
+
+#
+# Flutter
+#
+
+# Add Flutter to PATH
+[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
+
+alias f=flutter
+alias fpg='flutter pub get'
 
 #
 # Docker
