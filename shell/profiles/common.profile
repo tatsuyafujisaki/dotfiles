@@ -335,7 +335,8 @@ show_modules() {
 #
 
 # Add Flutter to PATH
-[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
+# ${HOME} is used instead of ~ because ~ is not recognized in PATH.
+[ -d ~/Documents/GitHub/flutter/bin ] && export PATH="${PATH}:${HOME}/Documents/GitHub/flutter/bin"
 
 alias f=flutter
 alias fpg='flutter pub get'
