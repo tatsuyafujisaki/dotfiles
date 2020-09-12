@@ -246,65 +246,14 @@ cleanup() {
   clean
   up
 }
+
 #
 # Helper functions to create a temporary file
 #
-
-json() {
-  folder=~/deleteme
-  [ -e ${folder} ] || mkdir -p ${folder}
-
-  if [ ${#} -ge 1 ]
-  then
-    basename=${1}
-  else
-    basename=$(date +%Y%m%d-%H%M%S)
-  fi
-
-  code ${folder}/${basename}.json
-}
-
-md() {
-  folder=~/deleteme
-  [ -e ${folder} ] || mkdir -p ${folder}
-
-  if [ ${#} -ge 1 ]
-  then
-    basename=${1}
-  else
-    basename=$(date +%Y%m%d-%H%M%S)
-  fi
-
-  code ${folder}/${basename}.md
-}
-
-txt() {
-  folder=~/deleteme
-  [ -e ${folder} ] || mkdir -p ${folder}
-
-  if [ ${#} -ge 1 ]
-  then
-    basename=${1}
-  else
-    basename=$(date +%Y%m%d-%H%M%S)
-  fi
-
-  code ${folder}/${basename}.txt
-}
-
-xml() {
-  folder=~/deleteme
-  [ -e ${folder} ] || mkdir -p ${folder}
-
-  if [ ${#} -ge 1 ]
-  then
-    basename=${1}
-  else
-    basename=$(date +%Y%m%d-%H%M%S)
-  fi
-
-  code ${folder}/${basename}.xml
-}
+alias json='code ~/Desktop/deleteme.json'
+alias md='code ~/Desktop/deleteme.md'
+alias txt='code ~/Desktop/deleteme.txt'
+alias xml='code ~/desktop/deleteme.xml'
 
 #
 # Gradle
