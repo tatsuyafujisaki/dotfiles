@@ -3,19 +3,18 @@
     "editor.tabSize": 2
   },
   "debug.console.historySuggestions" : false,
-  "editor.quickSuggestions": {
-    "other": false
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
   },
-  "editor.find.autoFindInSelection": "always",
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "other": false
+  },
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
