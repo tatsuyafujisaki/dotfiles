@@ -43,8 +43,8 @@ alias adbp='code ~/.shell_profiles/adb.profile'
 # Without -v, neither success or failure is printed.
 alias check_if_port_is_reachable='nc -vz'
 alias g=git
+alias jdks='/usr/libexec/java_home -V'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
-alias list_jdks='/usr/libexec/java_home -V'
 alias lns='ln -s $(pwd) ~'
 alias mybc='bc -lq' # -l is to show decimals. -q is to suppress a welcome message.
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
