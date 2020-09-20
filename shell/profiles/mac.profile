@@ -16,7 +16,7 @@ alias bcd='brew cask doctor'
 
 # List
 alias bl='brew list -1'
-alias bcl='brew cask list -1'
+alias blc='brew list --cask -1'
 
 # Info
 alias bin='brew info'
