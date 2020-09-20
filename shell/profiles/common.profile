@@ -280,11 +280,16 @@ show_modules() {
 }
 
 #
+# Google Cloud SDK
+#
+[ -f ~/google-cloud-sdk/path.zsh.inc ] && source ~/google-cloud-sdk/path.zsh.inc # adds Google Cloud SDK to PATH.
+[ -f ~/google-cloud-sdk/completion.zsh.inc ] && source ~/google-cloud-sdk/completion.zsh.inc # enables shell command completion for gcloud.
+
+#
 # Flutter
 #
 
-# Add Flutter to PATH
-# ${HOME} is used instead of ~ because ~ is not recognized in PATH.
+# Add Flutter to PATH by using ${HOME} rather than ~ because the latter is not resolved in PATH.
 [ -d ~/Documents/GitHub/flutter/bin ] && export PATH="${PATH}:${HOME}/Documents/GitHub/flutter/bin"
 
 alias f=flutter
