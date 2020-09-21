@@ -24,14 +24,14 @@ alias ..='cd ..'
 alias d='cd ~/Desktop'
 alias gh='cd ~/Documents/GitHub'
 
-mcd() {
+mkdircd() {
   if [ ${#} -ne 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <directory>"
     return
   fi
 
-  mkdir ${1} && cd ${1}
+  mkdir -p ${1} && cd ${1}
 }
 
 #
