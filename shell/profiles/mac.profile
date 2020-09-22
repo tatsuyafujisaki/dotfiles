@@ -69,8 +69,8 @@ up() {
   # Upgrade Node.js.
   sudo n latest
 
-  # Remove all the downloaded versions of Node.js except the installed version.
-  sudo n cache
+  # Remove all the downloaded versions of Node.js except the installed one.
+  sudo n prune
   
   # Upgrade npm.
   npm install npm@latest -g
