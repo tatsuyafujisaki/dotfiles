@@ -35,9 +35,9 @@ alias br='brew reinstall'
 alias bcr='brew cask reinstall'
 
 # Add GNU tools, installed by Homebrew, to PATH.
-export PATH="/usr/local/opt/binutils/bin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+[ -d /usr/local/opt/binutils/bin ] && export PATH="/usr/local/opt/binutils/bin:${PATH}"
+[ -d /usr/local/opt/gnu-sed/libexec/gnubin ] && export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
+[ -d /usr/local/opt/grep/libexec/gnubin ] && export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
 
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
@@ -57,19 +57,20 @@ l() {
 }
 
 up() {
-  brew upgrade
-  brew upgrade --cask --greedy
+  # Update both formulae and casks.
+  # --greedy applies only to casks.
+  # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
+  brew upgrade --greedy
 
   # "brew upgrade" internally runs "brew cleanup" if "brew cleanup" has not been run in 30 days, but it is advisable to run "brew cleanup" as often as possible.
   # "brew cleanup" also delete cask caches.
   brew cleanup
-
-  # Reinstall node because "sudo npm install -g npm" in the next step fails without reinstalling node.
-  # sudo rm -rf /usr/local/lib/node_modules/npm
-  # brew reinstall node
-
-  # Upgrade npm in case node installed from Homebrew does not contain the latest npm.
-  sudo npm install npm@latest -g
+  
+  # Upgrade npm
+  npm install npm@latest -g
+  
+  # Upgrade globally installed packages
+  npm update -g
 }
 
 # Update shell resources
