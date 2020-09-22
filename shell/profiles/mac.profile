@@ -73,7 +73,7 @@ up() {
   sudo n prune
   
   # Upgrade npm.
-  npm install npm@latest -g
+  sudo npm install npm@latest -g
   
   # Upgrade globally installed packages.
   npm update -g
