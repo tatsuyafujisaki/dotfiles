@@ -289,8 +289,10 @@ show_modules() {
 # Flutter
 #
 
-# Add Flutter to PATH by using ${HOME} rather than ~ because the latter is not resolved in PATH.
-[ -d ~/Documents/GitHub/flutter/bin ] && export PATH="${PATH}:${HOME}/Documents/GitHub/flutter/bin"
+# Add Flutter to PATH.
+# Note that Zsh does not expand the tilde(~) if it is in double quotes.
+# http://zsh.sourceforge.net/Guide/zshguide05.html
+[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
 
 alias f=flutter
 alias fpg='flutter pub get'
