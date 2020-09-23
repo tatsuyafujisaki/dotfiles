@@ -46,6 +46,7 @@ alias g=git
 alias jdks='/usr/libexec/java_home -V'
 alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
+alias macp='code ~/.shell_profiles/mac.profile'
 alias mybc='bc -lq' # -l is to show decimals. -q is to suppress a welcome message.
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias myobjdump='objdump -d -M intel'
