@@ -1,4 +1,6 @@
 # Add adb to PATH
+# Note that Zsh does not expand the tilde(~) if it is in double-quotes.
+# http://zsh.sourceforge.net/Guide/zshguide05.html
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
@@ -16,7 +18,7 @@ alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route |
 adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <uri> [package]"
+    echo "Usage: $funcstack[1] <uri> [package]"
     return
   fi
 
@@ -36,7 +38,7 @@ adb_deeplink() {
 adb_pull() {
   if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <path_under_scard_on_android> ."
+    echo "Usage: $funcstack[1] <path_under_scard_on_android> ."
     return
   fi
 
@@ -46,7 +48,7 @@ adb_pull() {
 adb_push() {
   if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <path_on_mac>"
+    echo "Usage: $funcstack[1] <path_on_mac>"
     return
   fi
 
@@ -56,6 +58,16 @@ adb_push() {
 adb_screenshot() {
   filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png
   adb exec-out screencap -p > ${filepath} && open ${filepath}
+}
+
+adb_show_activity_count() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: $funcstack[1] <module>"
+    return
+  fi
+
+  adb shell dumpsys meminfo ${1} | grep Activities
 }
 
 # Show what modules the given module depends on.
@@ -98,9 +110,15 @@ adb_enable_animations() {
 # Firebase
 #
 
-firebase_log() {
+adb_enable_firebase_log() {
+  if [ ${#} -ne 1 ]
+  then
+    echo "Usage: $funcstack[1] <package>"
+    return
+  fi
+
   # Enable DebugView
-  adb shell setprop debug.firebase.analytics.app com.example.myapplication
+  adb shell setprop debug.firebase.analytics.app ${1}
 
   # Enable verbose logging
   adb shell setprop log.tag.FA VERBOSE
