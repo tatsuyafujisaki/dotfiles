@@ -1,4 +1,5 @@
 set autoindent
+# Install nano using Homebrew because the preinstalled nano on mac OS is 2.0.6, which is too outdated to support "set constantshow".
 set constantshow
 set morespace
 set smooth
