@@ -1,13 +1,12 @@
 # How to set ANDROID_SDK_ROOT
+Try defining `ANDROID_SDK_ROOT` if running `./gradlew assembleAndroidTest` to create `app-debug-androidTest.apk` throws an error.
 ```shell
 launchctl setenv ANDROID_SDK_ROOT ~/Library/Android/sdk
 ```
 
-Trying to run `./gradlew assembleAndroidTest` to create `app-debug-androidTest.apk` without defining ANDROID_SDK_ROOT throws an error.
-
 # Create `.hushlogin`
 ```shell
-# Prevents Terminal from printing "Last login" when opening bash.
+# Prevents Terminal from printing "Last login" when opening bash/zsh.
 touch ~/.hushlogin
 ```
 
