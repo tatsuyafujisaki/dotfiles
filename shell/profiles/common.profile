@@ -229,19 +229,6 @@ rename_branch() {
   git push -u origin ${2} # creates the new branch on remote and resets the upstream branch to it.
 }
 
-show_modules() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <module>"
-    return
-  fi
-
-  # -q is to suppress non-error logs.
-  # --configuration is to filter only "implementation".
-  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
-  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
-}
-
 # Must be defined after both clean and up are defined.
 cleanup() {
   clean
@@ -260,12 +247,16 @@ alias xml='code ~/desktop/deleteme.xml'
 # Gradle
 #
 
-alias deps='./gradlew app:dependencies' # shows dependencies as a tree.
-alias deps2='./gradlew app:androidDependencies' # shows dependencies as a list.
 alias gp='code ~/.gradle/gradle.properties'
 alias gw='./gradlew'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
 alias ktlint='./gradlew ktlintCheck'
+
+# Show dependencies, as a tree, declared in project ":app".
+deps() {
+  local tempflie=$(mktemp)
+  ./gradlew app:dependencies > $tempflie && code $tempflie
+}
 
 show_modules() {
   if [ ${#} -ne 1 ]
