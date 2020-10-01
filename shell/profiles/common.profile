@@ -252,8 +252,14 @@ alias gw='./gradlew'
 alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
 alias ktlint='./gradlew ktlintCheck'
 
-# Show dependencies, as a tree, declared in project ":app".
+# Show dependencies, as a tree.
 deps() {
+  local tempflie=$(mktemp)
+  gradle dependencies > $tempflie && code $tempflie
+}
+
+# Show dependencies, as a tree, declared in the project "app".
+android_deps() {
   local tempflie=$(mktemp)
   ./gradlew app:dependencies > $tempflie && code $tempflie
 }
