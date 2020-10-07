@@ -61,9 +61,8 @@
     mt = mergetool
     pa = pull --all --autostash -r
     pf = push -f
+    pop = stash pop
     prum = pull --rebase upstream master # for a forked branch.
-    pt = push --tags
-    puo = push -u origin
     ra = rebase --abort
     rc = rebase --continue
     rd = rebase develop
