@@ -21,8 +21,10 @@ alias npmu='npm uninstall --save-dev'
 #
 
 alias ..='cd ..'
+alias ap='Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias gh='cd ~/Documents/GitHub'
+alias kp='Documents/GitHub/kotlin-playground'
 
 mkdircd() {
   if [ ${#} -ne 1 ]
