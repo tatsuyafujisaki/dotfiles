@@ -52,7 +52,7 @@
     cp = cherry-pick
     csol = config --show-origin -l
     d = diff
-    deletelocal = !git branch | grep -v master | grep -v develop | xargs git branch -D
+    dl = !git branch | grep -v master | grep -v develop | xargs git branch -D # "dl" means "delete local branches".
     dns = diff --name-status
     dsd = diff --stat develop
     dt = difftool
