@@ -242,6 +242,7 @@ cleanup() {
 #
 alias json='code ~/Desktop/deleteme.json'
 alias md='code ~/Desktop/deleteme.md'
+alias swif='code ~/Desktop/deleteme.swift'
 alias txt='code ~/Desktop/deleteme.txt'
 alias xml='code ~/desktop/deleteme.xml'
 
