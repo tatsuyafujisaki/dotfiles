@@ -1,7 +1,8 @@
 set autoindent
-# Install nano using Homebrew because the preinstalled nano on mac OS is 2.0.6, which is too outdated to support "set constantshow".
-set constantshow
 set morespace
 set smooth
 set tabsize 2
 set tabstospaces
+
+# Mac's nano is too old to support the following.
+# set constantshow
