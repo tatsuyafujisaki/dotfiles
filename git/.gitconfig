@@ -10,6 +10,7 @@
     helper = osxkeychain # sets "osxkeychain" on Mac. Set "wincred" on Windows, instead.
 [fetch]
     prune = true
+    pruneTags = true
     recurseSubmodules = true
 [http]
     sslVerify = false
@@ -51,20 +52,18 @@
     co = checkout
     cp = cherry-pick
     csol = config --show-origin -l
-    d = diff
     dl = !git branch | grep -v master | grep -v develop | xargs git branch -D # "dl" means "delete local branches".
+    dno = diff --name-only
     dns = diff --name-status
     dsd = diff --stat develop
     dt = difftool
     fd = fetch origin develop:develop
     l = log --graph --decorate --oneline
     lp = log -p --
-    m = merge --no-edit --squash
     mt = mergetool
-    pa = pull --all --autostash -r
+    pa = pull --all --autostash --rebase --recurse-submodules
     pf = push -f
     pop = stash pop
-    prum = pull --rebase upstream master # for a forked branch.
     ra = rebase --abort
     rc = rebase --continue
     rd = !git fetch origin develop:develop && git rebase develop
@@ -77,5 +76,10 @@
     st = stash -u # -u includes untracked files.
     sw = switch
     swc = switch -c
-    up = !git gc --auto && git clean -d -f && git restore --staged --worktree . && git pull --all --autostash -r --recurse-submodules && git fetch -p -t
+    # git clean:
+    # -d is to delete untracked directories too.
+    # git restore:
+    # --staged is to undo staged changes.
+    # --worktree is to undo unstaged changes.
+    up = !git clean -d --force && git restore --staged --worktree . && git pull --all --autostash --rebase --recurse-submodules && git fetch --prune --prune-tags
     upfork = !git switch master && git rebase upstream/master
