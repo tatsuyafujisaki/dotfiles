@@ -61,7 +61,6 @@
     l = log --graph --decorate --oneline
     lp = log -p --
     mt = mergetool
-    pa = pull --all --autostash --rebase --recurse-submodules
     pf = push -f
     pop = stash pop
     ra = rebase --abort
