@@ -69,7 +69,7 @@
     rgu = remote get-url # is normally followed by origin or upstream, which is an original repository you fork from.
     ri = rebase -i
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
-    sb = show-branch
+    sc = stach clear
     sno = show --name-only
     sns = show --name-status
     st = stash -u # -u includes untracked files.
