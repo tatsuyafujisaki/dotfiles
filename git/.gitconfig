@@ -59,7 +59,7 @@
     dt = difftool
     fd = fetch origin develop:develop
     l = log --graph --decorate --oneline
-    lp = log --patch --
+    lp = log --patch -- # takes <file> and shows the change history of the file.
     md = !git fetch origin develop:develop && git merge develop
     mt = mergetool
     pf = push --force
