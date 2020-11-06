@@ -125,3 +125,9 @@ adb_enable_firebase_log() {
   adb shell setprop log.tag.FA-SVC VERBOSE
   adb logcat -v time -s FA FA-SVC
 }
+
+#
+# The following is unrelated to adb but still related to Android development.
+#
+
+alias launch_emulator='~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) -dns-server 8.8.8.8'
