@@ -130,4 +130,4 @@ adb_enable_firebase_log() {
 # The following is unrelated to adb but still related to Android development.
 #
 
-alias launch_emulator='~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) -dns-server 8.8.8.8'
+alias launch_emulator='~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) -dns-server 8.8.4.4,8.8.8.8'
