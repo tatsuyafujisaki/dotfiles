@@ -295,6 +295,7 @@ xcvideo() {
 #
 # Google Cloud SDK
 #
+
 [ -f ~/google-cloud-sdk/path.zsh.inc ] && source ~/google-cloud-sdk/path.zsh.inc # adds Google Cloud SDK to PATH.
 [ -f ~/google-cloud-sdk/completion.zsh.inc ] && source ~/google-cloud-sdk/completion.zsh.inc # enables shell command completion for gcloud.
 
