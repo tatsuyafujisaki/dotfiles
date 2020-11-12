@@ -57,7 +57,7 @@ alias myls='ls -dFGhlv'
 
 # sips
 alias wh='sips -g pixelWidth -g pixelHeight' # shows the width and the height of an image.
-alias w1024=sips --resampleWidth 1024' # resizes the width of an image.
+alias w1024='sips --resampleWidth 1024' # resizes the width of an image.
 
 l() {
   clear
