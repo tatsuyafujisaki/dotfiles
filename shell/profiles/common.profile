@@ -104,14 +104,14 @@ clean() {
   sudo rm -fr Downloads Movies Music Pictures
 
   # Delete unnecessary directories
-  directories=(.bash_sessions .dvdcss .emulator_console_auth_toke .gradle/caches .gradle/daemon .gradle/native .gradle/wrapper .lemminx .local .m2 .oracle_jre_usage .Trash)
+  directories=(.bash_sessions .dvdcss .gradle/caches .gradle/daemon .gradle/native .gradle/wrapper .lemminx .local .m2 .oracle_jre_usage .Trash)
   for directory in "${directories[@]}"
   do
     rm -fr ${directory}
   done
 
   # Delete unnecessary files
-  files=(.bash_history .CFUserTextEncoding .emulator_console_auth_token .viminfo .zsh_history)
+  files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "${files[@]}"
   do
     rm -f ${file}
