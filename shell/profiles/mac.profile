@@ -55,7 +55,9 @@ alias bcr='brew cask reinstall'
 # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
 alias myls='ls -dFGhlv'
 
-alias p='code ~/.shell_profiles/common.profile'
+# sips
+alias wh='sips -g pixelWidth -g pixelHeight' # shows the width and the height of an image.
+alias w1024=sips --resampleWidth 1024' # resizes the width of an image.
 
 l() {
   clear
