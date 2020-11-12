@@ -57,6 +57,7 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
+alias p='code ~/.shell_profiles/common.profile'
 # Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
 # "-z" is port scanning.
