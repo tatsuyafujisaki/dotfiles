@@ -63,18 +63,14 @@
     md = !git fetch origin develop:develop && git merge develop
     mt = mergetool
     pf = push --force
-    pop = stash pop
     ra = rebase --abort
     rc = rebase --continue
     rd = !git fetch origin develop:develop && git rebase develop
     rgu = remote get-url # is normally followed by origin or upstream, which is an original repository you fork from.
     ri = rebase --interactive
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
-    sc = stach clear
-    sl = stash list
     sno = show --name-only
     sns = show --name-status
-    st = stash --include-untracked
     sw = switch
     swc = switch --create
     # git clean:
@@ -84,3 +80,11 @@
     # --worktree is to undo unstaged changes.
     up = !git clean -d --force && git restore --staged --worktree . && git pull --all --autostash --rebase --recurse-submodules && git fetch --prune --prune-tags
     upfork = !git switch master && git rebase upstream/master
+    # stash-related
+    pop = stash pop
+    sa = stash apply
+    sc = stash clear
+    sd = stash drop
+    sl = stash list
+    ss = stash show
+    st = stash --include-untracked --message
