@@ -34,6 +34,7 @@
     cmd = code -w $MERGED
 [alias]
     a = add --all
+    agp = stash push --include-untracked --message agp -- build.gradle
     ar = archive -o output.zip HEAD
     b = branch --show-current # has been available since 2.22.
     ba = branch --all
