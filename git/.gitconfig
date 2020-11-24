@@ -89,4 +89,4 @@
     sd = stash drop
     sl = stash list
     ss = stash show
-    st = stash push --include-untracked --message
+    st = stash push --include-untracked
