@@ -37,33 +37,36 @@ mkdircd() {
 }
 
 #
-# Misc aliases
+# Visual Studio Code-related
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
-# Usage: check_if_port_is_reachable example.com 80
-# Without -v, neither success or failure is printed.
-alias check_if_port_is_reachable='nc -vz'
+alias macp='code ~/.shell_profiles/mac.profile'
+alias p='code ~/.shell_profiles/common.profile'
+alias pp='code ~/.shell_profiles/private.profile'
+
+#
+# Misc aliases
+#
+
+alias cur='curl -O'
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
-alias l1='ls -1' # Show file names vertically. Note that the option is 1(one), not l(L).
+alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
-alias macp='code ~/.shell_profiles/mac.profile'
 alias mp4_to_gif='ffmpeg -i screencast.mp4 -vf scale=320:-1 screencast.gif' # 320 is width.
-alias mybc='bc -lq' # -l is to show decimals. -q is to suppress a welcome message.
+alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias myobjdump='objdump -d -M intel'
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
 alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
 alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
-alias p='code ~/.shell_profiles/common.profile'
 # Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
-# "-z" is port scanning.
+# -z is port scanning.
 # "-w 1" is to timeout after a second.
 alias port_scan='nc -vzw 1'
-alias pp='code ~/.shell_profiles/private.profile'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -270,6 +273,7 @@ cleanup() {
 #
 # Helper functions to create a temporary file
 #
+
 alias json='code ~/Desktop/deleteme.json'
 alias md='code ~/Desktop/deleteme.md'
 alias swif='code ~/Desktop/deleteme.swift'
