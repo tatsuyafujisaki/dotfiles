@@ -140,6 +140,20 @@ clean_android_or_intellij_project() {
   done
 }
 
+# cURL to a specific directory
+curlo() {
+  if [ ${#} -ne 2 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <directory> <url>"
+    return
+  fi
+
+  mkdir -p ${1}
+
+  # Use a subshell to restore the current directory in the end.
+  (cd ${1} && curl -O ${2})
+}
+
 decode_base64() {
   if [ ${#} -ne 2 ]
   then
