@@ -105,12 +105,15 @@ clean() {
   sudo rm -fr Downloads Movies Music Pictures
 
   # Delete unnecessary directories
-  directories=(.bash_sessions .dvdcss .gradle/caches .gradle/daemon .gradle/native .gradle/wrapper .lemminx .local .m2 .oracle_jre_usage .Trash)
+  directories=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash)
   for directory in "${directories[@]}"
   do
     rm -fr ${directory}
   done
 
+  mkdir .gradle
+  curl -o ~/.gradle/gradle.properties https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle.properties
+  
   # Delete unnecessary files
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "${files[@]}"
