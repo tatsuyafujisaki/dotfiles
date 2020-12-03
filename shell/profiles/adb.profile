@@ -85,28 +85,6 @@ adb_show_dependent_modules() {
 }
 
 #
-# Animations
-#
-
-adb_show_animation_settings() {
-  adb shell settings get global animator_duration_scale
-  adb shell settings get global transition_animation_scale
-  adb shell settings get global window_animation_scale
-}
-
-adb_disable_animations() {
-  adb shell settings put global animator_duration_scale 0
-  adb shell settings put global transition_animation_scale 0
-  adb shell settings put global window_animation_scale 0
-}
-
-adb_enable_animations() {
-  adb shell settings put global animator_duration_scale 1
-  adb shell settings put global transition_animation_scale 1
-  adb shell settings put global window_animation_scale 1
-}
-
-#
 # Firebase
 #
 
@@ -117,10 +95,10 @@ adb_enable_firebase_log() {
     return
   fi
 
-  # Enable DebugView
+  # Enable DebugView.
   adb shell setprop debug.firebase.analytics.app ${1}
 
-  # Enable verbose logging
+  # Enable verbose logging.
   adb shell setprop log.tag.FA VERBOSE
   adb shell setprop log.tag.FA-SVC VERBOSE
   adb logcat -v time -s FA FA-SVC
@@ -130,4 +108,14 @@ adb_enable_firebase_log() {
 # The following is unrelated to adb but still related to Android development.
 #
 
-alias launch_emulator='~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) -dns-server 1.1.1.1,8.8.8.8,8.8.4.4'
+launch_emulator() {
+  # Kill a running emumulator.
+  adb -s emulator-5554 emu kill
+
+  # "&!" is to keep an emulator running even after Terminal is closed.
+  # http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
+  ~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &|
+
+  # Close Terminal.
+  exit
+}
