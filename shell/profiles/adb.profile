@@ -2,6 +2,7 @@
 # Note that Zsh does not expand the tilde(~) if it is in double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
+[ -d ~/Library/Android/sdk/tools/bin ] && export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
