@@ -112,10 +112,10 @@ launch_emulator() {
   # Kill a running emumulator.
   adb -s emulator-5554 emu kill
 
-  # "&!" is to keep an emulator running even after Terminal is closed.
+  # "&!" is to keep an emulator running even after Zsh is closed.
   # http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
   ~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &|
 
-  # Close Terminal.
+  # Close Zsh.
   exit
 }
