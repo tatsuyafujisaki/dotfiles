@@ -217,14 +217,14 @@ myfind() {
   find . -iname "*${1}*" -print 2> /dev/null
 }
 
-mygradlew() {
+mygradle() {
   if [ ${#} -ne 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <task>"
     return
   fi
   
-  ./gradlew ${1} --build-cache --parallel --quiet --warning-mode=none -Dorg.gradle.jvmargs=-Xmx2g
+  gradle ${1} --build-cache --parallel --quiet --warning-mode=none -Dorg.gradle.jvmargs=-Xmx2g
 }
 
 mysed() {
