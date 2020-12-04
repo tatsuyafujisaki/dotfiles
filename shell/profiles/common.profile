@@ -217,7 +217,7 @@ myfind() {
   find . -iname "*${1}*" -print 2> /dev/null
 }
 
-mygradle() {
+mygradlew() {
   if [ ${#} -ne 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <task>"
