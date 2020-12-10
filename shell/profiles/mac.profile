@@ -79,15 +79,12 @@ up() {
   # "brew cleanup" also delete cask caches.
   brew cleanup
   
-  # Upgrade Node.js.
-  sudo n latest
-
-  # Remove all the downloaded versions of Node.js except the installed one.
-  sudo n prune
-  
   # Upgrade npm.
-  sudo npm install npm@latest -g
-  
+  npm install npm -g --force
+
+  # Upgrade node.
+  npm install node -g --force
+
   # Upgrade globally installed packages.
   npm update -g
 }
