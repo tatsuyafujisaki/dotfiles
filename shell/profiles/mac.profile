@@ -80,13 +80,13 @@ up() {
   brew cleanup
   
   # Upgrade npm.
-  npm install npm -g --force
+  npm install npm --global --force
 
   # Upgrade node.
-  npm install node -g --force
+  npm install node --global --force
 
   # Upgrade globally installed packages.
-  npm update -g
+  npm update --global
 }
 
 # Update shell resources
