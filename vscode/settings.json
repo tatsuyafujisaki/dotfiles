@@ -36,7 +36,6 @@
   "[html]": {
     "editor.tabSize": 2
   },
-  "http.proxyStrictSSL": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
   "search.smartCase": true,
