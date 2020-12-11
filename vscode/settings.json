@@ -33,6 +33,8 @@
   "git.autofetch": true,
   "git.autoStash": true,
   "git.confirmSync": false,
+  "git.fetchOnPull": true,
+  "html.format.endWithNewline": false,
   "html.format.preserveNewLines": false,
   "[html]": {
     "editor.tabSize": 2
