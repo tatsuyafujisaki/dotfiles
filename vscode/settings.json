@@ -2,7 +2,7 @@
   "[css]": {
     "editor.tabSize": 2
   },
-  "debug.console.historySuggestions" : false,
+  "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
@@ -38,6 +38,7 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
+  "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.nativeTabs": true,
