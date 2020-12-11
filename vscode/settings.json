@@ -31,6 +31,7 @@
   "files.hotExit": "off",
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
+  "git.autoStash": true,
   "git.confirmSync": false,
   "html.format.preserveNewLines": false,
   "[html]": {
