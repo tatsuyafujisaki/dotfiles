@@ -187,30 +187,20 @@ exclude_column() {
   cut -f ${1} --complement ${2}
 }
 
-find_file() {
+mydelete() {
   if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <file>"
+    echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
     return
   fi
 
-  find . -type f -iname "*${1}*" -print 2> /dev/null
-}
-
-find_directory() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <directory>"
-    return
-  fi
-
-  find  -type d -iname "*${1}*" -print 2> /dev/null
+  find . -iname "*${1}*" -print -exec rm -rf {} + 2> /dev/null
 }
 
 myfind() {
   if [ ${#} -ne 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <file>"
+    echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
     return
   fi
 
