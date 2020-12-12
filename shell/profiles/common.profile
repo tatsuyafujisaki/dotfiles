@@ -11,7 +11,7 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 # 
 
 alias npmi='npm install --save-dev'
-alias npmin='npm init -y'
+alias npmin='npm init --yes'
 alias npmls='npm ls --depth 0'
 alias npmlsg='npm ls --depth 0 -g'
 alias npmu='npm uninstall --save-dev'
