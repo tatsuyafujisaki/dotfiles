@@ -13,7 +13,6 @@
     pruneTags = true
     recurseSubmodules = true
 [http]
-    sslVerify = false
     emptyAuth = true # prevents "remote: HTTP Basic: Accesss denied" when cloning a repository. https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
 [pull]
     rebase = true
@@ -77,6 +76,7 @@
     sns = show --name-status
     sw = switch
     swc = switch --create
+    swd = switch develop
     # git clean:
     # -d is to delete untracked directories too.
     # git restore:
