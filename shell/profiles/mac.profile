@@ -19,31 +19,13 @@ javahome() {
 # Homebrew
 #
 
-alias bs='brew search' # supports both formulae and casks
-
-# Doctor
 alias bd='brew doctor'
-alias bcd='brew cask doctor'
-
-# List
-alias bl='brew list -1'
-alias blc='brew list --cask -1'
-
-# Info
-alias bin='brew info'
-alias bcin='brew cask info'
-
-# Install
 alias bi='brew install'
-alias bci='brew cask install'
-
-# Uninstall
-alias bu='brew uninstall'
-alias bz='brew cask zap' # to uninstall the given cask and delete all files associated with it.
-
-# Reinstall
+alias bin='brew info'
+alias bl='brew list -1'
 alias br='brew reinstall'
-alias bcr='brew cask reinstall'
+alias bs='brew search'
+alias bu='brew uninstall --zap'
 
 # Add GNU tools, installed by Homebrew, to PATH.
 [ -d /usr/local/opt/binutils/bin ] && export PATH="/usr/local/opt/binutils/bin:${PATH}"
