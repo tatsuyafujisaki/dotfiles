@@ -60,12 +60,6 @@ up() {
   # "brew upgrade" internally runs "brew cleanup" if "brew cleanup" has not been run in 30 days, but it is advisable to run "brew cleanup" as often as possible.
   # "brew cleanup" also delete cask caches.
   brew cleanup
-  
-  # Upgrade npm.
-  npm install npm --global --force
-
-  # Upgrade node.
-  npm install node --global --force
 
   # Upgrade globally installed packages.
   npm update --global
