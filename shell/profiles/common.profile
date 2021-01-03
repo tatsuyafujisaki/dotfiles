@@ -10,11 +10,11 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 # npm
 # 
 
-alias npmi='npm install --save-dev'
+alias npmig='npm install --global'
 alias npmin='npm init --yes'
 alias npmls='npm ls --depth 0'
-alias npmlsg='npm ls --depth 0 -g'
-alias npmu='npm uninstall --save-dev'
+alias npmlsg='npm ls --depth 0 --global'
+alias npmug='npm uninstall --global'
 
 #
 # cd-related
