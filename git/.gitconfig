@@ -41,10 +41,8 @@
     bl = blame -L # <line-number> <file>
     bm = branch --move
     ca = commit --all -m
-    caam = commit -a --amend -m # stages all changes and replaces the previous commit using the new commit message.
-    caan = commit -a --amend --no-edit # stages all changes and replaces the previous commit reusing the existing commit message.
-    cam = commit --amend -m # replaces the previous commit using the new commit message.
-    can = commit --amend --no-edit # replaces the previous commit reusing the existing commit message.
+    caam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
+    caan = commit --all --amend --no-edit # stages all changes and replaces the previous commit reusing the existing commit message.
     cb = clone --branch
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
