@@ -109,6 +109,10 @@ adb_enable_firebase_log() {
 # The following is unrelated to adb but still related to Android development.
 #
 
+kill_emulator() {
+  adb -s emulator-5554 emu kill
+}
+
 launch_emulator() {
   # Kill a running emumulator.
   adb -s emulator-5554 emu kill
