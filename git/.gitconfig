@@ -52,6 +52,7 @@
     csol = config --show-origin --list
     dl = !git branch | grep -v master | grep -v develop | xargs git branch -D # -D is a shortcut for "--delete --force". "dl" means "delete local branches".
     dno = diff --name-only
+    dnoa = !git diff --name-only HEAD~ | awk -F/ '{print $NF}' | sort    
     dns = diff --name-status
     dsd = diff --stat develop
     dt = difftool
