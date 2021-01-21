@@ -1,5 +1,5 @@
-# How to set ANDROID_SDK_ROOT
-Try defining `ANDROID_SDK_ROOT` if running `./gradlew assembleAndroidTest` to create `app-debug-androidTest.apk` throws an error.
+# How to set `ANDROID_SDK_ROOT`
+If running `./gradlew assembleAndroidTest` to create `app-debug-androidTest.apk` throws an error, try defining `ANDROID_SDK_ROOT`.
 ```shell
 launchctl setenv ANDROID_SDK_ROOT ~/Library/Android/sdk
 ```
