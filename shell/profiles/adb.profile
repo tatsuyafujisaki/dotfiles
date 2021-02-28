@@ -13,7 +13,9 @@ alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
 alias adbi='adb install -r' # -r is to replace an existing app.
+alias adbpullvideo='(cd ~/Desktop && adb pull /sdcard/video.mp4 && open video.mp4)'
 alias adbu='adb uninstall'
+alias adbv='adb screenrecord /sdcard/video.mp4'
 alias adbw="adb kill-server && adb tcpip 5555 && sleep 5 && adb shell ip route | awk '{print \$9}' | xargs adb connect"
 
 adb_deeplink() {
@@ -36,39 +38,9 @@ adb_deeplink() {
   fi
 }
 
-adb_pull() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <path_under_scard_on_android> ."
-    return
-  fi
-
-  adb pull /sdcard/${1} .
-}
-
-adb_push() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <path_on_mac>"
-    return
-  fi
-
-  adb push ${1} /sdcard
-}
-
 adb_screenshot() {
   filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png
   adb exec-out screencap -p > ${filepath} && open ${filepath}
-}
-
-adb_show_activity_count() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <module>"
-    return
-  fi
-
-  adb shell dumpsys meminfo ${1} | grep Activities
 }
 
 # Show what modules the given module depends on.
