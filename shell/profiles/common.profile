@@ -85,6 +85,19 @@ c() {
   fi
 }
 
+clean_chrome() {
+  pushd ~ > /dev/null # avoids showing the pushed directory stack
+
+  cd ~/Library/Application\ Support/Google/Chrome/Default
+
+  rm -fr sessions
+  rm -f *.bak
+  rm -f *.old
+  rm -f *-journal
+
+  popd > /dev/null # avoids showing the pushed directory stack
+}
+
 clean() {
   # Delete .DS_Store
   sudo find / -type f -iname .DS_Store -delete 2> /dev/null
