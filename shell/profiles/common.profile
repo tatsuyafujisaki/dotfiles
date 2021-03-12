@@ -93,8 +93,9 @@ clean() {
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
   # Delete directories for Android development.
-  rm -fr ~/.android/build-caches
-  rm -fr ~/.android/caches
+  rm -fr ~/.android/breakpad
+  rm -fr ~/.android/build-cache
+  rm -fr ~/.android/cache
   rm -fr ~/Library/Android/sdk/.downloadIntermediates
   rm -fr ~/Library/Android/sdk/.temp
 
