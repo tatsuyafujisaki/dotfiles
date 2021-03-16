@@ -59,8 +59,7 @@
     fd = fetch origin develop:develop
     l = log --graph --decorate --oneline
     lp = log --patch -- # takes <file> and shows the change history of the file.
-    m = merge --no-edit --squash # Note: With --squash, --commit is not allowed, and will fail. https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-squash
-    md = !git fetch origin develop:develop && git merge --no-edit develop
+    m = merge --no-edit
     mt = mergetool
     pf = push --force
     ra = rebase --abort
