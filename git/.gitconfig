@@ -67,6 +67,7 @@
     rd = !git fetch origin develop:develop && git rebase develop
     rgu = remote get-url # is normally followed by origin or upstream, which is an original repository you fork from.
     ri = rebase --interactive
+    rir = rebase --interactive --root
     rs = reset HEAD~
     rsk = rebase --skip
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
