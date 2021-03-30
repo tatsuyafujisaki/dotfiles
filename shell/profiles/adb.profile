@@ -6,9 +6,6 @@
 
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
-alias adb_plug='adb shell dumpsys battery reset'
-alias adb_stop='adb shell am force-stop ' # Usage: adb_stop <package>
-alias adb_unplug='adb shell dumpsys battery unplug'
 alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
