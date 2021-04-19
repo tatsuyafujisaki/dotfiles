@@ -228,7 +228,7 @@ mygradlew() {
     return
   fi
   
-  gradle ${1} --parallel --quiet --warning-mode=none -Dorg.gradle.jvmargs=-Xmx2g
+  gradle ${1} --parallel --quiet --warning-mode=none
 }
 
 mysed() {
