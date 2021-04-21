@@ -228,7 +228,7 @@ mygradlew() {
     return
   fi
   
-  gradle ${1} --parallel --quiet --warning-mode=none
+  gradle ${1} --parallel --quiet
 }
 
 mysed() {
