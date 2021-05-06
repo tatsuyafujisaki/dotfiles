@@ -1,7 +1,4 @@
 {
-  "[css]": {
-    "editor.tabSize": 2
-  },
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
@@ -34,9 +31,6 @@
   "git.fetchOnPull": true,
   "html.format.endWithNewline": false,
   "html.format.preserveNewLines": false,
-  "[html]": {
-    "editor.tabSize": 2
-  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
