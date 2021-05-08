@@ -1,8 +1,0 @@
-set autoindent
-set morespace
-set smooth
-set tabsize 2
-set tabstospaces
-
-# Mac's nano is too old to support the following.
-# set constantshow
