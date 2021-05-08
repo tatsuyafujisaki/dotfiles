@@ -289,8 +289,8 @@ alias xml='code ~/desktop/deleteme.xml'
 #
 
 alias gp='code ~/.gradle/gradle.properties'
-alias gw='./gradlew'
-alias gwp='(cd gradle/wrapper && curl -O https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle/wrapper/gradle-wrapper.properties)'
+alias gw='gradle wrapper --gradle-version 7.0 --distribution-type all'
+alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 alias ktlint='./gradlew ktlintCheck'
 
 # Show the root project's dependencies, as a tree.
@@ -305,17 +305,8 @@ app_deps() {
   ./gradlew app:dependencies > $temp && code $temp
 }
 
-show_modules() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <module>"
-    return
-  fi
-
-  # -q is to suppress non-error logs.
-  # --configuration is to filter only "implementation".
-  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
-  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
+projects_requried_by_app() {
+  ./gradlew -q app:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
 #
