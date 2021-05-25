@@ -43,7 +43,6 @@
     ca = commit --all -m
     cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
     can = commit --all --amend --no-edit # stages all changes and replaces the previous commit reusing the existing commit message.
-    cb = clone --branch
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
     cm = commit -m
