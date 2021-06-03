@@ -35,7 +35,7 @@
     a = !pbpaste | git apply
     agp = stash push --include-untracked --message agp -- build.gradle
     ar = archive -o output.zip HEAD
-    b = branch --show-current # has been available since 2.22.
+    b = branch --show-current # available since 2.22.
     ba = branch --all
     bd = branch -D # -D is a shortcut for "--delete --force".
     bl = blame -L # <line-number> <file>
