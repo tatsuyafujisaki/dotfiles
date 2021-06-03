@@ -32,7 +32,7 @@
 [mergetool "vscode"]
     cmd = code -w $MERGED
 [alias]
-    a = add --all
+    a = !pbpaste | git apply
     agp = stash push --include-untracked --message agp -- build.gradle
     ar = archive -o output.zip HEAD
     b = branch --show-current # has been available since 2.22.
@@ -49,13 +49,13 @@
     co = checkout
     cp = cherry-pick
     csol = config --show-origin --list
+    d = git diff | pbcopy
     dl = !git branch | grep -v master | grep -v develop | xargs git branch -D # -D is a shortcut for "--delete --force". "dl" means "delete local branches".
     dno = diff --name-only
     dnoa = !git diff --name-only HEAD~ | awk -F/ '{print $NF}' | cut -d. -f1 | sort
     dns = diff --name-status
     dsd = diff --stat develop
     dt = difftool
-    fd = fetch origin develop:develop
     l = log --graph --decorate --oneline
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
