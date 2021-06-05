@@ -46,7 +46,6 @@ adb_show_dependent_modules() {
   ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
-
 launch_emulator() {
   # Kill a running emumulator.
   adb -s emulator-5554 emu kill
