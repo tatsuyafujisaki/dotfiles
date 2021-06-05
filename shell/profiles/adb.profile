@@ -5,14 +5,13 @@
 [ -d ~/Library/Android/sdk/tools/bin ] && export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
-alias adb_list_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
-alias adbd='adb devices -l'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # shows fragments.
 alias adbi='adb install -r' # -r is to replace an existing app.
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/video.mp4 && adb shell rm /sdcard/video.mp4 && open video.mp4)' # "pv" means pull a video.
 alias adbu='adb uninstall'
 alias adbv='adb shell screenrecord /sdcard/video.mp4'
+alias adb_thirdparty_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
