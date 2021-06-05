@@ -33,7 +33,6 @@ adb_deeplink() {
   fi
 }
 
-# Show what modules the given module depends on.
 adb_show_dependent_modules() {
   if [ ${#} -ne 1 ]
   then
@@ -47,11 +46,24 @@ adb_show_dependent_modules() {
   ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
+
+launch_emulator() {
+  # Kill a running emumulator.
+  adb -s emulator-5554 emu kill
+
+  # "&|" is to keep an emulator running even after Zsh is closed.
+  # http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
+  ~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &|
+
+  # Close Zsh.
+  exit
+}
+
 #
 # Firebase
 #
 
-adb_enable_firebase_log() {
+enable_firebase_log() {
   if [ ${#} -ne 1 ]
   then
     echo "Usage: $funcstack[1] <package>"
@@ -65,16 +77,4 @@ adb_enable_firebase_log() {
   adb shell setprop log.tag.FA VERBOSE
   adb shell setprop log.tag.FA-SVC VERBOSE
   adb logcat -v time -s FA FA-SVC
-}
-
-launch_emulator() {
-  # Kill a running emumulator.
-  adb -s emulator-5554 emu kill
-
-  # "&|" is to keep an emulator running even after Zsh is closed.
-  # http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
-  ~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &|
-
-  # Close Zsh.
-  exit
 }
