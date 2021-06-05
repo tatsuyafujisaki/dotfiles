@@ -33,11 +33,6 @@ adb_deeplink() {
   fi
 }
 
-adb_screenshot() {
-  filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png
-  adb exec-out screencap -p > ${filepath} && open ${filepath}
-}
-
 # Show what modules the given module depends on.
 adb_show_dependent_modules() {
   if [ ${#} -ne 1 ]
@@ -70,14 +65,6 @@ adb_enable_firebase_log() {
   adb shell setprop log.tag.FA VERBOSE
   adb shell setprop log.tag.FA-SVC VERBOSE
   adb logcat -v time -s FA FA-SVC
-}
-
-#
-# The following is unrelated to adb but still related to Android development.
-#
-
-kill_emulator() {
-  adb -s emulator-5554 emu kill
 }
 
 launch_emulator() {
