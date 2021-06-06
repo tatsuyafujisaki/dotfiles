@@ -1,7 +1,7 @@
 # Add adb to PATH
 # Note that Zsh does not expand the tilde(~) if it is in double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
-[ -d ~/Library/Android/sdk/emulator ] && export PATH={$PATH}:~/Library/Android/sdk/emulator
+[ -d ~/Library/Android/sdk/emulator ] && export PATH=${PATH}:~/Library/Android/sdk/emulator
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 [ -d ~/Library/Android/sdk/tools/bin ] && export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 
