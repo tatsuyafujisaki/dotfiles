@@ -14,6 +14,11 @@ alias adbu='adb uninstall'
 alias adbv='adb shell screenrecord /sdcard/video.mp4'
 alias adb_thirdparty_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 
+# "dka" stands for "Don't keep activities".
+alias dka='adb shell settings get global always_finish_activities'
+alias dka0='adb shell settings put global always_finish_activities 0'
+alias dka1='adb shell settings put global always_finish_activities 1'
+
 adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
