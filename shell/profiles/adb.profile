@@ -13,6 +13,7 @@ alias adbpv='(cd ~/Desktop && adb pull /sdcard/video.mp4 && adb shell rm /sdcard
 alias adbu='adb uninstall'
 alias adbv='adb shell screenrecord /sdcard/video.mp4'
 alias adb_thirdparty_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
+alias avd='cd ~/.android/avd'
 
 # "dka" stands for "Don't keep activities".
 alias dka='adb shell settings get global always_finish_activities'
