@@ -320,25 +320,6 @@ xcvideo() {
 }
 
 #
-# Google Cloud SDK
-#
-
-[ -f ~/google-cloud-sdk/path.zsh.inc ] && source ~/google-cloud-sdk/path.zsh.inc # adds Google Cloud SDK to PATH.
-[ -f ~/google-cloud-sdk/completion.zsh.inc ] && source ~/google-cloud-sdk/completion.zsh.inc # enables shell command completion for gcloud.
-
-#
-# Flutter
-#
-
-# Add Flutter to PATH.
-# Note that Zsh does not expand the tilde(~) if it is in double quotes.
-# http://zsh.sourceforge.net/Guide/zshguide05.html
-[ -d ~/Documents/GitHub/flutter/bin ] && export PATH=${PATH}:~/Documents/GitHub/flutter/bin
-
-alias f=flutter
-alias fpg='flutter pub get'
-
-#
 # Docker
 #
 
