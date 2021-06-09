@@ -40,19 +40,6 @@ adb_deeplink() {
   fi
 }
 
-adb_show_dependent_modules() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <module>"
-    return
-  fi
-
-  # -q is to suppress non-error logs.
-  # --configuration is to filter only "implementation".
-  # https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html
-  ./gradlew -q ${1}:dependencies --configuration implementation | grep '+--- project' | sort
-}
-
 #
 # Firebase
 #
