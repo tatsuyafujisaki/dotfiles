@@ -40,6 +40,11 @@ adb_deeplink() {
   fi
 }
 
+clean_avd() {
+  (cd ~/.android/avd/Pixel_4_API_30.avd && rm -fr cache.img cache.img.qcow2 data multiinstance.lock read-snapshot.txt tmpAdbCmds)
+  (cd ~/.android/avd/Pixel_4a_API_30.avd && rm -fr cache.img cache.img.qcow2 data multiinstance.lock read-snapshot.txt tmpAdbCmds)
+}
+
 #
 # Firebase
 #
