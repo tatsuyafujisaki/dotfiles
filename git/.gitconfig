@@ -32,7 +32,7 @@
 [mergetool "vscode"]
     cmd = code -w $MERGED
 [alias]
-    a = !pbpaste | git apply
+    a = !pbpaste | git apply --ignore-space-change
     agp = stash push --include-untracked --message agp -- build.gradle
     ar = archive -o output.zip HEAD
     b = branch --show-current # available since 2.22.
