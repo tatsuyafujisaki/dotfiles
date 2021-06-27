@@ -19,9 +19,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
-  "files.associations": {
-    "*.kml": "xml"
-  },
   "files.autoGuessEncoding": true,
   "files.hotExit": "off",
   "files.trimTrailingWhitespace": true,
@@ -35,6 +32,7 @@
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
+  "security.workspace.trust.enabled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.nativeTabs": true,
   "window.restoreWindows": "none",
