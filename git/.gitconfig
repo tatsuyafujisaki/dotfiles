@@ -33,12 +33,10 @@
     cmd = code -w $MERGED
 [alias]
     a = !pbpaste | git apply --ignore-space-change
-    agp = stash push --include-untracked --message agp -- build.gradle
     ar = archive -o output.zip HEAD
     b = branch --show-current # available since 2.22.
     ba = branch --all
     bd = branch -D # -D is a shortcut for "--delete --force".
-    bl = blame -L # <line-number> <file>
     bm = branch --move
     ca = commit --all -m
     cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
@@ -68,6 +66,7 @@
     ri = rebase --interactive
     rir = rebase --interactive --root
     rs = reset HEAD~
+    rsh = reset HEAD~ --hard
     rsk = rebase --skip
     rsu = remote set-url # is normally followed by origin or upstream, which is an original repository you fork from.
     sno = show --name-only
