@@ -59,6 +59,7 @@
     m = merge --no-edit
     mt = mergetool
     pf = push --force
+    r = rebase
     ra = rebase --abort
     rc = rebase --continue
     rd = !git fetch origin develop:develop && git rebase develop
