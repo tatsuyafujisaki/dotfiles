@@ -289,7 +289,7 @@ alias xml='code ~/desktop/deleteme.xml'
 #
 
 alias gp='code ~/.gradle/gradle.properties'
-alias gw='gradle wrapper --gradle-version 7.0.2 --distribution-type all'
+alias gw='gradle wrapper --distribution-type all --gradle-version'
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 alias ktlint='./gradlew ktlintCheck'
 
