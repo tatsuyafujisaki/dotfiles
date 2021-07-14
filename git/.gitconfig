@@ -35,12 +35,10 @@
     a = !pbpaste | git apply --ignore-space-change
     ar = archive -o output.zip HEAD
     b = branch --show-current # available since 2.22.
-    ba = branch --all
     bd = branch -D # -D is a shortcut for "--delete --force".
-    bm = branch --move
     ca = commit --all -m
     cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
-    can = commit --all --amend --no-edit # stages all changes and replaces the previous commit reusing the existing commit message.
+    can = !git add --all && git commit --all --amend --no-edit # adds untracked files, stages all changes, and replaces the previous commit reusing the existing commit message.
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
     cm = commit -m
@@ -57,6 +55,7 @@
     l = log --graph --decorate --oneline
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
+    md = merge --no-edit develop
     mt = mergetool
     pf = push --force
     r = rebase
