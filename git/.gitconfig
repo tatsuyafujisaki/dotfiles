@@ -51,7 +51,6 @@
     dns = diff --name-status
     dsd = diff --stat develop
     dt = difftool
-    l = log --graph --decorate --oneline
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
     md = merge --no-edit develop
