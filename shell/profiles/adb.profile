@@ -25,13 +25,13 @@ alias dka1='adb shell settings put global always_finish_activities 1'
 adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
-    echo "Usage: $funcstack[1] <uri> [package]"
+    echo "Usage: $funcstack[1] <uri> [exact-package]"
     return
   fi
 
   # "am" stands for Activity Manager.
   # -W is to wait for launch to complete.
-  # Ensure <activity android:exported="true"> is in AndroidManifest.xml to avoid "java.lang.SecurityException: Permission Denial".
+  # Ensure that AndroidManifest.xml contains <activity android:exported="true">. Otherwise, "java.lang.SecurityException: Permission Denial" will occur.
   # https://developer.android.com/training/app-links/deep-linking#testing-filters
   # https://codelabs.developers.google.com/codelabs/android-navigation/#10
   if [ ${#} -ge 2 ]
@@ -40,6 +40,17 @@ adb_deeplink() {
   else
     adb shell am start -W -a android.intent.action.VIEW -d ${1}
   fi
+}
+
+adb_logcat() {
+  if [ ${#} -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <exact-package>"
+    return
+  fi
+
+  # https://developer.android.com/studio/command-line/logcat
+  adb logcat *:D -v color,tag --pid=$(adb shell pidof -s ${1})
 }
 
 clean_avd() {
