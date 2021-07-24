@@ -12,7 +12,10 @@ alias adbf="adb shell dumpsys activity top | grep 'Added Fragments' -A 5" # show
 alias adbi='adb install -r' # -r is to replace an existing app.
 alias adbks='adb kill-server'
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/video.mp4 && adb shell rm /sdcard/video.mp4 && open video.mp4)' # "pv" means pull a video.
-alias adbu='adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | xargs -r -n1 -t adb uninstall'
+
+# https://stackoverflow.com/a/30390647
+alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | xargs -n1 -r -t adb uninstall"
+
 alias adbv='adb shell screenrecord /sdcard/video.mp4'
 alias adb_thirdparty_packages='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias avd='cd ~/.android/avd'
