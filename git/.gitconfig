@@ -53,6 +53,7 @@
     dt = difftool
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
+    ma = merge --abort
     md = merge --no-edit develop
     mt = mergetool
     pf = push --force
