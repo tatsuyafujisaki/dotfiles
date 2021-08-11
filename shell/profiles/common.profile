@@ -122,6 +122,8 @@ clean() {
   sudo rm -fr Downloads Movies Music Pictures
 
   # Delete unnecessary directories
+  cd ~/Library/Application\ Support/Google/RLZ
+  
   directories=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash)
   for directory in "${directories[@]}"
   do
