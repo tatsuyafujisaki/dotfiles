@@ -24,6 +24,7 @@ alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias ghh='cd ~/Documents/GitHub'
+alias jc='cd ~/Documents/GitHub/android-compose-codelabs'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 mkdircd() {
