@@ -295,7 +295,6 @@ alias xml='code ~/desktop/deleteme.xml'
 alias gp='code ~/.gradle/gradle.properties'
 alias gw='gradle wrapper --distribution-type all --gradle-version' # Usage: gw <version-number>
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
-alias ktlint='./gradlew ktlintCheck'
 
 # Show the root project's dependencies, as a tree.
 root_deps() {
