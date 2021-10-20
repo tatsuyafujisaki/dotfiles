@@ -36,6 +36,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.nativeTabs": true,
   "window.restoreWindows": "none",
+  "workbench.colorTheme": "Default Light+",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
