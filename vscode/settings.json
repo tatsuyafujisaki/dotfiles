@@ -13,7 +13,6 @@
     "other": false
   },
   "editor.renderWhitespace": "all",
-  "editor.smoothScrolling": true,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
