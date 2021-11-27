@@ -8,7 +8,8 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 #
 # npm
-# 
+#
+
 alias npmig='npm install --global'
 alias npmin='npm init --yes'
 alias npmls='npm ls --depth 0'
@@ -18,6 +19,7 @@ alias npmug='npm uninstall --global'
 #
 # Python and pip
 #
+
 alias pip=/usr/local/bin/pip3
 alias pipi='pip install'
 alias pipl='pip list'
@@ -27,6 +29,7 @@ alias python=/usr/local/bin/python3
 #
 # cd-related
 #
+
 alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
@@ -132,7 +135,7 @@ clean() {
 
   # Delete unnecessary directories
   cd ~/Library/Application\ Support/Google/RLZ
-  
+
   directories=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash)
   for directory in "${directories[@]}"
   do
@@ -141,7 +144,7 @@ clean() {
 
   mkdir .gradle
   curl -o ~/.gradle/gradle.properties https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle.properties
-  
+
   # Delete unnecessary files
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "${files[@]}"
@@ -238,7 +241,7 @@ mygradlew() {
     echo "Usage: ${FUNCNAME[0]} <task>"
     return
   fi
-  
+
   gradle ${1} --parallel --quiet
 }
 
@@ -289,11 +292,12 @@ cleanup() {
 # Helper functions to create a temporary file
 #
 
-alias json='code ~/Desktop/deleteme.json'
-alias md='code ~/Desktop/deleteme.md'
-alias swif='code ~/Desktop/deleteme.swift'
-alias txt='code ~/Desktop/deleteme.txt'
-alias xml='code ~/desktop/deleteme.xml'
+alias json='code ~/Desktop/deleteme/deleteme.json'
+alias md='code ~/Desktop/deleteme/deleteme.md'
+alias py='code ~/Desktop/deleteme/deleteme.py'
+alias swif='code ~/Desktop/deleteme/deleteme.swift'
+alias txt='code ~/Desktop/deleteme/deleteme.txt'
+alias xml='code ~/desktop/deleteme/deleteme.xml'
 
 #
 # Gradle
@@ -325,7 +329,7 @@ projects_requried_by_app() {
 
 xcvideo() {
   local outputfile=screencast.mp4
-  rm outputfile 
+  rm outputfile
   xcrun simctl io booted recordVideo $outputfile
 }
 
