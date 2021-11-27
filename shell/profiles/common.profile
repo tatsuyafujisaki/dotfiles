@@ -9,7 +9,6 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 #
 # npm
 # 
-
 alias npmig='npm install --global'
 alias npmin='npm init --yes'
 alias npmls='npm ls --depth 0'
@@ -17,9 +16,17 @@ alias npmlsg='npm ls --depth 0 --global'
 alias npmug='npm uninstall --global'
 
 #
+# Python and pip
+#
+alias pip=pip3
+alias pipi='pip install'
+alias pipl='pip list'
+alias pipu='pip uninstall -y'
+alias python=python3
+
+#
 # cd-related
 #
-
 alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
