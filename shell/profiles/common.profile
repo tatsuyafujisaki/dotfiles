@@ -18,11 +18,11 @@ alias npmug='npm uninstall --global'
 #
 # Python and pip
 #
-alias pip=pip3
+alias pip=/usr/local/bin/pip3
 alias pipi='pip install'
 alias pipl='pip list'
 alias pipu='pip uninstall -y'
-alias python=python3
+alias python=/usr/local/bin/python3
 
 #
 # cd-related
