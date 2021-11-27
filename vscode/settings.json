@@ -27,6 +27,7 @@
   "html.format.endWithNewline": false,
   "html.format.preserveNewLines": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.formatting.provider": "black",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
