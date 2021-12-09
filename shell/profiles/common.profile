@@ -235,16 +235,6 @@ myfind() {
   find . -iname "*${1}*" -print 2> /dev/null
 }
 
-mygradlew() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <task>"
-    return
-  fi
-
-  gradle ${1} --parallel --quiet
-}
-
 mysed() {
   if [ ${#} -ne 3 ]
   then
