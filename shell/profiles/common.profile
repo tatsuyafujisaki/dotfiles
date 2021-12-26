@@ -35,6 +35,7 @@ alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias dm='mkdir -p deleteme; cd deleteme && code .'
 alias ghh='cd ~/Documents/GitHub'
+alias hrk='cd ~/Documents/Heroku'
 alias jc='cd ~/Documents/GitHub/android-compose-codelabs'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
@@ -63,7 +64,6 @@ alias pp='code ~/.shell_profiles/private.profile'
 
 alias co='curl -O'
 alias g=git
-alias hrk='code ~/Documents/Heroku'
 alias jdks='/usr/libexec/java_home -V'
 alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
