@@ -35,6 +35,7 @@
     a = !pbpaste | git apply --ignore-space-change
     ar = archive -o output.zip HEAD
     b = branch --show-current # available since 2.22.
+    ba = branch --all
     ca = commit --all -m
     cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
     can = !git add --all && git commit --all --amend --no-edit # adds untracked files, stages all changes, and replaces the previous commit reusing the existing commit message.
