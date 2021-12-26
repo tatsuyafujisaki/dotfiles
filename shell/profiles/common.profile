@@ -33,6 +33,7 @@ alias python=python3
 alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
+alias dm='mkdir -p deleteme; cd deleteme && code .'
 alias ghh='cd ~/Documents/GitHub'
 alias jc='cd ~/Documents/GitHub/android-compose-codelabs'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
