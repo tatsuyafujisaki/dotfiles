@@ -63,6 +63,7 @@ alias pp='code ~/.shell_profiles/private.profile'
 
 alias co='curl -O'
 alias g=git
+alias hrk='code ~/Documents/Heroku'
 alias jdks='/usr/libexec/java_home -V'
 alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
@@ -71,8 +72,6 @@ alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias myobjdump='objdump -d -M intel'
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
-alias mypkill='sudo pkill -i' # -i is to be case-insensitive.
-alias myrsync='rsync -r --exclude=.git'
 alias myxxd='xxd -g1'
 # Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
