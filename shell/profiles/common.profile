@@ -77,6 +77,7 @@ alias myxxd='xxd -g1'
 # Without -v, neither success or failure is printed.
 # -z is port scanning.
 # "-w 1" is to timeout after a second.
+alias n=node
 alias port_scan='nc -vzw 1'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
