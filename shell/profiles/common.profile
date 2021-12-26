@@ -62,7 +62,6 @@ alias pp='code ~/.shell_profiles/private.profile'
 #
 
 alias co='curl -O'
-alias dm='mkdir deleteme && cd deleteme && code .'
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
 alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
