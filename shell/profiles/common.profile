@@ -36,7 +36,7 @@ alias d='cd ~/Desktop'
 alias dm='mkdir -p deleteme; cd deleteme && code .'
 alias ghh='cd ~/Documents/GitHub'
 alias hrk='cd ~/Documents/Heroku'
-alias jc='cd ~/Documents/GitHub/android-compose-codelabs'
+alias jp='cd ~/Documents/GitHub/javascript-playground'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 mkdircd() {
@@ -283,6 +283,7 @@ cleanup() {
 # Helper functions to create a temporary file
 #
 
+alias js='code ~/Desktop/deleteme/deleteme.js'
 alias json='code ~/Desktop/deleteme/deleteme.json'
 alias md='code ~/Desktop/deleteme/deleteme.md'
 alias py='code ~/Desktop/deleteme/deleteme.py'
