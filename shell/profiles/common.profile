@@ -35,7 +35,6 @@ alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias dm='mkdir -p deleteme; cd deleteme && code .'
 alias ghh='cd ~/Documents/GitHub'
-alias hrk='cd ~/Documents/Heroku'
 alias jp='cd ~/Documents/GitHub/javascript-playground'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
@@ -54,6 +53,7 @@ mkdircd() {
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
+alias hrk='code ~/Documents/Heroku'
 alias macp='code ~/.shell_profiles/mac.profile'
 alias p='code ~/.shell_profiles/common.profile'
 alias pp='code ~/.shell_profiles/private.profile'
