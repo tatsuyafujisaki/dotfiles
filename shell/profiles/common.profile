@@ -70,9 +70,7 @@ alias lns='ln -s $(pwd) ~'
 alias mp4_to_gif='ffmpeg -i screencast.mp4 -vf scale=320:-1 screencast.gif' # 320 is width.
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
-alias myobjdump='objdump -d -M intel'
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
-alias myxxd='xxd -g1'
 # Usage: portscan example.com 1-65535.
 # Without -v, neither success or failure is printed.
 # -z is port scanning.
