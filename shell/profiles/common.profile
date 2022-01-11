@@ -170,20 +170,6 @@ clean_android_or_intellij_project() {
   done
 }
 
-# cURL to a specific directory
-curlo() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <directory> <url>"
-    return
-  fi
-
-  mkdir -p ${1}
-
-  # Use a subshell to restore the current directory in the end.
-  (cd ${1} && curl -O ${2})
-}
-
 decode_base64() {
   if [ ${#} -ne 2 ]
   then
@@ -269,6 +255,28 @@ rename_branch() {
   git branch -m ${2} # renames the current branch to the new branch on local.
   git push origin :${1} # deletes the old branch on remote.
   git push -u origin ${2} # creates the new branch on remote and resets the upstream branch to it.
+}
+
+sample_function_that_requires_one_argument() {
+  if [ ${#} -lt 1 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <first-argument>"
+    return
+  fi
+
+  echo "First parameter: ${1}"
+}
+
+
+sample_function_that_requires_two_arguments() {
+  if [ ${#} -lt 2 ]
+  then
+    echo "Usage: ${FUNCNAME[0]} <first-argument> <second-argument>"
+    return
+  fi
+
+  echo "First parameter: ${1}"
+  echo "Second parameter: ${2}"
 }
 
 # Must be defined after both clean and up are defined.
