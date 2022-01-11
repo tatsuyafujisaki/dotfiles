@@ -8,17 +8,17 @@ touch ~/.hushlogin
 ## How to add "Copy Path" to the context menu
 1. Open Automator
 2. Select `Quick Action`
-3. Double-click `Copy to Clipboard` on the left list
+3. Select `Copy to Clipboard` on the left list
 4. Select `files or folders` and `Finder.app`
-5. Cmd+S and save quick action as "Copy Path"
+5. Cmd+S and save as "Copy Path"
 
 ## How to add "Open in Visual Studio Code" to the context menu
 1. Open Automator
 2. Select `Quick Action`
-3. Double-click `Open Finder Items` on the left list
+3. Select `Open Finder Items` on the left list
 4. Select `files or folders` and `Finder.app`
-5. Set `Open with:` `Visual Studio Code`
-6. Cmd+S and save quick action as "Open in Visual Studio Code"
+5. Select `Visual Studio Code.app`
+6. Cmd+S and save as "Open in Visual Studio Code"
 
 ## Add "Open in Android Studio" to the context menu
 Do the same as "Open in Visual Studio Code" for Android Studio
