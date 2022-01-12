@@ -38,7 +38,7 @@ alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 mkdircd() {
-  if [ ${#} -ne 1 ]
+  if [ ${#} -lt 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <directory>"
     return
