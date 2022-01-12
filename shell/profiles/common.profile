@@ -33,19 +33,8 @@ alias python=python3
 alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
-alias dm='mkdir -p deleteme; cd deleteme && code .'
 alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
-
-mkdircd() {
-  if [ ${#} -lt 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <directory>"
-    return
-  fi
-
-  mkdir -p ${1} && cd ${1}
-}
 
 #
 # Visual Studio Code-related
@@ -85,15 +74,6 @@ alias show_function_definition='declare -f'
 alias show_logical_cores='sysctl -n hw.ncpu'
 alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
-
-c() {
-  if [ ${#} -ge 1 ]
-  then
-    cd "${1}" && l
-  else
-    cd && l
-  fi
-}
 
 clean_chrome() {
   pushd ~ > /dev/null # avoids showing the pushed directory stack
@@ -136,9 +116,9 @@ clean() {
   cd ~/Library/Application\ Support/Google/RLZ
 
   directories=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash)
-  for directory in "${directories[@]}"
+  for directory in "$directories[@]"
   do
-    rm -fr ${directory}
+    rm -fr $directory
   done
 
   mkdir .gradle
@@ -146,9 +126,9 @@ clean() {
 
   # Delete unnecessary files
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
-  for file in "${files[@]}"
+  for file in "$files[@]"
   do
-    rm -f ${file}
+    rm -f $file
   done
 
   popd > /dev/null # avoids showing the pushed directory stack
@@ -157,106 +137,128 @@ clean() {
 clean_android_or_intellij_project() {
   # Delete unnecessary directories
   directories=(.gradle .idea build)
-  for directory in "${directories[@]}"
+  for directory in "$directories[@]"
   do
-    find . -type d -name "${directory}" -exec rm -rf {} +
+    find . -type d -name "$directory" -exec rm -rf {} +
   done
 
   # Delete unnecessary files
   files=(*.iml)
-  for file in "${files[@]}"
+  for file in "$files[@]"
   do
-    find . -type f -name "${file}" -delete
+    find . -type f -name "$file" -delete
   done
 }
 
-exclude_column() {
-  if [ ${#} -lt 2 ]
+dm() {
+  local dir=~/Desktop/deleteme
+  mkdir -p $dir
+  cd $dir
+
+  if [ $# -ge 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <one-based column index> <file>"
+    touch deleteme.$1
+  fi
+
+  code .
+}
+
+exclude_column() {
+  if [ $# -lt 2 ]
+  then
+    echo "Usage: $funcstack[1] <one-based column index> <file>"
     return
   fi
 
-  cut -f ${1} --complement ${2}
+  cut -f $1 --complement $2
+}
+
+mkdircd() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <directory>"
+    return
+  fi
+
+  mkdir -p $1 && cd $1
 }
 
 mydelete() {
-  if [ ${#} -lt 1 ]
+  if [ $# -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
+    echo "Usage: $funcstack[1] <file-or-directory>"
     return
   fi
 
-  find . -iname "*${1}*" -print -exec rm -rf {} + 2> /dev/null
+  find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
 }
 
 myfind() {
-  if [ ${#} -lt 1 ]
+  if [ $# -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
+    echo "Usage: $funcstack[1] <file-or-directory>"
     return
   fi
 
-  find . -iname "*${1}*" -print 2> /dev/null
+  find . -iname "*$1*" -print 2> /dev/null
 }
 
 mysed() {
   if [ ${#} -lt 3 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <string-before> <string-after> <file>"
+    echo "Usage: $funcstack[1] <string-before> <string-after> <file>"
     return
   fi
 
   # -i is to edit a file in-place instead of printing to standard output.
   # g is to enable more than one replacement in each line.
-  sed -i 's/${1}/${2}/g' ${3}
+  sed -i 's/${1}/${2}/g' $3
 }
 
 myuniq() {
-  if [ ${#} -lt 1 ]
+  if [ $# -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <file>"
+    echo "Usage: $funcstack[1] <file>"
     return
   fi
 
   # -f is to sort case-insensitively.
   # uniq works only if the input is sorted.
-  cat ${1} | sort -f | uniq
+  cat $1 | sort -f | uniq
 }
 
 rename_branch() {
-  if [ ${#} -lt 2 ]
+  if [ $# -lt 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <old-branch> <new-branch>"
+    echo "Usage: $funcstack[1] <old-branch> <new-branch>"
     return
   fi
 
-  git switch ${1}
-  git branch -m ${2} # renames the current branch to the new branch on local.
-  git push origin :${1} # deletes the old branch on remote.
-  git push -u origin ${2} # creates the new branch on remote and resets the upstream branch to it.
+  git switch $1
+  git branch -m $2 # renames the current branch to the new branch on local.
+  git push origin :$1 # deletes the old branch on remote.
+  git push -u origin $2 # creates the new branch on remote and resets the upstream branch to it.
 }
 
 sample_function_that_requires_one_argument() {
-  if [ ${#} -lt 1 ]
+  if [ $# -lt 1 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <first-argument>"
+    echo "Usage: $funcstack[1] <first-argument>"
     return
   fi
 
-  echo "First parameter: ${1}"
+  echo "First parameter: $1"
 }
 
-
 sample_function_that_requires_two_arguments() {
-  if [ ${#} -lt 2 ]
+  if [ $# -lt 2 ]
   then
-    echo "Usage: ${FUNCNAME[0]} <first-argument> <second-argument>"
+    echo "Usage: $funcstack[1] <first-argument> <second-argument>"
     return
   fi
 
-  echo "First parameter: ${1}"
-  echo "Second parameter: ${2}"
+  echo "First parameter: $1"
+  echo "Second parameter: $2"
 }
 
 # Must be defined after both clean and up are defined.
