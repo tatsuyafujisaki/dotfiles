@@ -170,28 +170,8 @@ clean_android_or_intellij_project() {
   done
 }
 
-decode_base64() {
-  if [ ${#} -ne 2 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file>"
-    return
-  fi
-
-  echo ${1} | base64 -d
-}
-
-decode_url() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: ${FUNCNAME[0]} <file>"
-    return
-  fi
-
-  echo ${1} | nkf --url-input
-}
-
 exclude_column() {
-  if [ ${#} -ne 2 ]
+  if [ ${#} -lt 2 ]
   then
     echo "Usage: ${FUNCNAME[0]} <one-based column index> <file>"
     return
@@ -201,7 +181,7 @@ exclude_column() {
 }
 
 mydelete() {
-  if [ ${#} -ne 1 ]
+  if [ ${#} -lt 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
     return
@@ -211,7 +191,7 @@ mydelete() {
 }
 
 myfind() {
-  if [ ${#} -ne 1 ]
+  if [ ${#} -lt 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <file-or-directory>"
     return
@@ -221,7 +201,7 @@ myfind() {
 }
 
 mysed() {
-  if [ ${#} -ne 3 ]
+  if [ ${#} -lt 3 ]
   then
     echo "Usage: ${FUNCNAME[0]} <string-before> <string-after> <file>"
     return
@@ -233,7 +213,7 @@ mysed() {
 }
 
 myuniq() {
-  if [ ${#} -ne 1 ]
+  if [ ${#} -lt 1 ]
   then
     echo "Usage: ${FUNCNAME[0]} <file>"
     return
@@ -245,7 +225,7 @@ myuniq() {
 }
 
 rename_branch() {
-  if [ ${#} -ne 2 ]
+  if [ ${#} -lt 2 ]
   then
     echo "Usage: ${FUNCNAME[0]} <old-branch> <new-branch>"
     return
