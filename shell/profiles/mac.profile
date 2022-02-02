@@ -23,7 +23,6 @@ alias bd='brew doctor'
 alias bi='brew install'
 alias bin='brew info'
 alias bl='brew list -1'
-alias br='brew reinstall'
 alias bs='brew search'
 alias bu='brew uninstall --zap'
 
