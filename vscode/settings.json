@@ -12,6 +12,9 @@
   "editor.quickSuggestions": {
     "other": false
   },
+  "editor.unicodeHighlight.allowedLocales": {
+    "ja": true
+  },
   "editor.renderWhitespace": "all",
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
@@ -39,5 +42,11 @@
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  }
 }
