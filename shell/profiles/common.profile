@@ -224,7 +224,7 @@ myuniq() {
 
   # -f is to sort case-insensitively.
   # uniq works only if the input is sorted.
-  cat $1 | sort -f | uniq
+  sort -f < $1 | uniq
 }
 
 rename_branch() {
