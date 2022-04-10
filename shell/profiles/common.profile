@@ -46,6 +46,7 @@ alias jp='code ~/Documents/GitHub/javascript-playground'
 alias macp='code ~/.shell_profiles/mac.profile'
 alias p='code ~/.shell_profiles/common.profile'
 alias pp='code ~/.shell_profiles/private.profile'
+alias tp='code ~/Documents/GitHub/typescript-playground'
 
 #
 # Misc aliases
