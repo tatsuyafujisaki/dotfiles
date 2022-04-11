@@ -19,6 +19,7 @@
     "ja": true
   },
   "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -45,14 +46,5 @@
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
-  "workbench.startupEditor": "none",
-  "[javascript]": {
-    "editor.tabSize": 2
-  },
-  "[json]": {
-    "editor.tabSize": 2
-  },
-  "[typescript]": {
-    "editor.tabSize": 2
-  }
+  "workbench.startupEditor": "none"
 }
