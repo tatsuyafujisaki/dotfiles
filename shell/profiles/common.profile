@@ -272,12 +272,10 @@ cleanup() {
 # Helper functions to create a temporary file
 #
 
-alias js='code ~/Desktop/deleteme/deleteme.js'
 alias json='code ~/Desktop/deleteme/deleteme.json'
 alias md='code ~/Desktop/deleteme/deleteme.md'
 alias py='code ~/Desktop/deleteme/deleteme.py'
 alias swif='code ~/Desktop/deleteme/deleteme.swift'
-alias ts='code ~/Desktop/deleteme/deleteme.ts'
 alias txt='code ~/Desktop/deleteme/deleteme.txt'
 alias xml='code ~/desktop/deleteme/deleteme.xml'
 
