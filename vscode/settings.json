@@ -1,7 +1,4 @@
 {
-  "code-runner.executorMap": {
-    "typescript": "node --require ts-node/register"
-  },
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
