@@ -58,6 +58,5 @@
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
-  "workbench.startupEditor": "none",
-  "debug.onTaskErrors": "abort"
+  "workbench.startupEditor": "none"
 }
