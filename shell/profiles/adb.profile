@@ -26,6 +26,8 @@ alias dka='adb shell settings get global always_finish_activities'
 alias dka0='adb shell settings put global always_finish_activities 0'
 alias dka1='adb shell settings put global always_finish_activities 1'
 
+alias launch_emulator='emulator -avd Pixel_4_API_31 &|'
+
 adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
