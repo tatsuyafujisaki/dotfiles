@@ -8,6 +8,7 @@
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
+alias adbd='adb devices'
 alias adbe='adb emu geo fix' # Usage: adbe <longitude> <latitude>
 alias adbi='adb install -r' # -r is to replace an existing app.
 alias adbks='adb kill-server'
@@ -26,7 +27,7 @@ alias dka='adb shell settings get global always_finish_activities'
 alias dka0='adb shell settings put global always_finish_activities 0'
 alias dka1='adb shell settings put global always_finish_activities 1'
 
-alias launch_emulator='emulator -avd Pixel_4_API_31 &|'
+alias emul='emulator -list-avds'
 alias pixel4='emulator -avd Pixel_4_API_31 > /dev/null &|'
 
 adb_deeplink() {
