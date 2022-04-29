@@ -41,6 +41,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
+alias blk='code ~/Documents/bulk-retweeter-unretweeter'
 alias hrk='code ~/Documents/Heroku'
 alias jp='code ~/Documents/GitHub/javascript-playground'
 alias macp='code ~/.shell_profiles/mac.profile'
