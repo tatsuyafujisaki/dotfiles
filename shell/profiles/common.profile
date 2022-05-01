@@ -154,12 +154,12 @@ clean_android_or_intellij_project() {
 
 dm() {
   local dir=~/Desktop/deleteme
+  rm -r $dir
   mkdir -p $dir
   cd $dir
 
   if [ $# -ge 1 ]
   then
-    rm -r $dir
     touch deleteme.$1
   fi
 
