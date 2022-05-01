@@ -154,6 +154,7 @@ clean_android_or_intellij_project() {
 
 dm() {
   local dir=~/Desktop/deleteme
+  rm -r $dir
   mkdir -p $dir
   cd $dir
 
@@ -268,17 +269,6 @@ cleanup() {
   clean
   up
 }
-
-#
-# Helper functions to create a temporary file
-#
-
-alias json='code ~/Desktop/deleteme/deleteme.json'
-alias md='code ~/Desktop/deleteme/deleteme.md'
-alias py='code ~/Desktop/deleteme/deleteme.py'
-alias swif='code ~/Desktop/deleteme/deleteme.swift'
-alias txt='code ~/Desktop/deleteme/deleteme.txt'
-alias xml='code ~/desktop/deleteme/deleteme.xml'
 
 #
 # Gradle
