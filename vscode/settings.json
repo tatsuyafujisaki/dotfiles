@@ -1,6 +1,7 @@
 {
   "debug.console.historySuggestions": false,
   "code-runner.executorMap": {
+    "python": "/usr/bin/python3",
     "typescript": "node -r ts-node/register",
   },
   "editor.codeActionsOnSave": {
@@ -9,7 +10,7 @@
   },
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
