@@ -66,7 +66,6 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 # Without -v, neither success or failure is printed.
 # -z is port scanning.
 # "-w 1" is to timeout after a second.
-alias n=node
 alias port_scan='nc -vzw 1'
 alias reverse_string='rev <<<'
 alias rm='rm -rf'
@@ -164,16 +163,6 @@ dm() {
   fi
 
   code .
-}
-
-exclude_column() {
-  if [ $# -lt 2 ]
-  then
-    echo "Usage: $funcstack[1] <one-based column index> <file>"
-    return
-  fi
-
-  cut -f $1 --complement $2
 }
 
 mkdircd() {
