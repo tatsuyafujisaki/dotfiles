@@ -20,7 +20,7 @@ alias adbv='adb shell screenrecord /sdcard/screencast.mp4'
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
 
 # https://stackoverflow.com/a/30390647
-alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | xargs -n1 -r -t adb uninstall"
+alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | xargs -n1 -r -t adb uninstall"
 
 # "dka" stands for "Don't keep activities".
 alias dka='adb shell settings get global always_finish_activities'
