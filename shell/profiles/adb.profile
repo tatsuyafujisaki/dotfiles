@@ -28,6 +28,7 @@ alias dka0='adb shell settings put global always_finish_activities 0'
 alias dka1='adb shell settings put global always_finish_activities 1'
 
 alias emul='emulator -list-avds'
+alias develop='emulator @develop > /dev/null &|'
 alias pixel4='emulator @Pixel_4_API_31 > /dev/null &|'
 alias review='emulator @Review > /dev/null &|'
 
