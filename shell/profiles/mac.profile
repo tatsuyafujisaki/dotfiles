@@ -56,10 +56,6 @@ up() {
   # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
   brew upgrade --greedy
 
-  # "brew upgrade" internally runs "brew cleanup" if "brew cleanup" has not been run in 30 days, but it is advisable to run "brew cleanup" as often as possible.
-  # "brew cleanup" also delete cask caches.
-  brew cleanup
-
   # Upgrade globally installed packages.
   npm update --global
 }
