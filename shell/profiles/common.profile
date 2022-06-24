@@ -241,8 +241,8 @@ ymd() {
 
   local result="$1年$2月$3日"
 
-  echo result
-  echo result | pbcopy
+  echo $result
+  echo $result | pbcopy
 }
 
 sample_function_that_requires_one_argument() {
