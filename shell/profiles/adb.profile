@@ -31,6 +31,7 @@ alias emul='emulator -list-avds'
 alias develop='emulator @develop &|'
 alias pixel4='emulator @Pixel_4_API_31 &|'
 alias review='emulator @Review &|'
+alias review2='emulator @Review -dns-server 133.152.40.28,1.1.1.1 &|'
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
