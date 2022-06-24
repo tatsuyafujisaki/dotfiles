@@ -41,13 +41,13 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
-alias blk='code ~/Documents/GitHub/bulk-retweeter-unretweeter'
 alias hrk='code ~/Documents/Heroku'
 alias jp='code ~/Documents/GitHub/javascript-playground'
 alias macp='code ~/.shell_profiles/mac.profile'
 alias p='code ~/.shell_profiles/common.profile'
 alias pp='code ~/.shell_profiles/private.profile'
 alias tp='code ~/Documents/GitHub/typescript-playground'
+alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 
 #
 # Misc aliases
