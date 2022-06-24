@@ -232,6 +232,19 @@ rename_branch() {
   git push -u origin $2 # creates the new branch on remote and resets the upstream branch to it.
 }
 
+ymd() {
+  if [ $# -lt 3 ]
+  then
+    echo "Usage: $funcstack[1] <year> <month> <day>"
+    return
+  fi
+
+  local result="$1年$2月$3日"
+
+  echo result
+  echo result | pbcopy
+}
+
 sample_function_that_requires_one_argument() {
   if [ $# -lt 1 ]
   then
