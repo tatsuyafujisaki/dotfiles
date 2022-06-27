@@ -1,6 +1,6 @@
 [user]
     name = Tatsuya Fujisaki
-	email = 1838962+tatsuyafujisaki@users.noreply.github.com
+    email = 1838962+tatsuyafujisaki@users.noreply.github.com
 [core]
     excludesfile = ~/.gitignore
     editor = code -w
