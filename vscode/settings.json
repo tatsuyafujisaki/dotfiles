@@ -26,7 +26,7 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
   "files.hotExit": "off",
   "files.trimTrailingWhitespace": true,
   "git.allowForcePush": true,
