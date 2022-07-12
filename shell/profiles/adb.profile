@@ -53,20 +53,14 @@ adb_deeplink() {
   fi
 }
 
-adb_logcat() {
+pixel() {
   if [ ${#} -lt 1 ]
   then
-    echo "Usage: $funcstack[1] <exact-package>"
+    echo "Usage: $funcstack[1] <pixel-level>"
     return
   fi
 
-  # https://developer.android.com/studio/command-line/logcat
-  adb logcat *:D -v color,tag --pid=$(adb shell pidof -s ${1})
-}
-
-clean_avd() {
-  (cd ~/.android/avd/Pixel_4_API_30.avd && rm -fr cache.img cache.img.qcow2 data multiinstance.lock read-snapshot.txt tmpAdbCmds)
-  (cd ~/.android/avd/Pixel_4a_API_30.avd && rm -fr cache.img cache.img.qcow2 data multiinstance.lock read-snapshot.txt tmpAdbCmds)
+  emulator @Pixel_4_API_$1 &|
 }
 
 #
