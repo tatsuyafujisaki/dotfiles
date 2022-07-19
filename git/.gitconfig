@@ -68,8 +68,6 @@
     sno = show --name-only
     sns = show --name-status
     sw = switch
-    swc = switch --create
-    swd = switch develop
     # git clean:
     # -d is to delete untracked directories too.
     # git restore:
