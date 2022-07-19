@@ -56,6 +56,7 @@ alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 alias co='curl -O'
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
+alias ka=killall
 alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
 alias m2g='(cd ~/Desktop && ffmpeg -y -i screencast.mp4 screencast.gif)' # () is to use a subshell.
