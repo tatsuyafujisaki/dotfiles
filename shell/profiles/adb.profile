@@ -29,9 +29,7 @@ alias dka1='adb shell settings put global always_finish_activities 1'
 
 alias emul='emulator -list-avds'
 alias develop='emulator @develop &|'
-alias pixel4='emulator @Pixel_4_API_31 &|'
-alias review='emulator @Review &|'
-alias review2='emulator @Review -dns-server 133.152.40.28,1.1.1.1 &|'
+alias review='emulator @review &|'
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
