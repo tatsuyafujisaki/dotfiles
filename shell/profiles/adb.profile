@@ -22,11 +22,6 @@ alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5"
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | xargs -n1 -r -t adb uninstall"
 
-# "dka" stands for "Don't keep activities".
-alias dka='adb shell settings get global always_finish_activities'
-alias dka0='adb shell settings put global always_finish_activities 0'
-alias dka1='adb shell settings put global always_finish_activities 1'
-
 alias emul='emulator -list-avds'
 alias develop='emulator @develop &|'
 alias review='emulator @review &|'
