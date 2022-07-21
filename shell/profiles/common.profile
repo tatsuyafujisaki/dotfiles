@@ -50,6 +50,14 @@ alias tp='code ~/Documents/GitHub/typescript-playground'
 alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 
 #
+# https://cli.github.com
+#
+
+alias ghprl='gh pr list --web'
+alias ghprs='gh pr status'
+alias ghprv='gh pr view --web'
+
+#
 # Misc aliases
 #
 
