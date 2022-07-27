@@ -55,6 +55,7 @@
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
     ma = merge --abort
+    mt = mergetool
     pf = push --force
     r = rebase
     ra = rebase --abort
