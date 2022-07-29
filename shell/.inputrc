@@ -1,2 +1,0 @@
-# Enables case-insensitive tab completion in Bash.
-set completion-ignore-case on
