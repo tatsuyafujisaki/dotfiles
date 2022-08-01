@@ -1,3 +1,5 @@
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
+
 # Add adb to PATH
 # Note that Zsh does not expand the tilde(~) if it is in double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
