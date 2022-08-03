@@ -295,14 +295,24 @@ root_deps() {
   ./gradlew dependencies > $temp && code $temp
 }
 
-# Show the app module's dependencies, as a tree.
-app_deps() {
+# Show the given module's dependencies, as a tree.
+gradle_deps() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <project a.k.a. module>"
+    return
+  fi
   local temp=$(mktemp)
-  ./gradlew app:dependencies > $temp && code $temp
+  ./gradlew :$1:dependencies > $temp && code $temp
 }
 
-projects_requried_by_app() {
-  ./gradlew -q app:dependencies --configuration implementation | grep '+--- project' | sort
+print_projects_requried_by_given_project() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <project a.k.a. module>"
+    return
+  fi
+  ./gradlew -q :$1:dependencies --configuration implementation | grep '+--- project' | sort
 }
 
 #
