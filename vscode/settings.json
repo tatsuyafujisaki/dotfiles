@@ -8,6 +8,7 @@
     "source.fixAll": true,
     "source.organizeImports": true,
   },
+  "editor.copyWithSyntaxHighlighting": false,
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
