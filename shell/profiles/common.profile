@@ -53,6 +53,7 @@ alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 # https://cli.github.com
 #
 
+alias ghprc='gh pr create --assignee @me --web'
 alias ghprl='gh pr list --web'
 alias ghprs='gh pr status'
 alias ghprv='gh pr view --web'
