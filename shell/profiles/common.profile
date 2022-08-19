@@ -229,6 +229,18 @@ myuniq() {
   sort -f < $1 | uniq
 }
 
+pdf2png() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <file>"
+    return
+  fi
+
+  local basename=$1:r
+
+  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
+}
+
 rename_branch() {
   if [ $# -lt 2 ]
   then
@@ -262,7 +274,7 @@ sample_function_that_requires_one_argument() {
     return
   fi
 
-  echo "First parameter: $1"
+  echo "First argument: $1"
 }
 
 sample_function_that_requires_two_arguments() {
@@ -272,8 +284,8 @@ sample_function_that_requires_two_arguments() {
     return
   fi
 
-  echo "First parameter: $1"
-  echo "Second parameter: $2"
+  echo "First argument: $1"
+  echo "Second argument: $2"
 }
 
 # Must be defined after both clean and up are defined.
