@@ -78,7 +78,7 @@
     up = !git clean -d --force && git restore --staged --worktree . && git pull --all --autostash --rebase --recurse-submodules && git fetch --prune --prune-tags
     # stash-related
     pop = stash pop
-    st = stash --include-untracked
+    st = stash push --include-untracked
     clear = stash clear
     drop = stash drop
     stl = stash list
