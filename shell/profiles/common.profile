@@ -86,6 +86,50 @@ alias show_logical_cores='sysctl -n hw.ncpu'
 alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
+#
+# Converters
+#
+
+gif2mp4() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <mp4>"
+    return
+  fi
+
+  local basename=$1:r
+
+  ffmpeg -y -i $basename.gif $basename.mp4
+}
+
+mp44gif() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <mp4>"
+    return
+  fi
+
+  local basename=$1:r
+
+  ffmpeg -y -i $basename.mp4 $basename.gif
+}
+
+pdf2png() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <file>"
+    return
+  fi
+
+  local basename=$1:r
+
+  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
+}
+
+#
+# Misc functions
+#
+
 clean_chrome() {
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
@@ -227,18 +271,6 @@ myuniq() {
   # -f is to sort case-insensitively.
   # uniq works only if the input is sorted.
   sort -f < $1 | uniq
-}
-
-pdf2png() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <file>"
-    return
-  fi
-
-  local basename=$1:r
-
-  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
 }
 
 rename_branch() {
