@@ -1,20 +1,5 @@
 export PATH="/usr/libexec:$PATH" # adds the executable "java_home", which returns the value of $JAVA_HOME.
 
-# Change the version of the 'java' command.
-# Pass 1.8 to set JDK 8
-# Pass 13 to set JDK 13
-javahome() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <version>"
-    return
-  fi
-
-  export JAVA_HOME=$(/usr/libexec/java_home -v ${1})
-
-  java -v
-}
-
 #
 # Homebrew
 #
