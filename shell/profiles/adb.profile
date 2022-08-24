@@ -58,23 +58,3 @@ pixel() {
 
   emulator @Pixel_4_API_$1 &|
 }
-
-#
-# Firebase
-#
-
-enable_firebase_log() {
-  if [ ${#} -ne 1 ]
-  then
-    echo "Usage: $funcstack[1] <package>"
-    return
-  fi
-
-  # Enable DebugView.
-  adb shell setprop debug.firebase.analytics.app ${1}
-
-  # Enable verbose logging.
-  adb shell setprop log.tag.FA VERBOSE
-  adb shell setprop log.tag.FA-SVC VERBOSE
-  adb logcat -v time -s FA FA-SVC
-}
