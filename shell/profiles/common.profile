@@ -267,27 +267,6 @@ ymd() {
   echo $result | pbcopy
 }
 
-sample_function_that_requires_one_argument() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <first-argument>"
-    return
-  fi
-
-  echo "First argument: $1"
-}
-
-sample_function_that_requires_two_arguments() {
-  if [ $# -lt 2 ]
-  then
-    echo "Usage: $funcstack[1] <first-argument> <second-argument>"
-    return
-  fi
-
-  echo "First argument: $1"
-  echo "Second argument: $2"
-}
-
 # Must be defined after both clean and up are defined.
 cleanup() {
   clean
