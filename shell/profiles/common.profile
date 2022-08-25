@@ -62,7 +62,6 @@ alias ghprv='gh pr view --web'
 # Misc aliases
 #
 
-alias co='curl -O'
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
 alias ka=killall
