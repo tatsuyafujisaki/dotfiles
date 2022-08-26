@@ -79,7 +79,7 @@
     # stash-related
     pop = stash pop
     st = stash push --include-untracked
-    clear = stash clear
+    stc = stash clear
     drop = stash drop
     stl = stash list
     sts = stash show
