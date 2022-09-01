@@ -6,6 +6,7 @@ is_mac() {
 
 . ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
+. ~/.shell_profiles/functions.profile
 . ~/.shell_profiles/private.profile
 
 if [ $(uname) = Darwin ]
