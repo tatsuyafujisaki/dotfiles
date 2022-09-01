@@ -49,6 +49,7 @@ upp() {
   curl -o ~/.zshrc https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/profiles/.zshrc
   curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/profiles/adb.profile
   curl --create-dirs -o ~/.shell_profiles/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/profiles/common.profile
+  curl --create-dirs -o ~/.shell_profiles/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/profiles/common-functions.profile
   curl --create-dirs -o ~/.shell_profiles/mac.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/profiles/mac.profile
   
   exec -l $SHELL
