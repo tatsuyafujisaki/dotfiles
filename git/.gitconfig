@@ -60,7 +60,7 @@
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
-    rd = !git pull origin develop && git rebase develop
+    rd = !git up && git rebase develop
     rgu = remote get-url origin
     ri = rebase --interactive
     rir = rebase --interactive --root
@@ -75,7 +75,7 @@
     # git restore:
     # --staged is to undo staged changes.
     # --worktree is to undo unstaged changes.
-    up = !git clean -d --force && git restore --staged --worktree . && git pull --all --autostash --rebase --recurse-submodules && git fetch --prune --prune-tags
+    up = !git clean -d --force && git restore --staged --worktree . && git fetch --prune --prune-tags && git pull --all --autostash --rebase --recurse-submodules
     # stash-related
     pop = stash pop
     st = stash push --include-untracked
