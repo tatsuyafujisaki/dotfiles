@@ -11,10 +11,6 @@ setopt rmstarsilent
 # Case-insensitive tab completion
 autoload -U compinit && compinit && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
-is_mac() {
-  [[ $(uname) == Darwin ]]
-}
-
 . ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
 . ~/.shell_profiles/common-functions.profile
