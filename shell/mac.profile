@@ -11,11 +11,6 @@ alias bl='brew list -1'
 alias bs='brew search'
 alias bu='brew uninstall --zap'
 
-# Add GNU tools, installed by Homebrew, to PATH.
-[ -d /usr/local/opt/binutils/bin ] && export PATH="/usr/local/opt/binutils/bin:${PATH}"
-[ -d /usr/local/opt/gnu-sed/libexec/gnubin ] && export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
-[ -d /usr/local/opt/grep/libexec/gnubin ] && export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
-
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
 # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
@@ -38,5 +33,5 @@ up() {
   brew upgrade --greedy
 
   # Upgrade globally installed packages.
-  npm update --global
+  sudo npm update --global
 }
