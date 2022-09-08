@@ -7,26 +7,6 @@ export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 #
-# npm
-#
-
-alias npmig='npm install --global'
-alias npmin='npm init --yes'
-alias npmls='npm ls --depth 0'
-alias npmlsg='npm ls --depth 0 --global'
-alias npmug='npm uninstall --global'
-
-#
-# Python and pip
-#
-
-alias pip=pip3
-alias pipi='pip install'
-alias pipl='pip list'
-alias pipu='pip uninstall -y'
-alias python=python3
-
-#
 # cd-related
 #
 
@@ -37,7 +17,7 @@ alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 #
-# Visual Studio Code-related
+# https://code.visualstudio.com
 #
 
 alias adbp='code ~/.shell_profiles/adb.profile'
@@ -51,13 +31,32 @@ alias tp='code ~/Documents/GitHub/typescript-playground'
 alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 
 #
+# https://www.npmjs.com
+#
+
+alias npmig='npm install --global'
+alias npmin='npm init --yes'
+alias npmls='npm ls --depth 0'
+alias npmlsg='npm ls --depth 0 --global'
+alias npmug='npm uninstall --global'
+
+#
+# https://pip.pypa.io
+#
+
+alias pipi='pip3 install'
+alias pipl='pip3 list'
+alias pipu='pip3 uninstall -y'
+
+#
 # https://cli.github.com
 #
 
 alias ghpra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:'"
+alias ghpras='gh pr edit --add-assignee @me'
 alias ghpr='gh pr create --assignee @me --web'
 alias ghprl='gh pr list --web'
-alias ghprr='gh pr edit --add-reviewer tatsuyafujisaki'
+alias ghprr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
 alias ghprs='gh pr status'
 alias ghprv='gh pr view --web'
 
