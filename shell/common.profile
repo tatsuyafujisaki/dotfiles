@@ -60,6 +60,7 @@ alias ghprl='gh pr list --web'
 alias ghprr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
 alias ghprs='gh pr status'
 alias ghprv='gh pr view --web'
+alias ghrs='gh repo sync'
 
 #
 # Misc aliases
