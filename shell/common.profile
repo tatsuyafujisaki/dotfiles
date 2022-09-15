@@ -64,6 +64,12 @@ alias ghprv='gh pr view --web'
 alias ghrs='gh repo sync'
 
 #
+# https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
+#
+alias sqj='squoosh-cli --mozjpeg auto *.jpg'
+alias sqp='squoosh-cli --oxipng auto *.png'
+
+#
 # Misc aliases
 #
 
