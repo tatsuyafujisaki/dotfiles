@@ -66,8 +66,9 @@ alias ghrs='gh repo sync'
 #
 # https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
 #
-alias sqj='squoosh-cli --mozjpeg auto *.jpg'
-alias sqp='squoosh-cli --oxipng auto *.png'
+
+alias sqj='(cd ~/Desktop && squoosh-cli --mozjpeg auto *.jpg)' # () is to use a subshell.
+alias sqp='(cd ~/Desktop && squoosh-cli --oxipng auto *.png)' # () is to use a subshell.
 
 #
 # Misc aliases
