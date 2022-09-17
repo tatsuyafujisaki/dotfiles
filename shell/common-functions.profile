@@ -99,6 +99,7 @@ clean() {
   # Delete files for Android development.
   rm -f ~/.android/*.lock
   rm -f ~/.android/modem-nv-ram-*
+  rm -f ~/.emulator_console_auth_token
   rm -f ~/Library/Android/sdk/.knownPackages
 
   pushd ~ > /dev/null # avoids showing the pushed directory stack
