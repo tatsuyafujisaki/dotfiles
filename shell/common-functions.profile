@@ -1,5 +1,19 @@
 #
-# Converters
+# https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
+#
+
+alias sqj='(cd ~/Desktop && squoosh-cli --mozjpeg auto *.jpg)' # () is to use a subshell.
+alias sqp='(cd ~/Desktop && squoosh-cli --oxipng auto *.png)' # () is to use a subshell.
+
+mysq() {
+  cd ~/Desktop
+  [ -f *.jpg ] && squoosh-cli --mozjpeg auto *.jpg
+  [ -f *.png ] && squoosh-cli --oxipng auto *.png
+  cd -
+}
+
+#
+# https://ffmpeg.org
 #
 
 gif2mp4() {
@@ -25,6 +39,10 @@ mp4_to_gif() {
 
   ffmpeg -y -i $basename.mp4 $basename.gif
 }
+
+#
+# https://imagemagick.org
+#
 
 pdf2png() {
   if [ $# -lt 1 ]
@@ -211,7 +229,7 @@ rename_branch() {
 }
 
 # Update shell resources
-upp() {  
+upp() {
   # Remember to manually download private.profile from a private gist.
 
   curl -o ~/.bash_profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.bash_profile
