@@ -2,9 +2,6 @@
 # https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
 #
 
-alias sqj='(cd ~/Desktop && squoosh-cli --mozjpeg auto *.jpg)' # () is to use a subshell.
-alias sqp='(cd ~/Desktop && squoosh-cli --oxipng auto *.png)' # () is to use a subshell.
-
 mysq() {
   cd ~/Desktop
   [ -f *.jpg ] && squoosh-cli --mozjpeg auto *.jpg
