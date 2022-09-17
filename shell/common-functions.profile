@@ -3,10 +3,10 @@
 #
 
 mysq() {
-  cd ~/Desktop
+  pushd ~/Desktop > /dev/null # avoids showing the pushed directory stack
   [ -f *.jpg ] && squoosh-cli --mozjpeg auto *.jpg
   [ -f *.png ] && squoosh-cli --oxipng auto *.png
-  cd -
+  popd
 }
 
 #
