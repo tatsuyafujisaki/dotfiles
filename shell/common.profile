@@ -100,6 +100,7 @@ alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a p
 
 alias gp='code ~/.gradle/gradle.properties'
 alias gw=./gradlew
+alias gwkc='./gradlew ktlintCheck'
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 
 # Show the root project's dependencies, as a tree.
