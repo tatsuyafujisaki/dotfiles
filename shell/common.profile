@@ -99,7 +99,7 @@ alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a p
 #
 
 alias gp='code ~/.gradle/gradle.properties'
-alias gw='gradle wrapper --distribution-type all --gradle-version' # Usage: gw <version-number>
+alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 
 # Show the root project's dependencies, as a tree.
