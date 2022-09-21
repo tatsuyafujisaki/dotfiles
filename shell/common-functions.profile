@@ -4,9 +4,9 @@
 
 mysq() {
   pushd ~/Desktop > /dev/null # avoids showing the pushed directory stack
-  [ -f *.jpg ] && squoosh-cli --mozjpeg auto *.jpg
-  [ -f *.png ] && squoosh-cli --oxipng auto *.png
-  popd
+  squoosh-cli --mozjpeg auto *.jpg
+  squoosh-cli --oxipng auto *.png
+  popd > /dev/null # avoids showing the pushed directory stack
 }
 
 #
