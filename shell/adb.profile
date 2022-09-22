@@ -13,9 +13,9 @@ alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows 
 alias adbd='adb devices'
 alias adbi='adb install *.apk'
 alias adbks='adb kill-server'
-alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # "pv" means pull a video.
+alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)' # "pv" means pull a video.
 alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
-alias adbv='adb shell screenrecord /sdcard/screencast.mp4'
+alias adbv='adb shell screenrecord /sdcard/screencast.webm'
 
 # --text is to avoid "grep: (standard input): binary file matches".
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
