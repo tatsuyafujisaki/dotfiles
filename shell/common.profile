@@ -53,7 +53,7 @@ alias pipu='pip3 uninstall -y'
 #
 
 alias dkk='gh repo sync tatsuyafujisaki/conference-app-2022 --source DroidKaigi/conference-app-2022'
-alias ghpra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:'"
+alias ghpra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
 alias ghpras='gh pr edit --add-assignee @me'
 alias ghpr='gh pr create --assignee @me --web'
 alias ghprl='gh pr list --web'
