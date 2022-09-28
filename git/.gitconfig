@@ -31,6 +31,8 @@
     prompt = false
 [mergetool "vscode"]
     cmd = code -w $MERGED
+[advice]
+    skippedCherryPicks = false
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     ar = archive -o output.zip HEAD
