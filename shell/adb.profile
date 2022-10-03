@@ -21,7 +21,7 @@ alias adbv='adb shell screenrecord /sdcard/screencast.webm'
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
 
 # https://stackoverflow.com/a/30390647
-alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | xargs -n1 -r -t adb uninstall"
+alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | grep -v com.cisco.anyconnect.vpn.android.avf | xargs -n1 -r -t adb uninstall"
 
 alias emul='emulator -list-avds'
 alias develop='emulator @develop -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
