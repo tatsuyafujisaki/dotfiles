@@ -34,6 +34,7 @@
   "git.autofetch": true,
   "git.autoStash": true,
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,  
   "git.fetchOnPull": true,
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
