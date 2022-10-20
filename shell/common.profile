@@ -70,6 +70,12 @@ alias sqj='(cd ~/Desktop && squoosh-cli --mozjpeg auto *.jpg)' # () is to use a 
 alias sqp='(cd ~/Desktop && squoosh-cli --oxipng auto *.png)' # () is to use a subshell.
 
 #
+# https://github.com/jcsalterego/pngpaste
+#
+
+alias ppp='(cd ~/Desktop && pngpaste screenshot.png)' # () is to use a subshell.
+
+#
 # Misc aliases
 #
 
