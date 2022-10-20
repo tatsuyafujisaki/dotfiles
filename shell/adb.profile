@@ -26,7 +26,6 @@ alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v 
 alias emul='emulator -list-avds'
 alias develop='emulator @develop -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
 alias main='emulator @main -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
-alias review='emulator @review -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
