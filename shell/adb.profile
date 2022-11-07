@@ -16,16 +16,13 @@ alias adbks='adb kill-server'
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)' # "pv" means pull a video.
 alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
 alias adbv='adb shell screenrecord /sdcard/screencast.webm'
+alias emul='emulator -list-avds'
 
 # --text is to avoid "grep: (standard input): binary file matches".
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
 
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | grep -v com.cisco.anyconnect.vpn.android.avf | xargs -n1 -r -t adb uninstall"
-
-alias emul='emulator -list-avds'
-alias develop='emulator @develop -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
-alias main='emulator @main -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|'
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
@@ -50,9 +47,9 @@ adb_deeplink() {
 pixel() {
   if [ ${#} -lt 1 ]
   then
-    echo "Usage: $funcstack[1] <pixel-level>"
+    echo "Usage: $funcstack[1] <pixel-number> <api-level>"
     return
   fi
 
-  emulator @Pixel_4_API_$1 &|
+  emulator @Pixel_$1_API_$2 -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|
 }
