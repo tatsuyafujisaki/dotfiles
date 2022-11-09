@@ -22,7 +22,7 @@ alias emul='emulator -list-avds'
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
 
 # https://stackoverflow.com/a/30390647
-alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | grep -v com.cisco.anyconnect.vpn.android.avf | xargs -n1 -r -t adb uninstall"
+alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' | grep -v com.deploygate | grep -v com.cisco.anyconnect.vpn.android.avf | grep -v com.Slack | xargs -n1 -r -t adb uninstall"
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
