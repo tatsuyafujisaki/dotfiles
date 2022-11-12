@@ -66,6 +66,52 @@ pdf2png_grascale() {
 }
 
 #
+# Date-related
+#
+
+jymd() {
+  if [ $# -lt 4 ]
+  then
+    echo "Usage: $funcstack[1] <era> <year> <month> <day>"
+    return
+  fi
+
+  case $1 in
+  "m")
+    era="明治"
+    ;;
+  "t")
+    era="大正"
+    ;;
+  "s")
+    era="昭和"
+    ;;
+  "h")
+    era="平成"
+    ;;
+  esac
+
+  if [ $2 = "1" ]
+  then
+    year="元"
+  else
+    year=$2
+  fi
+
+  echo "$era$year年$3月$4日"
+}
+
+ymd() {
+  if [ $# -lt 3 ]
+  then
+    echo "Usage: $funcstack[1] <year> <month> <day>"
+    return
+  fi
+
+  echo "$1年$2月$3日"
+}
+
+#
 # Misc functions
 #
 
@@ -238,18 +284,6 @@ upp() {
   curl --create-dirs -o ~/.shell_profiles/mac.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/mac.profile
 
   exec -l $SHELL
-}
-
-ymd() {
-  if [ $# -lt 3 ]
-  then
-    echo "Usage: $funcstack[1] <year> <month> <day>"
-    return
-  fi
-
-  local result="$1年$2月$3日"
-
-  echo $result | pbcopy
 }
 
 # Must be defined after both clean and up are defined.
