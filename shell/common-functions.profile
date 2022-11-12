@@ -111,21 +111,11 @@ jymd() {
   echo "$era$year年$3月$4日"
 }
 
-m() {
-  jymd "m" $1 $2 $3
-}
-
-t() {
-  jymd "t" $1 $2 $3
-}
-
-s() {
-  jymd "s" $1 $2 $3
-}
-
-r() {
-  jymd "r" $1 $2 $3
-}
+m() { jymd "m" $1 $2 $3 }
+t() { jymd "t" $1 $2 $3 }
+s() { jymd "s" $1 $2 $3 }
+h() { jymd "h" $1 $2 $3 }
+r() { jymd "r" $1 $2 $3 }
 
 #
 # Misc functions
