@@ -91,7 +91,7 @@ jymd() {
     ;;
   esac
 
-  if [ $2 = "1" ]
+  if [ $2 = 1 ]
   then
     year="元"
   else
