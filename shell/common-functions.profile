@@ -66,8 +66,18 @@ pdf2png_grascale() {
 }
 
 #
-# Date-related
+# Date functions
 #
+
+ymd() {
+  if [ $# -lt 3 ]
+  then
+    echo "Usage: $funcstack[1] <year> <month> <day>"
+    return
+  fi
+
+  echo "$1年$2月$3日"
+}
 
 jymd() {
   if [ $# -lt 4 ]
@@ -101,14 +111,20 @@ jymd() {
   echo "$era$year年$3月$4日"
 }
 
-ymd() {
-  if [ $# -lt 3 ]
-  then
-    echo "Usage: $funcstack[1] <year> <month> <day>"
-    return
-  fi
+m() {
+  jymd "m" $1 $2 $3
+}
 
-  echo "$1年$2月$3日"
+t() {
+  jymd "t" $1 $2 $3
+}
+
+s() {
+  jymd "s" $1 $2 $3
+}
+
+r() {
+  jymd "r" $1 $2 $3
 }
 
 #
