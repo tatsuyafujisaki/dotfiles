@@ -52,15 +52,16 @@ alias pipu='pip3 uninstall -y'
 # https://cli.github.com
 #
 
-alias dkk='gh repo sync tatsuyafujisaki/conference-app-2022 --source DroidKaigi/conference-app-2022'
-alias ghpra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
-alias ghpras='gh pr edit --add-assignee @me'
-alias ghpr='gh pr create --assignee @me --web'
-alias ghprl='gh pr list --web'
-alias ghprr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
-alias ghprs='gh pr status'
-alias ghprv='gh pr view --web'
-alias ghrs='gh repo sync'
+alias pr='gh pr create --assignee @me --web'
+alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
+alias prl='gh pr list --web'
+alias prlm='gh pr create --assignee @me --web --label maintenance'
+alias prls='gh pr create --assignee @me --web --label subtask'
+alias prm='gh pr edit --add-assignee @me'
+alias prr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
+alias prs='gh pr status'
+alias prv='gh pr view --web'
+alias rs='gh repo sync'
 
 #
 # https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
