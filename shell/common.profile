@@ -13,8 +13,8 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
-alias dk='cd ~/Documents/GitHub/conference-app-2022'
 alias ghh='cd ~/Documents/GitHub'
+alias kc='cd ~/Documents/GitHub/kotlin-coroutines'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 #
