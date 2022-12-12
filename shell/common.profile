@@ -14,7 +14,6 @@ alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias ghh='cd ~/Documents/GitHub'
-alias kc='cd ~/Documents/GitHub/kotlin-coroutines'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 #
