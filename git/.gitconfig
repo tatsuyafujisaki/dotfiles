@@ -62,7 +62,7 @@
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
-    rd = !git pull origin develop && git rebase develop && git push --force
+    rd = !git pull origin develop && git rebase develop
     rgu = remote get-url origin
     ri = rebase --interactive
     rir = rebase --interactive --root
