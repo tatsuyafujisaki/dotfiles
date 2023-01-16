@@ -51,10 +51,10 @@ alias pipu='pip3 uninstall -y'
 # https://cli.github.com
 #
 
-alias pr='gh pr create --assignee @me --web --label subtask'
+alias pr='gh pr create --assignee @me --web --label subtask --body-file ~/Documents/GitHub/pr-template.md'
 alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
 alias prl='gh pr list --web'
-alias prm='gh pr create --assignee @me --web --label maintenance'
+alias prm='gh pr create --assignee @me --web --label maintenance --body-file ~/Documents/GitHub/pr-template.md'
 alias prme='gh pr edit --add-assignee @me'
 alias prr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
 alias prst='gh pr status'
