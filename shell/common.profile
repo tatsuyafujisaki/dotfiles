@@ -61,13 +61,6 @@ alias prst='gh pr status'
 alias prv='gh pr view --web'
 
 #
-# https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
-#
-
-alias sqj='(cd ~/Desktop && squoosh-cli --mozjpeg auto *.jpg)' # () is to use a subshell.
-alias sqp='(cd ~/Desktop && squoosh-cli --oxipng auto *.png)' # () is to use a subshell.
-
-#
 # https://github.com/jcsalterego/pngpaste
 #
 
