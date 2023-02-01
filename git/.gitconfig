@@ -77,7 +77,7 @@
     # git restore:
     # --staged is to undo staged changes.
     # --worktree is to undo unstaged changes.
-    up = !git clean -d --force && git restore --staged --worktree . && git fetch --prune --prune-tags && git pull --all --autostash --rebase --recurse-submodules
+    up = !git clean -d --force && git restore --staged --worktree . && git fetch --prune --prune-tags && git pull --all --autostash --rebase --recurse-submodules && git gc
     # stash-related
     pop = stash pop
     st = stash push --include-untracked
