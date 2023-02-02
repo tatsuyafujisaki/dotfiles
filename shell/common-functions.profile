@@ -2,7 +2,7 @@
 # https://ffmpeg.org
 #
 
-gif2mp4() {
+gif_to_mp4() {
   if [ $# -lt 1 ]
   then
     echo "Usage: $funcstack[1] <mp4>"
@@ -30,7 +30,7 @@ mp4_to_gif() {
 # https://imagemagick.org
 #
 
-pdf2png() {
+pdf_to_png() {
   if [ $# -lt 1 ]
   then
     echo "Usage: $funcstack[1] <file>"
@@ -42,7 +42,7 @@ pdf2png() {
   magick -density 600 $basename.pdf -trim -type grayscale $basename.png
 }
 
-pdf2png_grascale() {
+pdf_to_png_grascale() {
   if [ $# -lt 1 ]
   then
     echo "Usage: $funcstack[1] <file>"
