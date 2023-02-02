@@ -62,7 +62,7 @@ pdf_to_png() {
 
   local basename=$1:r
 
-  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
+  magick -density 600 $basename.pdf -trim $basename.png
 }
 
 pdf_to_png_grascale() {
@@ -74,7 +74,7 @@ pdf_to_png_grascale() {
 
   local basename=$1:r
 
-  magick -density 600 $basename.pdf -trim $basename.png
+  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
 }
 
 #
