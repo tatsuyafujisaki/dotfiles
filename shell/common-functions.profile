@@ -1,4 +1,27 @@
 #
+# https://git-scm.com
+#
+
+# git clean:
+#   -d is to delete untracked directories too.
+# git restore:
+#   --staged is to discard staged changes.
+#   --worktree is to discard unstaged changes.
+# git fetch:
+#   --prune is to remove remote-tracking references that no longer exist on the remote.
+#   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
+# git pull:
+#   -- all is to fetch all remotes.
+gg() {
+  git switch develop
+  git clean -d --force
+  git restore --staged --worktree .
+  git fetch --prune --prune-tags
+  git pull --all --autostash --rebase --recurse-submodules
+  git gc
+}
+
+#
 # https://ffmpeg.org
 #
 
