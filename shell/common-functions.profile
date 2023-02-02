@@ -1,15 +1,4 @@
 #
-# https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
-#
-
-mysq() {
-  pushd ~/Desktop > /dev/null # avoids showing the pushed directory stack
-  squoosh-cli --mozjpeg auto *.jpg
-  squoosh-cli --oxipng auto *.png
-  popd > /dev/null # avoids showing the pushed directory stack
-}
-
-#
 # https://ffmpeg.org
 #
 
