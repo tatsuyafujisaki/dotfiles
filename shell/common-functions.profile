@@ -2,6 +2,8 @@
 # https://git-scm.com
 #
 
+# git branch
+#   -D is a shortcut for "--delete --force".
 # git clean:
 #   -d is to delete untracked directories too.
 # git restore:
@@ -14,6 +16,7 @@
 #   -- all is to fetch all remotes.
 gg() {
   git switch develop
+  git branch | grep -v -e main -e master -e develop | xargs git branch -D
   git clean -d --force
   git restore --staged --worktree .
   git fetch --prune --prune-tags
