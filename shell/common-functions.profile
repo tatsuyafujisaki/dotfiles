@@ -114,6 +114,9 @@ jymd() {
   "h")
     era="平成"
     ;;
+  "r")
+    era="令和"
+    ;;
   esac
 
   if [ $2 = 1 ]
@@ -126,11 +129,11 @@ jymd() {
   echo "$era$year年$3月$4日"
 }
 
-m() { jymd "m" $1 $2 $3 }
-t() { jymd "t" $1 $2 $3 }
-s() { jymd "s" $1 $2 $3 }
-h() { jymd "h" $1 $2 $3 }
-r() { jymd "r" $1 $2 $3 }
+meiji() { jymd "m" $1 $2 $3 }
+taisho() { jymd "t" $1 $2 $3 }
+showa() { jymd "s" $1 $2 $3 }
+heisei() { jymd "h" $1 $2 $3 }
+reiwa() { jymd "r" $1 $2 $3 }
 
 #
 # Misc functions
