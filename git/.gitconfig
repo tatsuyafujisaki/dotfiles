@@ -5,7 +5,7 @@
     autocrlf = input # Set "input" on Linux/Mac. Set "true" on Windows. https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     editor = code -w
     excludesFile = ~/.gitignore
-    ignoreCase = false # makes it possible to 
+    ignoreCase = false # makes it possible to
     # whitespace = cr-at-eol # prevents "git diff" on Windows from showing "^M".
 [credential]
     helper = osxkeychain # sets "osxkeychain" on Mac. Set "wincred" on Windows, instead.
@@ -58,6 +58,7 @@
     lp = log --patch -- # takes <file> and shows the change history of the file.
     m = merge --no-edit
     ma = merge --abort
+    md = merege develop
     mt = mergetool
     pf = push --force
     r = rebase
@@ -67,8 +68,7 @@
     rgu = remote get-url origin
     ri = rebase --interactive
     rir = rebase --interactive --root
-    rs = reset HEAD~
-    rsh = reset HEAD~ --hard
+    rs = reset HEAD~ --hard
     rsk = rebase --skip
     sno = show --name-only
     sns = show --name-status
