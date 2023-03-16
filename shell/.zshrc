@@ -22,13 +22,3 @@ then
 else
   . ~/.shell_profiles/linux.profile
 fi
-
-#
-# Cloud SDK
-#
-
-# The next line updates PATH for the Google Cloud SDK.
-[ -f ~/google-cloud-sdk/path.zsh.inc ] && . ~/google-cloud-sdk/path.zsh.inc
-
-# The next line enables shell command completion for gcloud.
-[ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
