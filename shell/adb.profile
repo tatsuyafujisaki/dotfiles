@@ -1,4 +1,4 @@
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+export JAVA_HOME=~/Library/Application\ Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/221.6008.13.2211.9619390/Android\ Studio.app/Contents/jbr/Contents/Home
 
 # Add adb to PATH
 # Note that Zsh does not expand the tilde(~) if it is in double-quotes.
