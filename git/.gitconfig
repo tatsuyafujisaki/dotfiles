@@ -70,7 +70,6 @@
     rir = rebase --interactive --root
     rs = reset HEAD~
     rsh = reset HEAD~ --hard
-    rsk = rebase --skip
     sno = show --name-only
     sns = show --name-status
     sw = switch
