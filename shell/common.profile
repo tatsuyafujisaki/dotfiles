@@ -97,14 +97,19 @@ alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a p
 
 alias gp='code ~/.gradle/gradle.properties'
 alias gw=./gradlew
-alias gwkc='./gradlew ktlintCheck'
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
+
+#
+# Gradle for https://github.com/JLLeitschuh/ktlint-gradle
+#
+
+alias gwkc='./gradlew ktlintCheck'
 
 #
 # Gradle for https://github.com/dipien/releases-hub-gradle-plugin
 #
 
-alias rh='./gradlew listDependenciesToUpgrade'
+alias gwrh='./gradlew listDependenciesToUpgrade'
 
 # Show the root project's dependencies, as a tree.
 root_deps() {
