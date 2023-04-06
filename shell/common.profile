@@ -100,6 +100,12 @@ alias gw=./gradlew
 alias gwkc='./gradlew ktlintCheck'
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 
+#
+# Gradle for https://github.com/dipien/releases-hub-gradle-plugin
+#
+
+alias rh='./gradlew listDependenciesToUpgrade'
+
 # Show the root project's dependencies, as a tree.
 root_deps() {
   local temp=$(mktemp)
