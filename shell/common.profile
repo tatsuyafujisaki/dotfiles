@@ -100,6 +100,9 @@ alias gp='code ~/.gradle/gradle.properties'
 alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 
+# https://docs.gradle.org/8.0.2/release-notes.html#upgrade-instructions
+alias gwup='./gradlew wrapper --gradle-version=8.0.2'
+
 #
 # Gradle for https://github.com/JLLeitschuh/ktlint-gradle
 #
