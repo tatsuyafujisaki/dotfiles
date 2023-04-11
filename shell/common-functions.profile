@@ -154,12 +154,12 @@ clean_chrome() {
 
 clean() {
   # Delete .DS_Store
-  sudo find / -type f -iname .DS_Store -delete 2> /dev/null
+  sudo find / -type f -iname .DS_Store -delete 2> /dev/null &
 
   # Delete .localized
-  sudo find / -type f -iname .localized -delete 2> /dev/null
+  sudo find / -type f -iname .localized -delete 2> /dev/null &
 
-  # Delete directories for Android development.
+  # Delete folders for Android development.
   rm -fr ~/.android/breakpad
   rm -fr ~/.android/build-cache
   rm -fr ~/.android/cache
@@ -174,22 +174,22 @@ clean() {
 
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
-  # Delete unnecessary directories that require root privileges.
+  # Delete unnecessary folders that require root privileges.
   sudo rm -fr Downloads Movies Music Pictures
 
-  # Delete unnecessary directories
+  # Delete other unnecessary folders.
   cd ~/Library/Application\ Support/Google/RLZ
 
-  directories=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash .zsh_sessions)
-  for directory in "$directories[@]"
+  folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash .zsh_sessions)
+  for folder in "$folders[@]"
   do
-    rm -fr $directory
+    rm -fr $folder
   done
 
   mkdir .gradle
   curl -o ~/.gradle/gradle.properties https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle.properties
 
-  # Delete unnecessary files
+  # Delete unnecessary files.
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "$files[@]"
   do
