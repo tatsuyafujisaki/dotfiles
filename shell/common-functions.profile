@@ -199,22 +199,6 @@ clean() {
   popd > /dev/null # avoids showing the pushed directory stack
 }
 
-clean_android_or_intellij_project() {
-  # Delete unnecessary directories
-  directories=(.gradle .idea build)
-  for directory in "$directories[@]"
-  do
-    find . -type d -name "$directory" -exec rm -rf {} +
-  done
-
-  # Delete unnecessary files
-  files=(*.iml)
-  for file in "$files[@]"
-  do
-    find . -type f -name "$file" -delete
-  done
-}
-
 dm() {
   local dir=~/Desktop/deleteme
   rm -r $dir
