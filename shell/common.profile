@@ -89,7 +89,6 @@ alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias show_function_definition='declare -f'
 alias show_logical_cores='sysctl -n hw.ncpu'
 alias show_path='echo ${PATH} | tr : \\n'
-alias sr='swift repl'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 #
