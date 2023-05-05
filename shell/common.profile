@@ -92,10 +92,10 @@ alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 #
-# Gradle
+# https://gradle.org
 #
 
-alias gp='code ~/.gradle/gradle.properties'
+alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 
