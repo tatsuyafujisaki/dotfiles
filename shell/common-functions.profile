@@ -186,9 +186,6 @@ clean() {
     rm -fr $folder
   done
 
-  mkdir .gradle
-  curl -o ~/.gradle/gradle.properties https://raw.githubusercontent.com/tatsuyafujisaki/android-playground/master/gradle.properties
-
   # Delete unnecessary files.
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "$files[@]"
