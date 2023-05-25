@@ -1,6 +1,6 @@
 # Zsh does not expand the tilde(~) in single-quotes or double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
-export JAVA_HOME=~/Library/Application\ Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/222.4459.24.2221.9971841/Android\ Studio.app/Contents/jbr/Contents/Home
+export JAVA_HOME=~/Library/Application\ Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/222.4459.24.2221.10121639/Android\ Studio.app/Contents/jbr/Contents/Home
 
 # Add adb to PATH
 # Zsh does not expand the tilde(~) in single-quotes or double-quotes.
