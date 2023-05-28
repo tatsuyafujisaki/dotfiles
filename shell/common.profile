@@ -66,7 +66,7 @@ alias prv='gh pr view --web'
 # -ar stands for audio sample rate in hertz.
 # -q:a stands for quality:audio, and means a variable bit rate.
 # https://trac.ffmpeg.org/wiki/Encode/AAC
-ffmpeg -i input.m4a -ar 44100 -q:a 1 output.m4a
+alias myffmpeg='ffmpeg -i input.m4a -ar 44100 -q:a 1 output.m4a'
 
 #
 # https://github.com/exiftool/exiftool
