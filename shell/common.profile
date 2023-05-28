@@ -60,10 +60,10 @@ alias prst='gh pr status'
 alias prv='gh pr view --web'
 
 #
-# https://github.com/jcsalterego/pngpaste
+# https://github.com/exiftool/exiftool
 #
 
-alias ppp='(cd ~/Desktop && pngpaste $(date +%Y-%m-%d_%H-%M-%S).png)' # () is to use a subshell.
+alias exift='exiftool -all='
 
 #
 # Misc aliases
