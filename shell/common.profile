@@ -60,10 +60,19 @@ alias prst='gh pr status'
 alias prv='gh pr view --web'
 
 #
+# https://ffmpeg.org
+#
+
+# -ar stands for audio (sample) rate in hertz.
+# -q:a stands for quality:audio, and means a variable bit rate.
+# https://trac.ffmpeg.org/wiki/Encode/AAC
+ffmpeg -i input.m4a -ar 44100 -q:a 1 output.m4a
+
+#
 # https://github.com/exiftool/exiftool
 #
 
-alias exift='exiftool -all='
+alias exift='exiftool -all=' # takes a file path.
 
 #
 # Misc aliases
@@ -148,25 +157,4 @@ xcvideo() {
   local outputfile=screencast.mp4
   rm outputfile
   xcrun simctl io booted recordVideo $outputfile
-}
-
-#
-# Docker
-#
-
-# Show all running containers.
-alias dpsq='docker ps -q'
-
-# Show all running and non-running containers.
-alias dpsqa='docker ps -aq'
-
-docker_clean() {
-  # Stop all running containers.
-  docker stop $(docker ps -q) 2> /dev/null
-
-  # Remove all containers.
-  docker rm $(docker ps -aq) 2> /dev/null
-
-  # Remove all local images.
-  docker rmi $(docker images -aq) 2> /dev/null
 }
