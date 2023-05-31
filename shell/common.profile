@@ -10,7 +10,6 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 # cd-related
 #
 
-alias ..='cd ..'
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias ghh='cd ~/Documents/GitHub'
@@ -72,7 +71,7 @@ alias myffmpeg='ffmpeg -i input.m4a -ar 44100 -q:a 1 output.m4a'
 # https://github.com/exiftool/exiftool
 #
 
-alias exift='exiftool -all=' # takes a file path.
+alias exift='exiftool -overwrite_original -all=' # takes a file path.
 
 #
 # Misc aliases
