@@ -71,7 +71,7 @@ alias myffmpeg='ffmpeg -i input.m4a -ar 44100 -q:a 1 output.m4a'
 # https://github.com/exiftool/exiftool
 #
 
-alias exift='exiftool -overwrite_original -all=' # takes a file path.
+alias exift='exiftool -overwrite_original -all= *.mp4'
 
 #
 # Misc aliases
