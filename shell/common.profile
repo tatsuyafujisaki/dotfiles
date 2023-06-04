@@ -82,7 +82,6 @@ alias jdks='/usr/libexec/java_home -V'
 alias ka=killall
 alias l1='ls -1' # shows file names vertically. Note that the option is 1(one), not l(L).
 alias lns='ln -s $(pwd) ~'
-alias m2g='(cd ~/Desktop && ffmpeg -y -i screencast.mp4 screencast.gif)' # () is to use a subshell.
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep -i -n' # -n is to show a line number. -i is to be case-insensitive.
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
