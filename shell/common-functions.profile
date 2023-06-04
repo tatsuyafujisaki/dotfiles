@@ -25,34 +25,6 @@ gg() {
 }
 
 #
-# https://ffmpeg.org
-#
-
-gif_to_mp4() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <mp4>"
-    return
-  fi
-
-  local basename=$1:r
-
-  ffmpeg -y -i $basename.gif $basename.mp4
-}
-
-mp4_to_gif() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <mp4>"
-    return
-  fi
-
-  local basename=$1:r
-
-  ffmpeg -y -i $basename.mp4 $basename.gif
-}
-
-#
 # https://imagemagick.org
 #
 
