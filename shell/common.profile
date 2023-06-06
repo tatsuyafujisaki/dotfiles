@@ -115,12 +115,6 @@ alias gwup='./gradlew wrapper --gradle-version='
 
 alias gwkc='./gradlew ktlintCheck'
 
-#
-# Gradle for https://github.com/dipien/releases-hub-gradle-plugin
-#
-
-alias gwrh='./gradlew listDependenciesToUpgrade'
-
 # Show the root project's dependencies, as a tree.
 root_deps() {
   local temp=$(mktemp)
