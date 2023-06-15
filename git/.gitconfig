@@ -7,8 +7,6 @@
     excludesFile = ~/.gitignore
     ignoreCase = false # makes it possible to
     # whitespace = cr-at-eol # prevents "git diff" on Windows from showing "^M".
-[credential]
-    helper = osxkeychain # sets "osxkeychain" on Mac. Set "wincred" on Windows, instead.
 [fetch]
     prune = true
     pruneTags = true
