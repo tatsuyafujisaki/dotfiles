@@ -126,10 +126,10 @@ clean_chrome() {
 
 clean() {
   # Delete .DS_Store
-  sudo find / -type f -iname .DS_Store -delete 2> /dev/null &
+  sudo find / -type f -iname .DS_Store -delete 2> /dev/null
 
   # Delete .localized
-  sudo find / -type f -iname .localized -delete 2> /dev/null &
+  sudo find / -type f -iname .localized -delete 2> /dev/null
 
   # Delete folders for Android development.
   rm -fr ~/.android/breakpad
