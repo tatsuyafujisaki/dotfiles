@@ -182,6 +182,16 @@ dm() {
   code .
 }
 
+list_files_that_contain_string() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <keyword>"
+    return
+  fi
+
+  grep --ignore-case --recursive -I "$1" . | cut -d : -f 1 | xargs basename
+}
+
 mkdircd() {
   if [ $# -lt 1 ]
   then
