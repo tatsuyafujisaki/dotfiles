@@ -185,7 +185,7 @@ dm() {
 list_files_that_contain_string() {
   if [ $# -lt 1 ]
   then
-    echo "Usage: $funcstack[1] <keyword>"
+    echo "Usage: $funcstack[1] <pattern>"
     return
   fi
 
