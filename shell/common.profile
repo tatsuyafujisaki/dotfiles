@@ -93,7 +93,6 @@ alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process 
 # "-w 1" is to timeout after a second.
 alias port_scan='nc -vzw 1'
 alias reverse_string='rev <<<'
-alias rm='rm -rf'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias show_function_definition='declare -f'
 alias show_logical_cores='sysctl -n hw.ncpu'
