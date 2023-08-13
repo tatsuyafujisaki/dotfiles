@@ -1,4 +1,4 @@
-PS1='\e[1;32m\]$(pwd)\[\e[m\n\$ ' # Text between "\e[{x;ym}\]" and "\[\e[m" will be renderd in color.
+PS1='\e[1;32m\]$(pwd)\[\e[m\n\$ ' # A string between "\e[{x;ym}\]" and "\[\e[m" will be in color.
 
 . ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
