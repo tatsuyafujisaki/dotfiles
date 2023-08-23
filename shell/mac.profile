@@ -1,5 +1,8 @@
 export PATH="/usr/libexec:$PATH" # adds the executable "java_home", which returns the value of $JAVA_HOME.
 
+# Ruby 3
+[ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:${PATH}
+
 #
 # Homebrew
 #
