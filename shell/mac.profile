@@ -1,7 +1,11 @@
-export PATH="/usr/libexec:$PATH" # adds the executable "java_home", which returns the value of $JAVA_HOME.
+# Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
+export PATH=$PATH:/usr/libexec
+
+# Add Flutter to PATH.
+[ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
 
 # Add Ruby 3 installed via Homebrew to PATH.
-[ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:${PATH}
+[ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:$PATH
 
 #
 # Homebrew
