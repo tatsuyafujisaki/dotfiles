@@ -48,10 +48,6 @@
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.target": "ESNext",
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "python.formatting.provider": "none",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
