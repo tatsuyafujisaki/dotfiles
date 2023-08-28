@@ -1,9 +1,5 @@
 {
   "debug.console.historySuggestions": false,
-  "code-runner.executorMap": {
-    "python": "/usr/bin/python3",
-    "typescript": "node -r ts-node/register",
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
