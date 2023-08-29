@@ -28,6 +28,7 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,  
   "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,  
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
   "html.format.preserveNewLines": false,
