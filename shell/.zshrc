@@ -9,7 +9,10 @@ setopt nonomatch
 setopt rmstarsilent
 
 # Case-insensitive tab completion
-autoload -U compinit && compinit && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+# -u in "compinit -u" is to avoid showing an error in the following case. In short, if you only have one user, you won't have a problem.
+# > For security reasons compinit also checks if the completion system would use files not owned by root or by the current user, ...
+# https://zsh.sourceforge.io/Doc/Release/Completion-System.html
+autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
 . ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
