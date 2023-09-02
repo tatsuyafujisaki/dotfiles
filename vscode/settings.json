@@ -59,5 +59,11 @@
   "workbench.editor.restoreViewState": false,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "quickfix.convert.toSingleQuotedString": true,
+      "quickfix.insertSemicolon": true,
+    }
+  }
 }
