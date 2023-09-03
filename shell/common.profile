@@ -19,8 +19,6 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 # https://code.visualstudio.com
 #
 
-alias adbp='code ~/.shell_profiles/adb.profile'
-alias cf='code ~/.shell_profiles/common-functions.profile'
 alias macp='code ~/.shell_profiles/mac.profile'
 alias p='code ~/.shell_profiles/common.profile'
 alias pp='code ~/.shell_profiles/private.profile'
