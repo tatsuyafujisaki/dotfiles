@@ -1,3 +1,6 @@
+# opens this file in Visual Studio Code.
+alias cfp='code ~/.shell_profiles/common-functions.profile'
+
 #
 # https://git-scm.com
 #
