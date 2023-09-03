@@ -1,3 +1,6 @@
+# Opens this file in Visual Studio Code.
+alias p='code ~/.shell_profiles/common.profile'
+
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
 
 export EDITOR=nano # makes 'crontab -e' use nano instead of vim
@@ -14,16 +17,6 @@ alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
-
-#
-# https://code.visualstudio.com
-#
-
-alias macp='code ~/.shell_profiles/mac.profile'
-alias p='code ~/.shell_profiles/common.profile'
-alias pp='code ~/.shell_profiles/private.profile'
-alias tp='code ~/Documents/GitHub/typescript-playground'
-alias tw='code ~/Documents/GitHub/twitter-follow-unfollow-retweet-unretweet'
 
 #
 # https://www.npmjs.com
