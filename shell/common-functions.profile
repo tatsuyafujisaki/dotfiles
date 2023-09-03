@@ -267,6 +267,7 @@ upp() {
   curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/adb.profile
   curl --create-dirs -o ~/.shell_profiles/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common.profile
   curl --create-dirs -o ~/.shell_profiles/common-functions.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common-functions.profile
+  curl --create-dirs -o ~/.shell_profiles/flutter.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/flutter.profile
   curl --create-dirs -o ~/.shell_profiles/mac.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/mac.profile
 
   exec -l $SHELL
