@@ -1,4 +1,4 @@
-# Opens this file in Visual Studio Codd.
+# opens this file in Visual Studio Code.
 alias macp='code ~/.shell_profiles/mac.profile'
 
 # Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
