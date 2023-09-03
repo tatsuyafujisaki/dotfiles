@@ -1,3 +1,6 @@
+# Opens this file in Visual Studio Codd.
+alias macp='code ~/.shell_profiles/mac.profile'
+
 # Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
 export PATH=$PATH:/usr/libexec
 
