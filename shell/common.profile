@@ -1,4 +1,4 @@
-# Opens this file in Visual Studio Code.
+# opens this file in Visual Studio Code.
 alias p='code ~/.shell_profiles/common.profile'
 
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
