@@ -258,17 +258,23 @@ rename_branch() {
   git push -u origin $2 # creates the new branch on remote and resets the upstream branch to it.
 }
 
-# Update shell resources
+# Update shell profiles
 upp() {
   # Remember to manually download private.profile from a private gist.
 
-  curl -o ~/.bash_profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.bash_profile
-  curl -o ~/.zshrc https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.zshrc
-  curl --create-dirs -o ~/.shell_profiles/adb.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/adb.profile
-  curl --create-dirs -o ~/.shell_profiles/common.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common.profile
-  curl --create-dirs -o ~/.shell_profiles/common-functions.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common-functions.profile
-  curl --create-dirs -o ~/.shell_profiles/flutter.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/flutter.profile
-  curl --create-dirs -o ~/.shell_profiles/mac.profile https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/mac.profile
+  pushd ~
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.bash_profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.zshrc
+
+  pushd ~/.shell_profiles
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/adb.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common-functions.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/flutter.profile
+  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/mac.profile
+
+  popd
+  popd
 
   exec -l $SHELL
 }
