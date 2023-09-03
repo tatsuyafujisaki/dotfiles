@@ -17,6 +17,7 @@ autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[
 . ~/.shell_profiles/adb.profile
 . ~/.shell_profiles/common.profile
 . ~/.shell_profiles/common-functions.profile
+. ~/.shell_profiles/flutter.profile
 . ~/.shell_profiles/private.profile
 
 if [ $(uname) = Darwin ]
