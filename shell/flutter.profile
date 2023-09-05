@@ -3,6 +3,9 @@ alias fpp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
+# Uncomment the following if `flutter doctor` cannot find the Android toolchain.
+# ln -s "/Applications/Android Studio.app" ~/Applications
+
 # Dart
 alias d=dart
 alias dp='dart pub'
