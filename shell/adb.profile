@@ -1,10 +1,6 @@
 # opens this file in Visual Studio Code.
 alias adbp='code ~/.shell_profiles/adb.profile'
 
-# Zsh does not expand the tilde(~) in single-quotes or double-quotes.
-# http://zsh.sourceforge.net/Guide/zshguide05.html
-export JAVA_HOME=~/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
-
 # Add adb to PATH
 # Zsh does not expand the tilde(~) in single-quotes or double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
