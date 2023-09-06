@@ -4,7 +4,7 @@ alias fpp='code ~/.shell_profiles/flutter.profile'
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
 # Dart
-alias d=dart
+alias drt=dart
 alias dp='dart pub'
 alias dpg='dart pub get'
 
