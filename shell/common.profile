@@ -15,9 +15,13 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
-alias dpp='cd ~/Documents/GitHub/dart-playground'
 alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
+
+#
+# Visual Studio Code-related
+#
+alias dp='code ~/Documents/GitHub/dart-playground'
 
 #
 # https://www.npmjs.com
