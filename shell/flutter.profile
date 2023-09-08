@@ -13,3 +13,6 @@ alias f=flutter
 alias fd='flutter doctor'
 alias fp='flutter pub'
 alias fpg='flutter pub get'
+
+# Karabiner
+alias ctk='echo /Hfref/xoc110/Qbphzragf/TvgUho/gbxhfuvzneh_qvire_ncc | rot13 | xargs code'
