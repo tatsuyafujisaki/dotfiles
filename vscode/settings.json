@@ -65,7 +65,10 @@
       "quickfix.add.const.multi": true,
       "quickfix.add.trailingComma.multi": true,
       "quickfix.convert.toSingleQuotedString.multi": true,
+      "quickfix.convert.toSuperParameters.multi": true,
       "quickfix.insertSemicolon": true,
+      "quickfix.makeRequiredNamedParametersFirst.multi": true,
+      "quickfix.replace.withNullAware": true,
     }
   }
 }
