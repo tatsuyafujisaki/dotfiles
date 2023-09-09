@@ -116,10 +116,7 @@ alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 # https://gradle.org/releases/
 alias gwup='./gradlew wrapper --gradle-version='
 
-#
-# Gradle for https://github.com/JLLeitschuh/ktlint-gradle
-#
-
+# https://github.com/JLLeitschuh/ktlint-gradle
 alias gwkc='./gradlew ktlintCheck'
 
 # Show the root project's dependencies, as a tree.
