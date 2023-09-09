@@ -63,4 +63,9 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "quickfix.insertSemicolon": true,
+    },
+  },
 }
