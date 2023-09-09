@@ -1,5 +1,8 @@
 {
   "debug.console.historySuggestions": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.copyWithSyntaxHighlighting": false,
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
@@ -60,15 +63,4 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "[dart]": {
-    "editor.codeActionsOnSave": {
-      "quickfix.add.const.multi": true,
-      "quickfix.add.trailingComma.multi": true,
-      "quickfix.convert.toSingleQuotedString.multi": true,
-      "quickfix.convert.toSuperParameters.multi": true,
-      "quickfix.insertSemicolon": true,
-      "quickfix.makeRequiredNamedParametersFirst.multi": true,
-      "quickfix.replace.withNullAware": true,
-    }
-  }
 }
