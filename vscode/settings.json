@@ -26,9 +26,9 @@
   "git.autofetch": true,
   "git.autoStash": true,
   "git.confirmSync": false,
-  "git.enableSmartCommit": true,  
+  "git.enableSmartCommit": true,
   "git.fetchOnPull": true,
-  "git.followTagsWhenSync": true,  
+  "git.followTagsWhenSync": true,
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
   "html.format.preserveNewLines": false,
@@ -62,7 +62,9 @@
   "workbench.startupEditor": "none",
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.convert.toSingleQuotedString": true,
+      "quickfix.add.const.multi": true,
+      "quickfix.add.trailingComma.multi": true,
+      "quickfix.convert.toSingleQuotedString.multi": true,
       "quickfix.insertSemicolon": true,
     }
   }
