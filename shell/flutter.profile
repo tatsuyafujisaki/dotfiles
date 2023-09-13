@@ -4,7 +4,7 @@ alias fp='code ~/.shell_profiles/flutter.profile'
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
 # Dart
-alias drt=dart
+alias dbr='dart run build_runner build --delete-conflicting-outputs'
 
 # Flutter
 alias f=flutter
