@@ -1,5 +1,5 @@
 # opens this file in Visual Studio Code.
-alias fpp='code ~/.shell_profiles/flutter.profile'
+alias fp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
@@ -8,6 +8,7 @@ alias drt=dart
 
 # Flutter
 alias f=flutter
+alias fbr='flutter pub run build_runner build --delete-conflicting-outputs'
 alias fd='flutter doctor'
 
 # Karabiner
