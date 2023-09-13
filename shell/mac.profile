@@ -45,3 +45,13 @@ up() {
   # Upgrade globally installed packages.
   sudo npm update --global
 }
+
+#
+# Xcode
+#
+
+xcrv() {
+  local outputfile=screencast.mp4
+  rm $outputfile
+  xcrun simctl io booted recordVideo $outputfile
+}
