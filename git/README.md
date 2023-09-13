@@ -5,5 +5,5 @@ Android.gitignore,\
 Dart.gitignore,\
 Node.gitignore,\
 Swift.gitignore\
-} > gitignore.txt
+} > .gitignore
 ```
