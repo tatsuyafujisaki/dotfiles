@@ -35,7 +35,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 #
 
 alias cdp='code ~/Documents/GitHub/dart_playground'
-alias cfp='code ~/Documents/GitHub/flutter_playground'
+alias cfpp='code ~/Documents/GitHub/flutter_playground'
 
 #
 # https://www.npmjs.com
