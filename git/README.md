@@ -14,4 +14,5 @@ Swift.gitignore\
 # > In many source code repositories, the common practice is not to commit generated files, at all.
 # https://dart.dev/guides/libraries/private-files#details
 *.g.dart
+*.freezed.dart
 ```
