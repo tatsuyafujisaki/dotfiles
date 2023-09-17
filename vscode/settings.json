@@ -12,11 +12,9 @@
   "editor.quickSuggestions": {
     "other": false
   },
-  "editor.unicodeHighlight.allowedLocales": {
-    "ja": true
-  },
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
