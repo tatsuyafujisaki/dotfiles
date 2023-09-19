@@ -16,6 +16,7 @@ alias fa='flutter analyze'
 alias fbrb='flutter pub run build_runner build'
 alias fbrw='flutter pub run build_runner watch'
 alias fd='flutter doctor'
+alias fds='flutter devices'
 alias fpg='flutter pub get'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 
