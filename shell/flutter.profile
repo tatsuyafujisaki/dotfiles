@@ -5,7 +5,7 @@ alias fp='code ~/.shell_profiles/flutter.profile'
 
 # Dart
 alias dfa='dart fix --apply'
-alias dfdr='dart fix --dry-run --code=require_trailing_commas,unused_import,unused_local_variable'
+alias dfdr='dart fix --dry-run'
 alias dpg='dart pub get'
 alias dbrw='dart run build_runner watch'
 alias dpg='dart pub get'
