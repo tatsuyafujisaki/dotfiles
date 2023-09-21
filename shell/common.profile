@@ -25,8 +25,8 @@ alias tf='echo tatsuyafujisaki | pbcopy'
 
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
-alias dp='code ~/Documents/GitHub/dart_playground'
-alias fpp='code ~/Documents/GitHub/flutter_playground'
+alias dp='cd ~/Documents/GitHub/dart_playground'
+alias fpp='cd ~/Documents/GitHub/flutter_playground'
 alias ghh='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
