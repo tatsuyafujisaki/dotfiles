@@ -1,4 +1,5 @@
 {
+  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.5-stable",
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
