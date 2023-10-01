@@ -2,6 +2,7 @@
 alias fp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
+[ -d ~/.asdf/installs/flutter/3.13.5-stable/bin ] && export PATH=${PATH}:~/.asdf/installs/flutter/3.13.5-stable/bin
 
 # Dart
 alias dbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
