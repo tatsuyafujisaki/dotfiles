@@ -1,3 +1,4 @@
+// Put me as ~/Library/Application Support/Code/User/settings.json
 {
   "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.6-stable",
   "debug.console.historySuggestions": false,
