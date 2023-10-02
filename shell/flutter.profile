@@ -13,6 +13,7 @@ alias dfdr='dart fix --dry-run'
 alias dpg='dart pub get'
 alias drbrb='dart run build_runner build --delete-conflicting-outputs'
 alias drbrs='dart run build_runner serve'
+alias dv='dart --version'
 
 # Flutter
 alias f=flutter
@@ -23,6 +24,7 @@ alias fpa='flutter pub add'
 alias fpad='flutter pub add --dev'
 alias fpg='flutter pub get'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
+alias fv='flutter --version'
 
 # Karabiner
 alias ctk='echo /Hfref/xoc110/Qbphzragf/TvgUho/gbxhfuvzneh_qvire_ncc | rot13 | xargs code'
