@@ -147,13 +147,3 @@ print_projects_requried_by_given_project() {
   fi
   ./gradlew -q :$1:dependencies --configuration implementation | grep '+--- project' | sort
 }
-
-#
-# Xcode
-#
-
-xcvideo() {
-  local outputfile=screencast.mp4
-  rm outputfile
-  xcrun simctl io booted recordVideo $outputfile
-}
