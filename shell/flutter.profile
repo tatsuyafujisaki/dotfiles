@@ -3,6 +3,9 @@ alias fp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
+# Make it available 'dart' in Terminal
+[ -d $(~/.asdf/bin/asdf where flutter)/bin ] && export PATH=${PATH}:$(~/.asdf/bin/asdf where flutter)/bin
+
 # Dart
 alias dbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
 alias dfa='dart fix --apply'
