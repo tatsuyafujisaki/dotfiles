@@ -34,6 +34,7 @@ alias fds='flutter devices'
 alias fpa='flutter pub add'
 alias fpad='flutter pub add --dev'
 alias fpg='flutter pub get'
+alias fr='flutter run --dart-define=FLAVOR=stg'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias fv='flutter --version'
 
