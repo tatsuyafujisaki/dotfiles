@@ -3,7 +3,7 @@ alias fp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
-# Make it available 'dart' in Terminal
+# makes it available 'dart' in Terminal.
 [ -d $(~/.asdf/bin/asdf where flutter)/bin ] && export PATH=${PATH}:$(~/.asdf/bin/asdf where flutter)/bin
 
 # Dart
