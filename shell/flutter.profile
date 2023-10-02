@@ -8,7 +8,7 @@ alias dbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_gen
 alias dfa='dart fix --apply'
 alias dfdr='dart fix --dry-run'
 alias dpg='dart pub get'
-alias dpg='dart pub get'
+alias drbrb='dart run build_runner build --delete-conflicting-outputs'
 alias drbrs='dart run build_runner serve'
 
 # Flutter
