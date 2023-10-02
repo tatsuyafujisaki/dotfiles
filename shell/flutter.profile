@@ -3,8 +3,18 @@ alias fp='code ~/.shell_profiles/flutter.profile'
 
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
-# makes 'dart' available in Terminal.
-[ -d $(~/.asdf/bin/asdf where flutter)/bin ] && export PATH=${PATH}:$(~/.asdf/bin/asdf where flutter)/bin
+#
+# asdf
+#
+
+[ -d ~/.asdf/bin ] && export PATH=$PATH:~/.asdf/bin
+
+# makes 'flutter' available in Visual Studio Code.
+# https://github.com/oae/asdf-flutter#vscode
+export FLUTTER_ROOT=$(asdf where flutter)
+
+# makes 'flutter' and 'dart' available in Terminal.
+[ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
 
 # Dart
 alias dbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
