@@ -4,9 +4,6 @@ alias macp='code ~/.shell_profiles/mac.profile'
 # Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
 export PATH=$PATH:/usr/libexec
 
-# Add Flutter to PATH.
-[ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
-
 # Add Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
 [ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:$PATH
 
@@ -20,6 +17,14 @@ alias bin='brew info'
 alias bl='brew list -1'
 alias bs='brew search'
 alias bu='brew uninstall --zap'
+
+#
+# Misc
+#
+
+alias oa='open -a'
+alias oas='open -a simulator'
+alias oax='open -a xcode'
 
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
