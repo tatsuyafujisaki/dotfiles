@@ -1,6 +1,7 @@
 # opens this file in Visual Studio Code.
 alias fp='code ~/.shell_profiles/flutter.profile'
 
+# adds Flutter to PATH on macOS without asdf.
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
 #
