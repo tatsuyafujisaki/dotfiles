@@ -1,4 +1,4 @@
-// Put me as ~/Library/Application Support/Code/User/settings.json
+// Put me as "~/Library/Application Support/Code/User/settings.json" and delete all the comments.
 {
   "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.6-stable", // or set the FLUTTER_ROOT environment variable.
   "dart.openDevTools": "always",
