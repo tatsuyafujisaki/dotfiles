@@ -55,6 +55,7 @@ up() {
 # Xcode
 #
 
+"simct" means simulator only.
 xcrv() {
   local outputfile=screencast.mp4
   rm $outputfile
