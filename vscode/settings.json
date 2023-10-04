@@ -1,6 +1,6 @@
-Put me as "~/Library/Application Support/Code/User/settings.json" and delete all the comments.
+// Put me as "~/Library/Application Support/Code/User/settings.json" and delete all comments because they are not allowed in JSON.
 {
-  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.6-stable", or set the FLUTTER_ROOT environment variable.
+  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.6-stable", // or set the FLUTTER_ROOT environment variable.
   "dart.openDevTools": "always",
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
@@ -35,6 +35,13 @@ Put me as "~/Library/Application Support/Code/User/settings.json" and delete all
   "git.followTagsWhenSync": true,
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
+  // https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
   "html.format.preserveNewLines": false,
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
