@@ -34,6 +34,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 # Visual Studio Code-related
 #
 
+alias c='code .'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
 
