@@ -29,7 +29,8 @@ alias dv='dart --version'
 # Flutter
 alias f=flutter
 alias fa='flutter analyze'
-alias fcc='flutter create --platforms=ios,web .'
+alias fcl='flutter clean'
+alias fcr='flutter create --platforms=ios,web .'
 alias fd='flutter doctor'
 alias fds='flutter devices'
 alias fpa='flutter pub add'
