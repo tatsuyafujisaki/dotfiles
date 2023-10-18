@@ -25,6 +25,7 @@ alias dpa='dart pub add'
 alias dpg='dart pub get'
 alias drbrb='dart run build_runner build --delete-conflicting-outputs'
 alias drbrs='dart run build_runner serve'
+alias drbrw='dart run build_runner watch'
 alias dv='dart --version'
 
 # Flutter
