@@ -18,14 +18,13 @@ export FLUTTER_ROOT=$(asdf where flutter)
 [ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
 
 # Dart
-alias dbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
 alias dfa='dart fix --apply'
 alias dfdr='dart fix --dry-run'
 alias dpa='dart pub add'
 alias dpg='dart pub get'
 alias drbrb='dart run build_runner build --delete-conflicting-outputs'
 alias drbrs='dart run build_runner serve'
-alias drbrw='dart run build_runner watch'
+alias drbrw='dart run build_runner watch' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
 alias dv='dart --version'
 
 # Flutter
