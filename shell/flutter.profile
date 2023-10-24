@@ -32,7 +32,7 @@ alias dv='dart --version'
 alias f=flutter
 alias fa='flutter analyze'
 alias fcl='flutter clean'
-alias fcr='flutter create --platforms=ios,web .'
+alias fcr='flutter create --platforms=android,ios .'
 alias fd='flutter doctor'
 alias fds='flutter devices'
 alias fpa='flutter pub add'
@@ -40,9 +40,5 @@ alias fpad='flutter pub add --dev'
 alias fpg='flutter pub get'
 alias fr='flutter run'
 alias frr='flutter run --dart-define=FLAVOR=stg'
-alias frrr='flutter run --dart-define=FLAVOR=stg --release'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias fv='flutter --version'
-
-# Karabiner
-alias ctk='echo /Hfref/xoc110/Qbphzragf/TvgUho/gbxhfuvzneh_qvire_ncc | rot13 | xargs code'
