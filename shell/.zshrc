@@ -14,15 +14,15 @@ setopt rmstarsilent
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
-. ~/.shell_profiles/adb.profile
-. ~/.shell_profiles/common.profile
-. ~/.shell_profiles/common-functions.profile
-. ~/.shell_profiles/flutter.profile
-. ~/.shell_profiles/private.profile
+. ~/Documents/GitHub/dotfiles/shell/adb.profile
+. ~/Documents/GitHub/dotfiles/shell/common.profile
+. ~/Documents/GitHub/dotfiles/shell/common-functions.profile
+. ~/Documents/GitHub/dotfiles/shell/flutter.profile
+. ~/Documents/GitHub/private/private.profile
 
 if [ $(uname) = Darwin ]
 then
-  . ~/.shell_profiles/mac.profile
+  . ~/Documents/GitHub/dotfiles/shell/mac.profile
 else
-  . ~/.shell_profiles/linux.profile
+  . ~/Documents/GitHub/dotfiles/shell/linux.profile
 fi
