@@ -1,7 +1,7 @@
 // Put me as "~/Library/Application Support/Code/User/settings.json"
 // and delete all comments because they are not allowed in JSON.
 {
-  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.7-stable", // or set the FLUTTER_ROOT environment variable.
+  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.9-stable", // or set the FLUTTER_ROOT environment variable.
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
