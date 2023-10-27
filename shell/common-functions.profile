@@ -1,5 +1,5 @@
 # opens this file in Visual Studio Code.
-alias cfp='code ~/.shell_profiles/common-functions.profile'
+alias cfp='code ~/Documents/GitHub/dotfiles/shell/common-functions.profile'
 
 #
 # https://git-scm.com
