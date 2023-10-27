@@ -1,5 +1,5 @@
 # opens this file in Visual Studio Code.
-alias linuxp='code ~/.shell_profiles/linux.profile'
+alias linuxp='code ~/Documents/GitHub/dotfiles/shell/linux.profile'
 
 # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
 alias myls='ls -dFhlv --color --group-directories-first'
