@@ -261,27 +261,6 @@ rename_branch() {
   git push -u origin $2 # creates the new branch on remote and resets the upstream branch to it.
 }
 
-# Update shell profiles
-upp() {
-  # Remember to manually download private.profile from a private gist.
-
-  pushd ~
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.bash_profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/.zshrc
-
-  pushd ~/.shell_profiles
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/adb.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/common-functions.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/flutter.profile
-  curl -O https://raw.githubusercontent.com/tatsuyafujisaki/dotfiles/main/shell/mac.profile
-
-  popd
-  popd
-
-  exec -l $SHELL
-}
-
 # Must be defined after both clean and up are defined.
 cleanup() {
   clean
