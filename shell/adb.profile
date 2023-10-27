@@ -1,5 +1,5 @@
 # opens this file in Visual Studio Code.
-alias adbp='code ~/.shell_profiles/adb.profile'
+alias adbp='code ~/Documents/GitHub/dotfiles/shell/adb.profile'
 
 # Zsh does not expand the tilde(~) in single-quotes or double-quotes.
 # http://zsh.sourceforge.net/Guide/zshguide05.html
