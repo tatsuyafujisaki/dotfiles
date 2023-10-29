@@ -4,16 +4,6 @@ alias fp='code ~/Documents/GitHub/dotfiles/shell/flutter.profile'
 # adds Flutter to PATH on macOS without asdf.
 [ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
 
-#
-# asdf
-#
-
-[ -d ~/.asdf/bin ] && export PATH=$PATH:~/.asdf/bin
-
-# makes 'flutter' available in Visual Studio Code.
-# https://github.com/oae/asdf-flutter#vscode
-export FLUTTER_ROOT=$(asdf where flutter)
-
 # makes 'flutter' and 'dart' available in Terminal.
 [ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
 
@@ -43,3 +33,19 @@ alias fr='flutter run'
 alias frr='flutter run --dart-define=FLAVOR=stg'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias fv='flutter --version'
+
+#
+# asdf
+#
+
+[ -d ~/.asdf/bin ] && export PATH=$PATH:~/.asdf/bin
+
+# makes 'flutter' available in Visual Studio Code.
+# https://github.com/oae/asdf-flutter#vscode
+export FLUTTER_ROOT=$(asdf where flutter)
+
+alias asdfc='asdf current'
+alias asdfgf='asdf global flutter'
+alias asdflaf='asdf list all flutter'
+alias asdflf='asdf list flutter'
+alias asdflcf='asdf local flutter's
