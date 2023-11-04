@@ -1,7 +1,10 @@
 // Put me as "~/Library/Application Support/Code/User/settings.json"
 // and delete all comments because they are not allowed in JSON.
 {
+  "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.9-stable", // or set the FLUTTER_ROOT environment variable.
+  "dart.hotReloadOnSave": "allIfDirty",
+  "dart.renameFilesWithClasses": "always",
   "debug.console.historySuggestions": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
