@@ -6,6 +6,7 @@
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.renameFilesWithClasses": "always",
   "debug.console.historySuggestions": false,
+  "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
