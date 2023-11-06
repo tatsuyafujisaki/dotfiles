@@ -2,7 +2,10 @@
 alias fp='code ~/Documents/GitHub/dotfiles/shell/flutter.profile'
 
 # adds Flutter to PATH on macOS without asdf.
-[ -d ~/development/flutter/bin ] && export PATH=${PATH}:~/development/flutter/bin
+[ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
+
+# adds flutterfire to PATH.
+[ -d ~/.pub-cache/bin ] && export PATH=$PATH:~/.pub-cache/bin
 
 # Dart
 alias dfa='dart fix --apply'
