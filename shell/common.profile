@@ -115,6 +115,7 @@ alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a p
 alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
+alias gws='./gradlew --stop'
 
 # https://gradle.org/releases/
 alias gwup='./gradlew wrapper --gradle-version='
