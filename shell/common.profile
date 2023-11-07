@@ -26,7 +26,7 @@ alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fpp='cd ~/Documents/GitHub/flutter_playground'
-alias ghh='cd ~/Documents/GitHub'
+alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 
 #
