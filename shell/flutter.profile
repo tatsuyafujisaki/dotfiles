@@ -52,7 +52,7 @@ alias asdfc='asdf current'
 alias asdfgf='asdf global flutter'
 alias asdflaf='asdf list all flutter | uniq'
 alias asdflf='asdf list flutter'
-alias asdflcf='asdf local flutter's
+alias asdflcf='asdf local flutter'
 
 #
 # misc
