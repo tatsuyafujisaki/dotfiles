@@ -53,3 +53,8 @@ alias asdfgf='asdf global flutter'
 alias asdflaf='asdf list all flutter | uniq'
 alias asdflf='asdf list flutter'
 alias asdflcf='asdf local flutter's
+
+#
+# misc
+#
+alias xs='open ios/Runner.xcworkspace'
