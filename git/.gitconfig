@@ -2,11 +2,10 @@
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
 [core]
-    autocrlf = input # Set "input" on Linux/Mac. Set "true" on Windows. https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+    autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     editor = code -w
     excludesFile = ~/.gitignore
-    ignoreCase = false # makes it possible to
-    # whitespace = cr-at-eol # prevents "git diff" on Windows from showing "^M".
+    ignoreCase = false
 [fetch]
     prune = true
     pruneTags = true
