@@ -35,7 +35,8 @@
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     ar = archive -o output.zip HEAD
-    b = branch --show-current # available since 2.22.
+    b = branch
+    bc = branch --show-current
     bd = branch --delete
     ca = commit --all -m
     cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
