@@ -20,5 +20,5 @@ touch ~/.hushlogin
 5. Select `Visual Studio Code.app`
 6. Cmd+S and save as "Open in Visual Studio Code"
 
-## Add "Open in Android Studio" to the context menu
+## How to add "Open in Android Studio" to the context menu
 Do the same as "Open in Visual Studio Code" for Android Studio
