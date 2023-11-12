@@ -1,11 +1,14 @@
 // Put me as "~/Library/Application Support/Code/User/settings.json"
 // and delete all comments because they are not allowed in JSON.
 {
+  "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.9-stable", // or set the FLUTTER_ROOT environment variable.
   "dart.hotReloadOnSave": "allIfDirty",
-  "dart.renameFilesWithClasses": "always",
-  "debug.console.historySuggestions": false,
+  // https://dartcode.org/docs/recommended-settings/
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  // https://dartcode.org/docs/recommended-settings/
+  "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "commandCenter",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
@@ -76,9 +79,17 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
+  // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
       "quickfix.insertSemicolon": true,
     },
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false,
   },
 }
