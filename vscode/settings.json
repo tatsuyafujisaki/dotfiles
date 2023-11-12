@@ -9,7 +9,8 @@
   "debug.internalConsoleOptions": "openOnSessionStart",
   // https://dartcode.org/docs/recommended-settings/
   "debug.openDebug": "openOnDebugBreak",
-  "debug.toolBarLocation": "commandCenter",
+  // https://github.com/microsoft/vscode/issues/172464 is resolved.
+  // "debug.toolBarLocation": "commandCenter",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
@@ -71,8 +72,7 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.suggest.completeFunctionCalls": true,
-  // Uncomment when https://github.com/microsoft/vscode/issues/172464 is resolved.
-  // "window.nativeTabs": true,
+  "window.nativeTabs": true,
   "window.restoreWindows": "none",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.restoreViewState": false,
