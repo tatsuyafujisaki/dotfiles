@@ -19,6 +19,13 @@ alias bs='brew search'
 alias bu='brew uninstall --zap'
 
 #
+# Python
+#
+
+alias pip='pip3'
+alias python='python3'
+
+#
 # Misc
 #
 
@@ -54,9 +61,11 @@ up() {
 # Xcode
 #
 
-# "simct" means simulator only.
+# "simctl" stands for simulator control, which means it does not apply to physical iOS devices.
 xcrv() {
   local outputfile=screencast.mp4
   rm $outputfile
   xcrun simctl io booted recordVideo $outputfile
 }
+
+alias oios='open ios/Runner.xcworkspace'
