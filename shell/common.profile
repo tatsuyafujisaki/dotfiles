@@ -98,12 +98,6 @@ alias lns='ln -s $(pwd) ~'
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep --ignore-case --line-number --recursive -I' # -I is to ignore binary files.
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
-# Usage: portscan example.com 1-65535.
-# Without -v, neither success or failure is printed.
-# -z is port scanning.
-# "-w 1" is to timeout after a second.
-alias port_scan='nc -vzw 1'
-alias reverse_string='rev <<<'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias show_function_definition='declare -f'
 alias show_logical_cores='sysctl -n hw.ncpu'
