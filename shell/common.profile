@@ -14,10 +14,10 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 #
 
 # The next line updates PATH for the Google Cloud SDK.
-[ -f '~/google-cloud-sdk/path.zsh.inc' ] && . '~/google-cloud-sdk/path.zsh.inc'
+[ -f ~/google-cloud-sdk/path.zsh.inc ] && . ~/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
-[ -f '~/google-cloud-sdk/completion.zsh.inc' ] && . '~/google-cloud-sdk/completion.zsh.inc'
+[ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
 
 #
 # pbcopy-related
