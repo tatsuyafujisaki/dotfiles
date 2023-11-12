@@ -28,6 +28,7 @@ alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fpp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
+alias cl='cd ~/Documents/GitHub/cross-device-controller/starter_code'
 
 #
 # Visual Studio Code-related
@@ -36,7 +37,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias c='code .'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
-alias cl='code ~/Documents/GitHub/cross-device-controller/starter_code'
+alias ccl='code ~/Documents/GitHub/cross-device-controller/starter_code'
 
 #
 # https://www.npmjs.com
