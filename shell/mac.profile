@@ -47,7 +47,6 @@ up() {
   # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
   brew upgrade --greedy
 
-  # Upgrade globally installed packages.
   sudo npm update --global
 }
 
