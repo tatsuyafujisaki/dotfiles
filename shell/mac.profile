@@ -69,3 +69,9 @@ xcrv() {
 }
 
 alias oios='open ios/Runner.xcworkspace'
+
+#
+# CocoaPods
+#
+
+alias pcca='pod cache clean --all'
