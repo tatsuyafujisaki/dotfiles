@@ -1,6 +1,8 @@
 [user]
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
+[clean]
+    requireForce = true # prevents "git clean" without "-f" from causing an error.
 [core]
     autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     editor = code -w
