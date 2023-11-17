@@ -2,11 +2,16 @@
 # A string between "%F{color}" and "%f" will be in color.
 PS1=$'%B%F{green}%d%f%b\n$ '
 
-# Avoid printing "no matches found" to the standard output when using a glob, for example, in the "ls" command.
+# avoids printing "no matches found" to the standard output when using a glob, for example, in the "ls" command.
 setopt nonomatch
 
-# Avoid showing a confirmation when running rm.
+# avoids showing a confirmation when running rm.
 setopt rmstarsilent
+
+# prevents the following error from occurring when you run a command with a comment
+# $ cd ~ # returns home.
+# > cd: too many arguments
+setopt interactivecomments
 
 # Case-insensitive tab completion
 # -u in "compinit -u" is to avoid showing an error in the following case. In short, if you only have one user, you won't have a problem.
