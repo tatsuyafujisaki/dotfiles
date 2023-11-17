@@ -1,3 +1,11 @@
+# Create symbolic links to `.bash_profile`, `.zshrc`, `.zprofile`
+```shell
+cd ~
+ln -s Documents/GitHub/dotfiles/shell/.bash_profile .
+ln -s Documents/GitHub/dotfiles/shell/.zshrc .
+ln -s Documents/GitHub/dotfiles/shell/.zprofile .
+```
+
 # How to disable the `Last login: ...` message
 ```shell
 touch ~/.hushlogin
