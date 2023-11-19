@@ -16,7 +16,6 @@ alias dfdr='dart fix --dry-run'
 alias dpa='dart pub add'
 alias dpcr='dart pub cache repair'
 alias dpg='dart pub get'
-alias drbrb='dart run build_runner build --delete-conflicting-outputs' # https://pub.dev/packages/build_runner
 alias drbrw='dart run build_runner watch --delete-conflicting-outputs' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
 alias dv='dart --version'
 
