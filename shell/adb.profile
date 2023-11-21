@@ -47,7 +47,7 @@ adb_deeplink() {
 }
 
 pixel() {
-  if [ ${#} -lt 1 ]
+  if [ ${#} -lt 2 ]
   then
     echo "Usage: $funcstack[1] <pixel-number> <api-level>"
     return
