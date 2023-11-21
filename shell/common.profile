@@ -23,8 +23,6 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 # pbcopy-related
 #
 
-alias @='echo gngfhln.shwvfnxv@tznvy.pbz | rot13 | pbcopy'
-alias @@='echo gngfhln.shwvfnxv.yoc@tznvy.pbz | rot13 | pbcopy'
 alias tdf='echo tatsuya.fujisaki | pbcopy'
 alias tf='echo tatsuyafujisaki | pbcopy'
 
