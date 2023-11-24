@@ -47,7 +47,7 @@ alias fv='flutter --version'
 
 # makes 'flutter' available in Visual Studio Code.
 # https://github.com/oae/asdf-flutter#vscode
-export FLUTTER_ROOT=$(asdf where flutter)
+[ -d ~/.asdf/bin ] && export FLUTTER_ROOT=$(asdf where flutter)
 
 # makes 'flutter' and 'dart' available in Terminal.
 [ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
