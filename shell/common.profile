@@ -20,13 +20,6 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 [ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
 
 #
-# pbcopy-related
-#
-
-alias tdf='echo tatsuya.fujisaki | pbcopy'
-alias tf='echo tatsuyafujisaki | pbcopy'
-
-#
 # cd-related
 #
 
