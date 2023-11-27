@@ -247,22 +247,3 @@ myuniq() {
   # uniq works only if the input is sorted.
   sort -f < $1 | uniq
 }
-
-rename_branch() {
-  if [ $# -lt 2 ]
-  then
-    echo "Usage: $funcstack[1] <old-branch> <new-branch>"
-    return
-  fi
-
-  git switch $1
-  git branch -m $2 # renames the current branch to the new branch on local.
-  git push origin :$1 # deletes the old branch on remote.
-  git push -u origin $2 # creates the new branch on remote and resets the upstream branch to it.
-}
-
-# Must be defined after both clean and up are defined.
-cleanup() {
-  clean
-  up
-}
