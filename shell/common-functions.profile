@@ -103,12 +103,6 @@ jymd() {
   echo "$era$year年$3月$4日"
 }
 
-meiji() { jymd "m" $1 $2 $3 }
-taisho() { jymd "t" $1 $2 $3 }
-showa() { jymd "s" $1 $2 $3 }
-heisei() { jymd "h" $1 $2 $3 }
-reiwa() { jymd "r" $1 $2 $3 }
-
 #
 # Misc functions
 #
