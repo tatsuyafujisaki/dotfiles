@@ -127,6 +127,9 @@ clean() {
   # Delete .localized
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
+  # Delete Chrome RLZ.
+  rm -fr ~/Library/Application\ Support/Google/RLZ
+
   # Delete folders and files for Android development.
   rm -fr ~/.android/breakpad
   rm -fr ~/.android/build-cache
@@ -146,9 +149,6 @@ clean() {
   rm -fr ~/.dart
   rm -fr ~/.dartServer
   rm -f ~/.flutter
-
-  # Delete other folders.
-  rm -fr ~/Library/Application\ Support/Google/RLZ
 
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
