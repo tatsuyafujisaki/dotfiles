@@ -127,34 +127,42 @@ clean() {
   # Delete .localized
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
-  # Delete folders for Android development.
+  # Delete folders and files for Android development.
   rm -fr ~/.android/breakpad
   rm -fr ~/.android/build-cache
   rm -fr ~/.android/cache
   rm -fr ~/Library/Android/sdk/.downloadIntermediates
   rm -fr ~/Library/Android/sdk/.temp
-
-  # Delete files for Android development.
   rm -f ~/.android/*.lock
   rm -f ~/.android/modem-nv-ram-*
   rm -f ~/.emulator_console_auth_token
   rm -f ~/Library/Android/sdk/.knownPackages
 
+  # Delete folders and files for iOS development.
+  rm -fr ~/.cocoapods
+  rm -fr ~/.swiftpm
+
+  # Delete folders and files for Dart development.
+  rm -fr ~/.dart
+  rm -fr ~/.dartServer
+  rm -f ~/.flutter
+
+  # Delete other folders.
+  rm -fr ~/Library/Application\ Support/Google/RLZ
+
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
-  # Delete unnecessary folders that require root privileges.
+  # Delete folders that require root privileges.
   sudo rm -fr Downloads Movies Music Pictures
 
-  # Delete other unnecessary folders.
-  cd ~/Library/Application\ Support/Google/RLZ
-
+  # Delete folders directly under the home folder.
   folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash .zsh_sessions)
   for folder in "$folders[@]"
   do
     rm -fr $folder
   done
 
-  # Delete unnecessary files.
+  # Delete files directly under the home folder.
   files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "$files[@]"
   do
