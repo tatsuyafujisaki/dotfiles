@@ -1,6 +1,3 @@
-# opens this file in Visual Studio Code.
-alias macp='code ~/Documents/GitHub/dotfiles/shell/mac.profile'
-
 # Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
 export PATH=$PATH:/usr/libexec
 

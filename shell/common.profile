@@ -1,6 +1,3 @@
-# opens this file in Visual Studio Code.
-alias p='code ~/Documents/GitHub/dotfiles/shell/common.profile'
-
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
 
 export EDITOR=nano # makes 'crontab -e' use nano instead of vim
@@ -38,7 +35,8 @@ alias cl='cd ~/Documents/GitHub/cross-device-controller/starter_code'
 alias c='code .'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
-alias ccl='code ~/Documents/GitHub/cross-device-controller/starter_code'
+alias df='code ~/Documents/GitHub/dotfiles'
+alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 
 #
 # https://www.npmjs.com
@@ -108,7 +106,6 @@ alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a p
 # https://gradle.org
 #
 
-alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 alias gws='./gradlew --stop'
