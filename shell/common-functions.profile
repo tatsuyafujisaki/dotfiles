@@ -148,6 +148,7 @@ clean() {
   # Delete folders and files for Dart development.
   rm -fr ~/.dart
   rm -fr ~/.dartServer
+  rm -fr ~/.pub-cache
   rm -f ~/.flutter
 
   pushd ~ > /dev/null # avoids showing the pushed directory stack
