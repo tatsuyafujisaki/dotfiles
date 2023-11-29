@@ -49,7 +49,7 @@ alias fv='flutter --version'
 # makes 'flutter' and 'dart' available in Terminal.
 [ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
 
-alias asdfc='asdf current'
+alias asdfc='asdf current flutter'
 alias asdfg='asdf global flutter'
 alias asdfi='asdf install flutter'
 alias asdfil='asdf install flutter latest'
