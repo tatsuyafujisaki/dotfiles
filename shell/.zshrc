@@ -19,7 +19,7 @@ setopt interactivecomments
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
-. ~/Documents/GitHub/dotfiles/shell/adb.profile
+. ~/Documents/GitHub/dotfiles/shell/android.profile
 . ~/Documents/GitHub/dotfiles/shell/common.profile
 . ~/Documents/GitHub/dotfiles/shell/common-functions.profile
 . ~/Documents/GitHub/dotfiles/shell/flutter.profile

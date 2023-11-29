@@ -1,6 +1,6 @@
 PS1='\e[1;32m\]$(pwd)\[\e[m\n\$ ' # A string between "\e[{x;ym}\]" and "\[\e[m" will be in color.
 
-. ~/Documents/GitHub/dotfiles/shell/adb.profile
+. ~/Documents/GitHub/dotfiles/shell/android.profile
 . ~/Documents/GitHub/dotfiles/shell/common.profile
 . ~/Documents/GitHub/dotfiles/shell/common-functions.profile
 . ~/Documents/GitHub/dotfiles/shell/flutter.profile
