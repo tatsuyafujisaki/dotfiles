@@ -51,6 +51,7 @@ alias fv='flutter --version'
 
 alias asdfc='asdf current flutter'
 alias asdfg='asdf global flutter'
+alias asdfg3='asdf global flutter 3.3.10-stable'
 alias asdfi='asdf install flutter'
 alias asdfil='asdf install flutter latest'
 alias asdfl='asdf list flutter'
