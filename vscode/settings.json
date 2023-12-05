@@ -3,7 +3,6 @@
 {
   "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
-  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.13.9-stable", // or set the FLUTTER_ROOT environment variable.
   "dart.hotReloadOnSave": "allIfDirty",
   // https://dartcode.org/docs/recommended-settings/
   "debug.internalConsoleOptions": "openOnSessionStart",
@@ -91,5 +90,5 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
-  },
+  }
 }
