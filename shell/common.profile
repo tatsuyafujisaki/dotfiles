@@ -35,7 +35,7 @@ alias cl='cd ~/Documents/GitHub/cross-device-controller/starter_code'
 alias c='code .'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
-alias df='code ~/Documents/GitHub/dotfiles'
+alias dfs='code ~/Documents/GitHub/dotfiles'
 alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 
 #
