@@ -61,7 +61,6 @@ alias pipu='pip3 uninstall -y'
 #
 
 alias pr='gh pr create --assignee @me --web --label Lv.1'
-alias prm='gh pr create --assignee @me --base develop/memo-checklist --web'
 alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
 alias prl='gh pr list --web'
 alias prme='gh pr edit --add-assignee @me'
