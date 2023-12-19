@@ -1,5 +1,3 @@
-// Put me as "~/Library/Application Support/Code/User/settings.json"
-// and delete all comments because they are not allowed in JSON.
 {
   "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
