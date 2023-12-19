@@ -1,3 +1,4 @@
+// Delete all comments when deploying, as they are not allowed in JSON.
 {
   "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
