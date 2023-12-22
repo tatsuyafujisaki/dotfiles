@@ -52,6 +52,8 @@ up() {
   brew upgrade --greedy
 
   sudo npm update --global
+
+  flutter upgrade
 }
 
 #
