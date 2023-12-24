@@ -26,7 +26,7 @@ alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
-alias cl='cd ~/Documents/GitHub/cross-device-controller/starter_code'
+alias r='cd ~/Documents/GitHub/ringo'
 
 #
 # Visual Studio Code-related
