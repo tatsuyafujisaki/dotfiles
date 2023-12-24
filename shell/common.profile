@@ -97,6 +97,7 @@ alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the
 alias mygrep='grep --ignore-case --line-number --recursive -I' # -I is to ignore binary files.
 alias mypgrep='pgrep -il' # -i is to be case-insensitive. -l is to show process names.
 alias pfg='pkill -f gradle'
+alias rmfr='rm -fr'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias show_path='echo ${PATH} | tr : \\n'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
