@@ -36,6 +36,7 @@ alias frd='flutter run --dart-define=FLAVOR=dev'
 alias frs='flutter run --dart-define=FLAVOR=stg'
 alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias ft='flutter test'
+alias fu='flutter upgrade'
 alias fv='flutter --version'
 
 #
