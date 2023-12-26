@@ -100,6 +100,7 @@ alias pfg='pkill -f gradle'
 alias rmfr='rm -fr'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias show_path='echo ${PATH} | tr : \\n'
+alias sjis='iconv -c -f utf-8 -t Shift-JIS input.txt > output.txt'
 alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 #
