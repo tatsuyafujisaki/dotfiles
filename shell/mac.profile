@@ -26,9 +26,7 @@ alias python='python3'
 # Misc
 #
 
-alias oa='open -a'
 alias oas='open -a simulator'
-alias oax='open -a xcode'
 
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
