@@ -22,12 +22,6 @@ alias bu='brew uninstall --zap'
 alias pip='pip3'
 alias python='python3'
 
-#
-# Misc
-#
-
-alias oas='open -a simulator'
-
 # -G is equivalent to --color of the GNU-ls.
 # --group-directories-first is not availalble on the BSD-ls.
 # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
@@ -65,6 +59,7 @@ xcrv() {
   xcrun simctl io booted recordVideo $outputfile
 }
 
+alias oas='open -a simulator'
 alias oios='open ios/Runner.xcworkspace'
 
 #
