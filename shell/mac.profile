@@ -22,19 +22,16 @@ alias bu='brew uninstall --zap'
 alias pip='pip3'
 alias python='python3'
 
-# -G is equivalent to --color of the GNU-ls.
-# --group-directories-first is not availalble on the BSD-ls.
-# Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
-alias myls='ls -dFGhlv'
-
 l() {
   clear
 
+  # -G is equivalent to --color of the GNU-ls.
+  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
   # Print dotfiles and dotdirectories, then print a blank line, redirecting errors to /dev/null when there are not such files and directories.
-  myls .[^.]* 2> /dev/null && echo
+  ls -dFGhlv .[^.]* 2> /dev/null && echo
 
   # Print non-dotfiles and non-dotdirectories, redirecting errors to /dev/null when there are not such files and directories.
-  myls * 2> /dev/null
+  ls -dFGhlv * 2> /dev/null
 }
 
 up() {
@@ -42,9 +39,7 @@ up() {
   # --greedy applies only to casks.
   # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
   brew upgrade --greedy
-
   sudo npm update --global
-
   flutter upgrade
 }
 
