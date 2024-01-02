@@ -24,34 +24,6 @@ gg() {
 }
 
 #
-# https://imagemagick.org
-#
-
-pdf_to_png() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <file>"
-    return
-  fi
-
-  local basename=$1:r
-
-  magick -density 600 $basename.pdf -trim $basename.png
-}
-
-pdf_to_png_grascale() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <file>"
-    return
-  fi
-
-  local basename=$1:r
-
-  magick -density 600 $basename.pdf -trim -type grayscale $basename.png
-}
-
-#
 # Date functions
 #
 
