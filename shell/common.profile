@@ -27,6 +27,7 @@ alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias r='cd ~/Documents/GitHub/ringo'
+alias wf='cd ~/Documents/GitHub/codelabs/webview_flutter/step_12'
 
 #
 # Visual Studio Code-related
