@@ -53,9 +53,8 @@
     dsd = diff --stat develop
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
-    m = merge --no-edit
     ma = merge --abort
-    md = merege develop
+    md = merge develop
     mt = mergetool
     pf = push --force
     r = rebase
