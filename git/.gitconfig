@@ -54,7 +54,7 @@
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
     ma = merge --abort
-    md = merge develop
+    md = merge develop --no-edit
     mt = mergetool
     pf = push --force
     r = rebase
