@@ -74,6 +74,6 @@
     st = stash push --include-untracked
     sta = stash apply
     stc = stash clear
-    drop = stash drop
+    std = stash drop
     stl = stash list
     sts = stash show
