@@ -13,7 +13,7 @@ alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third part
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
-alias adbi='adb install *.apk'
+alias adbi='adb install'
 alias adbks='adb kill-server'
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # "pv" means pull a video.
 alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
