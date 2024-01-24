@@ -42,6 +42,7 @@ alias fv='flutter --version'
 unlock() {
   rm pubspec.lock
   rm ios/Podfile.lock
+  flutter pub get
   pushd ios
   pod install
   popd
