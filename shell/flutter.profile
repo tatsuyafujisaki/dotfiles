@@ -39,6 +39,14 @@ alias ft='flutter test'
 alias fu='flutter upgrade'
 alias fv='flutter --version'
 
+unlock() {
+  rm pubspec.lock
+  rm ios/Podfile.lock
+  pushd ios
+  pod install
+  popd
+}
+
 #
 # asdf
 #
