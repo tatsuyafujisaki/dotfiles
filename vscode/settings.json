@@ -8,8 +8,7 @@
   "debug.internalConsoleOptions": "openOnSessionStart",
   // https://dartcode.org/docs/recommended-settings/
   "debug.openDebug": "openOnDebugBreak",
-  // https://github.com/microsoft/vscode/issues/172464 is resolved.
-  // "debug.toolBarLocation": "commandCenter",
+  "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
