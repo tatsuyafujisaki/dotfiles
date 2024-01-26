@@ -14,7 +14,6 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbks='adb kill-server'
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # "pv" means pull a video.
 alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
 alias adbv='adb shell screenrecord /sdcard/screencast.mp4'
