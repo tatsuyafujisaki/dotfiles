@@ -2,7 +2,7 @@
 {
   "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
-  "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.16.7-stable",
+  "dart.flutterSdkPath": "~/.asdf/installs/flutter/<version>-stable",
   "dart.hotReloadOnSave": "allIfDirty",
   // https://dartcode.org/docs/recommended-settings/
   "debug.internalConsoleOptions": "openOnSessionStart",
