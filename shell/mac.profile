@@ -40,6 +40,7 @@ up() {
   # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
   brew upgrade --greedy
   sudo npm update --global
+  gcloud components update --quiet
   flutter upgrade
 }
 
