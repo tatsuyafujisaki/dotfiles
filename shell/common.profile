@@ -89,6 +89,7 @@ alias exift='exiftool -all= input.mp4'
 # Misc aliases
 #
 
+alias fb=firebase
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
 alias ka=killall
