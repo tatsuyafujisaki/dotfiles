@@ -91,13 +91,13 @@ alias exift='exiftool -all= input.mp4'
 
 alias fb=firebase
 alias g=git
+alias gc=gcloud
 alias jdks='/usr/libexec/java_home -V'
 alias ka=killall
 alias lns='ln -s $(pwd) ~'
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep --ignore-case --line-number --recursive -I' # -I is to ignore binary files.
 alias mygrepf='grep --ignore-case --line-number --recursive -I --exclude-dir build' # mygrep for Flutter projects.
-alias mypgrep='pgrep -i -l' # -i is to ignore cases. -l is to print process names.
 alias pfg='pkill -f gradle'
 alias rmfr='rm -fr'
 alias show_path='echo ${PATH} | tr : \\n'
