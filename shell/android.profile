@@ -19,6 +19,7 @@ alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screen
 alias adbv='adb shell screenrecord /sdcard/screencast.mp4'
 alias emul='emulator -list-avds'
 alias px='pixel 7 34'
+alias px4='pixel 4 29'
 
 # --text is to avoid "grep: (standard input): binary file matches".
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
