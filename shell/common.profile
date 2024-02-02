@@ -62,12 +62,11 @@ alias pipu='pip3 uninstall -y'
 #
 
 alias pr='gh pr create --assignee @me --web --label Lv.1'
-alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました:+1:' && gh pr view --web"
+alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました👍' && gh pr view --web"
 alias prl='gh pr list --web'
 alias prme='gh pr edit --add-assignee @me'
 alias prr='gh pr edit --add-reviewer tatsuyafujisaki && gh pr view --web'
 alias prst='gh pr status'
-alias prt='gh pr view | head -1 | sed "s/title://g" | awk "{\$1=\$1};1" | pbcopy'
 alias prv='gh pr view --web'
 
 #
