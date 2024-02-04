@@ -4,24 +4,6 @@ export PATH=$PATH:/usr/libexec
 # Add Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
 [ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:$PATH
 
-#
-# Homebrew
-#
-
-alias bd='brew doctor'
-alias bi='brew install'
-alias bin='brew info'
-alias bl='brew list -1'
-alias bs='brew search'
-alias bu='brew uninstall --zap'
-
-#
-# Python
-#
-
-alias pip='pip3'
-alias python='python3'
-
 l() {
   clear
 
@@ -45,6 +27,12 @@ up() {
 }
 
 #
+# Preferences
+#
+
+alias kb='open /System/Library/PreferencePanes/Keyboard.prefPane'
+
+#
 # Xcode
 #
 
@@ -63,3 +51,21 @@ alias oios='open ios/Runner.xcworkspace'
 #
 
 alias pcca='pod cache clean --all'
+
+#
+# Homebrew
+#
+
+alias bd='brew doctor'
+alias bi='brew install'
+alias bin='brew info'
+alias bl='brew list -1'
+alias bs='brew search'
+alias bu='brew uninstall --zap'
+
+#
+# Python
+#
+
+alias pip='pip3'
+alias python='python3'
