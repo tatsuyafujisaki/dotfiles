@@ -26,8 +26,7 @@ alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
-alias r='cd ~/Documents/GitHub/ringo'
-alias wf='cd ~/Documents/GitHub/codelabs/webview_flutter/step_12'
+alias ua='cd ~/Documents/GitHub/dt-baseapp-android'
 
 #
 # Visual Studio Code-related
