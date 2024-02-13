@@ -49,7 +49,7 @@ unlock() {
 }
 
 #
-# asdf
+# https://asdf-vm.com
 #
 
 [ -d ~/.asdf/bin ] && export PATH=$PATH:~/.asdf/bin
@@ -72,3 +72,12 @@ alias asdfl='asdf list flutter'
 alias asdfla='asdf list all flutter | uniq'
 alias asdflc='asdf local flutter'
 alias asdfu='asdf uninstall flutter'
+
+#
+# https://pub.dev/packages/flutter_gen
+#
+
+my_flutter_gen() {
+  dart pub global activate flutter_gen
+  fluttergen pubspec.yaml
+}
