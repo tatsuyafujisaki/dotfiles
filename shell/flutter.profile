@@ -19,6 +19,7 @@ alias dv='dart --version'
 
 # Flutter
 alias f=flutter
+alias ff='fvm flutter'
 alias fa='flutter analyze'
 alias fcl='flutter clean'
 alias fca='flutter create --platforms=android .'
@@ -47,31 +48,6 @@ unlock() {
   pod install
   popd
 }
-
-#
-# https://asdf-vm.com
-#
-
-[ -d ~/.asdf/bin ] && export PATH=$PATH:~/.asdf/bin
-
-# makes 'flutter' available in Visual Studio Code.
-# https://github.com/oae/asdf-flutter#vscode
-[ -d ~/.asdf/bin ] && export FLUTTER_ROOT=$(asdf where flutter)
-
-# makes 'flutter' and 'dart' available in Terminal.
-[ -d $FLUTTER_ROOT/bin ] && export PATH=$PATH:$FLUTTER_ROOT/bin
-
-alias asdf10='asdf global flutter 3.10.6-stable'
-alias asdf7='asdf global flutter 3.7.12-stable'
-alias asdfc='asdf current flutter'
-alias asdfg='asdf global flutter'
-alias asdfgl='asdf global flutter latest'
-alias asdfi='asdf install flutter'
-alias asdfil='asdf install flutter latest'
-alias asdfl='asdf list flutter'
-alias asdfla='asdf list all flutter | uniq'
-alias asdflc='asdf local flutter'
-alias asdfu='asdf uninstall flutter'
 
 #
 # https://pub.dev/packages/flutter_gen
