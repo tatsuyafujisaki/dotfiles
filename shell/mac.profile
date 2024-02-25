@@ -24,6 +24,15 @@ up() {
   sudo npm update --global
   gcloud components update --quiet
   flutter upgrade
+
+  # Sync GitHub repositories.
+  cd ~/Documents/GitHub
+  for dir in */
+  do
+    pushd $dir
+    gh repo sync
+    popd
+  done
 }
 
 #
