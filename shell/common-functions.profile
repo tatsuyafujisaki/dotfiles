@@ -156,14 +156,25 @@ dm() {
   code .
 }
 
-list_files_that_contain_string() {
+# Sync GitHub repositories.
+gh_repo_sync_all() {
+  cd ~/Documents/GitHub
+  for dir in */
+  do
+    pushd $dir
+    gh repo sync
+    popd
+  done
+}
+
+list_names_of_files_that_contain_string_in_content() {
   if [ $# -lt 1 ]
   then
     echo "Usage: $funcstack[1] <pattern>"
     return
   fi
 
-  grep --ignore-case --recursive -I "$1" . | cut -d : -f 1 | xargs basename
+  grep --ignore-case --recursive -I "$1" . | cut -d : -f 1
 }
 
 mkdircd() {
@@ -218,4 +229,13 @@ myuniq() {
   # -f is to sort case-insensitively.
   # uniq works only if the input is sorted.
   sort -f < $1 | uniq
+}
+
+up() {
+  sudo npm update --global
+  gcloud components update --quiet
+  flutter upgrade
+
+  bug
+  gh_repo_sync_all
 }

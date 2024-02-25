@@ -16,25 +16,6 @@ l() {
   ls -dFGhlv * 2> /dev/null
 }
 
-up() {
-  # Update both formulae and casks.
-  # --greedy applies only to casks.
-  # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
-  brew upgrade --greedy
-  sudo npm update --global
-  gcloud components update --quiet
-  flutter upgrade
-
-  # Sync GitHub repositories.
-  cd ~/Documents/GitHub
-  for dir in */
-  do
-    pushd $dir
-    gh repo sync
-    popd
-  done
-}
-
 #
 # Preferences
 #
@@ -71,6 +52,10 @@ alias bin='brew info'
 alias bl='brew list -1'
 alias bs='brew search'
 alias bu='brew uninstall --zap'
+# Update both formulae and casks.
+# --greedy applies only to casks.
+# Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
+alias bug='brew upgrade --greedy'
 
 #
 # Python
