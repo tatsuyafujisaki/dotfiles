@@ -1,6 +1,7 @@
-# Create symbolic links to `.bash_profile`, `.zshrc`, `.zprofile`
+# Create symbolic links
 ```shell
 cd ~
+ln -s Documents/GitHub/dotfiles/git/.gitconfig .
 ln -s Documents/GitHub/dotfiles/shell/.bash_profile .
 ln -s Documents/GitHub/dotfiles/shell/.zshrc .
 ln -s Documents/GitHub/dotfiles/shell/.zprofile .
