@@ -120,7 +120,7 @@ clean() {
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
   # Delete folders directly under the home folder.
-  folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash .zsh_sessions)
+  folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .zsh_sessions)
   for folder in "$folders[@]"
   do
     rm -fr $folder
