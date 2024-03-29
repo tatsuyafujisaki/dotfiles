@@ -144,6 +144,7 @@ sudo_clean() {
   sudo find / -type f -iname .localized -delete 2> /dev/null
 
   # Delete folders that require root privileges.
+  sudo rm -fr ~/.Trash
   sudo rm -fr ~/Downloads
   sudo rm -fr ~/Movies
   sudo rm -fr ~/Music
