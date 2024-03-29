@@ -85,17 +85,14 @@ clean_chrome() {
   rm -f *.bak
   rm -f *.old
   rm -f *-journal
+  rm -f History
+  rm -f LOCK
+  rm -f LOG
 
   popd > /dev/null # avoids showing the pushed directory stack
 }
 
 clean() {
-  # Delete .DS_Store
-  sudo find / -type f -iname .DS_Store -delete 2> /dev/null
-
-  # Delete .localized
-  sudo find / -type f -iname .localized -delete 2> /dev/null
-
   # Delete Chrome RLZ.
   rm -fr ~/Library/Application\ Support/Google/RLZ
 
@@ -122,9 +119,6 @@ clean() {
 
   pushd ~ > /dev/null # avoids showing the pushed directory stack
 
-  # Delete folders that require root privileges.
-  sudo rm -fr Downloads Movies Music Pictures
-
   # Delete folders directly under the home folder.
   folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .Trash .zsh_sessions)
   for folder in "$folders[@]"
@@ -140,6 +134,20 @@ clean() {
   done
 
   popd > /dev/null # avoids showing the pushed directory stack
+}
+
+sudo_clean() {
+  # Delete .DS_Store
+  sudo find / -type f -iname .DS_Store -delete 2> /dev/null
+
+  # Delete .localized
+  sudo find / -type f -iname .localized -delete 2> /dev/null
+
+  # Delete folders that require root privileges.
+  sudo rm -fr ~/Downloads
+  sudo rm -fr ~/Movies
+  sudo rm -fr ~/Music
+  sudo rm -fr ~/Pictures
 }
 
 dm() {
