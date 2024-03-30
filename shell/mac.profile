@@ -20,6 +20,7 @@ l() {
 # Preferences
 #
 
+alias gnrl='open /System/Library/PreferencePanes/StartupDisk.prefPane'
 alias kb='open /System/Library/PreferencePanes/Keyboard.prefPane'
 alias nw='open /System/Library/PreferencePanes/Network.prefPane'
 
