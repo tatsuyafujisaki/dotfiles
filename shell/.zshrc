@@ -13,6 +13,11 @@ setopt rmstarsilent
 # > cd: too many arguments
 setopt interactivecomments
 
+# prevents
+# > When a partial line is preserved, by default you will see an inverse+bold character at the end of the partial line: a ‘%’ for a normal user or a ‘#’ for root. If set, the shell parameter PROMPT_EOL_MARK can be used to customize how the end of partial lines are shown.
+# https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting
+export PROMPT_EOL_MARK=''
+
 # Case-insensitive tab completion
 # -u in "compinit -u" is to avoid showing an error in the following case. In short, if you only have one user, you won't have a problem.
 # > For security reasons compinit also checks if the completion system would use files not owned by root or by the current user, ...
