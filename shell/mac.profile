@@ -21,6 +21,7 @@ l() {
 #
 
 alias kb='open /System/Library/PreferencePanes/Keyboard.prefPane'
+alias nw='open /System/Library/PreferencePanes/Network.prefPane'
 
 #
 # Xcode
