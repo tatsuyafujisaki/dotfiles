@@ -56,7 +56,7 @@
     ma = merge --abort
     md = merge develop --no-edit
     mt = mergetool
-    pf = push --force-with-lease
+    pf = push --force-with-lease --force-if-includes
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
