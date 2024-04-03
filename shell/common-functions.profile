@@ -243,8 +243,7 @@ myuniq() {
 up() {
   sudo npm update --global
   gcloud components update --quiet
-  flutter upgrade
-
-  bug
+  flutter upgrade --force
+  brew upgrade --greedy
   gh_repo_sync_all
 }
