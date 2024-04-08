@@ -15,7 +15,7 @@ alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows 
 alias adbd='adb devices'
 alias adbi='adb install'
 alias adbpv='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # "pv" means pull a video.
-alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
+# alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
 alias adbv='adb shell screenrecord /sdcard/screencast.mp4'
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
@@ -41,6 +41,19 @@ adb_deeplink() {
   else
     adb shell am start -W -a android.intent.action.VIEW -d ${1}
   fi
+}
+
+# s for screenshot
+adbs() {
+  if [ ${#} -lt 1 ]
+  then
+    filepath=~/Desktop/screenshot.png
+  else
+    filepath=~/Desktop/${1}.png
+  fi
+
+  adb exec-out screencap -p > ${filepath}
+  open ${filepath}
 }
 
 pixel() {
