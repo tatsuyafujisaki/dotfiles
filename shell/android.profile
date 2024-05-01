@@ -15,8 +15,8 @@ alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows 
 alias adbd='adb devices'
 alias adbi='adb install'
 alias adbm='adb shell screenrecord /sdcard/screencast.mp4'
-# alias adbpm='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)
-# alias adbpw='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)'
+alias adbpm='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)'
+alias adbpw='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)'
 # alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
 alias adbw='adb shell screenrecord /sdcard/screencast.webm'
 alias emul='emulator -list-avds'
@@ -45,18 +45,15 @@ adb_deeplink() {
   fi
 }
 
-# "pm" in "adbpm" means pull MP4
-adbpm() {
+adbpm2() {
+  adbpm
   pushd ~/Desktop
-  adb pull /sdcard/screencast.mp4
-  adb shell rm /sdcard/screencast.mp4
   ffmpeg -i screencast.mp4 -b:v 1m downsized.mp4
   rm screencast.mp4
   open downsized.mp4
   popd
 }
 
-# "s" in "adbs" means screenshot
 adbs() {
   if [ ${#} -lt 1 ]
   then
@@ -69,11 +66,9 @@ adbs() {
   open ${filepath}
 }
 
-# "pw" in "adbpw" means pull WebM
-adbpw() {
+adbpw2() {
+  adbpw
   pushd ~/Desktop
-  adb pull /sdcard/screencast.webm
-  adb shell rm /sdcard/screencast.webm
   ffmpeg -i screencast.webm -b:v 1m downsized.webm
   rm screencast.webm
   open downsized.webm
