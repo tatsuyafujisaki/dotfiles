@@ -14,11 +14,10 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbm='adb shell screenrecord /sdcard/screencast.mp4'
-alias adbpm='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)'
-alias adbpw='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)'
-# alias adbs='filepath=~/Desktop/$(date +%Y%m%d-%H%M%S).png && adb exec-out screencap -p > ${filepath} && open ${filepath}'
-alias adbw='adb shell screenrecord /sdcard/screencast.webm'
+alias adbm='adb shell screenrecord --bit-rate 1M /sdcard/deleteme.mp4'
+alias adbpm='(cd ~/Desktop && adb pull /sdcard/deleteme.mp4 && adb shell rm /sdcard/deleteme.mp4 && open deleteme.mp4)'
+alias adbpw='(cd ~/Desktop && adb pull /sdcard/deleteme.webm && adb shell rm /sdcard/deleteme.webm && open deleteme.webm)'
+alias adbw='adb shell screenrecord --bit-rate 1M /sdcard/deleteme.webm'
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
 
@@ -45,13 +44,23 @@ adb_deeplink() {
   fi
 }
 
-adbpm2() {
-  adbpm
+adbp() {
+  temp_file_base_name=deleteme
   pushd ~/Desktop
-  ffmpeg -i screencast.mp4 -b:v 1m downsized.mp4
-  rm screencast.mp4
-  open downsized.mp4
+  adb pull /sdcard/$temp_file_base_name.${1}
+  adb shell rm /sdcard/$temp_file_base_name.${1}
+  ffmpeg -i $temp_file_base_name.${1} -b:v 1m screencast.${1}
+  rm $temp_file_base_name.${1}
+  open screencast.${1}
   popd
+}
+
+adbpm() {
+  adbp mp4
+}
+
+adbpw() {
+  adbp webm
 }
 
 adbs() {
@@ -64,15 +73,6 @@ adbs() {
 
   adb exec-out screencap -p > ${filepath}
   open ${filepath}
-}
-
-adbpw2() {
-  adbpw
-  pushd ~/Desktop
-  ffmpeg -i screencast.webm -b:v 1m downsized.webm
-  rm screencast.webm
-  open downsized.webm
-  popd
 }
 
 pixel() {
