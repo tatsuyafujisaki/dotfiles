@@ -14,10 +14,10 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbm='adb shell screenrecord --bit-rate 10M /sdcard/screencast.mp4' # https://developer.android.com/tools/adb#screenrecord
-alias adbmp='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # A parenthesized command runs in a subshell.
-alias adbw='adb shell screenrecord --bit-rate 10M /sdcard/screencast.webm' # https://developer.android.com/tools/adb#screenrecord
-alias adbwp='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)' # A parenthesized command runs in a subshell.
+alias adbm='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
+alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenrecord.mp4 && adb shell rm /sdcard/screenrecord.mp4 && open screenrecord.mp4)' # A parenthesized command runs in a subshell.
+alias adbw='adb shell screenrecord /sdcard/screenrecord.webm' # https://developer.android.com/tools/adb#screenrecord
+alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenrecord.webm && adb shell rm /sdcard/screenrecord.webm && open screenrecord.webm)' # A parenthesized command runs in a subshell.
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
 
@@ -49,9 +49,9 @@ adb_deeplink() {
 #   pushd ~/Desktop
 #   adb pull /sdcard/$temp_file_base_name.${1}
 #   adb shell rm /sdcard/$temp_file_base_name.${1}
-#   ffmpeg -i $temp_file_base_name.${1} -b:v 1m screencast.${1}
+#   ffmpeg -i $temp_file_base_name.${1} -b:v 1m screenrecord.${1}
 #   rm $temp_file_base_name.${1}
-#   open screencast.${1}
+#   open screenrecord.${1}
 #   popd
 # }
 
