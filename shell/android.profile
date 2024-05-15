@@ -14,10 +14,10 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbm='adb shell screenrecord --bit-rate 1M /sdcard/screenshot.mp4'
-alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenshot.mp4 && adb shell rm /sdcard/screenshot.mp4 && open screenshot.mp4)' # A parenthesized command runs in a subshell.
-alias adbw='adb shell screenrecord --bit-rate 1M /sdcard/deleteme.webm'
-alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenshot.webm && adb shell rm /sdcard/screenshot.webm && open screenshot.webm)' # A parenthesized command runs in a subshell.
+alias adbm='adb shell screenrecord --bit-rate 1M /sdcard/screencast.mp4'
+alias adbmp='(cd ~/Desktop && adb pull /sdcard/screencast.mp4 && adb shell rm /sdcard/screencast.mp4 && open screencast.mp4)' # A parenthesized command runs in a subshell.
+alias adbw='adb shell screenrecord --bit-rate 1M /sdcard/screencast.webm'
+alias adbwp='(cd ~/Desktop && adb pull /sdcard/screencast.webm && adb shell rm /sdcard/screencast.webm && open screencast.webm)' # A parenthesized command runs in a subshell.
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
 
