@@ -14,10 +14,10 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbm='adb shell screenrecord --bit-rate 1M /sdcard/deleteme.mp4'
-alias adbpm='(cd ~/Desktop && adb pull /sdcard/deleteme.mp4 && adb shell rm /sdcard/deleteme.mp4 && open deleteme.mp4)'
-alias adbpw='(cd ~/Desktop && adb pull /sdcard/deleteme.webm && adb shell rm /sdcard/deleteme.webm && open deleteme.webm)'
+alias adbm='adb shell screenrecord --bit-rate 1M /sdcard/screenshot.mp4'
+alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenshot.mp4 && adb shell rm /sdcard/screenshot.mp4 && open screenshot.mp4)' # A parenthesized command runs in a subshell.
 alias adbw='adb shell screenrecord --bit-rate 1M /sdcard/deleteme.webm'
+alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenshot.webm && adb shell rm /sdcard/screenshot.webm && open screenshot.webm)' # A parenthesized command runs in a subshell.
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
 
@@ -44,24 +44,24 @@ adb_deeplink() {
   fi
 }
 
-adbp() {
-  temp_file_base_name=deleteme
-  pushd ~/Desktop
-  adb pull /sdcard/$temp_file_base_name.${1}
-  adb shell rm /sdcard/$temp_file_base_name.${1}
-  ffmpeg -i $temp_file_base_name.${1} -b:v 1m screencast.${1}
-  rm $temp_file_base_name.${1}
-  open screencast.${1}
-  popd
-}
+# adbp() {
+#   temp_file_base_name=deleteme
+#   pushd ~/Desktop
+#   adb pull /sdcard/$temp_file_base_name.${1}
+#   adb shell rm /sdcard/$temp_file_base_name.${1}
+#   ffmpeg -i $temp_file_base_name.${1} -b:v 1m screencast.${1}
+#   rm $temp_file_base_name.${1}
+#   open screencast.${1}
+#   popd
+# }
 
-adbpm2() {
-  adbp mp4
-}
+# adbpm2() {
+#   adbp mp4
+# }
 
-adbpw2() {
-  adbp webm
-}
+# adbpw2() {
+#   adbp webm
+# }
 
 adbs() {
   if [ ${#} -lt 1 ]
