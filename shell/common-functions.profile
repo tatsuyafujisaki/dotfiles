@@ -206,6 +206,19 @@ mydelete() {
   find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
 }
 
+myffmpeg() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <mp4-or-webm>"
+    return
+  fi
+
+  extension=$1:e
+  local temp=$(mktemp --dry-run).$extension
+  ffmpeg -i $1 $temp
+  mv $temp $1
+}
+
 myfind() {
   if [ $# -lt 1 ]
   then
