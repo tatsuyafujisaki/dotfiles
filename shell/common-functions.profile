@@ -24,55 +24,6 @@ gg() {
 }
 
 #
-# Date functions
-#
-
-ymd() {
-  if [ $# -lt 3 ]
-  then
-    echo "Usage: $funcstack[1] <year> <month> <day>"
-    return
-  fi
-
-  echo "$1年$2月$3日"
-}
-
-jymd() {
-  if [ $# -lt 4 ]
-  then
-    echo "Usage: $funcstack[1] <era> <year> <month> <day>"
-    return
-  fi
-
-  case $1 in
-  "m")
-    era="明治"
-    ;;
-  "t")
-    era="大正"
-    ;;
-  "s")
-    era="昭和"
-    ;;
-  "h")
-    era="平成"
-    ;;
-  "r")
-    era="令和"
-    ;;
-  esac
-
-  if [ $2 = 1 ]
-  then
-    year="元"
-  else
-    year=$2
-  fi
-
-  echo "$era$year年$3月$4日"
-}
-
-#
 # Misc functions
 #
 
