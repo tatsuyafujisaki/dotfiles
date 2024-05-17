@@ -12,7 +12,7 @@ adbp() {
   popd
 }
 
-adbpm() {
+adbpm2() {
   adbp mp4
 }
 
