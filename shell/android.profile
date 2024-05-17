@@ -9,15 +9,13 @@ export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 [ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 [ -d ~/Library/Android/sdk/tools/bin ] && export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 
+. $(dirname $0)/android-screencap-screenrecord.profile
+
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
-alias adbm='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
-alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenrecord.mp4 && adb shell rm /sdcard/screenrecord.mp4 && open screenrecord.mp4)' # A parenthesized command runs in a subshell.
-alias adbw='adb shell screenrecord /sdcard/screenrecord.webm' # https://developer.android.com/tools/adb#screenrecord
-alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenrecord.webm && adb shell rm /sdcard/screenrecord.webm && open screenrecord.webm)' # A parenthesized command runs in a subshell.
 alias emul='emulator -list-avds'
 alias px='pixel 8 34'
 
@@ -42,37 +40,6 @@ adb_deeplink() {
   else
     adb shell am start -W -a android.intent.action.VIEW -d ${1}
   fi
-}
-
-# adbp() {
-#   temp_file_base_name=deleteme
-#   pushd ~/Desktop
-#   adb pull /sdcard/$temp_file_base_name.${1}
-#   adb shell rm /sdcard/$temp_file_base_name.${1}
-#   ffmpeg -i $temp_file_base_name.${1} -b:v 1m screenrecord.${1}
-#   rm $temp_file_base_name.${1}
-#   open screenrecord.${1}
-#   popd
-# }
-
-# adbpm2() {
-#   adbp mp4
-# }
-
-# adbpw2() {
-#   adbp webm
-# }
-
-adbs() {
-  if [ ${#} -lt 1 ]
-  then
-    filepath=~/Desktop/screenshot.png
-  else
-    filepath=~/Desktop/${1}.png
-  fi
-
-  adb exec-out screencap -p > ${filepath}
-  open ${filepath}
 }
 
 pixel() {
