@@ -1,7 +1,10 @@
 alias adbm='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
-alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenrecord.mp4 && adb shell rm /sdcard/screenrecord.mp4 && open screenrecord.mp4)' # A parenthesized command runs in a subshell.
 alias adbw='adb shell screenrecord /sdcard/screenrecord.webm' # https://developer.android.com/tools/adb#screenrecord
-alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenrecord.webm && adb shell rm /sdcard/screenrecord.webm && open screenrecord.webm)' # A parenthesized command runs in a subshell.
+
+# A parenthesized command runs in a subshell.
+# alias adbmp='(cd ~/Desktop && adb pull /sdcard/screenrecord.mp4 && adb shell rm /sdcard/screenrecord.mp4 && open screenrecord.mp4)'
+# A parenthesized command runs in a subshell.
+# alias adbwp='(cd ~/Desktop && adb pull /sdcard/screenrecord.webm && adb shell rm /sdcard/screenrecord.webm && open screenrecord.webm)'
 
 adbp() {
   pushd ~/Desktop
@@ -12,11 +15,11 @@ adbp() {
   popd
 }
 
-adbmp2() {
+adbmp() {
   adbp mp4
 }
 
-adbpw2() {
+adbpw() {
   adb webm
 }
 
