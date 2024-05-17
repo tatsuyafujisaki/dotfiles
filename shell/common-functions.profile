@@ -165,6 +165,7 @@ myffmpeg() {
   fi
 
   extension=$1:e
+  # Without the extension, ffmpeg will get an "Unable to select an output format" error.
   local temp=$(mktemp --dry-run).$extension
   ffmpeg -i $1 $temp
   mv $temp $1
