@@ -19,7 +19,7 @@ adbmp() {
   adbp mp4
 }
 
-adbpw() {
+adbwp() {
   adb webm
 }
 
