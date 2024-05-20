@@ -20,7 +20,7 @@ adbmp() {
 }
 
 adbwp() {
-  adb webm
+  adbp webm
 }
 
 adbs() {
