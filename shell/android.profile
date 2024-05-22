@@ -17,6 +17,8 @@ alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows 
 alias adbd='adb devices'
 alias adbi='adb install'
 alias emul='emulator -list-avds'
+alias layout='adb shell setprop debug.layout true'
+alias layou='adb shell setprop debug.layout false'
 alias px='pixel 8 34'
 
 # --text is to avoid "grep: (standard input): binary file matches".
