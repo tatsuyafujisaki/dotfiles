@@ -35,7 +35,6 @@
     skippedCherryPicks = false
 [alias]
     a = !pbpaste | git apply --ignore-space-change
-    ar = archive -o output.zip HEAD
     b = branch
     bc = branch --show-current
     ca = commit --all -m
@@ -48,9 +47,7 @@
     cp = cherry-pick
     csol = config --show-origin --list
     d = !git diff | pbcopy
-    dno = diff --name-only
-    dns = diff --name-status
-    dsd = diff --stat develop
+    ds = diff --shortstat develop
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
     ma = merge --abort
@@ -77,3 +74,8 @@
     std = stash drop
     stl = stash list
     sts = stash show
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
