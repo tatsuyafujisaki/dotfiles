@@ -1,6 +1,8 @@
 [user]
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
+[advice]
+    skippedCherryPicks = false
 [clean]
     requireForce = true # prevents "git clean" without "-f" from causing an error.
 [core]
@@ -14,6 +16,8 @@
     recurseSubmodules = true
 [http]
     emptyAuth = true # prevents "remote: HTTP Basic: Accesss denied" when cloning a repository. https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
+[pager]
+    branch = false # makes "git branch" list branches without using a pager.
 [pull]
     rebase = true
 [rebase]
@@ -31,8 +35,6 @@
     prompt = false
 [mergetool "vscode"]
     cmd = code -w $MERGED
-[advice]
-    skippedCherryPicks = false
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     b = branch
