@@ -65,12 +65,6 @@ alias prl='gh pr list --web'
 alias prv='gh pr view --web'
 
 #
-# https://github.com/exiftool/exiftool
-#
-
-alias exift='exiftool -all= input.mp4'
-
-#
 # Misc aliases
 #
 
