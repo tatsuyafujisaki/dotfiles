@@ -15,7 +15,7 @@
 #   --prune is to remove remote-tracking references that no longer exist on the remote.
 #   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
 gg() {
-  git branch | grep -v -e main -e master -e develop | xargs git branch -D
+  git branch | xargs git branch -D
   git clean -d --force
   git restore --staged --worktree .
   git pull --all --autostash --rebase --recurse-submodules
