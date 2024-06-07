@@ -49,7 +49,7 @@
     cp = cherry-pick
     csol = config --show-origin --list
     d = !git diff | pbcopy
-    dn = !git diff --name-only develop | xargs basename | sort # shows the list of files that are different from the develop branch.
+    dn = !git diff --name-only develop | xargs basename | sort # shows the names of the files that are different from the develop branch.
     ds = diff --shortstat develop # shows the number of files changed, the number of lines added, and the number of lines deleted.
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
