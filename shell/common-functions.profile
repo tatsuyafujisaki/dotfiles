@@ -1,3 +1,13 @@
+backup_desktop() {
+  cd ~/Desktop
+
+  local dir=$(date +"%Y-%m-%d_%H-%M-%S")
+  rm -r $dir
+  mkdir -p $dir
+
+  mv * $dir
+}
+
 #
 # https://git-scm.com
 #
