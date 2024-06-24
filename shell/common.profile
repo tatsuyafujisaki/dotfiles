@@ -74,14 +74,13 @@ alias gc=gcloud
 alias jdks='/usr/libexec/java_home -V'
 alias ka=killall
 alias lns='ln -s $(pwd) ~'
+alias mvpng='mv ~/Documents/*.png ~/Desktop'
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 alias mygrep='grep --ignore-case --line-number --recursive -I' # -I is to ignore binary files.
 alias mygrepf='grep --ignore-case --line-number --recursive -I --exclude-dir build' # mygrep for Flutter projects.
 alias pfg='pkill -f gradle'
-alias rmfr='rm -fr'
 alias show_path='echo ${PATH} | tr : \\n'
 alias sjis='iconv -c -f utf-8 -t Shift-JIS input.txt > output.txt'
-alias wd='open ~/Library/Application\ Support/Google/Chrome/Default' # opens a profile folder that contains Web Data.
 
 #
 # https://gradle.org
