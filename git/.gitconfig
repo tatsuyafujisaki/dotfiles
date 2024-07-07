@@ -39,9 +39,8 @@
     a = !pbpaste | git apply --ignore-space-change
     b = branch
     bc = branch --show-current
-    ca = commit --all -m
-    cam = commit --all --amend -m # stages all changes and replaces the previous commit using the new commit message.
-    can = !git add --all && git commit --all --amend --no-edit # adds untracked files, stages all changes, and replaces the previous commit reusing the existing commit message.
+    cam = commit --all --amend --no-verify -m # stages all changes and replaces the previous commit with the new commit message. --no-verify bypasses the pre-commit and commit-msg hooks.
+    can = !git add --all && git commit --all --amend  --no-verify --no-edit # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message. --no-verify bypasses the pre-commit and commit-msg hooks.
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
     cm = commit -m
