@@ -1,4 +1,4 @@
-# adds Flutter to PATH on macOS without asdf.
+# adds Flutter to PATH on macOS.
 [ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
 
 # adds flutterfire to PATH.
