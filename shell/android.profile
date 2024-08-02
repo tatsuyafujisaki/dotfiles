@@ -24,6 +24,8 @@ alias emul='emulator -list-avds'
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 alias px='pixel 4 34'
+alias showtap='adb shell settings put system show_touches 1'
+alias showta='adb shell settings put system show_touches 0'
 
 # --text is to avoid "grep: (standard input): binary file matches".
 alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
