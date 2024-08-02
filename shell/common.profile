@@ -59,7 +59,7 @@ alias pipu='pip3 uninstall -y'
 # https://cli.github.com
 #
 
-alias pr='gh pr create --assignee @me --web --label Lv.1'
+alias pr='gh pr create --assignee @me --web'
 alias pra="gh pr review --approve --body 'LGTMです！ご対応ありがとうございました👍' && gh pr view --web"
 alias prl='gh pr list --web'
 alias prv='gh pr view --web'
