@@ -214,18 +214,6 @@ mysed() {
   sed -i 's/${1}/${2}/g' $3
 }
 
-myuniq() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <file>"
-    return
-  fi
-
-  # -f is to sort case-insensitively.
-  # uniq works only if the input is sorted.
-  sort -f < $1 | uniq
-}
-
 up() {
   sudo npm update --global
   gcloud components update --quiet
