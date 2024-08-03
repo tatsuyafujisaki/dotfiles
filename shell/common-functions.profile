@@ -181,6 +181,13 @@ myffmpeg() {
   mv $temp $1
 }
 
+myffmpeg_all() {
+  for mp4 in ~/Desktop/*.mp4
+  do
+    myffmpeg $mp4
+  done
+}
+
 myfind() {
   if [ $# -lt 1 ]
   then
