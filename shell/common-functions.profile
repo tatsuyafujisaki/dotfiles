@@ -181,10 +181,14 @@ myffmpeg() {
   mv $temp $1
 }
 
+# > "N" ... sets the NULL_GLOB option for the current pattern
+# https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers
+#
+# The N glob qualifier avoids treating the "*" in "*.mp4" as non-wildcard if there is no mp4 file if there is no mp4 file, and the "*" in "*.webm" as non-wildcard if there is no webm file if there is no webm file.
 myffmpeg_all() {
-  for mp4 in ~/Desktop/*.mp4
+  for file in ~/Desktop/*.{mp4,webm}(N)
   do
-    myffmpeg $mp4
+    myffmpeg $file
   done
 }
 
