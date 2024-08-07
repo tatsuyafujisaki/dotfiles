@@ -7,17 +7,19 @@
 # adds Ruby 3, which is transitively installed for CocoaPods, to PATH before Ruby 2.
 [ -d /opt/homebrew/Cellar/ruby/3.3.4/bin ] && export PATH=/opt/homebrew/Cellar/ruby/3.3.4/bin:$PATH
 
-# Dart
+# https://dart.dev/tools/dart-tool
 alias da='dart analyze'
 alias dfa='dart fix --apply'
-alias dfd='dart format .'
-alias dpa='dart pub add'
+alias dfd='dart format --line-length 120 .'
 alias dpcr='dart pub cache repair'
 alias dpg='dart pub get'
-alias dr='dart run build_runner watch --delete-conflicting-outputs' # https://pub.dev/packages/riverpod_generator#starting-the-code-generator
+
+# https://pub.dev/packages/riverpod_generator
+# https://pub.dev/packages/build_runner
+alias dr='dart run build_runner watch --delete-conflicting-outputs'
 alias dv='dart --version'
 
-# Flutter
+# https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 alias f=flutter
 alias ff='flutter'
 alias fa='flutter analyze'
