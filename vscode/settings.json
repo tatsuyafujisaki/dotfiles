@@ -83,7 +83,10 @@
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.insertSemicolon": "explicit"
+      "quickfix.insertSemicolon": "explicit",
+      "editor.rulers": [
+        120
+      ],
     },
   }
 }
