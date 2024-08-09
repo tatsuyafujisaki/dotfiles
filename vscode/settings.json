@@ -2,12 +2,7 @@
 {
   "debug.console.historySuggestions": false,
   "dart.flutterHotReloadOnSave": "allIfDirty",
-  "dart.flutterSdkPath": "~/.asdf/installs/flutter/<version>-stable",
   "dart.hotReloadOnSave": "allIfDirty",
-  // https://dartcode.org/docs/recommended-settings/
-  "debug.internalConsoleOptions": "openOnSessionStart",
-  // https://dartcode.org/docs/recommended-settings/
-  "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
@@ -80,7 +75,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
       "quickfix.insertSemicolon": "explicit",
