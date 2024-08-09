@@ -5,7 +5,7 @@
   "dart.hotReloadOnSave": "allIfDirty",
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "always"
   },
   "editor.copyWithSyntaxHighlighting": false,
   "editor.find.globalFindClipboard": true,
@@ -77,7 +77,7 @@
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.insertSemicolon": true,
+      "quickfix.insertSemicolon": "always",
       "editor.rulers": [
         120
       ],
