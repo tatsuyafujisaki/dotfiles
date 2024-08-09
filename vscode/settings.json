@@ -55,7 +55,6 @@
   "javascript.inlayHints.variableTypes.enabled": true,
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "js/ts.implicitProjectConfig.target": "ESNext",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
@@ -75,9 +74,10 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
+  // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.insertSemicolon": "explicit",
+      "quickfix.insertSemicolon": true,
       "editor.rulers": [
         120
       ],
