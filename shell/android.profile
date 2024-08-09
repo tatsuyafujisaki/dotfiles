@@ -20,6 +20,11 @@ alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # s
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 alias adbd='adb devices'
 alias adbi='adb install'
+# https://stackoverflow.com/a/30390647
+alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
+grep -v com.piriform.ccleaner |\
+grep -v com.Slack |\
+xargs -n1 -r -t adb uninstall"
 alias emul='emulator -list-avds'
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
