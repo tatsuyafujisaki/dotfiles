@@ -2,6 +2,7 @@
 // Delete all comments when deploying, as they are not allowed in JSON.
 {
   "debug.console.historySuggestions": false,
+  "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
   "debug.toolBarLocation": "docked",
