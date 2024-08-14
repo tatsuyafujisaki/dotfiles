@@ -34,6 +34,13 @@ alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias fu='fvm flutter upgrade --force'
 alias fv='fvm flutter --version'
 
+ready() {
+  fvm flutter pub cache repair
+  dart run build_runner build --delete-conflicting-outputs
+  dart fix --apply
+  make fmt # is equivalent to "dart format --line-length 120 ." in my client work.
+}
+
 unlock() {
   rm pubspec.lock
   rm ios/Podfile.lock
@@ -41,13 +48,4 @@ unlock() {
   pushd ios
   pod install
   popd
-}
-
-#
-# https://pub.dev/packages/flutter_gen
-#
-
-my_flutter_gen() {
-  dart pub global activate flutter_gen
-  fluttergen pubspec.yaml
 }
