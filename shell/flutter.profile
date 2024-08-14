@@ -18,7 +18,7 @@ alias dr='dart run build_runner watch --delete-conflicting-outputs' # https://pu
 alias dv='dart --version'
 
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
-alias f='fvm flutter'
+alias ff='fvm flutter'
 alias fa='fvm flutter analyze'
 alias fc='fvm flutter clean'
 alias fd='fvm flutter doctor'
@@ -35,7 +35,9 @@ alias fu='fvm flutter upgrade --force'
 alias fv='fvm flutter --version'
 
 ready() {
-  fvm flutter pub cache repair
+  # not only downloads packages but also generates app_localizations.dart unlike 'flutter pub get'.
+  # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalizations
+  fvm flutter pub get
   dart run build_runner build --delete-conflicting-outputs
   dart fix --apply
   make fmt # is equivalent to "dart format --line-length 120 ." in my client work.
