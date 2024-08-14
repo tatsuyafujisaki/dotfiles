@@ -62,5 +62,5 @@ pixel() {
     return
   fi
 
-  emulator @Pixel_$1_API_$2 -dns-server 1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001 &|
+  emulator @Pixel_$1_API_$2 &|
 }
