@@ -18,15 +18,16 @@ alias dr='dart run build_runner watch --delete-conflicting-outputs' # https://pu
 alias dv='dart --version'
 
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
-alias ff='fvm flutter'
+alias f10='fvm flutter gen-l10n'
 alias fa='fvm flutter analyze'
 alias fc='fvm flutter clean'
 alias fd='fvm flutter doctor'
 alias fds='fvm flutter devices'
+alias ff='fvm flutter'
 alias fpa='fvm flutter pub add'
 alias fpad='fvm flutter pub add --dev'
-alias fpcr='fvm flutter pub cache repair'
 alias fpcc='fvm flutter pub cache clean'
+alias fpcr='fvm flutter pub cache repair'
 alias fpg='fvm flutter pub get'
 alias fpu='fvm flutter pub upgrade'
 alias fpum='fvm flutter pub upgrade --major-versions'
