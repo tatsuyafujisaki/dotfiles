@@ -1,10 +1,11 @@
 // ~/Library/Application Support/Code/User/settings.json
 // Delete all comments when deploying, as they are not allowed in JSON.
 {
-  "debug.console.historySuggestions": false,
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
+  "dart.flutterSdkPath": ".fvm/versions/3.22.1",
   "dart.hotReloadOnSave": "allIfDirty",
+  "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
