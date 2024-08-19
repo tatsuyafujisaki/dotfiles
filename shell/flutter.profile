@@ -14,7 +14,11 @@ alias dfd='dart format --line-length 120 .'
 alias dpc='dart pub cache clean'
 alias dpcr='dart pub cache repair'
 alias dpg='dart pub get'
-alias dr='dart run build_runner watch --delete-conflicting-outputs' # https://pub.dev/packages/build_runner & https://pub.dev/packages/riverpod_generator
+# https://dart.dev/tools/build_runner#using-built-in-commands
+# https://pub.dev/packages/build_runner
+# https://pub.dev/packages/riverpod_generator
+alias drr='dart run build_runner build --delete-conflicting-outputs'
+alias drw='dart run build_runner watch --delete-conflicting-outputs'
 alias dv='dart --version'
 
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
