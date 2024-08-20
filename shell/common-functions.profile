@@ -25,12 +25,7 @@ backup_desktop() {
 #   --prune is to remove remote-tracking references that no longer exist on the remote.
 #   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
 gg() {
-  # Switch to the develop branch.
-  # If the develop branch does not exist, switch to the main branch.
-  # If the main branch does not exist, switch to the master branch.
-  git switch master
-  git switch main
-  git switch develop
+  git switch develop || git switch main || git switch master
   git branch | xargs git branch -D
   git clean -d --force
   git restore --staged --worktree .
