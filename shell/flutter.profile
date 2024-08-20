@@ -1,10 +1,11 @@
 # adds Flutter to PATH on macOS.
 [ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
 
-# adds flutterfire to PATH.
+# adds protoc to PATH.
+# https://grpc.io/docs/languages/dart/quickstart/
 [ -d ~/.pub-cache/bin ] && export PATH=$PATH:~/.pub-cache/bin
 
-# adds Ruby 3, which is transitively installed for CocoaPods, to PATH before Ruby 2.
+# adds Ruby 3, which is transitively installed by CocoaPods, to PATH before Ruby 2.
 [ -d /opt/homebrew/Cellar/ruby/3.3.4/bin ] && export PATH=/opt/homebrew/Cellar/ruby/3.3.4/bin:$PATH
 
 # https://dart.dev/tools/dart-tool
