@@ -43,12 +43,6 @@
   "git.followTagsWhenSync": true,
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
-  // https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode
-  "github.copilot.enable": {
-    "markdown": false,
-    "plaintext": false,
-    "yaml": false,
-  },
   "html.format.preserveNewLines": false,
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
