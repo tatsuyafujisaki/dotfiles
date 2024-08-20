@@ -26,7 +26,8 @@ backup_desktop() {
 #   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
 gg() {
   git switch develop || git switch main || git switch master
-  git branch | xargs git branch -D
+  # "grep -v \*" excludes the current branch, which is marked with an asterisk.
+  git branch | grep -v \* | xargs git branch -D
   git clean -d --force
   git restore --staged --worktree .
   git pull --all --autostash --rebase --recurse-submodules
