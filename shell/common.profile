@@ -32,6 +32,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 #
 
 alias c='code .'
+alias ccc='code .circleci/config.yml'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
 alias df='code ~/Documents/GitHub/dotfiles'
@@ -60,9 +61,14 @@ alias pipu='pip3 uninstall -y'
 #
 
 alias pr='gh pr create --assignee @me --web'
-alias pra="gh pr review --approve --body 'LGTM! ご対応ありがとうございました👍' && gh pr view --web"
 alias prl='gh pr list --web'
 alias prv='gh pr view --web'
+
+#
+# https://buf.build/docs/reference/cli/buf
+#
+
+alias bls='buf ls-files'
 
 #
 # Misc aliases
