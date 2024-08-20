@@ -2,7 +2,8 @@
 [ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
 
 # adds protoc to PATH.
-# https://grpc.io/docs/languages/dart/quickstart/
+# https://grpc.io/docs/languages/dart/quickstart
+# https://pub.dev/packages/protoc_plugin
 [ -d ~/.pub-cache/bin ] && export PATH=$PATH:~/.pub-cache/bin
 
 # adds Ruby 3, which is transitively installed by CocoaPods, to PATH before Ruby 2.
