@@ -25,12 +25,18 @@ backup_desktop() {
 #   --prune is to remove remote-tracking references that no longer exist on the remote.
 #   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
 gg() {
+  # Switch to the develop branch.
+  # If the develop branch does not exist, switch to the main branch.
+  # If the main branch does not exist, switch to the master branch.
+  git switch master
+  git switch main
+  git switch develop
   git branch | xargs git branch -D
   git clean -d --force
   git restore --staged --worktree .
   git pull --all --autostash --rebase --recurse-submodules
   git fetch --prune --prune-tags
-  git gc
+  git gc --prune=now
 }
 
 #
@@ -126,13 +132,12 @@ dm() {
   code .
 }
 
-# Sync GitHub repositories.
-gh_repo_sync_all() {
+git_pull_all() {
   cd ~/Documents/GitHub
   for dir in */
   do
     pushd $dir
-    gh repo sync
+    gg # is a function defined in this file.
     popd
   done
 }
@@ -219,5 +224,5 @@ up() {
   gcloud components update --quiet
   flutter upgrade --force
   brew upgrade --greedy
-  gh_repo_sync_all
+  git_pull_all
 }
