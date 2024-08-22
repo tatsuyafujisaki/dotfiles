@@ -40,19 +40,22 @@ gg() {
 #
 
 clean_chrome() {
-  pushd ~ > /dev/null # avoids showing the pushed directory stack
-
   cd ~/Library/Application\ Support/Google/Chrome/Default
 
-  rm -fr sessions
+  rm -fr *Cache
+  rm -fr *Logs
+  rm -fr Sessions
   rm -f *.bak
   rm -f *.old
   rm -f *-journal
+  rm -f Cookies
+  rm -f Favicons
+  rm -f Google\ Profile\ Picture.png
   rm -f History
   rm -f LOCK
   rm -f LOG
 
-  popd > /dev/null # avoids showing the pushed directory stack
+  cd -
 }
 
 clean() {
