@@ -37,12 +37,23 @@ alias fpcr='fvm flutter pub cache repair'
 alias fpg='fvm flutter pub get'
 alias fpu='fvm flutter pub upgrade'
 alias fpum='fvm flutter pub upgrade --major-versions'
-alias fs='flutter screenshot --out=$HOME/Desktop/screenshot.png'
 alias fu='fvm flutter upgrade --force'
 alias fv='fvm flutter --version'
 
+fs() {
+  if [ ${#} -lt 1 ]
+  then
+    filepath=$HOME/Desktop/screenshot.png
+  else
+    filepath=$HOME/Desktop/$1.png
+  fi
+
+  fvm flutter screenshot --out=$filepath
+  open $filepath
+}
+
 ready() {
-  # not only downloads packages but also generates app_localizations.dart unlike 'flutter pub get'.
+  # not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalizations
   fvm flutter pub get
   dart run build_runner build --delete-conflicting-outputs

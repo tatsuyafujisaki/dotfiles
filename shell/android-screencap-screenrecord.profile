@@ -28,9 +28,9 @@ adbs() {
   then
     filepath=~/Desktop/screenshot.png
   else
-    filepath=~/Desktop/${1}.png
+    filepath=~/Desktop/$1.png
   fi
 
-  adb exec-out screencap -p > ${filepath}
-  open ${filepath}
+  adb exec-out screencap -p > $filepath
+  open $filepath
 }
