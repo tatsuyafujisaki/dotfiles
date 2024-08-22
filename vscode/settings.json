@@ -3,7 +3,7 @@
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
-  "dart.flutterSdkPath": ".fvm/versions/3.22.1",
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
