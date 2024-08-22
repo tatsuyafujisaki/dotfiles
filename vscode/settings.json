@@ -5,6 +5,7 @@
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.flutterSdkPath": ".fvm/versions/3.22.1",
   "dart.hotReloadOnSave": "allIfDirty",
+  "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
