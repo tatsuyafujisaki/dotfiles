@@ -83,7 +83,7 @@ clean() {
   rm -fr ~/.pub-cache
   rm -f ~/.flutter
 
-  pushd ~ > /dev/null # avoids showing the pushed directory stack
+  pushd ~
 
   # Delete folders directly under the home folder.
   folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .zsh_sessions)
@@ -99,22 +99,19 @@ clean() {
     rm -f $file
   done
 
-  popd > /dev/null # avoids showing the pushed directory stack
+  popd
 }
 
 sudo_clean() {
-  # Delete .DS_Store
-  sudo find / -type f -iname .DS_Store -delete 2> /dev/null
-
-  # Delete .localized
-  sudo find / -type f -iname .localized -delete 2> /dev/null
-
   # Delete folders that require root privileges.
   sudo rm -fr ~/.Trash
   sudo rm -fr ~/Downloads
   sudo rm -fr ~/Movies
   sudo rm -fr ~/Music
   sudo rm -fr ~/Pictures
+
+  # Delete .DS_Store
+  sudo find / -type f -name .DS_Store -delete 2> /dev/null
 }
 
 dm() {
