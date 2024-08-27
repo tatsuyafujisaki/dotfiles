@@ -1,0 +1,2 @@
+dart fix --apply
+dart format --line-length
