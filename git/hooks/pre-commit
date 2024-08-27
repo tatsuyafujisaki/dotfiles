@@ -1,2 +1,2 @@
 dart fix --apply
-dart formats
+dart format .
