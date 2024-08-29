@@ -30,6 +30,8 @@
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
+    "**/.fvm": true,
+    "**/.git": true,
     "**/*.freezed.dart": true,
     "**/*.g.dart": true
   },
