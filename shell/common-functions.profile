@@ -63,6 +63,7 @@ clean() {
   rm -fr ~/Library/Application\ Support/Google/RLZ
 
   # Delete folders and files for Android development.
+  find ~/.android/avd -type f -name cache.img*
   rm -fr ~/.android/breakpad
   rm -fr ~/.android/build-cache
   rm -fr ~/.android/cache
