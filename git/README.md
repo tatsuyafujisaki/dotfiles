@@ -1,4 +1,4 @@
-# How to deploy `.gitconfig` in this repository to the home folder on macOS
+# How to use `.gitconfig` in this repository on macOS
 1. Clone this repository using GitHub Desktop.
 2. Run following command.
     ```shell
