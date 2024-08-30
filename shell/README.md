@@ -1,19 +1,11 @@
-# Create symbolic links
+# How to use `.bash_profile`, `.zprofile`, and `.zshrc` in this repository on macOS
 ```shell
-cd ~
-ln -s Documents/GitHub/dotfiles/git/.gitconfig .
-ln -s Documents/GitHub/dotfiles/shell/.bash_profile .
-ln -s Documents/GitHub/dotfiles/shell/.zshrc .
-ln -s Documents/GitHub/dotfiles/shell/.zprofile .
+ln -fs ~/Documents/GitHub/dotfiles/shell/.bash_profile ~
+ln -fs ~/Documents/GitHub/dotfiles/shell/.zprofile ~
+ln -fs ~/Documents/GitHub/dotfiles/shell/.zshrc ~
 ```
 
 # How to disable the `Last login: ...` message
 ```shell
 touch ~/.hushlogin
-```
-
-# How to prevent Ctrl+S from disabling the keyboard on Linux
-This is unnecessary on macOS or Windows Subsystem for Linux (WSL).
-```shell
-stty stop undef
 ```
