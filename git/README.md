@@ -16,4 +16,8 @@
     # https://dart.dev/guides/libraries/private-files#details
     *.freezed.dart
     *.g.dart
+
+    # https://fvm.app
+    .fvm/
+    .fvmrc
     ```
