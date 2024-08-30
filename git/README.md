@@ -1,16 +1,24 @@
-# How to create `.gitignore`
-```shell
-curl https://raw.githubusercontent.com/github/gitignore/main/{\
-  Android.gitignore,\
-  Dart.gitignore,\
-  Swift.gitignore\
-} > .gitignore
-```
+# How to deploy `.gitconfig` in this repository to the home folder on macOS
+1. Clone this repository using GitHub Desktop.
+2. Run following command.
+    ```shell
+    ln -s ~/Documents/GitHub/dotfiles/git/.gitconfig ~
+    ```
 
-# Add the following to the generated `.gitignore`
-```gitignore
-# > In many source code repositories, the common practice is not to commit generated files, at all.
-# https://dart.dev/guides/libraries/private-files#details
-*.freezed.dart
-*.g.dart
-```
+# How to create `.gitignore` in the home folder on macOS
+1. Run the following command.
+    ```shell
+    curl https://raw.githubusercontent.com/github/gitignore/main/{\
+      Android.gitignore,\
+      Dart.gitignore,\
+      Go.gitignore,\
+      Swift.gitignore\
+    } > ~/.gitignore
+    ```
+2. Add the following to `.gitignore`.
+    ```gitignore
+    # > In many source code repositories, the common practice is not to commit generated files, at all.
+    # https://dart.dev/guides/libraries/private-files#details
+    *.freezed.dart
+    *.g.dart
+    ```
