@@ -53,11 +53,11 @@ fs() {
 }
 
 ready() {
+  dart run build_runner build --delete-conflicting-outputs
+  dart fix --apply
   # not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalizations
   fvm flutter pub get
-  dart run build_runner build --delete-conflicting-outputs
-  dart fix --apply
   make fmt # is equivalent to "dart format --line-length 120 ." in my client work.
 }
 
