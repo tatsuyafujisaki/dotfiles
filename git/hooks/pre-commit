@@ -1,3 +1,2 @@
 dart fix --apply
 dart format .
-git add --all && git commit --all --amend --no-edit
