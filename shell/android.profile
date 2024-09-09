@@ -15,25 +15,24 @@ export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 
 . $(dirname $0)/android-screencap-screenrecord.profile
 
+alias adbd='adb devices'
+alias adbi='adb install'
+
+#
+# adb shell
+#
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
 alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
-alias adbd='adb devices'
-alias adbi='adb install'
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
 grep -v com.piriform.ccleaner |\
 grep -v com.Slack |\
 xargs -n1 -r -t adb uninstall"
-alias emul='emulator -list-avds'
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
-alias px='pixel 4 34'
 alias showtap='adb shell settings put system show_touches 1'
 alias showta='adb shell settings put system show_touches 0'
-
-# --text is to avoid "grep: (standard input): binary file matches".
-alias adbf="adb shell dumpsys activity top | grep --text 'Added Fragments' -A 5" # shows fragments.
 
 adb_deeplink() {
   if [ ${#} -lt 1 ]
@@ -54,6 +53,8 @@ adb_deeplink() {
     adb shell am start -W -a android.intent.action.VIEW -d ${1}
   fi
 }
+
+alias emu='emulator -list-avds | tail -1 | xargs emulator -avd'
 
 pixel() {
   if [ ${#} -lt 2 ]
