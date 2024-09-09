@@ -54,7 +54,7 @@ adb_deeplink() {
   fi
 }
 
-alias emu='emulator -list-avds | tail -1 | xargs emulator -avd'
+alias emu='emulator -list-avds | tail -1 | xargs emulator -avd &|'
 
 pixel() {
   if [ ${#} -lt 2 ]
