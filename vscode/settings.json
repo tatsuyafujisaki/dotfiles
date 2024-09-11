@@ -32,6 +32,7 @@
   "files.exclude": {
     "**/.fvm": true,
     "**/.git": true,
+    "**/.pub-cache": true,
     "**/*.freezed.dart": true,
     "**/*.g.dart": true
   },
@@ -80,7 +81,7 @@
       "quickfix.insertSemicolon": "always",
       "editor.rulers": [
         120
-      ],
-    },
+      ]
+    }
   }
 }
