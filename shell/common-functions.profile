@@ -42,18 +42,19 @@ gg() {
 clean_chrome() {
   cd ~/Library/Application\ Support/Google/Chrome/Default
 
-  rm -fr *Cache
-  rm -fr *Logs
-  rm -fr Sessions
+  rm -f *-journal
   rm -f *.bak
   rm -f *.old
-  rm -f *-journal
-  rm -f Cookies
+  rm -f *Cookies
   rm -f Favicons
   rm -f Google\ Profile\ Picture.png
   rm -f History
   rm -f LOCK
   rm -f LOG
+  rm -f Top\ Sites
+  rm -fr *Cache
+  rm -fr *Logs
+  rm -fr Sessions
 
   cd -
 }
