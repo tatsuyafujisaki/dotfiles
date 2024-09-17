@@ -33,6 +33,7 @@ gg() {
   git pull --all --autostash --rebase --recurse-submodules
   git fetch --prune --prune-tags
   git gc --prune=now
+  git stash clear
 }
 
 #
