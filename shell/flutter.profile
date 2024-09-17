@@ -12,7 +12,8 @@
 # https://dart.dev/tools/dart-tool
 alias da='dart analyze'
 alias dfa='dart fix --apply'
-alias dfd='dart format --line-length 120 .'
+alias dfd='dart format .'
+alias dfd2='dart format --line-length 120 .'
 alias dpc='dart pub cache clean'
 alias dpcr='dart pub cache repair'
 alias dpg='dart pub get'
