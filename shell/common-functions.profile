@@ -40,26 +40,6 @@ gg() {
 # Misc functions
 #
 
-clean_chrome() {
-  cd ~/Library/Application\ Support/Google/Chrome/Default
-
-  rm -f *-journal
-  rm -f *.bak
-  rm -f *.old
-  rm -f *Cookies
-  rm -f Favicons
-  rm -f Google\ Profile\ Picture.png
-  rm -f History
-  rm -f LOCK
-  rm -f LOG
-  rm -f Top\ Sites
-  rm -fr *Cache
-  rm -fr *Logs
-  rm -fr Sessions
-
-  cd -
-}
-
 clean() {
   # Delete Chrome RLZ.
   rm -fr ~/Library/Application\ Support/Google/RLZ
@@ -89,7 +69,7 @@ clean() {
   pushd ~
 
   # Delete folders directly under the home folder.
-  folders=(.bash_sessions .dvdcss .gradle .lemminx .local .m2 .oracle_jre_usage .zsh_sessions)
+  folders=(.bash_sessions .dvdcss .gradle .lemminx .m2 .oracle_jre_usage .zsh_sessions)
   for folder in "$folders[@]"
   do
     rm -fr $folder
@@ -105,8 +85,29 @@ clean() {
   popd
 }
 
+clean_chrome() {
+  cd ~/Library/Application\ Support/Google/Chrome/Default
+
+  rm -f *-journal
+  rm -f *.bak
+  rm -f *.old
+  rm -f *Cookies
+  rm -f Favicons
+  rm -f Google\ Profile\ Picture.png
+  rm -f History
+  rm -f LOCK
+  rm -f LOG
+  rm -f Top\ Sites
+  rm -fr *Cache
+  rm -fr *Logs
+  rm -fr Sessions
+
+  cd -
+}
+
 sudo_clean() {
   # Delete folders that require root privileges.
+  sudo rm -fr ~/.local
   sudo rm -fr ~/.Trash
   sudo rm -fr ~/Downloads
   sudo rm -fr ~/Movies
