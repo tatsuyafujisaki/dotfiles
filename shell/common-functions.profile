@@ -1,13 +1,3 @@
-backup_desktop() {
-  cd ~/Desktop
-
-  local dir=$(date +"%Y-%m-%d_%H-%M-%S")
-  rm -r $dir
-  mkdir -p $dir
-
-  mv * $dir
-}
-
 #
 # https://git-scm.com
 #
@@ -39,6 +29,16 @@ gg() {
 #
 # Misc functions
 #
+
+backup_desktop() {
+  cd ~/Desktop
+
+  local dir=$(date +"%Y-%m-%d_%H-%M-%S")
+  rm -r $dir
+  mkdir -p $dir
+
+  mv * $dir
+}
 
 clean() {
   # Delete Chrome RLZ.
@@ -195,18 +195,6 @@ myfind() {
   fi
 
   find . -iname "*$1*" -print 2> /dev/null
-}
-
-mysed() {
-  if [ ${#} -lt 3 ]
-  then
-    echo "Usage: $funcstack[1] <string-before> <string-after> <file>"
-    return
-  fi
-
-  # -i is to edit a file in-place instead of printing to standard output.
-  # g is to enable more than one replacement in each line.
-  sed -i 's/${1}/${2}/g' $3
 }
 
 up() {
