@@ -8,6 +8,7 @@
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
+  "deno.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
   },
