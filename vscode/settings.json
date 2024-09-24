@@ -8,7 +8,6 @@
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
-  "deno.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
   },
@@ -88,5 +87,5 @@
   // https://github.com/denoland/vscode_deno?tab=readme-ov-file#formatting
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  },  
+  },
 }
