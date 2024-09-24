@@ -83,9 +83,5 @@
         120
       ]
     }
-  },
-  // https://github.com/denoland/vscode_deno?tab=readme-ov-file#formatting
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
+  }
 }
