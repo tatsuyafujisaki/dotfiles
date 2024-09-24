@@ -1,5 +1,4 @@
 // ~/Library/Application Support/Code/User/settings.json
-// Delete all comments when deploying, as they are not allowed in JSON.
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
