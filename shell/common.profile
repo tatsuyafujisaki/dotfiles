@@ -23,6 +23,7 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
 alias dp='cd ~/Documents/GitHub/dart_playground'
+alias fln='cd ~/Documents/GitHub/flutter_local_notifications/flutter_local_notifications/example'
 alias fm='cd ~/Documents/GitHub/flutterfire/packages/firebase_messaging/firebase_messaging/example'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
