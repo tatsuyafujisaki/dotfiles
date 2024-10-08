@@ -1,17 +1,8 @@
-# ANDROID_HOME is optional, but I couldn't build a project without it.
-# https://developer.android.com/tools/variables
+# https://developer.android.com/tools/variables#set
 export ANDROID_HOME=~/Library/Android/sdk
-
-# Zsh does not expand the tilde(~) in single-quotes or double-quotes.
-# http://zsh.sourceforge.net/Guide/zshguide05.html
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
-
-# Add adb to PATH
-# Zsh does not expand the tilde(~) in single-quotes or double-quotes.
-# http://zsh.sourceforge.net/Guide/zshguide05.html
-[ -d ~/Library/Android/sdk/emulator ] && export PATH=${PATH}:~/Library/Android/sdk/emulator
-[ -d ~/Library/Android/sdk/platform-tools ] && export PATH=${PATH}:~/Library/Android/sdk/platform-tools
-[ -d ~/Library/Android/sdk/tools/bin ] && export PATH=${PATH}:~/Library/Android/sdk/tools/bin
+[ -d $ANDROID_HOME/emulator ] && export PATH=$PATH:~/Library/Android/sdk/emulator
+[ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:~/Library/Android/sdk/platform-tools
+[ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:~/Library/Android/sdk/tools/bin
 
 . $(dirname $0)/android-screencap-screenrecord.profile
 
