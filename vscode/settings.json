@@ -79,9 +79,7 @@
   "[dart]": {
     "editor.codeActionsOnSave": {
       "quickfix.insertSemicolon": "always",
-      "editor.rulers": [
-        120
-      ]
-    }
-  }
+    },
+    "editor.rulers": [80],
+  },
 }
