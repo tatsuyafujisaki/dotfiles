@@ -36,6 +36,7 @@
     "**/*.g.dart": true
   },
   "files.hotExit": "off",
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.allowForcePush": true,
   "git.autofetch": true,
