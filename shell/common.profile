@@ -86,7 +86,7 @@ alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the
 
 # "build" means Flutter's build directory.
 # https://man.freebsd.org/cgi/man.cgi?query=grep
-alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git --exclude-dir build'
+alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git'
 
 # https://man.freebsd.org/cgi/man.cgi?query=pkill
 alias p='pkill -f gradle'
