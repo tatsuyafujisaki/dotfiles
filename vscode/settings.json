@@ -79,6 +79,8 @@
     "editor.codeActionsOnSave": {
       "quickfix.insertSemicolon": "always",
     },
-    "editor.rulers": [80],
-  },
+    "editor.rulers": [
+      80
+    ]
+  }
 }
