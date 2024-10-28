@@ -28,6 +28,7 @@ alias fm='cd ~/Documents/GitHub/flutterfire/packages/firebase_messaging/firebase
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
+alias vp='cd ~/Documents/GitHub/packages/packages/video_player/video_player/example'
 
 #
 # Visual Studio Code-related
