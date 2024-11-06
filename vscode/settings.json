@@ -78,6 +78,7 @@
   "[dart]": {
     "editor.codeActionsOnSave": {
       "quickfix.insertSemicolon": "always",
+      "quickfix.organize.imports": "always"
     },
     "editor.rulers": [
       80
