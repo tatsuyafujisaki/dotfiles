@@ -13,8 +13,6 @@ alias adbi='adb install'
 # adb shell
 #
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
-alias adba='adb shell "dumpsys activity activities | grep mResumedActivity"' # shows the resumed activity.
-alias adbas="adb shell \"dumpsys activity activities | grep ' Hist '\"" # shows all the actiities.
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
 grep -v com.piriform.ccleaner |\
@@ -44,6 +42,19 @@ adb_deeplink() {
     adb shell am start -W -a android.intent.action.VIEW -d ${1}
   fi
 }
+
+adb_pull_camera_image_or_video() {
+  if [ ${#} -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <image or video filename>"
+    return
+  fi
+  adb pull /storage/emulated/0/DCIM/Camera/${1} ~/Desktop
+}
+
+#
+# emulator
+#
 
 alias emu='emulator -list-avds | tail -1 | xargs emulator -avd &|'
 alias emul='emulator -list-avds'
