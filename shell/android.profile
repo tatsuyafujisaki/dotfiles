@@ -7,7 +7,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 . $(dirname $0)/android-screencap-screenrecord.profile
 
 alias adbd='adb devices'
-alias adbi='adb install'
+alias adbi='adb install *.apk'
 
 #
 # adb shell
