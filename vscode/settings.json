@@ -1,4 +1,4 @@
-// Since the JSON specification does not support comments, the pseudo comments `//` in this JSON file should be removed.
+// The pseudo comments `//` should be removed when this JSON file is used.
 // 
 // ~/Library/Application Support/Code/User/settings.json
 {
@@ -78,6 +78,10 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
+  // Only for my client work
+  "[json]": {
+    "editor.formatOnSave": false,
+  },
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
