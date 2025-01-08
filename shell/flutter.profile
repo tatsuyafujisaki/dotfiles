@@ -58,8 +58,8 @@ fs() {
 }
 
 ready() {
-  dart run build_runner build --delete-conflicting-outputs
-  dart fix --apply
+  fvm dart run build_runner build --delete-conflicting-outputs
+  fvm dart fix --apply
   # not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalizations
   fvm flutter pub get
