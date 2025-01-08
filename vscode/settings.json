@@ -79,8 +79,9 @@
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.insertSemicolon": "always",
-      "quickfix.organize.imports": "always"
+      "quickfix.insertSemicolon.multi": "always",
+      "quickfix.organize.imports": "always",
+      "quickfix.remove.unusedImport.multi": "always"
     },
     "editor.rulers": [
       80
