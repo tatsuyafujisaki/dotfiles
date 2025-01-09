@@ -10,7 +10,7 @@ PS1='\e[1;32m\]$(pwd)\[\e[m\n\$ ' # A string between "\e[{x;ym}\]" and "\[\e[m" 
 
 if [ $(uname) = Darwin ]
 then
-  . ~/.shell_profiles/mac.profile
+  .~/Documents/GitHub/dotfiles/shell/mac.profile
 else
-  . ~/.shell_profiles/linux.profile
+  . ~/Documents/GitHub/dotfiles/shell/linux.profile
 fi
