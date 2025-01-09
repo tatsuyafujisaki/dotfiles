@@ -24,17 +24,4 @@ export PROMPT_EOL_MARK=''
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
-. ~/Documents/GitHub/dotfiles/shell/android.profile
-. ~/Documents/GitHub/dotfiles/shell/android-screencap-screenrecord.profile
-. ~/Documents/GitHub/dotfiles/shell/chatbot.profile
-. ~/Documents/GitHub/dotfiles/shell/common.profile
-. ~/Documents/GitHub/dotfiles/shell/common-functions.profile
-. ~/Documents/GitHub/dotfiles/shell/flutter.profile
-. ~/Documents/GitHub/private/private.profile
-
-if [ $(uname) = Darwin ]
-then
-  . ~/Documents/GitHub/dotfiles/shell/mac.profile
-else
-  . ~/Documents/GitHub/dotfiles/shell/linux.profile
-fi
+. ~/Documents/GitHub/dotfiles/shell/startup/bash-and-zsh.profile
