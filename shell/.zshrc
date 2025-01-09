@@ -25,6 +25,8 @@ export PROMPT_EOL_MARK=''
 autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
 . ~/Documents/GitHub/dotfiles/shell/android.profile
+. ~/Documents/GitHub/dotfiles/shell/android-screencap-screenrecord.profile
+. ~/Documents/GitHub/dotfiles/shell/chatbot.profile
 . ~/Documents/GitHub/dotfiles/shell/common.profile
 . ~/Documents/GitHub/dotfiles/shell/common-functions.profile
 . ~/Documents/GitHub/dotfiles/shell/flutter.profile

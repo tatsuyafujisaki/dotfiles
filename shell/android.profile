@@ -4,8 +4,6 @@ export ANDROID_HOME=~/Library/Android/sdk
 [ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:~/Library/Android/sdk/platform-tools
 [ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:~/Library/Android/sdk/tools/bin
 
-. $(dirname $0)/android-screencap-screenrecord.profile
-
 alias adbd='adb devices'
 alias adbi='adb install *.apk'
 
