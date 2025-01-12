@@ -38,6 +38,11 @@ grm() {
   ai
 }
 
+grm2() {
+  echo "Is the following phrase grammatically correct? Does the following phrase sound natural?\n\n$(pbpaste)" | pbcopy
+  ai
+}
+
 sf() {
   echo "What does $(pbpaste) stand for?" | pbcopy
   ai
