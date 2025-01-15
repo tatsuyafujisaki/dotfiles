@@ -3,7 +3,7 @@ ai() {
 
   urls=(
     "https://claude.ai/new?q=$keyword"
-    "https://www.google.com/search?hl=en&q=$keyword"
+    "https://gemini.google.com"
     "https://www.perplexity.ai/?q=$keyword"
   )
 
