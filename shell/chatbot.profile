@@ -62,8 +62,3 @@ wdm() {
   echo "What does $(pbpaste) mean?" | pbcopy
   ai
 }
-
-wi() {
-  echo "What is $(pbpaste) ?" | pbcopy
-  ai
-}
