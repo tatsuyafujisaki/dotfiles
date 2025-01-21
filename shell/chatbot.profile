@@ -32,16 +32,6 @@ hdi() {
   ai
 }
 
-grm() {
-  echo "Is the following sentence grammatically correct? Does the following sentence sound natural?\n\n$(pbpaste)" | pbcopy
-  ai
-}
-
-grm2() {
-  echo "Is the following phrase grammatically correct? Does the following phrase sound natural?\n\n$(pbpaste)" | pbcopy
-  ai
-}
-
 sf() {
   echo "What does $(pbpaste) stand for?" | pbcopy
   ai
@@ -51,7 +41,6 @@ tds() {
   echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
   ai
 }
-
 
 th() {
   echo "$(pbpaste)とは？" | pbcopy
