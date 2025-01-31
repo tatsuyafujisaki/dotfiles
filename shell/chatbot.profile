@@ -12,18 +12,18 @@ ai() {
   done
 }
 
-fhdi() {
-  echo "In Flutter, how do I $(pbpaste)" | pbcopy
+explf() {
+  echo "Explain the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
   ai
 }
 
-fsmpl() {
-  echo "Simplify the following Flutter code.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
+optmf() {
+  echo "Optimize the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
   ai
 }
 
-gtr() {
-  echo "$(pbpaste)の具体例は？" | pbcopy
+smplf() {
+  echo "Simplify the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
   ai
 }
 
