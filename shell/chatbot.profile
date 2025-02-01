@@ -27,27 +27,7 @@ smplf() {
   ai
 }
 
-hdi() {
-  echo "How do I $(pbpaste) ?" | pbcopy
-  ai
-}
-
-sf() {
-  echo "What does $(pbpaste) stand for?" | pbcopy
-  ai
-}
-
-tds() {
-  echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
-  ai
-}
-
-th() {
-  echo "$(pbpaste)とは？" | pbcopy
-  ai
-}
-
-wdm() {
-  echo "What does $(pbpaste) mean?" | pbcopy
-  ai
+# deletes double quotes from the clipboard.
+dq() {
+  pbpaste | tr -d '"' | pbcopy
 }
