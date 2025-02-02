@@ -2,8 +2,9 @@ ai() {
   local keyword=$(pbpaste)
 
   urls=(
-    "https://claude.ai/new?q=$keyword"
-    "https://www.perplexity.ai/?q=$keyword"
+    https://claude.ai/new?q=$keyword
+    https://www.perplexity.ai/?q=$keyword
+    https://gemini.google.com/app
   )
 
   for url in "${urls[@]}"
@@ -24,6 +25,11 @@ optmf() {
 
 smplf() {
   echo "Simplify the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
+  ai
+}
+
+tds() {
+  echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
   ai
 }
 
