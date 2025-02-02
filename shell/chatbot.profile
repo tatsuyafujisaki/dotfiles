@@ -30,4 +30,5 @@ smplf() {
 # deletes double quotes from the clipboard.
 dq() {
   pbpaste | tr -d '"' | pbcopy
+  open -a 'Google Chrome' https://gemini.google.com/app
 }
