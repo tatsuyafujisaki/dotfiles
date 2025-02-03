@@ -66,6 +66,7 @@ my_refresh_dart() {
 }
 
 my_refresh_flutter() {
+  flutter clean && \
   flutter pub cache clean --force && \
   flutter pub upgrade --tighten --major-versions && \
   dart run build_runner build --delete-conflicting-outputs && \
@@ -74,11 +75,10 @@ my_refresh_flutter() {
 }
 
 my_refresh_client_work_flutter() {
+  fvm flutter clean && \
+  fvm flutter pub cache clean --force && \
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
-  fvm flutter pub get
-  # fvm flutter pub upgrade --tighten --major-versions && \
-  fvm dart run build_runner build --delete-conflicting-outputs && \
-  fvm dart fix --apply && \
-  make fmt # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
+  make all # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
+  make run
 }
