@@ -57,26 +57,29 @@ fs() {
   open $filepath
 }
 
-my_refresh_dart() {
-  dart pub cache clean --force && \
-  dart pub upgrade --tighten --major-versions && \
+# my dart refresh
+myd() {
+  # dart pub cache clean --force && \
+  # dart pub upgrade --tighten --major-versions && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format .
 }
 
-my_refresh_flutter() {
-  flutter clean && \
-  flutter pub cache clean --force && \
+# my flutter refresh
+myf() {
+  # flutter clean && \
+  # flutter pub cache clean --force && \
   flutter pub upgrade --tighten --major-versions && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format .
 }
 
-my_refresh_client_work_flutter() {
-  fvm flutter clean && \
-  fvm flutter pub cache clean --force && \
+# my client work
+mycw() {
+  # fvm flutter clean && \
+  # fvm flutter pub cache clean --force && \
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
   make all # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
