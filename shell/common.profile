@@ -82,6 +82,7 @@ alias g=git
 alias gc=gcloud
 alias jdks='/usr/libexec/java_home -V'
 alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
+alias pbsort2="pbpaste | fold -w1 | sort | uniq | tr -d '\n' | pbcopy" # pbsort for characters in a single line.
 
 # https://man.freebsd.org/cgi/man.cgi?query=bc
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
