@@ -60,7 +60,6 @@ fs() {
 # my dart refresh
 myd() {
   # dart pub cache clean --force && \
-  dart pub upgrade --tighten --major-versions && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format .
@@ -70,7 +69,6 @@ myd() {
 myf() {
   # flutter clean && \
   # flutter pub cache clean --force && \
-  flutter pub upgrade --tighten --major-versions && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format .
