@@ -5,6 +5,7 @@
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
+  "dart.lineLength": 120, // only for my current client work
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
@@ -78,10 +79,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  // Only for my client work
-  "[json]": {
-    "editor.formatOnSave": false,
-  },
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     "editor.codeActionsOnSave": {
