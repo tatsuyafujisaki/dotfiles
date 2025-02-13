@@ -67,8 +67,11 @@ myd() {
 
 # my flutter refresh
 myf() {
-  # flutter clean && \
-  # flutter pub cache clean --force && \
+  flutter clean && \
+  flutter pub cache clean --force && \
+  # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
+  # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
+  flutter pub get && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format .
@@ -78,8 +81,6 @@ myf() {
 mycw() {
   # fvm flutter clean && \
   # fvm flutter pub cache clean --force && \
-  # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
-  # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
   make all # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
   make run
 }
