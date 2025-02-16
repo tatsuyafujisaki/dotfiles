@@ -1,5 +1,5 @@
 // The unsupported comments `//` should be removed when this JSON file is used.
-// 
+//
 // ~/Library/Application Support/Code/User/settings.json
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
@@ -50,7 +50,6 @@
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
   "html.format.preserveNewLines": false,
-  "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.inlayHints.parameterTypes.enabled": true,
@@ -85,9 +84,6 @@
       "quickfix.insertSemicolon.multi": "always",
       "quickfix.organize.imports": "always",
       "quickfix.remove.unusedImport.multi": "always"
-    },
-    "editor.rulers": [
-      80
-    ]
+    }
   }
 }
