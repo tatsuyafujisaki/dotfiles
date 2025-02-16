@@ -5,7 +5,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 [ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:~/Library/Android/sdk/tools/bin
 
 alias adbd='adb devices'
-alias adbi='adb install *.apk'
+alias adbi='adb install -r *.apk'
 
 #
 # adb shell
