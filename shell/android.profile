@@ -6,7 +6,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 [ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 #
-# adb shell
+# https://developer.android.com/tools/adb
 #
 
 alias adbd='adb devices'
