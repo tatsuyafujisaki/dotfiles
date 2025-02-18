@@ -1,8 +1,9 @@
 # https://developer.android.com/tools/variables#set
 export ANDROID_HOME=~/Library/Android/sdk
-[ -d $ANDROID_HOME/emulator ] && export PATH=$PATH:~/Library/Android/sdk/emulator
-[ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:~/Library/Android/sdk/platform-tools
-[ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:~/Library/Android/sdk/tools/bin
+[ -d $ANDROID_HOME/cmdline-tools/latest/bin ] && export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+[ -d $ANDROID_HOME/emulator ] && export PATH=$PATH:$ANDROID_HOME/emulator
+[ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:$ANDROID_HOME/platform-tools
+[ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 alias adbd='adb devices'
 alias adbi='adb install -r *.apk'
