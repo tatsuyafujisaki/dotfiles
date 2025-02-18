@@ -5,12 +5,12 @@ export ANDROID_HOME=~/Library/Android/sdk
 [ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:$ANDROID_HOME/platform-tools
 [ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:$ANDROID_HOME/tools/bin
 
-alias adbd='adb devices'
-alias adbi='adb install -r *.apk'
-
 #
 # adb shell
 #
+
+alias adbd='adb devices'
+alias adbi='adb install -r *.apk'
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
