@@ -59,7 +59,14 @@ alias my_logcat='adb logcat -v brief'
 
 # "flutter:I" shows logs with the tag "flutter" at the Info level. These are debugPrint logs.
 # "*:S" silences all other tags.
-alias my_logcat_flutter='adb logcat flutter:I *:S | grep 👀'
+adb_logcat_flutter() {
+  if [ ${#} -ge 1 ]
+  then
+    adb -s $1 logcat flutter:I *:S
+  else
+    adb logcat flutter:I *:S
+  fi
+}
 
 #
 # emulator
