@@ -55,11 +55,13 @@ adb_pull_camera_image_or_video() {
 # https://developer.android.com/tools/logcat
 #
 
-alias my_logcat='adb logcat -v brief'
+alias my_logcat='adb logcat --clear && adb logcat -v brief'
 
 # "flutter:I" shows logs with the tag "flutter" at the Info level. These are debugPrint logs.
 # "*:S" silences all other tags.
 adb_logcat_flutter() {
+  adb logcat --clear
+
   if [ ${#} -ge 1 ]
   then
     adb -s $1 logcat flutter:I *:S
