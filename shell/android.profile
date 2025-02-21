@@ -64,9 +64,9 @@ adb_logcat_flutter() {
 
   if [ ${#} -ge 1 ]
   then
-    adb -s $1 logcat flutter:I *:S
+    adb -s $1 logcat flutter:I *:S | grep 👀
   else
-    adb logcat flutter:I *:S
+    adb logcat flutter:I *:S | grep 👀
   fi
 }
 
