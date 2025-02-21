@@ -52,6 +52,12 @@ adb_pull_camera_image_or_video() {
 }
 
 #
+# https://developer.android.com/tools/logcat
+#
+
+alias logcat='adb logcat -v brief'
+
+#
 # emulator
 #
 
