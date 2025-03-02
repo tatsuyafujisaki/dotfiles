@@ -21,7 +21,9 @@
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Kotlin.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Python.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Swift.gitignore >> ~/.gitignore
+    ```
 
+    ```shell
     # Alternatively
     curl https://raw.githubusercontent.com/github/gitignore/main/{<file1>, <file2>, ...} > ~/.gitignore
     ```
