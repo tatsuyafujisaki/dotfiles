@@ -3,6 +3,7 @@ ai() {
 
   urls=(
     https://claude.ai/new?q=$keyword
+    https://copilot.microsoft.com/?q=$keyword
     https://www.perplexity.ai/?q=$keyword
     https://gemini.google.com/app
   )
