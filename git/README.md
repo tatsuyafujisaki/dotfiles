@@ -8,7 +8,22 @@
 # How to create `.gitignore` in the home folder on macOS
 1. Run the following command.
     ```shell
-    curl https://raw.githubusercontent.com/github/gitignore/main/{Android.gitignore,Dart.gitignore,Go.gitignore,Swift.gitignore} > ~/.gitignore
+    rm ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Android.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Dart.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Firebase.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Flutter.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/macOS.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/VisualStudioCode.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/Xcode.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/Xcode.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Gradle.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Kotlin.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Python.gitignore >> ~/.gitignore
+    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Swift.gitignore >> ~/.gitignore
+
+    # Alternatively
+    curl https://raw.githubusercontent.com/github/gitignore/main/{<file1>, <file2>, ...} > ~/.gitignore
     ```
 2. Add the following to `~/.gitignore`.
     ```gitignore
