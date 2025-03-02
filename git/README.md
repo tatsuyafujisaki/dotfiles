@@ -12,7 +12,7 @@
     ```
 2. Add the following to `~/.gitignore`.
     ```gitignore
-    pubspec.lock
+    GoogleService-Info.plist
 
     # > don't include most of the files that your IDE or code editor, the pub tool, and other tools generate.
     # > In many source code repositories, the common practice is not to commit generated files, at all.
