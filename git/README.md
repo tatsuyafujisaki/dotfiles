@@ -16,7 +16,6 @@
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/macOS.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/VisualStudioCode.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/Xcode.gitignore >> ~/.gitignore
-    curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/Xcode.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Gradle.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Kotlin.gitignore >> ~/.gitignore
     curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Python.gitignore >> ~/.gitignore
@@ -29,6 +28,7 @@
     ```
 2. Add the following to `~/.gitignore`.
     ```gitignore
+    # google-services.json is already included in https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Android.gitignore
     GoogleService-Info.plist
 
     # > don't include most of the files that your IDE or code editor, the pub tool, and other tools generate.
