@@ -23,6 +23,7 @@ GoogleService-Info.plist
 
 EOF
 
+# Appends .gitignore templates.
 curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/{Android,Dart,Firebase,Flutter,Gradle,Kotlin,Python,Swift}.gitignore >> ~/.gitignore
 curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/{macOS,VisualStudioCode,Xcode}.gitignore >> ~/.gitignore
 ```
