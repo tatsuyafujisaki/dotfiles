@@ -5,7 +5,6 @@
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
-  "dart.lineLength": 120, // only for my current client work
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.toolBarLocation": "docked",
@@ -86,7 +85,7 @@
       "quickfix.remove.unusedImport.multi": "always"
     },
     "editor.rulers": [
-      120 // only for my current client work
+      80
     ]
   }
 }
