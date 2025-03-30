@@ -2,6 +2,7 @@ ai() {
   local keyword=$(pbpaste)
 
   urls=(
+    https://chatgpt.com/?q=$keyword
     https://claude.ai/new?q=$keyword
     https://copilot.microsoft.com/?q=$keyword
     https://www.perplexity.ai/?q=$keyword
