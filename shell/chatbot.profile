@@ -2,11 +2,12 @@ ai() {
   local keyword=$(pbpaste)
 
   urls=(
+    http://grok.com/?q=$keyword
     https://chatgpt.com/?q=$keyword
     https://claude.ai/new?q=$keyword
     https://copilot.microsoft.com/?q=$keyword
-    https://www.perplexity.ai/?q=$keyword
     https://gemini.google.com/app
+    https://www.perplexity.ai/?q=$keyword
   )
 
   for url in "${urls[@]}"
