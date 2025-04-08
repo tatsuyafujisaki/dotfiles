@@ -12,19 +12,19 @@ ruby_version=$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)
 unset ruby_version
 
 # https://dart.dev/tools/dart-tool
-alias da='dart analyze'
-alias dfa='dart fix --apply'
-alias dfd='dart format .'
-alias dfd2='dart format --line-length 120 .'
-alias dpc='dart pub cache clean'
-alias dpcr='dart pub cache repair'
-alias dpg='dart pub get'
+alias da='fvm dart analyze'
+alias dfa='fvm dart fix --apply'
+alias dfd='fvm dart format .'
+alias dfd2='fvm dart format --line-length 120 .'
+alias dpc='fvm dart pub cache clean'
+alias dpcr='fvm dart pub cache repair'
+alias dpg='fvm dart pub get'
 # https://dart.dev/tools/build_runner#using-built-in-commands
 # https://pub.dev/packages/build_runner
 # https://pub.dev/packages/riverpod_generator
-alias drr='dart run build_runner build --delete-conflicting-outputs'
-alias drw='dart run build_runner watch --delete-conflicting-outputs'
-alias dv='dart --version'
+alias drr='fvm dart run build_runner build --delete-conflicting-outputs'
+alias drw='fvm dart run build_runner watch --delete-conflicting-outputs'
+alias dv='fvm dart --version'
 
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 alias fa='fvm flutter analyze'
