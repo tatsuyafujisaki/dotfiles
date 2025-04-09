@@ -199,6 +199,9 @@ up() {
   sudo npm update --global
   gcloud components update --quiet
   flutter upgrade --force
+  flutter doctor
   brew upgrade --greedy
+  brew cleanup --prune=all
+  brew doctor
   git_pull_all
 }

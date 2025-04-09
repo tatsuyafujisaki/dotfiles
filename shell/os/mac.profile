@@ -49,11 +49,11 @@ alias pcca='pod cache clean --all'
 #
 
 alias bd='brew doctor'
-alias bi='brew install'
+alias bi='brew install --force'
 alias bin='brew info'
 alias bl='brew list -1'
 alias bs='brew search'
-alias bu='brew uninstall --zap'
+alias bu='brew uninstall --force --zap'
 # Update both formulae and casks.
 # --greedy applies only to casks.
 # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
