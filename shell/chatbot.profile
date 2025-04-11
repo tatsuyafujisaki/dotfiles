@@ -16,19 +16,8 @@ ai() {
   done
 }
 
-explf() {
-  echo "Explain the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
-  ai
-}
-
-optmf() {
-  echo "Optimize the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
-  ai
-}
-
-smplf() {
-  echo "Simplify the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
-  ai
+smpl() {
+  echo "Simplify the code.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
 }
 
 tds() {
