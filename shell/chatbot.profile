@@ -28,7 +28,7 @@ optmf() {
 
 smplf() {
   echo "Simplify the Flutter code if you can.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
-  ai
+  # ai
 }
 
 tds() {
