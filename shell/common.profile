@@ -66,23 +66,6 @@ alias pr='gh pr create --assignee @me --web'
 alias prl='gh pr list --web'
 alias prv='gh pr view --web'
 
-#
-# https://buf.build/docs/reference/cli/buf
-#
-
-alias bls='buf ls-files'
-
-#
-# Misc aliases
-#
-
-alias fb=firebase
-alias g=git
-alias gc=gcloud
-alias jdks='/usr/libexec/java_home -V'
-alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
-alias pbsort2="pbpaste | fold -w1 | sort | uniq | tr -d '\n' | pbcopy" # pbsort for characters in a single line.
-
 # https://man.freebsd.org/cgi/man.cgi?query=bc
 alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
 
@@ -105,8 +88,15 @@ alias gws='./gradlew --stop'
 # https://gradle.org/releases/
 alias gwup='./gradlew wrapper --gradle-version='
 
-# https://github.com/JLLeitschuh/ktlint-gradle
-alias gwkc='./gradlew ktlintCheck'
+#
+# Miscellaneous aliases
+#
+
+alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm .DS_Store)' # () is to use a subshell.
+alias g=git
+alias jdks='/usr/libexec/java_home -V'
+alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
+alias pbsort2="pbpaste | fold -w1 | sort | uniq | tr -d '\n' | pbcopy" # pbsort for characters in a single line.
 
 # Show the root project's dependencies, as a tree.
 root_deps() {
