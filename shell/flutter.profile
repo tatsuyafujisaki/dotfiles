@@ -66,14 +66,14 @@ myd() {
 
 # my flutter refresh
 myf() {
-  flutter clean && \
-  flutter pub cache clean --force && \
+  fvm flutter clean && \
+  fvm flutter pub cache clean --force && \
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
-  flutter pub get && \
-  dart run build_runner build --delete-conflicting-outputs && \
-  dart fix --apply && \
-  dart format .
+  fvm flutter pub get && \
+  fvm dart run build_runner build --delete-conflicting-outputs && \
+  fvm dart fix --apply && \
+  fvm dart format .
 }
 
 # my client work
