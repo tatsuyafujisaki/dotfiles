@@ -11,7 +11,10 @@ ruby_version=$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)
 [ -d /opt/homebrew/Cellar/ruby/$ruby_version/bin ] && export PATH=/opt/homebrew/Cellar/ruby/$ruby_version/bin:$PATH
 unset ruby_version
 
+#
 # https://dart.dev/tools/dart-tool
+#
+
 alias da='fvm dart analyze'
 alias dfa='fvm dart fix --apply'
 alias dfd='fvm dart format .'
@@ -26,8 +29,15 @@ alias drr='fvm dart run build_runner build --delete-conflicting-outputs'
 alias drw='fvm dart run build_runner watch --delete-conflicting-outputs'
 alias dv='fvm dart --version'
 
+#
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
+#
+
 alias fa='fvm flutter analyze'
+
+# > Run flutter analyze --suggestions to see if your AGP, Java, and Gradle versions are compatible.
+# https://docs.flutter.dev/release/breaking-changes/android-java-gradle-migration-guide#solution-2-command-line
+alias fas='fvm flutter analyze --suggestions'
 alias fc='fvm flutter clean'
 alias fd='fvm flutter doctor'
 alias fds='fvm flutter devices'
