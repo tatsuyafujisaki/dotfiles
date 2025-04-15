@@ -92,7 +92,7 @@ alias gwup='./gradlew wrapper --gradle-version='
 # Miscellaneous aliases
 #
 
-alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm .DS_Store)' # () is to use a subshell.
+alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm .DS_Store 2>/dev/null)' # () is to use a subshell.
 alias g=git
 alias jdks='/usr/libexec/java_home -V'
 alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
