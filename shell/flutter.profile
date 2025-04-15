@@ -56,6 +56,11 @@ fs() {
   open $filepath
 }
 
+myc() {
+  fvm flutter clean && \
+  fvm flutter pub cache clean --force
+}
+
 # my dart refresh
 myd() {
   # dart pub cache clean --force && \
@@ -66,8 +71,7 @@ myd() {
 
 # my flutter refresh
 myf() {
-  fvm flutter clean && \
-  fvm flutter pub cache clean --force && \
+  myc
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
   fvm flutter pub get && \
@@ -78,8 +82,7 @@ myf() {
 
 # my client work
 mycw() {
-  # fvm flutter clean && \
-  # fvm flutter pub cache clean --force && \
+  myc
   make all # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
   make run
 }
