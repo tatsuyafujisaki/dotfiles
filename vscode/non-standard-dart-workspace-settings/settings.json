@@ -1,0 +1,11 @@
+// This is a set of workspace settings for a client work of Dart that prefers a certain line limit of characters.
+// <dart-project>/.vscode/settings.json
+// https://code.visualstudio.com/docs/configure/settings#_workspace-settings
+{
+  "dart.lineLength": 120,
+  "[dart]": {
+    "editor.rulers": [
+      120
+    ]
+  },
+}
