@@ -93,8 +93,7 @@ alias gwup='./gradlew wrapper --gradle-version='
 # JDK (Java Development Kit)
 #
 
-alias jdks='/usr/libexec/java_home -V'
-alias jdk17='export JAVA_HOME=$(/usr/libexec/java_home --version 17)'
+alias jh='/usr/libexec/java_home --verbose'
 
 #
 # Miscellaneous aliases
