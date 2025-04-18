@@ -39,6 +39,7 @@ alias fa='fvm flutter analyze'
 # https://docs.flutter.dev/release/breaking-changes/android-java-gradle-migration-guide#solution-2-command-line
 alias fas='fvm flutter analyze --suggestions'
 alias fc='fvm flutter clean'
+alias fcjdk='flutter config --jdk-dir' # takes the path to the JDK as an argument. Running the command updates ~/.config/flutter/settings
 alias fd='fvm flutter doctor'
 alias fds='fvm flutter devices'
 alias ff='fvm flutter'
