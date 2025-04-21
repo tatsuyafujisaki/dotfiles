@@ -1,5 +1,4 @@
 // ~/Library/Application Support/Code/User/settings.json
-// The comment `//` is not supported in JSON and is expected to be removed when this JSON file is deployed.
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
