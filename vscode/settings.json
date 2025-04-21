@@ -1,12 +1,12 @@
-// The unsupported comments `//` should be removed when this JSON file is used.
-//
 // ~/Library/Application Support/Code/User/settings.json
+// The comment `//` is not supported in JSON and is expected to be removed when this JSON file is deployed.
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
+  "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
@@ -58,9 +58,9 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
-  // If smartCase is false, the search is always case-insensitive.
   // If smartCase is true, the search is case-insensitive only if the search term is all lowercase.
-  // "search.smartCase": true,
+  // If smartCase is false, the search is always case-insensitive.
+  // "search.smartCase": true,  
   "security.workspace.trust.enabled": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
@@ -87,6 +87,9 @@
     },
     "editor.rulers": [
       80
-    ]
-  }
+    ],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+  },
 }
