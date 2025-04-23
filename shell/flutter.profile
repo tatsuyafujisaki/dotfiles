@@ -33,11 +33,9 @@ alias dv='fvm dart --version'
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 #
 
-alias fa='fvm flutter analyze'
-
-# > Run flutter analyze --suggestions to see if your AGP, Java, and Gradle versions are compatible.
+# > Run `flutter analyze --suggestions` to see if your Android Gradle Plugin (AGP), Java, and Gradle versions are compatible.
 # https://docs.flutter.dev/release/breaking-changes/android-java-gradle-migration-guide#solution-2-command-line
-alias fas='fvm flutter analyze --suggestions'
+alias fa='fvm flutter analyze && fvm flutter analyze --suggestions'
 alias fc='fvm flutter clean'
 alias fcjdk='flutter config --jdk-dir' # takes the path to the JDK as an argument. Running the command updates ~/.config/flutter/settings
 alias fd='fvm flutter doctor'
