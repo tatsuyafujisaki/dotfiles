@@ -67,28 +67,34 @@ fs() {
   open $filepath
 }
 
-myc() {
+my_clean_dart() {
+  dart pub cache clean --force
+}
+
+my_clean_flutter() {
   fvm flutter clean && \
   fvm flutter pub cache clean --force
 }
 
 # my dart refresh
-myd() {
-  # dart pub cache clean --force && \
+my_dart() {
+  dart pub get && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
-  dart format .
+  dart format . && \
+  dart analyze
 }
 
-# my flutter refresh
-myf() {
+my_flutter() {
   myc
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
   fvm flutter pub get && \
   fvm dart run build_runner build --delete-conflicting-outputs && \
   fvm dart fix --apply && \
-  fvm dart format .
+  fvm dart format . && \
+  flutter analyze && \
+  flutter analyze --suggestions
 }
 
 # my client work
