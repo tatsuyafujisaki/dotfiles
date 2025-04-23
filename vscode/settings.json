@@ -8,7 +8,9 @@
   "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
+    "source.fixAll": "always",
+    "source.organizeImports": "always",
+    "source.sortMembers": "always",
   },
   "editor.copyWithSyntaxHighlighting": false,
   "editor.find.globalFindClipboard": true,
