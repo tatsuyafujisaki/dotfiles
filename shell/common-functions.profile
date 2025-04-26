@@ -44,15 +44,15 @@ clean() {
 
   # Delete folders and files for Android development.
   find ~/.android/avd -type f -name cache.img*
+  rm -f ~/.android/*.lock
+  rm -f ~/.android/modem-nv-ram-*
+  rm -f ~/.emulator_console_auth_token
+  rm -f ~/Library/Android/sdk/.knownPackages
   rm -fr ~/.android/breakpad
   rm -fr ~/.android/build-cache
   rm -fr ~/.android/cache
   rm -fr ~/Library/Android/sdk/.downloadIntermediates
   rm -fr ~/Library/Android/sdk/.temp
-  rm -f ~/.android/*.lock
-  rm -f ~/.android/modem-nv-ram-*
-  rm -f ~/.emulator_console_auth_token
-  rm -f ~/Library/Android/sdk/.knownPackages
 
   # Delete folders and files for iOS development.
   rm -fr ~/.cocoapods
@@ -61,8 +61,8 @@ clean() {
   # Delete folders and files for Dart development.
   rm -fr ~/.dart
   rm -fr ~/.dartServer
+  rm -fr ~/.flutter
   rm -fr ~/.pub-cache
-  rm -f ~/.flutter
 
   pushd ~
 
