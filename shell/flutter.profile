@@ -94,10 +94,3 @@ my_flutter() {
   flutter analyze && \
   flutter analyze --suggestions
 }
-
-# my client work
-mycw() {
-  myc
-  make all # is given by my client in my client work, which is equivalent to `dart format --line-length 120 .`.
-  make run
-}
