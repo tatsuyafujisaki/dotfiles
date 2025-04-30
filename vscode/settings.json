@@ -61,7 +61,7 @@
   "search.quickOpen.includeHistory": false,
   // If smartCase is true, the search is case-insensitive only if the search term is all lowercase.
   // If smartCase is false, the search is always case-insensitive.
-  // "search.smartCase": true,  
+  // "search.smartCase": true,
   "security.workspace.trust.enabled": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,

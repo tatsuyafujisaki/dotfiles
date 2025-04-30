@@ -15,19 +15,17 @@ unset ruby_version
 # https://dart.dev/tools/dart-tool
 #
 
-alias da='fvm dart analyze'
-alias dfa='fvm dart fix --apply'
-alias dfd='fvm dart format .'
-alias dfd2='fvm dart format --line-length 120 .'
-alias dpc='fvm dart pub cache clean --force'
-alias dpcr='fvm dart pub cache repair'
-alias dpg='fvm dart pub get'
+alias da='dart analyze'
+alias dfa='dart fix --apply'
+alias dfd='dart format .'
+alias dpc='dart pub cache clean --force'
+alias dpcr='dart pub cache repair'
+alias dpg='dart pub get'
 # https://dart.dev/tools/build_runner#using-built-in-commands
 # https://pub.dev/packages/build_runner
 # https://pub.dev/packages/riverpod_generator
-alias drr='fvm dart run build_runner build --delete-conflicting-outputs'
-alias drw='fvm dart run build_runner watch --delete-conflicting-outputs'
-alias dv='fvm dart --version'
+alias drr='dart run build_runner build --delete-conflicting-outputs'
+alias drw='dart run build_runner watch --delete-conflicting-outputs'
 
 #
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
@@ -35,23 +33,23 @@ alias dv='fvm dart --version'
 
 # > Run `flutter analyze --suggestions` to see if your Android Gradle Plugin (AGP), Java, and Gradle versions are compatible.
 # https://docs.flutter.dev/release/breaking-changes/android-java-gradle-migration-guide#solution-2-command-line
-alias fa='fvm flutter analyze && fvm flutter analyze --suggestions'
-alias fc='fvm flutter clean'
+alias fa='flutter analyze && flutter analyze --suggestions'
+alias fc='flutter clean'
 alias fcjdk='flutter config --jdk-dir' # takes the path to the JDK as an argument. Running the command updates ~/.config/flutter/settings
-alias fd='fvm flutter doctor'
-alias fds='fvm flutter devices'
-alias ff='fvm flutter'
-alias ffc='fvm flutter pub global activate flutterfire_cli && flutterfire configure'
-alias fpa='fvm flutter pub add'
-alias fpcc='fvm flutter pub cache clean --force'
-alias fpcr='fvm flutter pub cache repair'
-alias fpg='fvm flutter pub get'
-alias fpo='fvm flutter pub outdated'
-alias fpr='fvm flutter pub remove'
-alias fpum='fvm flutter pub upgrade --major-versions'
-alias fput='fvm flutter pub upgrade --tighten'
-alias fu='fvm flutter upgrade --force'
-alias fv='fvm flutter --version'
+alias fd='flutter doctor'
+alias fds='flutter devices'
+alias ff='flutter'
+alias ffc='flutter pub global activate flutterfire_cli && flutterfire configure'
+alias fpa='flutter pub add'
+alias fpcc='flutter pub cache clean --force'
+alias fpcr='flutter pub cache repair'
+alias fpg='flutter pub get'
+alias fpo='flutter pub outdated'
+alias fpr='flutter pub remove'
+alias fpum='flutter pub upgrade --major-versions'
+alias fput='flutter pub upgrade --tighten'
+alias fu='flutter upgrade --force'
+alias fv='flutter --version'
 
 fs() {
   if [ ${#} -lt 1 ]
@@ -61,7 +59,7 @@ fs() {
     filepath=$HOME/Desktop/$1.png
   fi
 
-  fvm flutter screenshot --out=$filepath
+  flutter screenshot --out=$filepath
   open $filepath
 }
 
@@ -70,8 +68,8 @@ my_clean_dart() {
 }
 
 my_clean_flutter() {
-  fvm flutter clean && \
-  fvm flutter pub cache clean --force
+  flutter clean && \
+  flutter pub cache clean --force
 }
 
 # my dart refresh
@@ -84,13 +82,12 @@ my_dart() {
 }
 
 my_flutter() {
-  myc
   # `flutter pub get` not only downloads packages but also generates app_localizations.dart.
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
-  fvm flutter pub get && \
-  fvm dart run build_runner build --delete-conflicting-outputs && \
-  fvm dart fix --apply && \
-  fvm dart format . && \
+  flutter pub get && \
+  dart run build_runner build --delete-conflicting-outputs && \
+  dart fix --apply && \
+  dart format . && \
   flutter analyze && \
   flutter analyze --suggestions
 }
