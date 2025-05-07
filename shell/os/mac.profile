@@ -64,5 +64,11 @@ alias bug='brew upgrade --greedy'
 # Python
 #
 
-alias pip='pip3'
-alias python='python3'
+export PATH=$(brew --prefix python)/libexec/bin:$PATH
+
+#
+# Miscellaneous
+#
+
+# en0 usually refers to the primary network interface, typically Wi-Fi on most Mac devices.
+alias print_wifi_ip='ipconfig getifaddr en0'
