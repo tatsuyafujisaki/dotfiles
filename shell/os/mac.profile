@@ -70,5 +70,9 @@ export PATH=$(brew --prefix python)/libexec/bin:$PATH
 # Miscellaneous
 #
 
+# USB cable speed detection
+# https://developer.android.com/studio/releases/past-releases/as-koala-feature-drop-release-notes#usb-check
+alias print_usb_speed='system_profiler SPUSBDataType'
+
 # en0 usually refers to the primary network interface, typically Wi-Fi on most Mac devices.
 alias print_wifi_ip='ipconfig getifaddr en0'
