@@ -22,22 +22,20 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias d='cd ~/Desktop'
+alias df='cd ~/Documents/GitHub/dotfiles'
 alias dnp='cd ~/Documents/GitHub/deno-playground'
 alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
-alias ud='cd ~/Documents/GitHub/Flash-Chat-iOS13' # ud stands for Udemy.
 
 #
 # Visual Studio Code-related
 #
 
 alias c='code .'
-alias ccc='code .circleci/config.yml'
 alias cdp='code ~/Documents/GitHub/dart_playground'
 alias cfpp='code ~/Documents/GitHub/flutter_playground'
-alias df='code ~/Documents/GitHub/dotfiles'
 alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
 
 #
