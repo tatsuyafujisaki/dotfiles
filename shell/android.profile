@@ -22,6 +22,10 @@ alias layou='adb shell setprop debug.layout false'
 alias showtap='adb shell settings put system show_touches 1'
 alias showta='adb shell settings put system show_touches 0'
 
+# Settings > System > Gestures > System navigation or 3-button navigation
+alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
+alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
+
 adb_deeplink() {
   if [ ${#} -lt 1 ]
   then
