@@ -70,6 +70,9 @@ export PATH=$(brew --prefix python)/libexec/bin:$PATH
 # Miscellaneous
 #
 
+# "pd" stands for "percent decode".
+alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy'
+
 # USB cable speed detection
 # https://developer.android.com/studio/releases/past-releases/as-koala-feature-drop-release-notes#usb-check
 alias print_usb_speed='system_profiler SPUSBDataType'
