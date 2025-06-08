@@ -28,6 +28,7 @@ alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
+alias pt='cd ~/Documents/GitHub/prototype'
 
 #
 # Visual Studio Code-related
