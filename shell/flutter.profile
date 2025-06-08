@@ -36,6 +36,7 @@ alias drw='dart run build_runner watch --delete-conflicting-outputs'
 alias fa='flutter analyze && flutter analyze --suggestions'
 alias fc='flutter clean'
 alias fcjdk='flutter config --jdk-dir' # takes the path to the JDK as an argument. Running the command updates ~/.config/flutter/settings
+alias fcr='flutter create --platforms=android,ios .'
 alias fd='flutter doctor'
 alias fds='flutter devices'
 alias ff='flutter'
