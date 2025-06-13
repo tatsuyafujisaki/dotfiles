@@ -1,23 +1,20 @@
 ai() {
-  local keyword=$(pbpaste)
+  local query=$(pbpaste)
 
   urls=(
-    http://grok.com/?q=$keyword
-    https://chatgpt.com/?q=$keyword
-    https://claude.ai/new?q=$keyword
-    https://copilot.microsoft.com/?q=$keyword
+    http://grok.com/?q=$query
+    https://chatgpt.com/?q=$query
+    https://claude.ai/new?q=$query
+    https://copilot.microsoft.com/?q=$query
     https://gemini.google.com/app
-    https://www.perplexity.ai/?q=$keyword
+    https://github.com/copilot
+    https://www.perplexity.ai/?q=$query
   )
 
   for url in "${urls[@]}"
   do
     open -a 'Google Chrome' $url
   done
-}
-
-smpl() {
-  echo "Simplify the code.\n\`\`\`\n$(pbpaste)\n\`\`\`\n" | pbcopy
 }
 
 tds() {
