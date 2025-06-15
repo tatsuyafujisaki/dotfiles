@@ -1,3 +1,5 @@
+alias dq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
+
 ai() {
   local query=$(pbpaste)
 
@@ -20,10 +22,4 @@ ai() {
 tds() {
   echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
   ai
-}
-
-# deletes double quotes from the clipboard.
-dq() {
-  pbpaste | tr -d '"' | pbcopy
-  open -a 'Google Chrome' https://gemini.google.com/app
 }
