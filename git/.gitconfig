@@ -51,9 +51,9 @@
     co = checkout
     cp = cherry-pick
     csol = config --show-origin --list
-    d = !git diff | pbcopy
-    dn = !git diff --name-only develop | xargs basename | sort # shows the names of the files that are different from the develop branch.
-    ds = diff --shortstat develop # shows the number of files changed, the number of lines added, and the number of lines deleted.
+    dbn = !git --no-pager diff --name-only develop | xargs basename | sort # prints basenames of the files that are different from the develop branch.
+    dn = --no-pager diff --name-only develop # prints the names of files that differ from those in the develop branch.
+    ds = --no-pager diff --shortstat develop # prints the number of files that have been changed, as well as the number of lines that have been added or deleted.
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
     ma = merge --abort
@@ -69,8 +69,6 @@
     rir = rebase --interactive --root
     rs = reset HEAD~
     rsh = reset HEAD~ --hard
-    sno = show --name-only
-    sns = show --name-status
     sw = switch
     # stash-related
     pop = stash pop
@@ -80,8 +78,3 @@
     std = stash drop
     stl = stash list
     sts = stash show
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
