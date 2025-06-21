@@ -94,6 +94,16 @@ alias gwup='./gradlew wrapper --gradle-version='
 
 alias jh='/usr/libexec/java_home --verbose'
 
+my_set_java_home() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <version>"
+    return
+  fi
+
+  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+}
+
 #
 # Miscellaneous aliases
 #
