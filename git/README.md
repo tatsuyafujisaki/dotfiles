@@ -16,7 +16,7 @@ cat >> ~/.gitignore << 'EOF'
 GoogleService-Info.plist
 
 # Excludes the service credentials file used for Firebase App Distribution.
-app/*.json
+*.json
 
 # > don't include most of the files that your IDE or code editor, the pub tool, and other tools generate.
 # > In many source code repositories, the common practice is not to commit generated files, at all.
