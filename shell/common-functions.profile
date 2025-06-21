@@ -39,10 +39,10 @@ backup_desktop() {
 }
 
 clean() {
-  # Delete Chrome RLZ.
+  # Deletes Chrome RLZ.
   rm -fr ~/Library/Application\ Support/Google/RLZ
 
-  # Delete folders and files for Android development.
+  # Deletes folders and files for Android development.
   find ~/.android/avd -type f -name cache.img*
   rm -f ~/.android/*.lock
   rm -f ~/.android/modem-nv-ram-*
@@ -54,11 +54,11 @@ clean() {
   rm -fr ~/Library/Android/sdk/.downloadIntermediates
   rm -fr ~/Library/Android/sdk/.temp
 
-  # Delete folders and files for iOS development.
+  # Deletes folders and files for iOS development.
   rm -fr ~/.cocoapods
   rm -fr ~/.swiftpm
 
-  # Delete folders and files for Dart development.
+  # Deletes folders and files for Dart development.
   rm -fr ~/.dart
   rm -fr ~/.dartServer
   rm -fr ~/.flutter
@@ -66,15 +66,15 @@ clean() {
 
   pushd ~
 
-  # Delete folders directly under the home folder.
+  # Deletes folders in the home folder.
   folders=(.bash_sessions .dvdcss .gradle .lemminx .m2 .oracle_jre_usage .zsh_sessions)
   for folder in "$folders[@]"
   do
     rm -fr $folder
   done
 
-  # Delete files directly under the home folder.
-  files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
+  # Deletes in the home folder.
+  files=(.bash_history .CFUserTextEncoding .hawtjni .viminfo .zcompdump .zsh_history)
   for file in "$files[@]"
   do
     rm -f $file
