@@ -195,6 +195,13 @@ myfind() {
   find . -iname "*$1*" -print 2> /dev/null
 }
 
+# Renames PDF files, compressed by Adobe, which have "-compressed" in the filename.
+my_rename_compressed_pdfs() {
+  for file in ~/Desktop/*-compressed.pdf; do
+    mv -- "$file" "${file//-compressed/}"
+  done
+}
+
 up() {
   sudo npm update --global
   gcloud components update --quiet
