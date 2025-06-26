@@ -21,5 +21,4 @@ ai() {
 
 tds() {
   echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
-  ai
 }
