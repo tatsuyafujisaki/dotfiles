@@ -90,3 +90,11 @@ pixel() {
 
   emulator @Pixel_$1_API_$2 &|
 }
+
+print_aab() {
+  aab_path="app/build/outputs/bundle/release/app-release.aab"
+  rm -f $aab_path && \
+  ./gradlew bundleRelease && \
+  bundletool dump manifest --bundle=$aab_path && \
+  cp $aab_path ~/Desktop
+}
