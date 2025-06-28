@@ -21,6 +21,7 @@
   "editor.quickSuggestions": {
     "other": false
   },
+  
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -28,6 +29,9 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.gs": "javascript"
+  },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
