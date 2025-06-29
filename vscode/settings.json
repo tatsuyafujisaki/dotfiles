@@ -10,7 +10,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.organizeImports": "always",
-    "source.sortMembers": "always",
+    "source.sortMembers": "always"
   },
   "editor.copyWithSyntaxHighlighting": false,
   "editor.find.globalFindClipboard": true,
@@ -21,7 +21,7 @@
   "editor.quickSuggestions": {
     "other": false
   },
-  
+
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -90,11 +90,9 @@
       "quickfix.organize.imports": "always",
       "quickfix.remove.unusedImport.multi": "always"
     },
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off",
-  },
+    "editor.wordBasedSuggestions": "off"
+  }
 }
