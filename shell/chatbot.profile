@@ -19,6 +19,10 @@ ai() {
   done
 }
 
+smpl() {
+    echo "Simplify the code or script below.\n\`\`\`\n$(pbpaste)\n\`\`\`" | pbcopy
+}
+
 tds() {
   echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
 }
