@@ -7,9 +7,11 @@
 [ -d ~/.pub-cache/bin ] && export PATH=$PATH:~/.pub-cache/bin
 
 # adds Ruby 3, which is transitively installed by CocoaPods, to PATH before Ruby 2.
-ruby_version=$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)
-[ -d /opt/homebrew/Cellar/ruby/$ruby_version/bin ] && export PATH=/opt/homebrew/Cellar/ruby/$ruby_version/bin:$PATH
-unset ruby_version
+if [[ -d "/opt/homebrew/Cellar/ruby" ]]; then
+  ruby_version=$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)
+  export PATH="/opt/homebrew/Cellar/ruby/$ruby_version/bin:$PATH"
+  unset ruby_version
+fi
 
 #
 # https://dart.dev/tools/dart-tool
