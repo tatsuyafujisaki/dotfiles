@@ -22,6 +22,11 @@ alias layou='adb shell setprop debug.layout false'
 alias showtap='adb shell settings put system show_touches 1'
 alias showta='adb shell settings put system show_touches 0'
 
+
+# Transfers files between Android and macOS.
+alias m2a='adb push ~/Desktop/my-quick-share/. /sdcard/Download && adb shell ls /sdcard/Download'
+alias a2m='adb pull /sdcard/Download/. ~/Desktop/my-quick-share && open ~/Desktop/my-quick-share'
+
 # Settings > System > Gestures > System navigation or 3-button navigation
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
 alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
