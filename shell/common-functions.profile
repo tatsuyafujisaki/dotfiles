@@ -39,6 +39,8 @@ backup_desktop() {
 }
 
 clean() {
+  sudo find ~ -type f -name .DS_Store -delete
+
   # Deletes Chrome RLZ.
   rm -fr ~/Library/Application\ Support/Google/RLZ
 
@@ -64,23 +66,45 @@ clean() {
   rm -fr ~/.flutter
   rm -fr ~/.pub-cache
 
-  pushd ~
+  cd ~
 
   # Deletes folders in the home folder.
-  folders=(.bash_sessions .dvdcss .gradle .hawtjni .lemminx .m2 .oracle_jre_usage .zsh_sessions)
+  folders=(
+    .bash_sessions
+    .dvdcss
+    .gradle
+    .hawtjni
+    .lemminx
+    .local
+    .m2
+    .oracle_jre_usage
+    .zsh_sessions
+    .Trash
+    Downloads
+    Movies
+    Music
+    Pictures
+  )
+
   for folder in "$folders[@]"
   do
-    rm -fr $folder
+    rm -fr "$folder"
   done
 
   # Deletes in the home folder.
-  files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
+  files=(
+    .bash_history
+    .CFUserTextEncoding
+    .viminfo
+    .zcompdump
+    .zsh_history
+  )
   for file in "$files[@]"
   do
     rm -f $file
   done
 
-  popd
+  cd -
 }
 
 clean_chrome() {
@@ -103,17 +127,8 @@ clean_chrome() {
   cd -
 }
 
-sudo_clean() {
-  # Delete folders that require root privileges.
-  sudo rm -fr ~/.local
-  sudo rm -fr ~/.Trash
-  sudo rm -fr ~/Downloads
-  sudo rm -fr ~/Movies
-  sudo rm -fr ~/Music
-  sudo rm -fr ~/Pictures
-
-  # Delete .DS_Store
-  sudo find / -type f -name .DS_Store -delete 2> /dev/null
+delete_ds_store() {
+  sudo find / -type f -name .DS_Store -delete
 }
 
 dm() {
@@ -131,13 +146,14 @@ dm() {
 }
 
 git_pull_all() {
-  cd ~/Documents/GitHub
+  pushd ~/Documents/GitHub
   for dir in */
   do
     pushd $dir
     gg # is a function defined in this file.
     popd
   done
+  popd
 }
 
 mkdircd() {
