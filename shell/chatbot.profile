@@ -9,7 +9,6 @@ ai() {
     https://claude.ai/new?q=$query
     https://copilot.microsoft.com/?q=$query
     https://gemini.google.com/app
-    https://github.com/copilot
     https://www.perplexity.ai/?q=$query
   )
 
