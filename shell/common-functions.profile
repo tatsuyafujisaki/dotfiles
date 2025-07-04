@@ -67,14 +67,14 @@ clean() {
   pushd ~
 
   # Deletes folders in the home folder.
-  folders=(.bash_sessions .dvdcss .gradle .lemminx .m2 .oracle_jre_usage .zsh_sessions)
+  folders=(.bash_sessions .dvdcss .gradle .hawtjni .lemminx .m2 .oracle_jre_usage .zsh_sessions)
   for folder in "$folders[@]"
   do
     rm -fr $folder
   done
 
   # Deletes in the home folder.
-  files=(.bash_history .CFUserTextEncoding .hawtjni .viminfo .zcompdump .zsh_history)
+  files=(.bash_history .CFUserTextEncoding .viminfo .zcompdump .zsh_history)
   for file in "$files[@]"
   do
     rm -f $file
