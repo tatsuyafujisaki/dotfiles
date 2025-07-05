@@ -52,7 +52,6 @@
     cam = commit --all --amend --no-verify -m
     # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message.
     can = !git add --all && git commit --all --amend --no-edit
-    cancan = !git can && git can
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
     cm = commit -m
@@ -79,10 +78,5 @@
     rsh = reset HEAD~ --hard
     sw = switch
     # stash-related
-    pop = stash pop
     st = stash push --include-untracked
-    sta = stash apply
-    stc = stash clear
-    std = stash drop
-    stl = stash list
-    sts = stash show
+
