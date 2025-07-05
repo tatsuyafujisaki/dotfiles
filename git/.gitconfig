@@ -44,13 +44,12 @@
 [mergetool "vscode"]
     cmd = code -w $MERGED
 [alias]
+    # --no-verify bypasses the pre-commit and commit-msg hooks.
+    # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message.
+    # stages all the changes, replacing the previous commit with the new commit message.
     a = !pbpaste | git apply --ignore-space-change
     b = branch
-    bc = branch --show-current
-    # stages all the changes, replacing the previous commit with the new commit message.
-    # --no-verify bypasses the pre-commit and commit-msg hooks.
     cam = commit --all --amend --no-verify -m
-    # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message.
     can = !git add --all && git commit --all --amend --no-edit
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
@@ -71,12 +70,11 @@
     ra = rebase --abort
     rc = rebase --continue
     rd = !git pull origin develop && git rebase develop
-    rgu = remote get-url origin
     ri = rebase --interactive
     rir = rebase --interactive --root
     rs = reset HEAD~
     rsh = reset HEAD~ --hard
-    sw = switch
-    # stash-related
+    rsh2 = reset HEAD~2 --hard
+    rsh3 = reset HEAD~3 --hard
     st = stash push --include-untracked
-
+    sw = switch
