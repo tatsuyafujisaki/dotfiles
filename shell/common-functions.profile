@@ -219,12 +219,13 @@ my_rename_compressed_pdfs() {
 }
 
 up() {
+  sudo npm cache clean
   sudo npm update --global
-  gcloud components update --quiet
-  flutter upgrade --force
-  flutter doctor
   brew upgrade --greedy
   brew cleanup --prune=all
   brew doctor
+  gcloud components update
+  flutter upgrade --force
+  flutter doctor
   git_pull_all
 }
