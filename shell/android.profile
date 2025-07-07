@@ -15,6 +15,7 @@ alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third part
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
 grep -v com.piriform.ccleaner |\
+grep -v com.blogspot.newapphorizons.fakegps |\
 grep -v com.Slack |\
 xargs -n1 -r -t adb uninstall"
 alias layout='adb shell setprop debug.layout true'
