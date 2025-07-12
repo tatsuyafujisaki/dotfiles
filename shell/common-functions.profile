@@ -219,7 +219,6 @@ my_rename_compressed_pdfs() {
 }
 
 up() {
-  sudo npm cache clean
   sudo npm update --global
   brew upgrade --greedy
   brew cleanup --prune=all
