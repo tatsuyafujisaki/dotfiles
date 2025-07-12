@@ -28,6 +28,7 @@ alias dnp='cd ~/Documents/GitHub/deno-playground'
 alias dp='cd ~/Documents/GitHub/dart_playground'
 alias fp='cd ~/Documents/GitHub/flutter_playground'
 alias h='cd ~/Documents/GitHub'
+alias jp='cd ~/Documents/GitHub/java-playground'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias pt='cd ~/Documents/GitHub/prototype'
 
