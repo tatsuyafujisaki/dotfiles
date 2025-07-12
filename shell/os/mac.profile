@@ -1,7 +1,10 @@
-# Add the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
+# Adds HomeBrew to PATH.
+[ -d /opt/homebrew/bin ] && export PATH=/opt/homebrew/bin:$PATH
+
+# Adds the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
 export PATH=$PATH:/usr/libexec
 
-# Add Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
+# Adds Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
 [ -d /usr/local/opt/ruby/bin ] && export PATH=/usr/local/opt/ruby/bin:$PATH
 
 l() {
