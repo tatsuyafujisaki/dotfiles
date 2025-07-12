@@ -1,4 +1,4 @@
-alias dq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
+alias dq='pbpaste | tr -d "\"" | pbcopy && open -a "Google Chrome" https://gemini.google.com/app' # deletes double quotes from the clipboard.
 
 ai() {
   local query=$(pbpaste)
