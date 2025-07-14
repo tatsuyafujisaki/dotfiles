@@ -104,3 +104,27 @@ print_aab() {
   bundletool dump manifest --bundle=$aab_path && \
   cp $aab_path ~/Desktop
 }
+
+#
+# Language
+#
+
+# finds the language of Android
+alias adblc=adb shell getprop persist.sys.locale
+
+# sets the language of Android
+alias adbcn='my_set_android_language zh-Hans-CN'
+alias adbja='my_set_android_language ja-JP'
+alias adbkr='my_set_android_language ko-KR'
+alias adbtw='my_set_android_language zh-Hans-TW'
+alias adbus='my_set_android_language en-US'
+
+my_set_android_language() {
+  if [ ${#} -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <locale>"
+    return
+  fi
+
+  adb shell settings put system system_locales ${1} && adb reboot
+}
