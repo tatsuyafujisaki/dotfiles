@@ -112,6 +112,7 @@ my_set_java_home() {
 
 alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm .DS_Store 2>/dev/null)' # () is to use a subshell.
 alias g=git
+alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
 alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
 alias pbsort2="pbpaste | fold -w1 | sort | uniq | tr -d '\n' | pbcopy" # pbsort for characters in a single line.
 
