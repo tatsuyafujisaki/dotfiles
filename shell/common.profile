@@ -114,7 +114,7 @@ alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm 
 alias g=git
 alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
 alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
-alias delte_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
+alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
 
 # Show the root project's dependencies, as a tree.
 root_deps() {
