@@ -1,5 +1,5 @@
 # Adds HomeBrew to PATH.
-[ -d /opt/homebrew/bin ] && export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # Adds the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
 export PATH=$PATH:/usr/libexec
