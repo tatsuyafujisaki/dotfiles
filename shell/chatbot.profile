@@ -4,11 +4,11 @@ ai() {
   local query=$(pbpaste)
 
   urls=(
-    http://grok.com/?q=$query
     https://chatgpt.com/?q=$query
     https://claude.ai/new?q=$query
     https://copilot.microsoft.com/?q=$query
     https://gemini.google.com/app
+    https://grok.com/?q=$query
     https://www.perplexity.ai/?q=$query
   )
 
