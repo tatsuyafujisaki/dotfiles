@@ -57,6 +57,7 @@
     co = checkout
     cp = cherry-pick
     csol = config --show-origin --list
+    d = !git --no-pager diff | pbcopy
     dbn = !git --no-pager diff --name-only develop | xargs basename | sort # prints basenames of the files that are different from the develop branch.
     dn = --no-pager diff --name-only develop # prints the names of files that differ from those in the develop branch.
     ds = --no-pager diff --shortstat develop # prints the number of files that have been changed, as well as the number of lines that have been added or deleted.
