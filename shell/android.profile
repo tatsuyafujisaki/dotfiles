@@ -116,7 +116,7 @@ alias adblc=adb shell getprop persist.sys.locale
 alias adbcn='my_set_android_language zh-Hans-CN'
 alias adbja='my_set_android_language ja-JP'
 alias adbkr='my_set_android_language ko-KR'
-alias adbtw='my_set_android_language zh-Hans-TW'
+alias adbtw='my_set_android_language zh-Hant-TW'
 alias adbus='my_set_android_language en-US'
 
 my_set_android_language() {
