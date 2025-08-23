@@ -23,5 +23,5 @@ smpl() {
 }
 
 tds() {
-  echo "以下の文章は正しいか。「$(pbpaste)」" | pbcopy
+  echo "以下の文章は正しいですか。「$(pbpaste)」根拠条文または根拠判例も教えてください。" | pbcopy
 }
