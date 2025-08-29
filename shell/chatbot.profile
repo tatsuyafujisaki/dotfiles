@@ -22,6 +22,6 @@ smpl() {
     echo "Simplify the code or script below.\n\`\`\`\n$(pbpaste)\n\`\`\`" | pbcopy
 }
 
-tds() {
-  echo "以下の文章は正しいですか。「$(pbpaste)」根拠条文または根拠判例も教えてください。" | pbcopy
+td() {
+  echo "「$(pbpaste)」は正しいですか。根拠条文または根拠判例も教えてください。" | pbcopy
 }
