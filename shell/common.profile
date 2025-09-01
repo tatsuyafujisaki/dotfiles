@@ -117,28 +117,13 @@ alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" delete
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
 
-# Show the root project's dependencies, as a tree.
-root_deps() {
-  local temp=$(mktemp)
-  ./gradlew dependencies > $temp && code $temp
-}
-
-# Show the given module's dependencies, as a tree.
-gradle_deps() {
+# Prints a tree of all the dependencies used by a given project, also known as a module.
+print_module_dependencies() {
   if [ $# -lt 1 ]
   then
     echo "Usage: $funcstack[1] <project a.k.a. module>"
     return
   fi
   local temp=$(mktemp)
-  ./gradlew :$1:dependencies > $temp && code $temp
-}
-
-print_projects_requried_by_given_project() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <project a.k.a. module>"
-    return
-  fi
-  ./gradlew -q :$1:dependencies --configuration implementation | grep '+--- project' | sort
+  ./gradlew $1:dependencies > $temp && code $temp
 }
