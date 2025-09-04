@@ -86,6 +86,11 @@ alias gw=./gradlew
 alias gwp='code gradle/wrapper/gradle-wrapper.properties'
 alias gws='./gradlew --stop'
 
+# Ideally, only the line with the largest version would be kept when there are multiple lines for different versions of the same library, but this is difficult. This is because, when comparing versions in text, 1.2 is considered larger than 1.10.
+# sed -E 's/^[^[:alpha:]]*//' removes leading non-alphabetic characters.
+# sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' changes "foo:1.0 -> 2.0" to "foo:2.0".
+alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep -v '(c)$' | grep -v '(n)$' | grep -v '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort | uniq"
+
 # https://gradle.org/releases/
 alias gwup='./gradlew wrapper --gradle-version='
 
@@ -116,14 +121,3 @@ alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" 
 alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
-
-# Prints a tree of all the dependencies used by a given project, also known as a module.
-print_module_dependencies() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <project a.k.a. module>"
-    return
-  fi
-  local temp=$(mktemp)
-  ./gradlew $1:dependencies > $temp && code $temp
-}
