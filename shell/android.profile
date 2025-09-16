@@ -20,7 +20,9 @@ alias a2m='adb pull /sdcard/Download/. ~/Desktop/my-quick-share && open ~/Deskto
 # adb shell
 #
 
-alias adba='adb shell am start -a' # Usage: adba android.intent.action.VIEW -d https://example.com
+alias adba='adb shell am start -a'
+# https://developer.android.com/about/versions/12/reference/common-intents-31
+alias adbl='adb shell am start -a android.settings.LOCALE_SETTINGS'
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
