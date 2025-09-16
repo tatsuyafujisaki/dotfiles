@@ -11,6 +11,16 @@ export ANDROID_HOME=~/Library/Android/sdk
 
 alias adbd='adb devices'
 alias adbi='adb install -r *.apk'
+
+# Transfers files between Android and macOS.
+alias m2a='adb push ~/Desktop/my-quick-share/. /sdcard/Download && adb shell ls /sdcard/Download'
+alias a2m='adb pull /sdcard/Download/. ~/Desktop/my-quick-share && open ~/Desktop/my-quick-share'
+
+#
+# adb shell
+#
+
+alias adba='adb shell am start -a' # Usage: adba android.intent.action.VIEW -d https://example.com
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
@@ -22,11 +32,6 @@ alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 alias showtap='adb shell settings put system show_touches 1'
 alias showta='adb shell settings put system show_touches 0'
-
-
-# Transfers files between Android and macOS.
-alias m2a='adb push ~/Desktop/my-quick-share/. /sdcard/Download && adb shell ls /sdcard/Download'
-alias a2m='adb pull /sdcard/Download/. ~/Desktop/my-quick-share && open ~/Desktop/my-quick-share'
 
 # Settings > System > Gestures > System navigation or 3-button navigation
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
@@ -103,28 +108,4 @@ print_aab() {
   ./gradlew bundleRelease && \
   bundletool dump manifest --bundle=$aab_path && \
   cp $aab_path ~/Desktop
-}
-
-#
-# Language
-#
-
-# finds the language of Android
-alias adblc=adb shell getprop persist.sys.locale
-
-# sets the language of Android
-alias adbcn='my_set_android_language zh-Hans-CN'
-alias adbja='my_set_android_language ja-JP'
-alias adbkr='my_set_android_language ko-KR'
-alias adbtw='my_set_android_language zh-Hant-TW'
-alias adbus='my_set_android_language en-US'
-
-my_set_android_language() {
-  if [ ${#} -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <locale>"
-    return
-  fi
-
-  adb shell settings put system system_locales ${1} && adb reboot
 }
