@@ -39,30 +39,19 @@ alias showta='adb shell settings put system show_touches 0'
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
 alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
 
-adb_deeplink() {
-  if [ ${#} -lt 1 ]
+adb_emu_geo_fix() {
+  if [[ $# -lt 2 ]]
   then
-    echo "Usage: $funcstack[1] <uri> [exact-package]"
+    echo "Usage: $0 <longitude> <latitude>"
     return
   fi
-
-  # "am" stands for Activity Manager.
-  # -W is to wait for launch to complete.
-  # Ensure that AndroidManifest.xml contains <activity android:exported="true">. Otherwise, "java.lang.SecurityException: Permission Denial" will occur.
-  # https://developer.android.com/training/app-links/deep-linking#testing-filters
-  # https://codelabs.developers.google.com/codelabs/android-navigation/#10
-  if [ ${#} -ge 2 ]
-  then
-    adb shell am start -W -a android.intent.action.VIEW -d ${1} ${2}
-  else
-    adb shell am start -W -a android.intent.action.VIEW -d ${1}
-  fi
+  adb emu geo fix ${1} ${2}
 }
 
 adb_pull_camera_image_or_video() {
-  if [ ${#} -lt 1 ]
+  if [[ $# -lt 1 ]]
   then
-    echo "Usage: $funcstack[1] <image or video filename>"
+    echo "Usage: $0 <image or video filename>"
     return
   fi
   adb pull /storage/emulated/0/DCIM/Camera/${1} ~/Desktop
@@ -72,32 +61,19 @@ adb_pull_camera_image_or_video() {
 # https://developer.android.com/tools/logcat
 #
 
-alias my_logcat='adb logcat --clear && adb logcat -v brief'
-
-# "flutter:I" shows logs with the tag "flutter" at the Info level. These are debugPrint logs.
-# "*:S" silences all other tags.
-adb_logcat_flutter() {
-  adb logcat --clear
-
-  if [ ${#} -ge 1 ]
-  then
-    adb -s $1 logcat flutter:I *:S | grep 👀
-  else
-    adb logcat flutter:I *:S | grep 👀
-  fi
-}
+alias my_logcat='adb logcat --clear && adb logcat -v tag'
 
 #
-# emulator
+# https://developer.android.com/studio/run/emulator-commandline
 #
 
-alias emu='emulator -list-avds | tail -1 | xargs emulator -avd &|'
+alias emu='emulator -avd $(emulator -list-avds | tail -1) &'
 alias emul='emulator -list-avds'
 
 pixel() {
-  if [ ${#} -lt 2 ]
+  if [[ $# -lt 2 ]]
   then
-    echo "Usage: $funcstack[1] <pixel-number> <api-level>"
+    echo "Usage: $0 <pixel-number> <api-level>"
     return
   fi
 
@@ -105,9 +81,8 @@ pixel() {
 }
 
 print_aab() {
-  aab_path="app/build/outputs/bundle/release/app-release.aab"
-  rm -f $aab_path && \
+  local aab_path="app/build/outputs/bundle/release/app-release.aab"
   ./gradlew bundleRelease && \
-  bundletool dump manifest --bundle=$aab_path && \
-  cp $aab_path ~/Desktop
+  bundletool dump manifest --bundle="$aab_path" && \
+  cp "$aab_path" ~/Desktop
 }

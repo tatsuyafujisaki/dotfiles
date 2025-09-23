@@ -1,20 +1,19 @@
 unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
 
 export EDITOR=nano # makes 'crontab -e' use nano instead of vim
-export HISTCONTROL=ignoreboth
 export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 #
-# Google Cloud SDK / gcloud CLI
+# https://cloud.google.com/sdk
 #
 
 # The next line updates PATH for the Google Cloud SDK.
-[ -f ~/google-cloud-sdk/path.zsh.inc ] && . ~/google-cloud-sdk/path.zsh.inc
+[[ -f ~/google-cloud-sdk/path.zsh.inc ]] && . ~/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
-[ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
+[[ -f ~/google-cloud-sdk/completion.zsh.inc ]] && . ~/google-cloud-sdk/completion.zsh.inc
 
 #
 # cd-related
@@ -33,7 +32,7 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias pt='cd ~/Documents/GitHub/prototype'
 
 #
-# Visual Studio Code-related
+# https://code.visualstudio.com
 #
 
 alias c='code .'
@@ -89,11 +88,9 @@ alias gws='./gradlew --stop'
 # Ideally, only the line with the largest version would be kept when there are multiple lines for different versions of the same library, but this is difficult. This is because, when comparing versions in text, 1.2 is considered larger than 1.10.
 # sed -E 's/^[^[:alpha:]]*//' removes leading non-alphabetic characters.
 # sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' changes "foo:1.0 -> 2.0" to "foo:2.0".
-alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep -v '(c)$' | grep -v '(n)$' | grep -v '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort | uniq"
+alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep -v '(c)$' | grep -v '(n)$' | grep -v '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
 
-# https://gradle.org/releases/
-alias gwup='./gradlew wrapper --gradle-version='
-
+alias gwup='./gradlew wrapper --gradle-version=' # https://gradle.org/releases/
 
 #
 # JDK (Java Development Kit)
@@ -101,23 +98,13 @@ alias gwup='./gradlew wrapper --gradle-version='
 
 alias jh='/usr/libexec/java_home --verbose'
 
-my_set_java_home() {
-  if [ $# -lt 1 ]
-  then
-    echo "Usage: $funcstack[1] <version>"
-    return
-  fi
-
-  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
-}
-
 #
 # Miscellaneous aliases
 #
 
-alias delmedia='(cd ~/Desktop && rm *.gif *.jpeg *.jpg *.mp4 *.png *.svg *.webm .DS_Store 2>/dev/null)' # () is to use a subshell.
+alias delmedia='cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm} .DS_Store 2>/dev/null'
 alias g=git
 alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
-alias pbsort='pbpaste | sort | uniq | grep -v ^$ | pbcopy' # "grep -v ^$" deletes empty lines.
+alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.

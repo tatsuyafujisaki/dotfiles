@@ -15,7 +15,7 @@
 gg() {
   git switch develop || git switch main || git switch master
   # "grep -v \*" excludes the current branch, which is marked with an asterisk.
-  git branch | grep -v \* | xargs git branch -D
+  git branch | grep -v \* | xargs --no-run-if-empty git branch -D
   git clean -d --force
   git restore --staged --worktree .
   git pull --all --autostash --rebase --recurse-submodules
@@ -27,16 +27,6 @@ gg() {
 #
 # Misc functions
 #
-
-backup_desktop() {
-  cd ~/Desktop
-
-  local dir=$(date +"%Y-%m-%d_%H-%M-%S")
-  rm -r $dir
-  mkdir -p $dir
-
-  mv * $dir
-}
 
 clean() {
   sudo find ~ -type f -name .DS_Store -delete
@@ -136,12 +126,7 @@ dm() {
   rm -r $dir
   mkdir -p $dir
   cd $dir
-
-  if [ $# -ge 1 ]
-  then
-    touch deleteme.$1
-  fi
-
+  [[ $# -ge 1 ]] && touch deleteme.$1
   code .
 }
 
@@ -156,30 +141,50 @@ git_pull_all() {
   popd
 }
 
+
+my_backup_desktop() {
+  local dir=~/Desktop/$(date +"%Y-%m-%d_%H-%M-%S")
+  mkdir -p "$dir"
+  mv ~/Desktop/* "$dir"/
+}
+
 mkdircd() {
-  if [ $# -lt 1 ]
+  if [[ $# -lt 1 ]]
   then
-    echo "Usage: $funcstack[1] <directory>"
+    echo "Usage: $0 <directory>"
     return
   fi
 
-  mkdir -p $1 && cd $1
+  mkdir -p "$1" && cd "$1"
 }
 
-mydelete() {
-  if [ $# -lt 1 ]
+my_delete() {
+  if [[ $# -lt 1 ]]
   then
-    echo "Usage: $funcstack[1] <file-or-directory>"
+    echo "Usage: $0 <file-or-directory>"
     return
   fi
 
   find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
 }
 
+my_download_chichibu_images() {
+  url="https://www.chichibuji.gr.jp/station-live/chichibu.jpg"
+  save_dir=~/Desktop/chichibu
+  mkdir -p "$save_dir"
+
+  while true
+  do
+    filename="chichibu-$(date +"%Y-%m-%d_%H-%M-%S").jpg"
+    curl --silent --output "$save_dir/$filename" "$url"
+    sleep 600 # Waits for 10 minutes (600 seconds)
+  done
+}
+
 myffmpeg() {
-  if [ $# -lt 1 ]
+  if [[ $# -lt 1 ]]
   then
-    echo "Usage: $funcstack[1] <mp4-or-webm>"
+    echo "Usage: $0 <mp4-or-webm>"
     return
   fi
 
@@ -195,27 +200,35 @@ myffmpeg() {
 #
 # The N glob qualifier avoids treating the "*" in "*.mp4" as non-wildcard if there is no mp4 file if there is no mp4 file, and the "*" in "*.webm" as non-wildcard if there is no webm file if there is no webm file.
 myffmpeg_all() {
-  for file in ~/Desktop/*.{mp4,webm}(N)
+  for file in ~/Desktop/*.(mp4|webm)(N)
   do
-    myffmpeg $file
+    myffmpeg "$file"
   done
 }
 
 myfind() {
-  if [ $# -lt 1 ]
+  if [[ $# -lt 1 ]]
   then
-    echo "Usage: $funcstack[1] <file-or-directory>"
+    echo "Usage: $0 <file-or-directory>"
     return
   fi
 
-  find . -iname "*$1*" -print 2> /dev/null
+  find . -iname "*$1*" 2>/dev/null
 }
 
-# Renames PDF files, compressed by Adobe, which have "-compressed" in the filename.
-my_rename_compressed_pdfs() {
+my_remove_compressed_pdf_suffix() {
   for file in ~/Desktop/*-compressed.pdf; do
-    mv -- "$file" "${file//-compressed/}"
+    mv -- "$file" "${file/-compressed/}"
   done
+}
+
+my_set_java_home() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <version>"
+    return
+  fi
+  export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
 }
 
 up() {

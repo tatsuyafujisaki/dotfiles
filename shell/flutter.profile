@@ -1,16 +1,14 @@
 # adds Flutter to PATH on macOS.
-[ -d ~/development/flutter/bin ] && export PATH=$PATH:~/development/flutter/bin
+[[ -d ~/development/flutter/bin ]] && export PATH=$PATH:~/development/flutter/bin
 
 # adds protoc to PATH.
 # https://grpc.io/docs/languages/dart/quickstart
 # https://pub.dev/packages/protoc_plugin
-[ -d ~/.pub-cache/bin ] && export PATH=$PATH:~/.pub-cache/bin
+[[ -d ~/.pub-cache/bin ]] && export PATH=$PATH:~/.pub-cache/bin
 
 # adds Ruby 3, which is transitively installed by CocoaPods, to PATH before Ruby 2.
 if [[ -d "/opt/homebrew/Cellar/ruby" ]]; then
-  ruby_version=$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)
-  export PATH="/opt/homebrew/Cellar/ruby/$ruby_version/bin:$PATH"
-  unset ruby_version
+  export PATH="/opt/homebrew/Cellar/ruby/$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)/bin:$PATH"
 fi
 
 #
@@ -54,34 +52,21 @@ alias fput='flutter pub upgrade --tighten'
 alias fu='flutter upgrade --force'
 alias fv='flutter --version'
 
-fs() {
-  if [ ${#} -lt 1 ]
-  then
-    filepath=$HOME/Desktop/screenshot.png
-  else
-    filepath=$HOME/Desktop/$1.png
-  fi
-
-  flutter screenshot --out=$filepath
-  open $filepath
-}
-
-my_clean_dart() {
-  dart pub cache clean --force
-}
-
-my_clean_flutter() {
-  flutter clean && \
-  flutter pub cache clean --force
-}
-
-# my dart refresh
 my_dart() {
   dart pub get && \
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format . && \
   dart analyze
+}
+
+my_dart_clean() {
+  dart pub cache clean --force
+}
+
+my_flutter_clean() {
+  flutter clean && \
+  flutter pub cache clean --force
 }
 
 my_flutter() {
@@ -91,6 +76,12 @@ my_flutter() {
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format . && \
-  flutter analyze && \
   flutter analyze --suggestions
+
+}
+
+my_flutter_screenshot() {
+  filepath="$HOME/Desktop/${1:-screenshot}.png"
+  flutter screenshot --out="$filepath"
+  open "$filepath"
 }

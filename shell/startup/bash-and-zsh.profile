@@ -6,7 +6,7 @@
 . ~/Documents/GitHub/dotfiles/shell/flutter.profile
 . ~/Documents/GitHub/private/private.profile
 
-if [ $(uname) = Darwin ]
+if [[ $(uname) = Darwin ]]
 then
   . ~/Documents/GitHub/dotfiles/shell/os/mac.profile
 else
