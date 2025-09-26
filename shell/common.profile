@@ -104,7 +104,4 @@ alias jh='/usr/libexec/java_home --verbose'
 
 alias delmedia='cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm} .DS_Store 2>/dev/null'
 alias g=git
-alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
-alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
-alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.

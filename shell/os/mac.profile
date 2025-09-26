@@ -70,11 +70,32 @@ alias bug='brew upgrade --greedy'
 export PATH=$(brew --prefix python)/libexec/bin:$PATH
 
 #
-# Miscellaneous
+# pbpaste and/or pbcopy
 #
 
-# "pd" stands for "percent decode".
-alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy'
+alias dq='pbpaste | sed 's/.*/"&"/' | pbcopy' # adds double quotes to the clipboard.
+alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
+alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
+alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
+alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
+alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
+
+ai() {
+  local query=$(pbpaste)
+  local urls=(
+    "https://chatgpt.com/?q=$query"
+    "https://claude.ai/new?q=$query"
+    "https://copilot.microsoft.com/?q=$query"
+    "https://gemini.google.com/app"
+    "https://grok.com/?q=$query"
+    "https://www.perplexity.ai/?q=$query"
+  )
+  open -a 'Google Chrome' "${urls[@]}"
+}
+
+#
+# Miscellaneous
+#
 
 # USB cable speed detection
 # https://developer.android.com/studio/releases/past-releases/as-koala-feature-drop-release-notes#usb-check
