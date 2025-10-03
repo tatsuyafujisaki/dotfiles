@@ -1,9 +1,9 @@
 # https://developer.android.com/tools/variables#set
 export ANDROID_HOME=~/Library/Android/sdk
-[ -d $ANDROID_HOME/cmdline-tools/latest/bin ] && export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-[ -d $ANDROID_HOME/emulator ] && export PATH=$PATH:$ANDROID_HOME/emulator
-[ -d $ANDROID_HOME/platform-tools ] && export PATH=$PATH:$ANDROID_HOME/platform-tools
-[ -d $ANDROID_HOME/tools/bin ] && export PATH=$PATH:$ANDROID_HOME/tools/bin
+[[ -d $ANDROID_HOME/cmdline-tools/latest/bin ]] && export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+[[ -d $ANDROID_HOME/emulator ]] && export PATH=$PATH:$ANDROID_HOME/emulator
+[[ -d $ANDROID_HOME/platform-tools ]] && export PATH=$PATH:$ANDROID_HOME/platform-tools
+[[ -d $ANDROID_HOME/tools/bin ]] && export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 #
 # https://developer.android.com/tools/adb

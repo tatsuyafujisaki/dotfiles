@@ -9,11 +9,6 @@
 # https://pub.dev/packages/protoc_plugin
 [[ -d ~/.pub-cache/bin ]] && export PATH=$PATH:~/.pub-cache/bin
 
-# adds Ruby 3, which is transitively installed by CocoaPods, to PATH before Ruby 2.
-if [[ -d "/opt/homebrew/Cellar/ruby" ]]; then
-  export PATH="/opt/homebrew/Cellar/ruby/$(ls -1 /opt/homebrew/Cellar/ruby | tail -1)/bin:$PATH"
-fi
-
 #
 # https://dart.dev/tools/dart-tool
 #
