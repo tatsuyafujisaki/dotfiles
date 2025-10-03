@@ -1,5 +1,8 @@
-# adds Flutter to PATH on macOS.
+# adds Flutter to PATH.
 [[ -d ~/development/flutter/bin ]] && export PATH=$PATH:~/development/flutter/bin
+
+# adds FVM to PATH.
+[[ -d .fvm_flutter/bin ]] && export PATH=$PATH:.fvm_flutter/bin
 
 # adds protoc to PATH.
 # https://grpc.io/docs/languages/dart/quickstart
