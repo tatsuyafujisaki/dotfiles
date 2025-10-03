@@ -100,6 +100,13 @@ alias gwup='./gradlew wrapper --gradle-version=' # https://gradle.org/releases/
 alias jh='/usr/libexec/java_home --verbose'
 
 #
+# https://asdf-vm.com
+#
+
+# Adds tools installed via asdf to PATH.
+[[ -d $HOME/.asdf/shims ]] && export PATH=$HOME/.asdf/shims:$PATH
+
+#
 # Miscellaneous aliases
 #
 
