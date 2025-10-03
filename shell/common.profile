@@ -33,12 +33,13 @@ alias pt='cd ~/Documents/GitHub/prototype'
 
 #
 # https://code.visualstudio.com
+# https://cursor.com
 #
 
-alias c='code .'
-alias cdp='code ~/Documents/GitHub/dart_playground'
-alias cfpp='code ~/Documents/GitHub/flutter_playground'
-alias gp='code ~/Documents/GitHub/android-playground/gradle.properties'
+alias c="$(command -v cursor || echo code) ."
+alias cdp="$(command -v cursor || echo code) ~/Documents/GitHub/dart_playground"
+alias cfpp="$(command -v cursor || echo code) ~/Documents/GitHub/flutter_playground"
+alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playground/gradle.properties"
 
 #
 # https://www.npmjs.com

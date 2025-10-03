@@ -44,6 +44,7 @@ alias fd='flutter doctor'
 alias fds='flutter devices'
 alias ff='flutter'
 alias ffc='flutter pub global activate flutterfire_cli && flutterfire configure'
+alias flutter="$(command -v fvm && echo 'fvm flutter' || echo flutter)"
 alias fpa='flutter pub add'
 alias fpcc='flutter pub cache clean --force'
 alias fpcr='flutter pub cache repair'
