@@ -83,7 +83,7 @@ ai() {
   local query=$(pbpaste)
   local urls=(
     "https://chatgpt.com/?q=$query"
-    "https://claude.ai/new?q=$query"
+    "https://claude.ai"
     "https://copilot.microsoft.com/?q=$query"
     "https://gemini.google.com/app"
     "https://grok.com/?q=$query"
