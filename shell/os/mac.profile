@@ -10,13 +10,12 @@ export PATH=$PATH:/usr/libexec
 l() {
   clear
 
-  # -G is equivalent to --color of the GNU-ls.
-  # Use "ls -dl *" rather than "ls -l" because the latter shows the unwanted "total 0" on the first line of the output.
-  # Print dotfiles and dotdirectories, then print a blank line, redirecting errors to /dev/null when there are not such files and directories.
-  ls -dFGhlv .[^.]* 2> /dev/null && echo
+  # Prints non-dotfiles and non-dotdirectories and a blank line.
+  # `.[^.]*` is a Zsh glob pattern to except `.` and `..`.
+  ls -d -F -G -h -l .[^.]* 2> /dev/null && echo
 
-  # Print non-dotfiles and non-dotdirectories, redirecting errors to /dev/null when there are not such files and directories.
-  ls -dFGhlv * 2> /dev/null
+  # Prints non-dotfiles and non-dotdirectories.
+  ls -d -F -G -h -l * 2> /dev/null
 }
 
 #
