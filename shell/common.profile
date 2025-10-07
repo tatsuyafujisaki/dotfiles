@@ -91,8 +91,6 @@ alias gws='./gradlew --stop'
 # sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' changes "foo:1.0 -> 2.0" to "foo:2.0".
 alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep -v '(c)$' | grep -v '(n)$' | grep -v '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
 
-alias gwup='./gradlew wrapper --gradle-version=' # https://gradle.org/releases/
-
 #
 # JDK (Java Development Kit)
 #
