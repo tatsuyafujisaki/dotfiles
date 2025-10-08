@@ -26,6 +26,7 @@ alias a2m='adb pull /sdcard/Download/. ~/Desktop/my-quick-share && open ~/Deskto
 #
 
 alias adba='adb shell am start -a'
+alias adbdo='adb shell am start -a android.settings.APPLICATION_DEVELOPMENT_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adbl='adb shell am start -a android.settings.LOCALE_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adbps='adb shell getconf PAGE_SIZE' # https://developer.android.com/guide/practices/page-sizes
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
