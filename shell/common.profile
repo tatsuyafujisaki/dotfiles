@@ -45,6 +45,7 @@ alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playgroun
 # https://nodejs.org
 #
 
+# makes the Claude Code command `claude` available.
 export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH"
 
 #
