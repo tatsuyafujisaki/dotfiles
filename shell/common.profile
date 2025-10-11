@@ -40,6 +40,13 @@ alias cdp="$(command -v cursor || echo code) ~/Documents/GitHub/dart_playground"
 alias cfpp="$(command -v cursor || echo code) ~/Documents/GitHub/flutter_playground"
 alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playground/gradle.properties"
 
+
+#
+# https://nodejs.org
+#
+
+export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH"
+
 #
 # https://www.npmjs.com
 #
@@ -67,7 +74,7 @@ alias prl='gh pr list --web'
 alias prv='gh pr view --web'
 
 # https://man.freebsd.org/cgi/man.cgi?query=bc
-alias mybc='bc -lq' # -l is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. -q is to suppress a welcome message.
+alias mybc='bc --mathlib --quiet' # --mathlib is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. --quiet is to suppress a welcome message.
 
 # "build" means Flutter's build directory.
 # https://man.freebsd.org/cgi/man.cgi?query=grep
