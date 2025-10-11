@@ -232,7 +232,6 @@ my_set_java_home() {
 }
 
 up() {
-  sudo npm update --global
   brew upgrade --greedy
   brew cleanup --prune=all
   brew doctor
