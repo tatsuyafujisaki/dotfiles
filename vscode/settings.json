@@ -67,6 +67,7 @@
   // If smartCase is false, the search is always case-insensitive.
   // "search.smartCase": true,
   "security.workspace.trust.enabled": false,
+  "telemetry.enableTelemetry": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
