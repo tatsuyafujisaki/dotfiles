@@ -1,4 +1,4 @@
-// ~/Library/Application Support/Code/User/settings.json
+// ~/Library/Application Support/{Code, Cursor}/User/settings.json
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
