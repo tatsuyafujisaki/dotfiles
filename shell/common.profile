@@ -40,22 +40,11 @@ alias cdp="$(command -v cursor || echo code) ~/Documents/GitHub/dart_playground"
 alias cfpp="$(command -v cursor || echo code) ~/Documents/GitHub/flutter_playground"
 alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playground/gradle.properties"
 
-
-#
-# https://nodejs.org
-#
-
-# makes the Claude Code command `claude` available.
-export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH"
-
 #
 # https://www.npmjs.com
 #
 
 alias npmig='npm install --global'
-alias npmin='npm init --yes'
-alias npmls='npm ls --depth 0'
-alias npmlsg='npm ls --depth 0 --global'
 alias npmug='npm uninstall --global'
 
 #
