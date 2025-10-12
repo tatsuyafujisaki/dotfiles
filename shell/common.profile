@@ -53,7 +53,7 @@ alias npmug='npm uninstall --global'
 
 alias pipi='pip3 install'
 alias pipl='pip3 list'
-alias pipu='pip3 uninstall -y'
+alias pipu='pip3 uninstall --yes'
 
 #
 # https://cli.github.com
@@ -62,9 +62,6 @@ alias pipu='pip3 uninstall -y'
 alias pr='gh pr create --assignee @me --web'
 alias prl='gh pr list --web'
 alias prv='gh pr view --web'
-
-# https://man.freebsd.org/cgi/man.cgi?query=bc
-alias mybc='bc --mathlib --quiet' # --mathlib is to show decimals. It shows 0.333 instead of 0 as the result of 1/3. --quiet is to suppress a welcome message.
 
 # "build" means Flutter's build directory.
 # https://man.freebsd.org/cgi/man.cgi?query=grep
