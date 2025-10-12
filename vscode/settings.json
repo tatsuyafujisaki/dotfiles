@@ -6,7 +6,6 @@
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
-  "debug.toolBarLocation": "docked",
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.organizeImports": "always",
