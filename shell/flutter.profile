@@ -31,7 +31,7 @@ alias drbrw='dart run build_runner watch'
 alias fa='flutter analyze && flutter analyze --suggestions'
 alias fc='flutter clean'
 alias fcjdk='flutter config --jdk-dir' # takes the path to the JDK as an argument. Running the command updates ~/.config/flutter/settings
-alias fcr='flutter create --platforms=android,ios .'
+alias fcp='flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
 alias fd='flutter doctor'
 alias fds='flutter devices'
 alias ff='flutter'
