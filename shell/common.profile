@@ -41,6 +41,12 @@ alias cfpp="$(command -v cursor || echo code) ~/Documents/GitHub/flutter_playgro
 alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playground/gradle.properties"
 
 #
+# https://nodejs.org
+#
+
+export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH" # makes the Gemini CLI command `gemini` available.
+
+#
 # https://www.npmjs.com
 #
 
