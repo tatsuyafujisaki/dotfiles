@@ -80,3 +80,9 @@ my_start_emulator() {
 
   emulator @${1} &
 }
+
+#
+# Miscellaneous
+#
+
+alias keytool_list='keytool -list -keystore' # takes the path of .store or .jks
