@@ -14,6 +14,9 @@ curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/{
 
 cat >> ~/.gitignore << 'EOF'
 
+# https://developer.android.com/studio/publish/app-signing
+keystore.properties
+
 # google-services.json is already included in https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Android.gitignore but GoogleService-Info.plist is not.
 GoogleService-Info.plist
 
