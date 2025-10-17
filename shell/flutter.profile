@@ -1,13 +1,17 @@
-# adds Flutter to PATH.
+# adds `flutter` to PATH.
 [[ -d ~/development/flutter/bin ]] && export PATH=$PATH:~/development/flutter/bin
 
-# adds FVM to PATH.
+# adds `fvm` to PATH.
 [[ -d .fvm_flutter/bin ]] && export PATH=$PATH:.fvm_flutter/bin
 
-# adds protoc to PATH.
+# adds `protoc` to PATH.
 # https://grpc.io/docs/languages/dart/quickstart
 # https://pub.dev/packages/protoc_plugin
 [[ -d ~/.pub-cache/bin ]] && export PATH=$PATH:~/.pub-cache/bin
+
+# adds `dart` and `flutter`, which are installed via FVM, to PATH.
+latest_flutter_version=$(ls -1 ~/fvm/versions 2>/dev/null | tail -1)
+[[ -n "$latest_flutter_version" && -d ~/fvm/versions/$latest_flutter_version/bin ]] && export PATH=$PATH:~/fvm/versions/$latest_flutter_version/bin
 
 #
 # https://dart.dev/tools/dart-tool
