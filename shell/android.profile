@@ -14,7 +14,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 #
 
 alias adbd='adb devices'
-alias adbi='adb install -r *.apk'
+alias adbi='adb install -r'
 
 # Transfers files between Android and macOS.
 alias m2a='adb push ~/Desktop/my-quick-share/. /sdcard/Download && adb shell ls /sdcard/Download'
