@@ -85,8 +85,8 @@ ai() {
     "https://chatgpt.com/?q=$query"
     "https://claude.ai"
     "https://copilot.microsoft.com/?q=$query"
-    "https://gemini.google.com/app"
     "https://grok.com/?q=$query"
+    "https://www.google.com/search?hl=en&udm=50&q=$query"
     "https://www.perplexity.ai/search/new?q=$query"
   )
   open -a 'Google Chrome' "${urls[@]}"
