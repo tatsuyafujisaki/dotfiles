@@ -72,7 +72,6 @@ export PATH=$(brew --prefix python)/libexec/bin:$PATH
 # pbpaste and/or pbcopy
 #
 
-alias dq='pbpaste | sed 's/.*/"&"/' | pbcopy' # adds double quotes to the clipboard.
 alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
