@@ -43,6 +43,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "geminicodeassist.agentYoloMode": true,
+  "geminicodeassist.enableTelemetry": false,
   "git.allowForcePush": true,
   "git.autofetch": true,
   "git.autoStash": true,
