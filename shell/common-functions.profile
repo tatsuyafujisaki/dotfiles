@@ -235,7 +235,7 @@ up() {
   brew upgrade --greedy
   brew cleanup --prune=all
   brew doctor
-  gcloud components update
+  gcloud components update --quiet
   flutter upgrade --force
   flutter doctor
   git_pull_all
