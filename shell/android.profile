@@ -69,7 +69,8 @@ my_adb_pull_camera_image_or_video() {
 # https://developer.android.com/studio/run/emulator-commandline
 #
 
-alias emu='emulator -avd $(emulator -list-avds | tail -1) &'
+# Using "&|" instead of "&" keeps the emulator running even after you close Terminal.
+alias emu='emulator -avd $(emulator -list-avds | tail -1) &|'
 alias emul='emulator -list-avds'
 
 my_start_emulator() {
@@ -79,7 +80,7 @@ my_start_emulator() {
     return
   fi
 
-  emulator @${1} &
+  emulator @${1} &|
 }
 
 #
