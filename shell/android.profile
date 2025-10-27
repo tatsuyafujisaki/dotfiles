@@ -35,6 +35,7 @@ alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
 grep -v com.piriform.ccleaner |\
 grep -v com.blogspot.newapphorizons.fakegps |\
 grep -v com.Slack |\
+grep -v dev.firebase.appdistribution |\
 xargs -n1 -r -t adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
