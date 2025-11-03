@@ -29,6 +29,16 @@ alias nw='open /System/Library/PreferencePanes/Network.prefPane'
 alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?SpokenContent'
 
 #
+# Pasteboard
+#
+
+alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
+alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
+alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
+alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
+alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (fullwidth) digits to hankaku (halfwidth) digits.
+
+#
 # Xcode
 #
 
@@ -68,29 +78,6 @@ alias bug='brew upgrade --greedy'
 #
 
 export PATH=$(brew --prefix python)/libexec/bin:$PATH
-
-#
-# pbpaste and/or pbcopy
-#
-
-alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
-alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
-alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
-alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
-alias z2h="pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy" # converts zenkaku (full-width) digits to hankaku (half-width) digits.
-
-ai() {
-  local query=$(pbpaste)
-  local urls=(
-    "https://chatgpt.com/?q=$query"
-    "https://claude.ai"
-    "https://copilot.microsoft.com/?q=$query"
-    "https://grok.com/?q=$query"
-    "https://www.google.com/search?hl=en&udm=50&q=$query"
-    "https://www.perplexity.ai/search/new?q=$query"
-  )
-  open -a 'Google Chrome' "${urls[@]}"
-}
 
 #
 # Miscellaneous

@@ -141,6 +141,18 @@ git_pull_all() {
   popd
 }
 
+my_ai() {
+  local query=$(pbpaste)
+  local urls=(
+    "https://chatgpt.com/?q=$query"
+    "https://claude.ai"
+    "https://copilot.microsoft.com/?q=$query"
+    "https://grok.com/?q=$query"
+    "https://www.google.com/search?hl=en&udm=50&q=$query"
+    "https://www.perplexity.ai/search/new?q=$query"
+  )
+  open "${urls[@]}"
+}
 
 my_backup_desktop() {
   local dir=~/Desktop/$(date +"%Y-%m-%d_%H-%M-%S")

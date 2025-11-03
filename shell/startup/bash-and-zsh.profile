@@ -3,6 +3,7 @@
 . ~/Documents/GitHub/dotfiles/shell/common.profile
 . ~/Documents/GitHub/dotfiles/shell/common-functions.profile
 . ~/Documents/GitHub/dotfiles/shell/flutter.profile
+. ~/Documents/GitHub/dotfiles/shell/gemini.profile
 . ~/Documents/GitHub/private/private.profile
 
 if [[ $(uname) = Darwin ]]
