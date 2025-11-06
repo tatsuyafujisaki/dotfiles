@@ -1,7 +1,18 @@
 #
-# Prompt library for the Gemini gem for a legal examination.
+# Prompt library for the Gemini gem "Writing editor"
+
+# Stands for Writing Editor.
+we() {
+  echo -n "Review the sentence(s) or phrase(s) below. Is it gramatically correct? Does it sound natural? Can you refine it?\n\n\"\"" | pbcopy
+  open https://gemini.google.com/gem/writing-editor
+}
+
+
+#
+# Prompt library for the Gemini custom gem for a legal examination
 #
 
+# Stands for 5 years old.
 5() {
   if [[ $# -lt 1 ]]
   then
@@ -19,6 +30,7 @@
   open https://gemini.google.com/gem/c43c5873bd3f
 }
 
+# Stands for 具体例 (gutairei)
 gtr() {
   if [[ $# -lt 1 ]]
   then
@@ -36,6 +48,7 @@ gtr() {
   open https://gemini.google.com/gem/c43c5873bd3f
 }
 
+# Stands for 教えて (oshiete)
 os() {
   if [[ $# -lt 1 ]]
   then
@@ -53,6 +66,7 @@ os() {
   open https://gemini.google.com/gem/c43c5873bd3f
 }
 
+# Stands for 正しい (tadashii)
 td() {
   if [[ $# -lt 1 ]]
   then
@@ -67,7 +81,7 @@ td() {
 # Miscellaneous functions that take more than one parameter.
 #
 
-# stands for "違い (chigai)".
+# Stands for 違い (chigai).
 cgi() {
   if [[ $# -lt 2 ]]
   then
@@ -83,7 +97,7 @@ cgi() {
   fi
 }
 
-# stands for "What is the difference?"
+# Stands for "What is the difference?"
 witd() {
   if [[ $# -lt 2 ]]
   then
@@ -99,7 +113,7 @@ witd() {
   fi
 }
 
-# stands for "Which sounds more/most natural?"
+# Stands for "Which sounds more/most natural?"
 wsmn() {
   if [[ $# -lt 2 ]]
   then
