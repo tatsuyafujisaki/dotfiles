@@ -30,8 +30,8 @@ we() {
   open https://gemini.google.com/gem/c43c5873bd3f
 }
 
-# Stands for 具体例 (gutairei)
-gtr() {
+# Stands for 代表例 (daihyorei)
+dhr() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <keyword1> [keyword2]"
@@ -40,9 +40,9 @@ gtr() {
 
   if [[ $# -lt 2 ]]
   then
-    echo "${1}の具体例を教えてください。" | pbcopy
+    echo "${1}の代表例を教えてください。" | pbcopy
   else
-    echo "${1}における${2}の具体例を教えてください。" | pbcopy
+    echo "${1}における${2}の代表例を教えてください。" | pbcopy
   fi
 
   open https://gemini.google.com/gem/c43c5873bd3f
