@@ -1,6 +1,12 @@
 #
 # Prompt library for the Gemini gem "Writing editor"
 
+# Stands for "Fill in the blank."
+fb() {
+  echo -n "Fill in the blank below.\n\n\"$(pbpaste)\"" | pbcopy
+  open https://gemini.google.com/gem/writing-editor
+}
+
 # Stands for Writing Editor.
 we() {
   echo -n "Review the sentence(s) or phrase(s) below. Is it grammatically correct? Does it sound natural? Can you refine it?\n\n\"$(pbpaste)\"" | pbcopy
