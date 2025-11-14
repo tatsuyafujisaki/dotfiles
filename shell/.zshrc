@@ -24,4 +24,8 @@ export PROMPT_EOL_MARK=''
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
-. ~/Documents/GitHub/dotfiles/shell/startup/bash-and-zsh.profile
+
+for profile in ~/Documents/GitHub/dotfiles/shell/profiles/*.profile ~/Documents/GitHub/private/private.profile
+do
+  . "$profile"
+done
