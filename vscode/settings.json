@@ -1,4 +1,6 @@
-// ~/Library/Application Support/{Code, Cursor}/User/settings.json
+// How to deploy this file:
+// ln -f -s ~/Documents/GitHub/dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+// ln -f -s ~/Documents/GitHub/dotfiles/vscode/settings.json "$HOME/Library/Application Support/Cursor/User/settings.json"
 {
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",

@@ -3,7 +3,7 @@
 1. Clone this repository using GitHub Desktop.
 2. Run following command.
    ```shell
-   ln -fs ~/Documents/GitHub/dotfiles/git/.gitconfig ~
+   ln -f -s ~/Documents/GitHub/dotfiles/git/.gitconfig ~
    ```
 
 # How to create `~/.gitignore` on macOS
