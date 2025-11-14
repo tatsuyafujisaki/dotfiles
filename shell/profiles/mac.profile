@@ -1,11 +1,11 @@
 # Adds HomeBrew to PATH.
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
 
 # Adds the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
-export PATH=$PATH:/usr/libexec
+export PATH="$PATH:/usr/libexec"
 
 # Adds Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
-[[ -d /opt/homebrew/opt/ruby/bin ]] && export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+[[ -d "/opt/homebrew/opt/ruby/bin" ]] && export PATH="$PATH:/opt/homebrew/opt/ruby/bin"
 
 l() {
   clear
@@ -77,7 +77,7 @@ alias bug='brew upgrade --greedy'
 # Python
 #
 
-export PATH=$(brew --prefix python)/libexec/bin:$PATH
+export PATH="$PATH:$(brew --prefix python)/libexec/bin"
 
 #
 # Miscellaneous

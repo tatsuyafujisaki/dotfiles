@@ -44,7 +44,7 @@ alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playgroun
 # https://nodejs.org
 #
 
-export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH" # makes the Gemini CLI command `gemini` available.
+export PATH="$PATH:/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin" # makes the Gemini CLI command `gemini` available.
 
 #
 # https://www.npmjs.com
@@ -101,7 +101,7 @@ alias jh='/usr/libexec/java_home --verbose'
 #
 
 # Adds tools installed via asdf to PATH.
-[[ -d $HOME/.asdf/shims ]] && export PATH=$HOME/.asdf/shims:$PATH
+[[ -d "$HOME/.asdf/shims" ]] && export PATH="$PATH:$HOME/.asdf/shims"
 
 #
 # Miscellaneous aliases
