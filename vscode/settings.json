@@ -21,7 +21,6 @@
   "editor.quickSuggestions": {
     "other": false
   },
-
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -55,6 +54,29 @@
   "git.followTagsWhenSync": true,
   "git.pruneOnFetch": true,
   "git.rebaseWhenSync": true,
+  // https://golangci-lint.run/docs/welcome/integrations/#visual-studio-code
+  "go.lintTool": "golangci-lint-v2",
+  "go.lintFlags": [
+    "--path-mode=abs",
+    "--fast-only"
+  ],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint-v2"
+  },
+  "go.formatFlags": [
+    "fmt",
+    "--stdin"
+  ],
+  // Golang settings not in https://golangci-lint.run/docs/welcome/integrations/#visual-studio-code
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.ignoredError": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
   "html.format.preserveNewLines": false,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
