@@ -5,21 +5,23 @@
 # Stands for 5 years old.
 5() {
   echo -n "$(pbpaste)を5歳児に説明してください。" | pbcopy
-
   open https://gemini.google.com/gem/learning-coach
 }
 
 # Stands for 代表例 (daihyorei)
 dhr() {
   echo -n "$(pbpaste)の代表例を教えてください。" | pbcopy
+  open https://gemini.google.com/gem/learning-coach
+}
 
+gg() {
+  echo -n "$(pbpaste)という漢字の語源を教えてください。" | pbcopy
   open https://gemini.google.com/gem/learning-coach
 }
 
 # Stands for 教えて (oshiete)
 os() {
   echo -n "$(pbpaste)について教えてください。" | pbcopy
-
   open https://gemini.google.com/gem/learning-coach
 }
 
@@ -28,6 +30,13 @@ td() {
   echo -n "「$(pbcopy)」という記述は正しいですか？根拠条文または根拠判例など法的根拠も教えてください。" | pbcopy
   open https://gemini.google.com/gem/learning-coach
 }
+
+# stands for 和製英語 (wasei-eigo)
+ws() {
+  echo -n "$(pbpaste)は和製英語ですか？" | pbcopy
+  open https://gemini.google.com/gem/learning-coach
+}
+
 
 #
 # The learning coach gem with prompts that take more than one parameter.
