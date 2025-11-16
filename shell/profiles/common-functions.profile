@@ -156,8 +156,14 @@ my_ai() {
 
 my_backup_desktop() {
   local dir=~/Desktop/$(date +"%Y-%m-%d_%H-%M-%S")
-  mkdir -p "$dir"
-  mv ~/Desktop/* "$dir"/
+  mkdir -p "$dir" && mv ~/Desktop/* "$dir"/
+}
+
+my_cwebp() {
+  for image in ~/Desktop/*.{jpg,jpeg,png}(N)
+  do
+    cwebp -m 6 -mt -af "$image" -o "${image%.*}.webp" && rm -f "$image"
+  done
 }
 
 mkdircd() {
@@ -180,41 +186,11 @@ my_delete() {
   find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
 }
 
-my_download_chichibu_images() {
-  url="https://www.chichibuji.gr.jp/station-live/chichibu.jpg"
-  save_dir=~/Desktop/chichibu
-  mkdir -p "$save_dir"
-
-  while true
+my_ffmpeg() {
+  for file in ~/Desktop/*.mp4(N)
   do
-    filename="chichibu-$(date +"%Y-%m-%d_%H-%M-%S").jpg"
-    curl --silent --output "$save_dir/$filename" "$url"
-    sleep 600 # Waits for 10 minutes (600 seconds)
-  done
-}
-
-myffmpeg() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <mp4-or-webm>"
-    return
-  fi
-
-  extension=$1:e
-  # Without the extension, ffmpeg will get an "Unable to select an output format" error.
-  local temp=$(mktemp --dry-run).$extension
-  ffmpeg -i $1 $temp
-  mv $temp $1
-}
-
-# > "N" ... sets the NULL_GLOB option for the current pattern
-# https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers
-#
-# The N glob qualifier avoids treating the "*" in "*.mp4" as non-wildcard if there is no mp4 file if there is no mp4 file, and the "*" in "*.webm" as non-wildcard if there is no webm file if there is no webm file.
-myffmpeg_all() {
-  for file in ~/Desktop/*.(mp4|webm)(N)
-  do
-    myffmpeg "$file"
+    local temp=$(mktemp --dry-run).$file:e
+    ffmpeg -i "$file" "$temp" && mv "$temp" "$file"
   done
 }
 
