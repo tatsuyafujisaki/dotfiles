@@ -70,9 +70,9 @@ witd() {
 
   if [[ $# -lt 3 ]]
   then
-    echo -n "What is the difference between ${1} and ${2}?" | pbcopy
+    echo -n "What is the difference between the two items listed below?\n- ${1}\n- ${2}" | pbcopy
   else
-    echo -n "What is the difference among ${1}, ${2}, and ${3}?" | pbcopy
+    echo -n "What is the difference among the three items listed below?\n- ${1}\n- ${2}\n- ${3}" | pbcopy
   fi
 
   open https://gemini.google.com/gem/learning-coach
@@ -88,9 +88,9 @@ wsmn() {
 
   if [[ $# -lt 3 ]]
   then
-    echo -n "Which sounds more natural: ${1} or ${2}?" | pbcopy
+    echo -n "Which sounds more natural?\n- ${1}\n- ${2}" | pbcopy
   else
-    echo -n "Which sounds more natural: ${1}, ${2} or ${3}?" | pbcopy
+    echo -n "Which sounds more natural?\n- ${1}\n- ${2}\n- ${3}?" | pbcopy
   fi
 
   open https://gemini.google.com/gem/learning-coach
@@ -102,14 +102,14 @@ wsmn() {
 
 # Stands for "Fill in the blank."
 fb() {
-  echo -n "Fill in the blank below.\n\n\"$(pbpaste)\"" | pbcopy
+  echo -n "Fill in the blank below.\n\"$(pbpaste)\"" | pbcopy
 
   open https://gemini.google.com/gem/writing-editor
 }
 
 # Stands for Writing Editor.
 we() {
-  echo -n "Review the sentence(s) or phrase(s) below. Is it grammatically correct? Does it sound natural? Can you refine it?\n\n\"$(pbpaste)\"" | pbcopy
+  echo -n "Review the sentence(s) or phrase(s) below. Is it grammatically correct? Does it sound natural? Can you refine it?\n\"$(pbpaste)\"" | pbcopy
 
   open https://gemini.google.com/gem/writing-editor
 }
