@@ -17,7 +17,7 @@ cgi() {
     echo -n "${1}と${2}と${3}の違いを教えてください。" | pbcopy
   fi
 
-  open https://gemini.google.com/gem/learning-coach
+  open https://gemini.google.com/app
 }
 
 # Stands for "What is the difference?"
@@ -35,7 +35,7 @@ witd() {
     echo -n "What is the difference among the three items listed below?\n- ${1}\n- ${2}\n- ${3}" | pbcopy
   fi
 
-  open https://gemini.google.com/gem/learning-coach
+  open https://gemini.google.com/app
 }
 
 # Stands for "Which sounds more/most natural?"
@@ -53,7 +53,7 @@ wsmn() {
     echo -n "Which sounds more natural?\n- ${1}\n- ${2}\n- ${3}?" | pbcopy
   fi
 
-  open https://gemini.google.com/gem/learning-coach
+  open https://gemini.google.com/app
 }
 
 #
