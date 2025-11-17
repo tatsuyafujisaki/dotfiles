@@ -224,7 +224,7 @@ up() {
   brew cleanup --prune=all
   brew doctor
   gcloud components update --quiet
-  fvm flutter upgrade --force
-  fvm flutter doctor
+  command -v flutter >/dev/null && flutter upgrade --force
+  command -v fvm >/dev/null && fvm flutter doctor || command -v flutter >/dev/null && flutter doctor
   git_pull_all
 }
