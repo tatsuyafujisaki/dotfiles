@@ -194,7 +194,7 @@ my_ffmpeg() {
   done
 }
 
-myfind() {
+my_find() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <file-or-directory>"
@@ -202,6 +202,16 @@ myfind() {
   fi
 
   find . -iname "*$1*" 2>/dev/null
+}
+
+my_open_port() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <port>"
+    return
+  fi
+
+  lsof -i:$1 -t | xargs --no-run-if-empty kill
 }
 
 my_remove_compressed_pdf_suffix() {
