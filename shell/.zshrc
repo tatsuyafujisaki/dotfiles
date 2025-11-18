@@ -29,3 +29,9 @@ for profile in ~/Documents/GitHub/dotfiles/shell/profiles/*.profile ~/Documents/
 do
   . "$profile"
 done
+
+# https://direnv.net/docs/hook.html#zsh
+if command -v direnv >/dev/null 2>&1
+then
+  eval "$(direnv hook zsh)"
+fi
