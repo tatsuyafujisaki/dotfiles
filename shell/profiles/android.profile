@@ -36,7 +36,7 @@ grep -v com.piriform.ccleaner |\
 grep -v com.blogspot.newapphorizons.fakegps |\
 grep -v com.Slack |\
 grep -v dev.firebase.appdistribution |\
-xargs -n1 -r -t adb uninstall"
+xargs -n 1 --no-run-if-empty --verbose adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 alias logcat='adb logcat --clear && adb logcat -v tag' # https://developer.android.com/tools/logcat
