@@ -82,7 +82,6 @@ my_flutter() {
   fi
 }
 
-
 my_flutter_screenshot() {
   filepath="$HOME/Desktop/${1:-screenshot}.png" && \
   command -v fvm >/dev/null && fvm flutter screenshot --out="$filepath" || flutter screenshot --out="$filepath" && \
