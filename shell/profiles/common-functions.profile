@@ -160,9 +160,19 @@ my_backup_desktop() {
 }
 
 my_cwebp() {
-  for image in ~/Desktop/*.{jpg,jpeg,png}(N)
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <image>"
+    return
+  fi
+
+  cwebp -m 6 -mt -af "$1" -o "${1%.*}.webp" && rm -f "$1"
+}
+
+my_cwebp_all() {
+  for file in ~/Desktop/*.{jpg,jpeg,png}(N)
   do
-    cwebp -m 6 -mt -af "$image" -o "${image%.*}.webp" && rm -f "$image"
+    my_cwebp "$file"
   done
 }
 
@@ -187,10 +197,21 @@ my_delete() {
 }
 
 my_ffmpeg() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <video>"
+    return
+  fi
+
+  local temp
+  temp="$(mktemp --dry-run).${1:e}"
+  ffmpeg -i "$1" "$temp" && mv "$temp" "$1"
+}
+
+my_ffmpeg_all() {
   for file in ~/Desktop/*.mp4(N)
   do
-    local temp=$(mktemp --dry-run).$file:e
-    ffmpeg -i "$file" "$temp" && mv "$temp" "$file"
+    my_ffmpeg "$file"
   done
 }
 
@@ -235,6 +256,6 @@ up() {
   brew doctor
   gcloud components update --quiet
   command -v flutter >/dev/null && flutter upgrade --force
-  command -v fvm >/dev/null && fvm flutter doctor || command -v flutter >/dev/null && flutter doctor
+  command -v fvm >/dev/null && fvm flutter doctor || flutter doctor
   git_pull_all
 }
