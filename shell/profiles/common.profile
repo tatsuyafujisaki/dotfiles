@@ -35,10 +35,10 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 # https://cursor.com
 #
 
-alias c="$(command -v cursor || echo code) ."
-alias cdp="$(command -v cursor || echo code) ~/Documents/GitHub/dart_playground"
-alias cfpp="$(command -v cursor || echo code) ~/Documents/GitHub/flutter_playground"
-alias gp="$(command -v cursor || echo code) ~/Documents/GitHub/android-playground/gradle.properties"
+alias c="${$(command -v cursor):-code} ."
+alias cdp="${$(command -v cursor):-code} ~/Documents/GitHub/dart_playground"
+alias cfpp="${$(command -v cursor):-code} ~/Documents/GitHub/flutter_playground"
+alias gp="${$(command -v cursor):-code} ~/Documents/GitHub/android-playground/gradle.properties"
 
 #
 # https://nodejs.org

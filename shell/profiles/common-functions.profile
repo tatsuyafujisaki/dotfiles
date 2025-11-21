@@ -124,9 +124,9 @@ delete_ds_store() {
 # Stands for "Delete me".
 dm() {
   local dir=~/Desktop/deleteme
-  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir"
+  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return
   [[ $# -ge 1 ]] && touch "deleteme.$1"
-  $(command -v cursor || echo code) .
+  ${$(command -v cursor):-code} .
 }
 
 git_pull_all() {
