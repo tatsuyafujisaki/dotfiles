@@ -121,13 +121,12 @@ delete_ds_store() {
   sudo find / -type f -name .DS_Store -delete
 }
 
+# Stands for "Delete me".
 dm() {
   local dir=~/Desktop/deleteme
-  rm -r $dir
-  mkdir -p $dir
-  cd $dir
-  [[ $# -ge 1 ]] && touch deleteme.$1
-  code .
+  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir"
+  [[ $# -ge 1 ]] && touch "deleteme.$1"
+  $(command -v cursor || echo code) .
 }
 
 git_pull_all() {
