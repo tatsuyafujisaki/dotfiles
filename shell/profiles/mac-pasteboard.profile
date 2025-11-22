@@ -1,4 +1,11 @@
 #
+# Prompts that take one parameter for a special Gemini gem
+#
+
+# Stands for 教えて (oshiete)
+alias os='echo -n "$(pbpaste)について教えてください。" | pbcopy'
+
+#
 # Prompts that take more than one parameter
 #
 
