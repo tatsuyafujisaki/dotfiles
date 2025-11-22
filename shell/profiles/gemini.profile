@@ -69,7 +69,7 @@ fb() {
 
 # Stands for Writing Editor.
 we() {
-  echo -n "Proofread the sentence(s) or phrase(s) below. Is it grammatically correct? Does it sound natural? Can you refine it?\n\"$(pbpaste)\"" | pbcopy
+  echo -n "Proofread and refine the sentence(s) or phrase(s) below.\n\n\"$(pbpaste)\"\n\nIs it grammatically correct?\nDoes it sound natural?" | pbcopy
 
   open https://gemini.google.com/gem/writing-editor
 }
