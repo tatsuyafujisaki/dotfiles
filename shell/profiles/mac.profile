@@ -32,7 +32,6 @@ alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?Sp
 # Pasteboard
 #
 
-alias gogo='echo "Describe the program written in the Go programming language below.\n\n\`\`\`$(pbpaste)\n\`\`\`" | pbcopy'
 alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
