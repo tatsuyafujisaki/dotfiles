@@ -2,14 +2,14 @@
 # Prompts that take one parameter for a special Gemini gem
 #
 
-# Stands for 教えて (oshiete)
+# stands for 教えて (oshiete)
 alias os='echo -n "$(pbpaste)について教えてください。" | pbcopy'
 
 #
 # Prompts that take more than one parameter
 #
 
-# Stands for 違い (chigai).
+# stands for 違い (chigai).
 cgi() {
   if [[ $# -lt 2 ]]
   then
@@ -25,7 +25,7 @@ cgi() {
   fi
 }
 
-# Stands for "What is the difference?"
+# stands for "What is the difference?"
 witd() {
   if [[ $# -lt 2 ]]
   then
@@ -41,7 +41,7 @@ witd() {
   fi
 }
 
-# Stands for "Which sounds more/most natural?"
+# stands for "Which sounds more/most natural?"
 wsmn() {
   if [[ $# -lt 2 ]]
   then
@@ -67,8 +67,8 @@ alias gol='echo -n "Describe the program written in the Go programming language 
 # Prompts for language learning
 #
 
-# Stands for "Fill in the blank."
+# stands for "Fill in the blank."
 alias fb='echo -n "Fill in the blank below.\n\"$(pbpaste)\"" | pbcopy'
 
-# Stands for Writing Editor.
+# stands for Writing Editor.
 alias sn='echo -n "Proofread and refine \"$(pbpaste)\"\nDoes it sound natural?" | pbcopy'

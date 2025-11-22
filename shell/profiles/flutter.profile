@@ -1,17 +1,12 @@
 # adds "flutter" to PATH.
-[[ -d "$HOME/development/flutter/bin" ]] && export PATH="$PATH:$HOME/development/flutter/bin"
+[[ -d "$HOME/develop/flutter/bin" ]] && export PATH="$PATH:$HOME/develop/flutter/bin"
 
 # adds "fvm" to PATH.
 [[ -d "$HOME/.fvm_flutter/bin" ]] && export PATH="$PATH:$HOME/.fvm_flutter/bin"
 
-# adds "dart" and "flutter", which are installed via FVM, to PATH.
-# fvm_latest_installed_flutter_version=$(ls -1 "$HOME/fvm/versions" 2>/dev/null | tail -1)
-# [[ -n "$fvm_latest_installed_flutter_version" && -d "$HOME/fvm/versions/$fvm_latest_installed_flutter_version/bin" ]] && export PATH="$PATH:$HOME/fvm/versions/$fvm_latest_installed_flutter_version/bin"
-
-# adds executables such as "flutterfire" and "protoc", which are installed via "dart pub global activate <package_name>", to PATH.
+# adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>", and "fvm".
 # https://firebase.google.com/docs/flutter/setup
-# https://grpc.io/docs/languages/dart/quickstart
-# https://pub.dev/packages/protoc_plugin
+# https://fvm.app/documentation/getting-started/installation#path-configuration
 [[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$PATH:$HOME/.pub-cache/bin"
 
 #
