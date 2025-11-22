@@ -71,4 +71,4 @@ alias gol='echo -n "Describe the program written in the Go programming language 
 alias fb='echo -n "Fill in the blank below.\n\"$(pbpaste)\"" | pbcopy'
 
 # Stands for Writing Editor.
-alias we='echo -n "Proofread and refine the sentence(s) or phrase(s) below.\n\n\"$(pbpaste)\"\n\nDoes it sound natural?" | pbcopy'
+alias sn='echo -n "Proofread and refine \"$(pbpaste)\"\nDoes it sound natural?" | pbcopy'
