@@ -19,12 +19,27 @@ cgi() {
 
   if [[ $# -lt 3 ]]
   then
-    echo -n "${1}と${2}の違いを教えてください。" | pbcopy
+    echo -n "以下の違いを教えてください。\n- ${1}\n- ${2}" | pbcopy
   else
-    echo -n "${1}と${2}と${3}の違いを教えてください。" | pbcopy
+    echo -n "以下の違いを教えてください。\n- ${1}\n- ${2}\n- ${3}" | pbcopy
   fi
 }
 
+# stands for 一般的 (ippanteki).
+ip() {
+  if [[ $# -lt 2 ]]
+  then
+    echo "Usage: $0 <keyword1> <keyword2> [keyword3]"
+    return
+  fi
+
+  if [[ $# -lt 3 ]]
+  then
+    echo -n "以下のどちらの表現がより一般的ですか。\n- ${1}\n- ${2}" | pbcopy
+  else
+    echo -n "以下のどの表現が最も一般的ですか。\n- ${1}\n- ${2}\n- ${3}" | pbcopy
+  fi
+}
 # stands for "What is the difference?"
 witd() {
   if [[ $# -lt 2 ]]
