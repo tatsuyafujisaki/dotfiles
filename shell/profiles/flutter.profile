@@ -64,13 +64,13 @@ my_flutter() {
   if command -v fvm >/dev/null
   then
     fvm flutter pub get && \
-    fvm dart run build_runner build && \
+    fvm dart run build_runner build --delete-conflicting-outputs && \
     fvm dart fix --apply && \
     fvm dart format . && \
     fvm flutter analyze
   else
     flutter pub get && \
-    dart run build_runner build && \
+    dart run build_runner build --delete-conflicting-outputs && \
     dart fix --apply && \
     dart format . && \
     flutter analyze
