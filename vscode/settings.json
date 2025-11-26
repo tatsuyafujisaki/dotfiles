@@ -82,6 +82,10 @@
   "go.inlayHints.parameterNames": true,
   "go.inlayHints.rangeVariableTypes": true,
   "go.lintOnSave": "workspace",
+  // https://marketplace.visualstudio.com/items?itemName=golang.Go#:~:text=For%20better%20syntax%20highlighting,%20we%20recommend%20enabling%20semantic%20highlighting%20by%20turning%20on%20Gopls'%20ui.semanticTokens%20setting.%20%22gopls%22:%20{%20%22ui.semanticTokens%22:%20true%20}
+  "gopls": {
+    "ui.semanticTokens": true
+  },
   "html.format.preserveNewLines": false,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
