@@ -32,7 +32,10 @@ clean() {
   sudo find ~ -type f -name .DS_Store -delete
 
   # Deletes Chrome RLZ.
-  rm -fr ~/Library/Application\ Support/Google/RLZ
+  rm -fr "$HOME/Library/Application Support/Google/RLZ"
+
+  # Delete the prompt history for the Cursor editor.
+  rm -fr "$HOME/Library/Application Support/Cursor/User/workspaceStorage"
 
   # Deletes folders and files for Android development.
   find ~/.android/avd -type f -name cache.img*
