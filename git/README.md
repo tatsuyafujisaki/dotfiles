@@ -9,8 +9,24 @@
 # How to create `~/.gitignore` on macOS
 
 ```shell
-curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/{Android,Dart,Firebase,Flutter,Gradle,Kotlin,Swift}.gitignore > ~/.gitignore
-curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/{macOS,VisualStudioCode,Xcode}.gitignore >> ~/.gitignore
+# https://github.com/github/gitignore
+
+curl --location https://raw.githubusercontent.com/github/gitignore/refs/heads/main/{\
+Android,\
+Dart,\
+Firebase,\
+Flutter,\
+Gradle,\
+Kotlin,\
+Swift\
+}.gitignore --output ~/.gitignore
+
+curl --location https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/{\
+Cursor,\
+macOS,\
+VisualStudioCode,\
+Xcode\
+}.gitignore >> ~/.gitignore
 
 cat >> ~/.gitignore << 'EOF'
 
