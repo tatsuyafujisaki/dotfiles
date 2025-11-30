@@ -237,9 +237,19 @@ my_open_port() {
   lsof -i:$1 -t | xargs --no-run-if-empty kill
 }
 
-my_remove_compressed_pdf_suffix() {
-  for file in ~/Desktop/*-compressed.pdf; do
+# Removes the '-compressed' suffix from the names of PDF files on Desktop.
+my_remove_compressed_suffix() {
+  for file in ~/Desktop/*-compressed.pdf
+  do
     mv -- "$file" "${file/-compressed/}"
+  done
+}
+
+# Removes the ' (1)' suffix from the names of files on Desktop.
+my_remove_parenthesized_one_suffix() {
+  for file in ~/Desktop/*\ \(1\)*(N)
+  do
+    mv -- "$file" "${file/ \(1\)/}"
   done
 }
 
