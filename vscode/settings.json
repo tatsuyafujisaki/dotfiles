@@ -21,7 +21,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.guides.bracketPairs": true,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "other": false
