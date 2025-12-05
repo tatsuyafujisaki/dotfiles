@@ -1,22 +1,14 @@
-# Adds HomeBrew to PATH.
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+# Adds homebrew to PATH.
+export PATH="$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH"
 
-# Adds the executable "java_home", which returns the value of $JAVA_HOME, to PATH.
-export PATH="$PATH:/usr/libexec"
+# Adds java_home to PATH.
+export PATH="/usr/libexec:$PATH"
 
-# Adds Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
-[[ -d "/opt/homebrew/opt/ruby/bin" ]] && export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# Adds python (Pyton 3) to PATH.
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
-l() {
-  clear
-
-  # Prints non-dotfiles and non-dotdirectories and a blank line.
-  # `.[^.]*` is a Zsh glob pattern to except `.` and `..`.
-  ls -d -F -G -h -l .[^.]* 2> /dev/null && echo
-
-  # Prints non-dotfiles and non-dotdirectories.
-  ls -d -F -G -h -l * 2> /dev/null
-}
+# Adds ruby (Ruby 3) to PATH.
+export PATH="$(brew --prefix ruby)/bin:$PATH"
 
 #
 # Preferences
@@ -32,25 +24,28 @@ alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?Sp
 # Pasteboard
 #
 
+alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
 alias pbnn='pbpaste | tr -s "\n" | pbcopy' # stands for "pasteboard removing \n\n.
 alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
-alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
 alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
 
 #
-# Xcode
+# https://developer.apple.com/xcode/
 #
-
-# "simctl" stands for simulator control, which means it does not apply to physical iOS devices.
-xcrv() {
-  local outputfile=screencast.mp4
-  rm $outputfile
-  xcrun simctl io booted recordVideo $outputfile
-}
 
 alias oas='open -a simulator'
 alias oios='open ios/Runner.xcworkspace'
+
+# "xcrv" stands for record video.
+# "xcrun" stands for Xcode Run.
+# "simctl" stands for simulator control.
+xcrv() {
+  local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+  xcrun simctl io booted recordVideo "$timestamp.mp4"
+  my_ffmpeg "${timestamp}.mp4"
+  open "${timestamp}.mp4"
+}
 
 #
 # https://cocoapods.org
@@ -72,12 +67,6 @@ alias bu='brew uninstall --force --zap'
 # --greedy applies only to casks.
 # Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
 alias bug='brew upgrade --greedy'
-
-#
-# Python
-#
-
-export PATH="$PATH:$(brew --prefix python)/libexec/bin"
 
 #
 # Miscellaneous

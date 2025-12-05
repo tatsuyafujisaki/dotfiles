@@ -1,9 +1,9 @@
 # https://developer.android.com/tools/variables#set
 export ANDROID_HOME=~/Library/Android/sdk
-[[ -d "$ANDROID_HOME/cmdline-tools/latest/bin" ]] && export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-[[ -d "$ANDROID_HOME/emulator" ]] && export PATH="$PATH:$ANDROID_HOME/emulator"
-[[ -d "$ANDROID_HOME/platform-tools" ]] && export PATH="$PATH:$ANDROID_HOME/platform-tools"
-[[ -d "$ANDROID_HOME/tools/bin" ]] && export PATH="$PATH:$ANDROID_HOME/tools/bin"
+[[ -d "$ANDROID_HOME/cmdline-tools/latest/bin" ]] && export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+[[ -d "$ANDROID_HOME/emulator" ]] && export PATH="$ANDROID_HOME/emulator:$PATH"
+[[ -d "$ANDROID_HOME/platform-tools" ]] && export PATH="$ANDROID_HOME/platform-tools:$PATH"
+[[ -d "$ANDROID_HOME/tools/bin" ]] && export PATH="$ANDROID_HOME/tools/bin:$PATH"
 
 #
 # https://developer.android.com/tools/adb
@@ -51,7 +51,7 @@ my_adb_emu_geo_fix() {
   if [[ $# -lt 2 ]]
   then
     echo "Usage: $0 <longitude> <latitude>"
-    return
+    return 1
   fi
   adb emu geo fix ${1} ${2}
 }
@@ -59,8 +59,8 @@ my_adb_emu_geo_fix() {
 my_adb_pull_camera_image_or_video() {
   if [[ $# -lt 1 ]]
   then
-    echo "Usage: $0 <image or video filename>"
-    return
+    echo "Usage: $0 <image or video>"
+    return 1
   fi
   adb pull /storage/emulated/0/DCIM/Camera/${1} ~/Desktop
 }
@@ -77,7 +77,7 @@ my_start_emulator() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <adb-device>"
-    return
+    return 1
   fi
 
   emulator @${1} &|

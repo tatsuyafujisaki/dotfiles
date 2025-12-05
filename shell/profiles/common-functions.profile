@@ -127,7 +127,7 @@ delete_ds_store() {
 # Stands for "Delete me".
 dm() {
   local dir=~/Desktop/deleteme
-  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return
+  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return 1
   [[ $# -ge 1 ]] && touch "deleteme.$1"
   ${$(command -v cursor):-code} .
 }
@@ -141,6 +141,17 @@ git_pull_all() {
     popd
   done
   popd
+}
+
+l() {
+  clear
+
+  # Prints non-dotfiles and non-dotdirectories and a blank line.
+  # `.[^.]*` is a Zsh glob pattern to except `.` and `..`.
+  ls -d -F -G -h -l .[^.]* 2> /dev/null && echo
+
+  # Prints non-dotfiles and non-dotdirectories.
+  ls -d -F -G -h -l * 2> /dev/null
 }
 
 my_ai() {
@@ -164,7 +175,7 @@ my_backup_desktop() {
 my_cwebp() {
   if [[ $# -lt 1 ]]
   then
-    echo "Usage: $0 <image>" >&2
+    echo "Usage: $0 <image>"
     return 1
   fi
 
@@ -178,46 +189,45 @@ my_cwebp() {
   fi
 }
 
-my_cwebp_all() {
+my_cwebp_desktop() {
   for file in ~/Desktop/*.{jpg,jpeg,png}(N)
   do
     my_cwebp "$file"
   done
 }
 
-mkdircd() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <directory>"
-    return
-  fi
-
-  mkdir -p "$1" && cd "$1"
+my_date() {
+  date +"%Y-%m-%d_%H-%M-%S"
 }
 
 my_delete() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <file-or-directory>"
-    return
+    return 1
   fi
 
   find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
 }
 
 my_ffmpeg() {
-  if [[ $# -lt 1 ]]
+  if [[ ! -f "$1" ]]
   then
     echo "Usage: $0 <video>"
-    return
+    return 1
   fi
 
-  local temp
-  temp="$(mktemp --dry-run).${1:e}"
-  ffmpeg -i "$1" "$temp" && mv "$temp" "$1"
+  local temp="$(mktemp --dry-run).${1:e}"
+  if ffmpeg -i "$1" "$temp" && mv "$temp" "$1"
+  then
+    echo "$1"
+    return 0
+  else
+    return 1
+  fi
 }
 
-my_ffmpeg_all() {
+my_ffmpeg_desktop() {
   for file in ~/Desktop/*.mp4(N)
   do
     my_ffmpeg "$file"
@@ -228,17 +238,27 @@ my_find() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <file-or-directory>"
-    return
+    return 1
   fi
 
   find . -iname "*$1*" 2>/dev/null
+}
+
+my_mkdir() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <directory>"
+    return 1
+  fi
+
+  mkdir -p "$1" && cd "$1"
 }
 
 my_open_port() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <port>"
-    return
+    return 1
   fi
 
   lsof -i:$1 -t | xargs --no-run-if-empty kill
@@ -258,15 +278,6 @@ my_remove_parenthesized_one_suffix() {
   do
     mv -- "$file" "${file/ \(1\)/}"
   done
-}
-
-my_set_java_home() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <version>"
-    return
-  fi
-  export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
 }
 
 up() {

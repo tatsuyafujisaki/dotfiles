@@ -44,7 +44,7 @@ alias gp="${$(command -v cursor):-code} ~/Documents/GitHub/android-playground/gr
 # https://nodejs.org
 #
 
-export PATH="$PATH:/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin" # makes the Gemini CLI command `gemini` available.
+export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH" # makes the Gemini CLI command `gemini` available.
 
 #
 # https://www.npmjs.com
@@ -94,14 +94,14 @@ alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -
 # JDK (Java Development Kit)
 #
 
-alias jh='/usr/libexec/java_home --verbose'
+alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Development Kit (JDK).
 
 #
 # https://asdf-vm.com
 #
 
 # Adds tools installed via asdf to PATH.
-[[ -d "$HOME/.asdf/shims" ]] && export PATH="$PATH:$HOME/.asdf/shims"
+[[ -d "$HOME/.asdf/shims" ]] && export PATH="$HOME/.asdf/shims:$PATH"
 
 #
 # Miscellaneous aliases

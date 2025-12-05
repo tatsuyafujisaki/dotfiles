@@ -1,13 +1,13 @@
 # adds "flutter" to PATH.
-[[ -d "$HOME/develop/flutter/bin" ]] && export PATH="$PATH:$HOME/develop/flutter/bin"
+[[ -d "$HOME/develop/flutter/bin" ]] && export PATH="$HOME/develop/flutter/bin:$PATH"
 
 # adds "fvm" to PATH.
-[[ -d "$HOME/.fvm_flutter/bin" ]] && export PATH="$PATH:$HOME/.fvm_flutter/bin"
+[[ -d "$HOME/.fvm_flutter/bin" ]] && export PATH="$HOME/.fvm_flutter/bin:$PATH"
 
 # adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>", and "fvm".
 # https://firebase.google.com/docs/flutter/setup
 # https://fvm.app/documentation/getting-started/installation#path-configuration
-[[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$PATH:$HOME/.pub-cache/bin"
+[[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$HOME/.pub-cache/bin:$PATH"
 
 #
 # https://dart.dev/tools/dart-tool
@@ -54,7 +54,7 @@ my_flutter_pub_global_activate() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <package>"
-    return
+    return 1
   fi
 
   command -v fvm >/dev/null && fvm flutter pub global activate $1 || flutter pub global activate $1
@@ -79,14 +79,15 @@ my_flutter() {
 
 my_flutter_screenshot() {
   cd ~/Desktop
-  if command -v fvm >/dev/null; then
+  if command -v fvm >/dev/null
+  then
     fvm flutter screenshot --out="screenshot.png"
   else
     flutter screenshot --out="screenshot.png"
   fi
 
-  local timestamp=$(date +"%Y-%m-%d_%H-%M%S").png
-  mv screenshot.png $timestamp
-  open $timestamp
+  local timestamp=$(date +"%Y-%m-%d_%H-%M%S")
+  mv screenshot.png "${timestamp}.png"
+  open "${timestamp}.png"
   cd -
 }
