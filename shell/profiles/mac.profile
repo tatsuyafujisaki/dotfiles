@@ -5,7 +5,7 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/usr/libexec"
 
 # Adds Ruby 3 installed via Homebrew to PATH before pre-installed Ruby 2.
-[[ -d "/opt/homebrew/opt/ruby/bin" ]] && export PATH="$PATH:/opt/homebrew/opt/ruby/bin"
+[[ -d "/opt/homebrew/opt/ruby/bin" ]] && export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 l() {
   clear
