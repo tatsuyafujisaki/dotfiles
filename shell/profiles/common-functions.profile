@@ -164,11 +164,18 @@ my_backup_desktop() {
 my_cwebp() {
   if [[ $# -lt 1 ]]
   then
-    echo "Usage: $0 <image>"
-    return
+    echo "Usage: $0 <image>" >&2
+    return 1
   fi
 
-  cwebp -m 6 -mt -af "$1" -o "${1%.*}.webp" && rm -f "$1"
+  local output_file="${1%.*}.webp"
+  if cwebp -m 6 -mt -af "$1" -o "$output_file" && rm -f "$1"
+  then
+    echo "$output_file"
+    return 0
+  else
+    return 1
+  fi
 }
 
 my_cwebp_all() {
