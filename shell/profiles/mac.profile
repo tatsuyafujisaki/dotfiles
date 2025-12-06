@@ -24,10 +24,11 @@ alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?Sp
 # Pasteboard
 #
 
-alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
+alias pbbp='pbpaste | sed "s/^/- /" | pbcopy' # stands for "pasteboard bullet points".
 alias pbnn='pbpaste | tr -s "\n" | pbcopy' # stands for "pasteboard removing \n\n.
 alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
+alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
 alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
 
 #
