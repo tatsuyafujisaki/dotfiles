@@ -132,17 +132,6 @@ dm() {
   ${$(command -v cursor):-code} .
 }
 
-git_pull_all() {
-  pushd ~/Documents/GitHub
-  for dir in */
-  do
-    pushd $dir
-    gg # is a function defined in this file.
-    popd
-  done
-  popd
-}
-
 l() {
   clear
 
@@ -244,6 +233,17 @@ my_find() {
   find . -iname "*$1*" 2>/dev/null
 }
 
+my_git_pull_all() {
+  pushd ~/Documents/GitHub
+  for dir in */
+  do
+    pushd $dir
+    gg # is a function defined in this file.
+    popd
+  done
+  popd
+}
+
 my_mkdir() {
   if [[ $# -lt 1 ]]
   then
@@ -287,5 +287,6 @@ up() {
   gcloud components update --quiet
   command -v flutter >/dev/null && flutter upgrade --force
   command -v fvm >/dev/null && fvm flutter doctor || flutter doctor
-  git_pull_all
+  my_upgrade_golang
+  my_git_pull_all
 }
