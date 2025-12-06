@@ -24,7 +24,7 @@ alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?Sp
 # Pasteboard
 #
 
-alias pbbp='pbpaste | sed "s/^/- /" | pbcopy' # stands for "pasteboard bullet points".
+alias pbl='pbpaste | sed "s/^/- /" | pbcopy' # stands for "pasteboard unordered list".
 alias pbnn='pbpaste | tr -s "\n" | pbcopy' # stands for "pasteboard removing \n\n.
 alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
