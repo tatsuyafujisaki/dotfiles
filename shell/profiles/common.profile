@@ -57,7 +57,9 @@ alias npmug='npm uninstall --global'
 # https://pnpm.io
 #
 
-[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/pnpm:$PATH"
+[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/:$PATH"
+
+alias my_install_pnpm='curl -fsSL https://get.pnpm.io/install.sh | sh -'
 
 #
 # https://pip.pypa.io

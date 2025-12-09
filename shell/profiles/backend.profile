@@ -20,7 +20,7 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 alias goci='golangci-lint run --fix'
 
 # https://golangci-lint.run/docs/welcome/install/#binaries
-alias install_golangci_lint='curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin'
+alias my_install_golangci_lint='curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin'
 
 #
 # Note
