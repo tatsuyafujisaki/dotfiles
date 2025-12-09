@@ -17,7 +17,7 @@ export PATH="$(go env GOROOT)/bin:$PATH"
 export PATH="$(go env GOPATH)/bin:$PATH"
 
 # https://golangci-lint.run/docs/welcome/quick-start/#linting
-alias glr='golangci-lint run --fix'
+alias goci='golangci-lint run --fix'
 
 my_upgrade_golang() {
   # Note
