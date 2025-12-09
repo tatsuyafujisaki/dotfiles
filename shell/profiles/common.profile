@@ -44,7 +44,7 @@ alias gp="${$(command -v cursor):-code} ~/Documents/GitHub/android-playground/gr
 # https://nodejs.org
 #
 
-export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH" # makes the Gemini CLI command `gemini` available.
+[[ -d "/opt/homebrew/Cellar/node" ]] && export PATH="/opt/homebrew/Cellar/node/$(ls -1 /opt/homebrew/Cellar/node)/bin:$PATH" # makes the Gemini CLI command `gemini` available.
 
 #
 # https://www.npmjs.com
