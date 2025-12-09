@@ -54,6 +54,12 @@ alias npmig='npm install --global'
 alias npmug='npm uninstall --global'
 
 #
+# https://pnpm.io
+#
+
+[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/pnpm:$PATH"
+
+#
 # https://pip.pypa.io
 #
 
