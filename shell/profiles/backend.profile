@@ -19,13 +19,14 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 # https://golangci-lint.run/docs/welcome/quick-start/#linting
 alias goci='golangci-lint run --fix'
 
-my_upgrade_golang() {
-  # Note
-  # You don't have to install `goimports` separately if you are using the modern Go language server, `gopls` because `gopls` integrates `goimports`.
+# https://golangci-lint.run/docs/welcome/install/#binaries
+alias install_golangci_lint='curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin'
 
-  # Manually upgrade the Go programming language.
-  # https://go.dev/doc/install
+#
+# Note
+#
 
-  # https://golangci-lint.run/docs/welcome/install/#binaries
-  curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
-}
+# You don't have to install `goimports` separately if you are using the modern Go language server, `gopls` because `gopls` integrates `goimports`.
+
+# There is no official way to upgrade the Go programming language in Terminal.
+# https://go.dev/doc/install
