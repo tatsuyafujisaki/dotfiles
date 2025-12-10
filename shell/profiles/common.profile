@@ -5,6 +5,13 @@ export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
+
+#
+# https://antigravity.google
+#
+
+[[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
 #
 # https://cloud.google.com/sdk
 #
