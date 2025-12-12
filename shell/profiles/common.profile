@@ -5,7 +5,6 @@ export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
-
 #
 # https://antigravity.google
 #
@@ -64,7 +63,7 @@ alias npmug='npm uninstall --global'
 # https://pnpm.io
 #
 
-[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/:$PATH"
+[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/pnpm:$PATH"
 
 alias my_install_pnpm='curl -fsSL https://get.pnpm.io/install.sh | sh -'
 
