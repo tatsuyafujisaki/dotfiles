@@ -79,9 +79,11 @@ alias pipu='pip3 uninstall --yes'
 # https://cli.github.com
 #
 
-alias pr='gh pr create --assignee @me --web'
-alias prl='gh pr list --web'
-alias prv='gh pr view --web'
+alias ghpr='gh pr create --assignee @me --web'
+alias ghprl='gh pr list --web'
+alias ghprv='gh pr view --web'
+alias ghrl='gh release list'
+alias ghrv='gh repo view --web'
 
 # "build" means Flutter's build directory.
 # https://man.freebsd.org/cgi/man.cgi?query=grep
