@@ -31,18 +31,12 @@
 [rebase]
     autoSquash = true
     autoStash = true
-[diff]
-    tool = vscode
 [difftool]
     prompt = false
-[difftool "vscode"]
-    cmd = code -w -d $LOCAL $REMOTE
-[merge]
-    tool = vscode
+    cmd = agy --wait --diff $LOCAL $REMOTE
 [mergetool]
     prompt = false
-[mergetool "vscode"]
-    cmd = code -w $MERGED
+    cmd = agy --wait $MERGED
 [alias]
     # --no-verify bypasses the pre-commit and commit-msg hooks.
     # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message.
