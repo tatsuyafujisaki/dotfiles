@@ -14,14 +14,6 @@
     prune = true
     pruneTags = true
     recurseSubmodules = true
-# The configurations below are generated automatically upon installation of GitHub Desktop.
-# https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/about-git-large-file-storage-and-github-desktop
-# https://git-scm.com/docs/gitattributes#_filter
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
 [http]
     emptyAuth = true # prevents "remote: HTTP Basic: Accesss denied" when cloning a repository. https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
 [pager]
@@ -31,11 +23,17 @@
 [rebase]
     autoSquash = true
     autoStash = true
+[diff]
+    tool = mytool
 [difftool]
     prompt = false
+[difftool "mytool"]
     cmd = agy --wait --diff $LOCAL $REMOTE
+[merge]
+    tool = mytool
 [mergetool]
     prompt = false
+[mergetool "mytool"]
     cmd = agy --wait $MERGED
 [alias]
     # --no-verify bypasses the pre-commit and commit-msg hooks.
@@ -73,3 +71,11 @@
     rsh3 = reset HEAD~3 --hard
     st = stash push --include-untracked
     sw = switch
+# The configurations below are generated automatically upon installation of GitHub Desktop.
+# https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/about-git-large-file-storage-and-github-desktop
+# https://git-scm.com/docs/gitattributes#_filter
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
