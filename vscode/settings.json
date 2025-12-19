@@ -12,6 +12,9 @@
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
+  "debug.openExplorerOnEnd": true,
+  "debug.showVariableTypes": true,
+  "debug.terminal.clearBeforeReusing": true,
   // "editor.codeActionsOnSave": {
   //   "source.fixAll": "always",
   //   "source.organizeImports": "always",
