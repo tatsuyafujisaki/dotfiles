@@ -7,7 +7,7 @@
     requireForce = true # prevents "git clean" without "-f" from causing an error.
 [core]
     autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
-    editor = code -w
+    editor = agy --wait # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
     excludesFile = ~/.gitignore
     ignoreCase = false
 [fetch]
