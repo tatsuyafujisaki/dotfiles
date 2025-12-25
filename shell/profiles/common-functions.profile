@@ -288,6 +288,6 @@ up() {
   command -v flutter >/dev/null && flutter upgrade --force
   command -v fvm >/dev/null && fvm flutter doctor || flutter doctor
   my_install_golangci_lint
-  my_install_pnpm
+  my_install_yamlfmt
   my_git_pull_all
 }

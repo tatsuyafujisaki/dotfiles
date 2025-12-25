@@ -118,7 +118,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "yaml.format.singleQuote": true,
   // https://dartcode.org/docs/recommended-settings/
   "[dart]": {
     // Automatically format code on save and during typing of certain characters
