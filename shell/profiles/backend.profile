@@ -24,6 +24,7 @@ alias my_install_golangci_lint='curl -sSfL https://raw.githubusercontent.com/gol
 
 # https://github.com/google/yamlfmt
 alias my_install_yamlfmt='go install github.com/google/yamlfmt/cmd/yamlfmt@latest'
+alias yf='yamlfmt **/*.{yaml,yml}'
 
 #
 # Note
