@@ -206,18 +206,21 @@ my_ffmpeg() {
     return 1
   fi
 
-  local temp="$(mktemp --dry-run).${1:e}"
-  if ffmpeg -i "$1" "$temp" && mv "$temp" "$1"
+  local output="${1%.*}.mp4"
+  local temp="$(mktemp --dry-run).mp4"
+  if ffmpeg -i "$1" "$temp"
   then
-    echo "$1"
+    [[ "$1" != "$output" ]] && rm -f "$1"
+    mv "$temp" "$output"
     return 0
   else
+    rm -f "$temp"
     return 1
   fi
 }
 
 my_ffmpeg_desktop() {
-  for file in ~/Desktop/*.mp4(N)
+  for file in ~/Desktop/*.{mov,mp4}(N)
   do
     my_ffmpeg "$file"
   done
