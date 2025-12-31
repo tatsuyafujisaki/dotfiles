@@ -30,8 +30,7 @@ alias asl='cd ~/Documents/GitHub/apps-script-library'
 alias d='cd ~/Desktop'
 alias df='cd ~/Documents/GitHub/dotfiles'
 alias dnp='cd ~/Documents/GitHub/deno-playground'
-alias dp='cd ~/Documents/GitHub/dart_playground'
-alias fp='cd ~/Documents/GitHub/flutter_playground'
+alias fp='cd ~/Documents/GitHub/flutter-playground'
 alias h='cd ~/Documents/GitHub'
 alias jp='cd ~/Documents/GitHub/java-playground'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
@@ -42,8 +41,6 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 #
 
 alias c="${$(command -v cursor):-code} ."
-alias cdp="${$(command -v cursor):-code} ~/Documents/GitHub/dart_playground"
-alias cfpp="${$(command -v cursor):-code} ~/Documents/GitHub/flutter_playground"
 alias gp="${$(command -v cursor):-code} ~/Documents/GitHub/android-playground/gradle.properties"
 
 #
