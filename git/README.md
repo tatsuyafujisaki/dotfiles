@@ -19,16 +19,16 @@ Flutter,\
 Gradle,\
 Kotlin,\
 Swift\
-}.gitignore --output ~/.gitignore
+}.gitignore --output .gitignore
 
 curl --location https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Global/{\
 Cursor,\
 macOS,\
 VisualStudioCode,\
 Xcode\
-}.gitignore >> ~/.gitignore
+}.gitignore >> .gitignore
 
-cat >> ~/.gitignore << 'EOF'
+cat >> .gitignore << 'EOF'
 
 # https://developer.android.com/studio/publish/app-signing
 keystore.properties
