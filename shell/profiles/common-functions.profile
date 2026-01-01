@@ -288,8 +288,8 @@ up() {
   brew cleanup --prune=all
   brew doctor
   gcloud components update --quiet
-  command -v flutter >/dev/null && flutter upgrade --force
-  command -v fvm >/dev/null && fvm flutter doctor || flutter doctor
+  flutter upgrade --force
+  flutter doctor
   my_git_pull_all
   my_install_golangci_lint
   my_install_yamlfmt
