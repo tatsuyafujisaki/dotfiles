@@ -43,9 +43,6 @@
   },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
-  "files.exclude": {
-    "**/.git": true,
-  },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
