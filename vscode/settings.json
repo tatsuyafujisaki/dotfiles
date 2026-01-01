@@ -44,11 +44,7 @@
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/.fvm": true,
     "**/.git": true,
-    "**/.pub-cache": true,
-    "**/*.freezed.dart": true,
-    "**/*.g.dart": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
