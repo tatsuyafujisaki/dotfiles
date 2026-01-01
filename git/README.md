@@ -11,7 +11,7 @@
 ```shell
 rm -f ~/.gitignore
 
-for type in Cursor macOS VisualStudioCode Xcode
+for type in Cursor JetBrains macOS VisualStudioCode Xcode
 do
   {
     echo "### $type.gitignore ###"
