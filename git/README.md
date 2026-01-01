@@ -7,18 +7,42 @@
    ```
 
 # How to create `~/.gitignore`
+1. Run the script below.
+   ```shell
+   rm -f ~/.gitignore
+   
+   for type in Cursor JetBrains macOS VisualStudioCode Xcode
+   do
+     {
+       echo "#"
+       echo "# https://github.com/github/gitignore/blob/main/Global/$type.gitignore"
+       echo "#"
+       echo ""
+       curl --location --silent "https://raw.githubusercontent.com/github/gitignore/main/Global/$type.gitignore"
+       echo ""
+     } >> ~/.gitignore
+   done
+   ```
+2. Append the following.
+   ```gitignore
+   .idea/
+   ```
+   
+# How to create `~/.gitignore` for each project
 
 ```shell
-rm -f ~/.gitignore
+rm -f .gitignore
 
-for type in Cursor JetBrains macOS VisualStudioCode Xcode
+# Only select what you need.
+for type in Android Dart Firebase Flutter Gradle Java Kotlin Swift
 do
   {
-    echo "### $type.gitignore ###"
-    echo "# Source: https://github.com/github/gitignore/blob/main/Global/$type.gitignore"
+    echo "#"
+    echo "# https://github.com/github/gitignore/blob/main/$type.gitignore"
+    echo "#"
     echo ""
-    curl --location --silent "https://raw.githubusercontent.com/github/gitignore/main/Global/$type.gitignore"
+    curl --location --silent "https://raw.githubusercontent.com/github/gitignore/main/$type.gitignore"
     echo ""
-  } >> ~/.gitignore
+  } >> .gitignore
 done
 ```
