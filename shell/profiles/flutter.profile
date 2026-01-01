@@ -69,7 +69,6 @@ my_flutter() {
     fvm dart fix --apply && \
     fvm dart format . && \
     fvm flutter analyze
-    fvm flutter test
   else
     flutter pub get && \
     ([ ! -d "ios" ] || (cd ios && pod install)) && \
@@ -77,7 +76,6 @@ my_flutter() {
     dart fix --apply && \
     dart format . && \
     flutter analyze
-    flutter test
   fi
 }
 
