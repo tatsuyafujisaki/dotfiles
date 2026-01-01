@@ -21,6 +21,8 @@
   //   "source.sortMembers": "always"
   // },
   "editor.copyWithSyntaxHighlighting": false,
+  "editor.find.history": "never",
+  "editor.find.replaceHistory": "never",
   "editor.find.globalFindClipboard": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -103,6 +105,7 @@
   // "search.smartCase": true,
   "security.workspace.trust.enabled": false,
   "telemetry.enableTelemetry": false,
+  "terminal.integrated.enablePersistentSessions": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
