@@ -1,8 +1,8 @@
 # adds "flutter" to PATH.
 [[ -d "$HOME/develop/flutter/bin" ]] && export PATH="$HOME/develop/flutter/bin:$PATH"
 
-# adds "fvm" to PATH.
-[[ -d "$HOME/.fvm_flutter/bin" ]] && export PATH="$HOME/.fvm_flutter/bin:$PATH"
+# prioritizes the "flutter" command in the current project if present.
+export PATH=".fvm/flutter_sdk/bin:$PATH"
 
 # adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>", and "fvm".
 # https://firebase.google.com/docs/flutter/setup
