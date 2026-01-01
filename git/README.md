@@ -47,8 +47,8 @@ GoogleService-Info.plist
 
 # https://docs.flutter.dev/ui/internationalization
 lib/l10n/app_localizations.dart
-lib/l10n/app_localizations_en.dart
-lib/l10n/app_localizations_ja.dart
+lib/l10n/app_localizations_*.dart # e.g. app_localizations_en.dart and app_localizations_ja.dart
+lib/l10n/untranslated.txt
 
 # https://fvm.app
 .fvm/
