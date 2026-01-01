@@ -64,6 +64,7 @@ my_flutter() {
   if command -v fvm >/dev/null
   then
     fvm flutter pub get && \
+    ([ ! -d "ios" ] || (cd ios && pod install)) && \
     fvm flutter pub run flutter_launcher_icons && \
     fvm dart run build_runner build --delete-conflicting-outputs && \
     fvm dart fix --apply && \
@@ -71,6 +72,7 @@ my_flutter() {
     fvm flutter analyze
   else
     flutter pub get && \
+    ([ ! -d "ios" ] || (cd ios && pod install)) && \
     flutter pub run flutter_launcher_icons && \
     dart run build_runner build --delete-conflicting-outputs && \
     dart fix --apply && \
