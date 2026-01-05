@@ -124,4 +124,4 @@ alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Developm
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
 alias delmedia='cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm} .DS_Store 2>/dev/null'
 alias g=git
-alias my_upgrade_firebase=curl -sL https://firebase.tools | upgrade=true bash # https://firebase.google.com/docs/cli
+alias my_upgrade_firebase='curl -sL https://firebase.tools | upgrade=true bash # https://firebase.google.com/docs/cli'
