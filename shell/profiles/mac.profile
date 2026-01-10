@@ -52,8 +52,12 @@ xcrv() {
 # https://cocoapods.org
 #
 
+# https://guides.cocoapods.org/using/getting-started.html#sudo-less-installation
 # Make `flutter doctor` find CocoaPods.
-[[ -d "$(gem env home)/bin" ]] && export PATH="$(gem env home)/bin:$PATH"
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
+# [[ -d "$(gem env home)/bin" ]] && export PATH="$(gem env home)/bin:$PATH"
 
 alias pcca='pod cache clean --all'
 
