@@ -27,7 +27,7 @@ alias drbrw='dart run build_runner watch'
 
 # > Run `flutter analyze --suggestions` to see if your Android Gradle Plugin (AGP), Java, and Gradle versions are compatible.
 # https://docs.flutter.dev/release/breaking-changes/android-java-gradle-migration-guide#solution-2-command-line
-alias fa='flutter analyze && flutter analyze --suggestions'
+alias fa='flutter analyze --suggestions --fatal-infos'
 alias fc='flutter clean'
 alias fcp='flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
 alias fd='flutter doctor'
