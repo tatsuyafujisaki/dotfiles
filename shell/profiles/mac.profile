@@ -52,6 +52,9 @@ xcrv() {
 # https://cocoapods.org
 #
 
+# Make `flutter doctor` find CocoaPods.
+[[ -d "$(gem env home)/bin" ]] && export PATH="$(gem env home)/bin:$PATH"
+
 alias pcca='pod cache clean --all'
 
 #

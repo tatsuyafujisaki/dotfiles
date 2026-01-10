@@ -8,10 +8,6 @@ export PATH=".fvm/flutter_sdk/bin:$PATH"
 # https://firebase.google.com/docs/flutter/setup
 [[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$HOME/.pub-cache/bin:$PATH"
 
-
-# Make `flutter doctor` find CocoaPods.
-[[ -d "$(gem env home)/bin" ]] && export PATH="$(gem env home)/bin:$PATH"
-
 #
 # https://dart.dev/tools/dart-tool
 #
