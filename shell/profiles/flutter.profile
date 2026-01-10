@@ -61,7 +61,7 @@ my_flutter() {
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format . && \
-  flutter analyze --suggestions --fatal-infos
+  flutter analyze --fatal-infos # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
 }
 
 my_flutter_screenshot() {
