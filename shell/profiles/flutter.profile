@@ -61,7 +61,7 @@ my_flutter() {
   dart run build_runner build --delete-conflicting-outputs && \
   dart fix --apply && \
   dart format . && \
-  lutter analyze --suggestions --fatal-infos
+  flutter analyze --suggestions --fatal-infos
 }
 
 my_flutter_screenshot() {
