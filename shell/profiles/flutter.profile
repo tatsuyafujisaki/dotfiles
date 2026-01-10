@@ -14,7 +14,9 @@ export PATH=".fvm/flutter_sdk/bin:$PATH"
 
 alias dfa='dart fix --apply'
 alias dfd='dart format .'
-alias drbrb='dart run build_runner build --delete-conflicting-outputs'
+# The "--delete-conflicting-outputs" flag is not necessary.
+# https://youtu.be/6PKIv7yUKwQ?t=209
+alias drbrb='dart run build_runner build'
 alias drbrw='dart run build_runner watch'
 
 #
