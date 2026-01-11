@@ -56,7 +56,7 @@ my_flutter_pub_global_activate() {
 my_flutter() {
   flutter pub get && \
   ([ ! -d "ios" ] || (cd ios && pod install)) && \
-  dart run build_runner build --delete-conflicting-outputs && \
+  dart run build_runner build && \
   dart fix --apply && \
   dart format . && \
   flutter analyze --fatal-infos # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
