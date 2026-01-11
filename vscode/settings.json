@@ -7,6 +7,7 @@
     "dart": true,
     "go": true
   },
+  "cursor.composer.queueMessageDefaultBehavior": "stop-and-send",
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
