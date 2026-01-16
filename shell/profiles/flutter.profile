@@ -38,6 +38,12 @@ alias fput='flutter pub upgrade --tighten'
 alias fu='flutter upgrade --force'
 alias fv='flutter --version'
 
+#
+# https://fvm.app
+#
+
+alias my_fvm_reset='fvm remove --all && fvm use'
+
 my_flutter_clean() {
   flutter clean && \
   flutter pub cache clean --force
