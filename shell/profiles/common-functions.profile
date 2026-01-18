@@ -283,6 +283,11 @@ my_remove_parenthesized_one_suffix() {
   done
 }
 
+# This is a function, not an alias, so it can be called from another function, such as up.
+my_upgrade_firebase() {
+  curl -sL https://firebase.tools | upgrade=true bash
+}
+
 up() {
   brew upgrade --greedy
   brew cleanup --prune=all
