@@ -57,6 +57,7 @@
     mt = mergetool
     pf = push --force-with-lease --force-if-includes
     pop = git stash pop
+    push = stash push --include-untracked
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
@@ -64,10 +65,9 @@
     ri = rebase --interactive
     rir = rebase --interactive --root
     rs = reset HEAD~
-    rsh = reset HEAD~ --hard
-    rsh2 = reset HEAD~2 --hard
-    rsh3 = reset HEAD~3 --hard
-    st = stash push --include-untracked
+    rsh = reset --hard HEAD~
+    rsh2 = reset --hard HEAD~2
+    rsh3 = reset --hard HEAD~3
     sw = switch
 # The configurations below are generated automatically upon installation of GitHub Desktop.
 # https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/about-git-large-file-storage-and-github-desktop
