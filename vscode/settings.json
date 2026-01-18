@@ -9,7 +9,7 @@
   },
   "cursor.composer.queueMessageDefaultBehavior": "stop-and-send",
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
-  "dart.flutterHotReloadOnSave": "allIfDirty",
+  "dart.flutterHotReloadOnSave": "all", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
@@ -43,7 +43,7 @@
     "*.gs": "javascript"
   },
   "files.autoGuessEncoding": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
