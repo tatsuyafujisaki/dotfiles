@@ -92,7 +92,7 @@ clean() {
     .zcompdump
     .zsh_history
   )
-  for file in "$files[@]"
+  for file in "${files[@]}"
   do
     rm -f "$file"
   done
