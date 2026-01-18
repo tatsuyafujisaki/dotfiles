@@ -10,18 +10,12 @@ export ANDROID_HOME=~/Library/Android/sdk
 #
 
 #
-# `adb` except `adb shell`
+# adb shell settings
 #
 
-alias adbd='adb devices'
-alias adbi='adb install -r'
-
-# Transfers files from macOS to Android.
-alias m2a='adb push ~/Desktop/foo/. /sdcard/Download && adb shell ls /sdcard/Download'
-
-# Transfers files from Android to macOS.
-alias a2m='adb pull /sdcard/Download/. ~/Desktop/foo && open ~/Desktop/foo'
-
+alias adbdo='adb shell settings put global development_settings_enabled 1 && adb shell am start -a android.settings.APPLICATION_DEVELOPMENT_SETTINGS' # enables and opens the Developer options. https://developer.android.com/about/versions/12/reference/common-intents-31
+alias showta='adb shell settings put system show_touches 0'
+alias showtap='adb shell settings put system show_touches 1'
 
 #
 # adb shell
@@ -40,17 +34,27 @@ xargs -n 1 --no-run-if-empty --verbose adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 
-#
-# adb shell settings
-#
-
-alias adbdo='adb shell settings put global development_settings_enabled 1 && adb shell am start -a android.settings.APPLICATION_DEVELOPMENT_SETTINGS' # enables and opens the Developer options. https://developer.android.com/about/versions/12/reference/common-intents-31
-alias showta='adb shell settings put system show_touches 0'
-alias showtap='adb shell settings put system show_touches 1'
-
 # Settings > System > Gestures > System navigation or 3-button navigation
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
 alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
+
+
+#
+# adb
+#
+
+# Japan longitude and latitude origin (日本緯度経度原点)
+# https://visit-minato-city.tokyo/en/places/1260
+alias adb_emu_geo_fix_tokyo='adb emu geo fix 139.74135747 35.65809922'
+
+alias adbd='adb devices'
+alias adbi='adb install -r'
+
+# Transfers files from macOS to Android.
+alias m2a='adb push ~/Desktop/foo/. /sdcard/Download && adb shell ls /sdcard/Download'
+
+# Transfers files from Android to macOS.
+alias a2m='adb pull /sdcard/Download/. ~/Desktop/foo && open ~/Desktop/foo'
 
 my_adb_emu_geo_fix() {
   if [[ $# -lt 2 ]]
