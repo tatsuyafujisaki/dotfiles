@@ -77,3 +77,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
+# It is not easy to find the default values in Git Config. Refer to the website below for more information.
+# https://git-scm.com/docs/git-config
