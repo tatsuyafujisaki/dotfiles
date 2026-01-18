@@ -8,13 +8,11 @@ alias dcu='docker compose up --detach --remove-orphans --wait'
 # https://go.dev
 #
 
-export PATH="$(go env GOROOT)/bin:$PATH"
+[[ -d "$(go env GOROOT)/bin" ]] && export PATH="$(go env GOROOT)/bin:$PATH"
 
 #
 # https://golangci-lint.run
 #
-
-export PATH="$(go env GOPATH)/bin:$PATH"
 
 # https://golangci-lint.run/docs/welcome/quick-start/#linting
 alias goci='golangci-lint run --fix'
@@ -24,7 +22,6 @@ alias my_install_golangci_lint='curl -sSfL https://raw.githubusercontent.com/gol
 
 # https://github.com/google/yamlfmt
 alias my_install_yamlfmt='go install github.com/google/yamlfmt/cmd/yamlfmt@latest'
-alias yf='yamlfmt .'
 
 #
 # Note
