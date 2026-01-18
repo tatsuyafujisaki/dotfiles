@@ -20,6 +20,8 @@
     branch = false # makes "git branch" list branches without using a pager.
 [pull]
     rebase = true
+[push]
+    autoSetupRemote = true
 [rebase]
     autoSquash = true
     autoStash = true
@@ -35,6 +37,7 @@
     prompt = false
 [mergetool "mytool"]
     cmd = agy --wait $MERGED
+
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     b = branch
