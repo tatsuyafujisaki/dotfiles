@@ -36,9 +36,6 @@
 [mergetool "mytool"]
     cmd = agy --wait $MERGED
 [alias]
-    # --no-verify bypasses the pre-commit and commit-msg hooks.
-    # adds untracked files, stages all changes, and replaces the previous commit, reusing the existing commit message.
-    # stages all the changes, replacing the previous commit with the new commit message.
     a = !pbpaste | git apply --ignore-space-change
     b = branch
     cam = commit --all --amend --no-verify -m
@@ -59,6 +56,7 @@
     md = merge develop --no-edit
     mt = mergetool
     pf = push --force-with-lease --force-if-includes
+    pop = git stash pop
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
