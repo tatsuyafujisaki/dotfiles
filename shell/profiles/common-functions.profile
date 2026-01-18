@@ -38,7 +38,7 @@ clean() {
   rm -fr "$HOME/Library/Application Support/Cursor/User/workspaceStorage"
 
   # Deletes folders and files for Android development.
-  find ~/.android/avd -type f -name cache.img*
+  find ~/.android/avd -type f -name cache.img* -delete
   rm -f ~/.android/*.lock
   rm -f ~/.android/modem-nv-ram-*
   rm -f ~/.emulator_console_auth_token
@@ -230,7 +230,7 @@ my_git_pull_all() {
   pushd ~/Documents/GitHub
   for dir in */
   do
-    pushd $"dir"
+    pushd "$dir"
     gg # is a function defined in this file.
     popd
   done
