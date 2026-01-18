@@ -59,65 +59,65 @@ clean() {
   rm -fr ~/.flutter
   rm -fr ~/.pub-cache
 
-  cd ~
+  (
+    cd ~
 
-  # Deletes folders in the home folder.
-  folders=(
-    .bash_sessions
-    .dvdcss
-    .gradle
-    .hawtjni
-    .lemminx
-    .local
-    .m2
-    .oracle_jre_usage
-    .zsh_sessions
-    .Trash
-    Downloads
-    Movies
-    Music
-    Pictures
+    # Deletes folders in the home folder.
+    folders=(
+      .bash_sessions
+      .dvdcss
+      .gradle
+      .hawtjni
+      .lemminx
+      .local
+      .m2
+      .oracle_jre_usage
+      .zsh_sessions
+      .Trash
+      Downloads
+      Movies
+      Music
+      Pictures
+    )
+
+    for folder in "${folders[@]}"
+    do
+      rm -fr "$folder"
+    done
+
+    # Deletes in the home folder.
+    files=(
+      .bash_history
+      .CFUserTextEncoding
+      .viminfo
+      .zcompdump
+      .zsh_history
+    )
+    for file in "${files[@]}"
+    do
+      rm -f "$file"
+    done
   )
-
-  for folder in "${folders[@]}"
-  do
-    rm -fr "$folder"
-  done
-
-  # Deletes in the home folder.
-  files=(
-    .bash_history
-    .CFUserTextEncoding
-    .viminfo
-    .zcompdump
-    .zsh_history
-  )
-  for file in "${files[@]}"
-  do
-    rm -f "$file"
-  done
-
-  cd -
 }
 
 clean_chrome() {
-  cd ~/Library/Application\ Support/Google/Chrome/Default
+  (
+    cd ~/Library/Application\ Support/Google/Chrome/Default
 
-  rm -f *-journal
-  rm -f *.bak
-  rm -f *.old
-  rm -f *Cookies
-  rm -f Favicons
-  rm -f Google\ Profile\ Picture.png
-  rm -f History
-  rm -f LOCK
-  rm -f LOG
-  rm -f Top\ Sites
-  rm -fr *Cache
-  rm -fr *Logs
-  rm -fr Sessions
-
-  cd -
+    rm -f *-journal
+    rm -f *.bak
+    rm -f *.old
+    rm -f *Cookies
+    rm -f Favicons
+    rm -f Google\ Profile\ Picture.png
+    rm -f History
+    rm -f LOCK
+    rm -f LOG
+    rm -f Top\ Sites
+    rm -fr *Cache
+    rm -fr *Logs
+    rm -fr Sessions
+  )
 }
 
 delete_ds_store() {
