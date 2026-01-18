@@ -27,8 +27,6 @@ alias a2m='adb pull /sdcard/Download/. ~/Desktop/foo && open ~/Desktop/foo'
 # adb shell
 #
 
-alias adba='adb shell am start -a'
-alias adbdo='adb shell am start -a android.settings.APPLICATION_DEVELOPMENT_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adbl='adb shell am start -a android.settings.LOCALE_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adbps='adb shell getconf PAGE_SIZE' # https://developer.android.com/guide/practices/page-sizes
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
@@ -41,9 +39,14 @@ grep -v dev.firebase.appdistribution |\
 xargs -n 1 --no-run-if-empty --verbose adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
-alias logcat='adb logcat --clear && adb logcat -v tag' # https://developer.android.com/tools/logcat
-alias showtap='adb shell settings put system show_touches 1'
+
+#
+# adb shell settings
+#
+
+alias adbdo='adb shell settings put global development_settings_enabled 1 && adb shell am start -a android.settings.APPLICATION_DEVELOPMENT_SETTINGS' # enables and opens the Developer options. https://developer.android.com/about/versions/12/reference/common-intents-31
 alias showta='adb shell settings put system show_touches 0'
+alias showtap='adb shell settings put system show_touches 1'
 
 # Settings > System > Gestures > System navigation or 3-button navigation
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
