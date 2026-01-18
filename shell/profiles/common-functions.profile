@@ -79,7 +79,7 @@ clean() {
     Pictures
   )
 
-  for folder in "$folders[@]"
+  for folder in "${folders[@]}"
   do
     rm -fr "$folder"
   done
@@ -94,7 +94,7 @@ clean() {
   )
   for file in "$files[@]"
   do
-    rm -f $file
+    rm -f "$file"
   done
 
   cd -
@@ -189,16 +189,6 @@ my_date() {
   date +"%Y-%m-%d_%H-%M-%S"
 }
 
-my_delete() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <file-or-directory>"
-    return 1
-  fi
-
-  find . -iname "*$1*" -print -exec rm -rf {} + 2> /dev/null
-}
-
 my_ffmpeg() {
   if [[ ! -f "$1" ]]
   then
@@ -240,7 +230,7 @@ my_git_pull_all() {
   pushd ~/Documents/GitHub
   for dir in */
   do
-    pushd $dir
+    pushd $"dir"
     gg # is a function defined in this file.
     popd
   done
