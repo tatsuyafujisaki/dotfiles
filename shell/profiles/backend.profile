@@ -8,7 +8,8 @@ alias dcu='docker compose up --detach --remove-orphans --wait'
 # https://go.dev
 #
 
-[[ -d "$(go env GOROOT)/bin" ]] && export PATH="$(go env GOROOT)/bin:$PATH"
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
 
 #
 # https://golangci-lint.run
