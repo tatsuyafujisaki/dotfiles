@@ -130,5 +130,5 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 #
 
 alias delete_status_bar='magick *.png -crop +0+40 -gravity North output.png' # delets the status bar from the iPhone screenshot.
-alias delmedia='cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm} .DS_Store 2>/dev/null'
+alias delmedia='cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null'
 alias g=git
