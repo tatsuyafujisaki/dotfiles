@@ -23,7 +23,7 @@ alias drbrw='dart run build_runner watch'
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 #
 
-alias fa='flutter analyze --fatal-infos'
+alias fa='flutter analyze'
 alias fc='flutter clean'
 alias fcp='flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
 alias fd='flutter doctor'
@@ -65,7 +65,7 @@ my_flutter() {
   dart run build_runner build && \
   dart fix --apply && \
   dart format . && \
-  flutter analyze --fatal-infos # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
+  flutter analyze # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
 }
 
 my_flutter_screenshot() {
