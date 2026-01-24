@@ -23,7 +23,7 @@ alias drbrw='dart run build_runner watch'
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 #
 
-alias fa='flutter analyze --suggestions --fatal-infos'
+alias fa='flutter analyze --fatal-infos'
 alias fc='flutter clean'
 alias fcp='flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
 alias fd='flutter doctor'
