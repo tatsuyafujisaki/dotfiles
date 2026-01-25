@@ -68,6 +68,7 @@
     rsh = reset --hard HEAD~
     rsh2 = reset --hard HEAD~2
     rsh3 = reset --hard HEAD~3
+    st = stash
     sw = switch
 # The configurations below are generated automatically upon installation of GitHub Desktop.
 # https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/about-git-large-file-storage-and-github-desktop
