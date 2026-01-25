@@ -35,6 +35,8 @@ alias fpo='flutter pub outdated'
 alias fpr='flutter pub remove'
 alias fpum='flutter pub upgrade --major-versions'
 alias fput='flutter pub upgrade --tighten'
+alias fra="flutter run --device-id 'sdk gphone64 arm64'"
+alias fri="flutter run --device-id ios"
 alias fu='flutter upgrade --force'
 alias fv='flutter --version'
 
