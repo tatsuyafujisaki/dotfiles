@@ -37,12 +37,13 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
+# https://antigravity.google
 # https://code.visualstudio.com
 # https://cursor.com
 #
 
+alias a='agy .'
 alias c="${$(command -v cursor):-code} ."
-alias gp="${$(command -v cursor):-code} ~/Documents/GitHub/android-playground/gradle.properties"
 
 #
 # https://nodejs.org
