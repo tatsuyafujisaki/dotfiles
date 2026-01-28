@@ -56,7 +56,9 @@
   "git.fetchOnPull": true,
   "git.followTagsWhenSync": true,
   "git.pruneOnFetch": true,
+  "git.pullBeforeCheckout": true,
   "git.rebaseWhenSync": true,
+  "git.replaceTagsWhenPull": true,
   // https://golangci-lint.run/docs/welcome/integrations/#visual-studio-code
   "go.lintTool": "golangci-lint-v2",
   "go.lintFlags": [
