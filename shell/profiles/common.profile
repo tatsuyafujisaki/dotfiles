@@ -71,14 +71,6 @@ alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git
 alias p='pkill -f gradle'
 alias show_path='echo ${PATH} | tr : \\n'
 
-#
-# https://gradle.org
-#
-
-alias gw=./gradlew
-alias gwp='code gradle/wrapper/gradle-wrapper.properties'
-alias gws='./gradlew --stop'
-
 # Ideally, only the line with the largest version would be kept when there are multiple lines for different versions of the same library, but this is difficult. This is because, when comparing versions in text, 1.2 is considered larger than 1.10.
 # sed -E 's/^[^[:alpha:]]*//' removes leading non-alphabetic characters.
 # sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' changes "foo:1.0 -> 2.0" to "foo:2.0".
