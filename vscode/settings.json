@@ -106,7 +106,10 @@
   // If smartCase is false, the search is always case-insensitive.
   // "search.smartCase": true,
   "security.workspace.trust.enabled": false,
+  "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "telemetry.feedback.enabled": false,
+  "telemetry.telemetryLevel": "off",
   "terminal.integrated.enablePersistentSessions": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
