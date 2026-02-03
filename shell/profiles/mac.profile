@@ -21,7 +21,7 @@ alias nw='open /System/Library/PreferencePanes/Network.prefPane'
 alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?SpokenContent'
 
 #
-# Pasteboard
+# pbcopy, pbpaste
 #
 
 alias pbl='pbpaste | sed "s/^/- /" | pbcopy' # stands for "pasteboard unordered list".
@@ -30,6 +30,14 @@ alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes emp
 alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
 alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
 alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
+
+#
+# plutil
+#
+
+alias pl2json='plutil -convert json -r -e json -- "Text Substitutions.plist"'
+alias pl2xml='plutil -convert xml1 -e plist -- "Text Substitutions.json"'
+alias plp='plutil -p -- "Text Substitutions.plist"'
 
 #
 # https://developer.apple.com/xcode/
