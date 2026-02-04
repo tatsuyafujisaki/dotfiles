@@ -6,22 +6,6 @@ export LESSHISTFILE=- # avoids creating ~/.lesshst
 export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 #
-# https://antigravity.google
-#
-
-[[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
-#
-# https://cloud.google.com/sdk
-#
-
-# The next line updates PATH for the Google Cloud SDK.
-[[ -f ~/google-cloud-sdk/path.zsh.inc ]] && . ~/google-cloud-sdk/path.zsh.inc
-
-# The next line enables shell command completion for gcloud.
-[[ -f ~/google-cloud-sdk/completion.zsh.inc ]] && . ~/google-cloud-sdk/completion.zsh.inc
-
-#
 # cd-related
 #
 
@@ -37,12 +21,35 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
+# Google Chrome
+#
+
+alias export_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data ~/Desktop/'
+alias import_search_engines='cp ~/Desktop/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
+
+#
+# https://cloud.google.com/sdk
+#
+
+# The next line updates PATH for the Google Cloud SDK.
+[[ -f ~/google-cloud-sdk/path.zsh.inc ]] && . ~/google-cloud-sdk/path.zsh.inc
+
+# The next line enables shell command completion for gcloud.
+[[ -f ~/google-cloud-sdk/completion.zsh.inc ]] && . ~/google-cloud-sdk/completion.zsh.inc
+
+#
 # https://antigravity.google
+#
+
+[[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+alias a='agy .'
+
+#
 # https://code.visualstudio.com
 # https://cursor.com
 #
 
-alias a='agy .'
 alias c="${$(command -v cursor):-code} ."
 
 #
