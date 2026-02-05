@@ -35,9 +35,9 @@ alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clip
 # plutil
 #
 
-alias pl2json='plutil -convert json -r -e json -- "Text Substitutions.plist"'
-alias pl2xml='plutil -convert xml1 -e plist -- "Text Substitutions.json"'
-alias plp='plutil -p -- "Text Substitutions.plist"'
+alias pl2json='plutil -convert json -r -e json -- *.plist'
+alias pl2xml='plutil -convert xml1 -e plist -- *.json'
+alias plp='plutil -p -- *.plist'
 
 #
 # https://developer.apple.com/xcode/
