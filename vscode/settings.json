@@ -7,8 +7,6 @@
     "dart": true,
     "go": true
   },
-  "cursor.composer.queueMessageDefaultBehavior": "stop-and-send",
-  "cursor.cpp.enablePartialAccepts": true,
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "all", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
   "dart.hotReloadOnSave": "allIfDirty",
