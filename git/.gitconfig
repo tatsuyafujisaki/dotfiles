@@ -57,7 +57,7 @@
     mt = mergetool
     pf = push --force-with-lease --force-if-includes
     pop = git stash pop
-    push = stash push --include-untracked
+    pus = stash push --include-untracked # `push` cannot be used as an alias because it is a built-in command.
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
