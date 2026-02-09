@@ -90,4 +90,5 @@ alias bug='brew upgrade --greedy'
 
 # USB cable speed detection
 # https://developer.android.com/studio/releases/past-releases/as-koala-feature-drop-release-notes#usb-check
-alias print_usb_speed='system_profiler SPUSBDataType'
+alias print_usb_speed='system_profiler SPUSBHostDataType | grep --extended-regexp "Link Speed|Product:"'
+
