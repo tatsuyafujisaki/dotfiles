@@ -48,7 +48,7 @@ alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.th
 alias adb_emu_geo_fix_tokyo='adb emu geo fix 139.74135747 35.65809922'
 
 alias adbd='adb devices'
-alias adbi='adb install -r'
+alias adbi='adb install -r *.apk'
 
 # Transfers files from macOS to Android.
 alias m2a='adb push ~/Desktop/foo/. /sdcard/Download && adb shell ls /sdcard/Download'
