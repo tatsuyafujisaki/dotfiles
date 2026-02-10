@@ -95,7 +95,7 @@ alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Developm
 
 # By default, `gh` limits the output of many commands (including run list) to the 30 most recent items.
 # To list all workflow runs (up to the maximum allowed by the API, which is 1000), `--limit` is required.
-alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq "[].databaseId" | xargs --max-args=1 gh run delete'
+alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq ".[].databaseId" | xargs -n 1 gh run delete'
 
 #
 # https://asdf-vm.com
