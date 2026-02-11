@@ -38,9 +38,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
-  "files.associations": {
-    "*.gs": "javascript"
-  },
   "files.autoGuessEncoding": true,
   "files.autoSave": "afterDelay", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
   "files.hotExit": "off",
