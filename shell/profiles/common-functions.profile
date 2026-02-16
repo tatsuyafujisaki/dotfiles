@@ -107,15 +107,16 @@ clean_chrome() {
     rm -f *-journal
     rm -f *.bak
     rm -f *.old
-    rm -f *Cookies
+    rm -f Cookies
     rm -f Favicons
     rm -f Google\ Profile\ Picture.png
     rm -f History
     rm -f LOCK
     rm -f LOG
     rm -f Top\ Sites
-    rm -fr *Cache
-    rm -fr *Logs
+    rm -f Visited\ Links
+    rm -fr AutofillAiModelCache
+    rm -fr GPUCache
     rm -fr Sessions
   )
 }
