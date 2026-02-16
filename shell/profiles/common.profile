@@ -11,6 +11,7 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 
 alias ap='cd ~/Documents/GitHub/android-playground'
 alias asl='cd ~/Documents/GitHub/apps-script-library'
+alias chrome_profile='cd ~/Library/Application\ Support/Google/Chrome/Default'
 alias d='cd ~/Desktop'
 alias df='cd ~/Documents/GitHub/dotfiles'
 alias dnp='cd ~/Documents/GitHub/deno-playground'
