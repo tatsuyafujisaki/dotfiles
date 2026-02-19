@@ -69,7 +69,6 @@ clean() {
       .gradle
       .hawtjni
       .lemminx
-      .local
       .m2
       .oracle_jre_usage
       .zsh_sessions

@@ -33,10 +33,10 @@ alias import_search_engines='cp ~/Desktop/Web\ Data ~/Library/Application\ Suppo
 #
 
 # The next line updates PATH for the Google Cloud SDK.
-[[ -f ~/google-cloud-sdk/path.zsh.inc ]] && . ~/google-cloud-sdk/path.zsh.inc
+[[ -f $HOME/google-cloud-sdk/path.zsh.inc ]] && . $HOME/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
-[[ -f ~/google-cloud-sdk/completion.zsh.inc ]] && . ~/google-cloud-sdk/completion.zsh.inc
+[[ -f $HOME/google-cloud-sdk/completion.zsh.inc ]] && . $HOME/google-cloud-sdk/completion.zsh.inc
 
 #
 # https://antigravity.google
@@ -54,12 +54,10 @@ alias a='agy .'
 alias c="${$(command -v cursor):-code} ."
 
 #
-# https://pip.pypa.io
+# https://github.com/astral-sh/uv
 #
 
-alias pipi='pip3 install'
-alias pipl='pip3 list'
-alias pipu='pip3 uninstall --yes'
+[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
 
 #
 # https://cli.github.com
