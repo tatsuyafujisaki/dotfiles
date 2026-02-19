@@ -18,12 +18,14 @@ setopt interactivecomments
 # https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting
 export PROMPT_EOL_MARK=''
 
-# Case-insensitive tab completion
-# -u in "compinit -u" is to avoid showing an error in the following case. In short, if you only have one user, you won't have a problem.
-# > For security reasons compinit also checks if the completion system would use files not owned by root or by the current user, ...
-# https://zsh.sourceforge.io/Doc/Release/Completion-System.html
-autoload -U compinit && compinit -u && zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+# https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html
+autoload -Uz compinit
 
+# https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Use-of-compinit
+compinit
+
+# https://zsh.sourceforge.io/Doc/Release/Zsh-Modules.html#The-zsh_002fzutil-Module
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 for profile in ~/Documents/GitHub/dotfiles/shell/profiles/*.profile ~/Documents/GitHub/private/private.profile
 do
