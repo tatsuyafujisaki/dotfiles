@@ -35,6 +35,7 @@ alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clip
 # plutil
 #
 
+alias cppl='cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && sudo cp *.plist /Users/work/Desktop'
 alias pl2json='plutil -convert json -r -e json -- *.plist'
 alias pl2xml='plutil -convert xml1 -e plist -- *.json'
 alias plp='plutil -p -- *.plist'
