@@ -28,7 +28,7 @@
    .idea/
    ```
    
-# How to create `~/.gitignore` for each project
+# How to create `.gitignore` in a project
 
 ```shell
 rm -f .gitignore
