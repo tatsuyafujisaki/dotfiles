@@ -6,7 +6,7 @@
    ln -f -s ~/Documents/GitHub/dotfiles/git/.gitconfig ~
    ```
 
-# How to create `~/.gitignore`
+# How to create a consolidated `~/.gitignore`
 1. Run the script below.
    ```shell
    rm -f ~/.gitignore
@@ -28,7 +28,7 @@
    .idea/
    ```
    
-# How to create `.gitignore` in a project
+# How to create a consolidated `.gitignore` in a project
 
 ```shell
 rm -f .gitignore
@@ -45,4 +45,9 @@ do
     echo ""
   } >> .gitignore
 done
+```
+
+# How to create a single `.gitignore` in a Node.js project
+```shell
+curl --location --silent --output .gitignore https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 ```
