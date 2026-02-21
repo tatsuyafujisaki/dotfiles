@@ -282,9 +282,14 @@ up() {
   brew upgrade --greedy
   brew cleanup --prune=all
   brew doctor
+
   gcloud components update --quiet
+
+  fnm default --lts
+
   flutter upgrade --force
   flutter doctor
+
   my_git_pull_all
   my_install_golangci_lint
   my_install_yamlfmt
