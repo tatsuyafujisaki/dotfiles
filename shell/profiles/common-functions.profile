@@ -101,22 +101,33 @@ clean() {
 
 clean_chrome() {
   (
-    cd ~/Library/Application\ Support/Google/Chrome/Default
+    cd "$HOME/Library/Application Support/Google/Chrome/Default"
 
-    rm -f *-journal
-    rm -f *.bak
-    rm -f *.old
-    rm -f Cookies
-    rm -f Favicons
-    rm -f Google\ Profile\ Picture.png
-    rm -f History
-    rm -f LOCK
-    rm -f LOG
-    rm -f Top\ Sites
-    rm -f Visited\ Links
-    rm -fr AutofillAiModelCache
-    rm -fr GPUCache
-    rm -fr Sessions
+    files=(
+      *-journal
+      *.bak
+      *.old
+      Cookies
+      Favicons
+      "Google Profile Picture.png"
+      History
+      LOCK
+      LOG
+      "Top Sites"
+      "Visited Links"
+    )
+    for file in "${files[@]}"; do
+      rm -f "$file"
+    done
+
+    dirs=(
+      AutofillAiModelCache
+      GPUCache
+      Sessions
+    )
+    for dir in "${dirs[@]}"; do
+      rm -fr "$dir"
+    done
   )
 }
 
