@@ -273,25 +273,28 @@ my_remove_parenthesized_one_suffix() {
   done
 }
 
-# This is a function, not an alias, so it can be called from another function, such as up.
-my_upgrade_firebase() {
-  curl -sL https://firebase.tools | upgrade=true bash
-}
-
 up() {
-  brew upgrade --greedy
+  # https://docs.brew.sh/Manpage
+  brew upgrade --force --greedy
   brew cleanup --prune=all
   brew doctor
 
-  gcloud components update --quiet
+  # https://firebase.google.com/docs/cli#mac-linux-npm
+  npm install --global firebase-tools
 
   fnm default --lts
 
   flutter upgrade --force
   flutter doctor
 
+  # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
+  uv self update
+
+  # https://golangci-lint.run/docs/welcome/install/local/
+  curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
+  # https://github.com/google/yamlfmt
+  go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+
   my_git_pull_all
-  my_install_golangci_lint
-  my_install_yamlfmt
-  my_upgrade_firebase
 }

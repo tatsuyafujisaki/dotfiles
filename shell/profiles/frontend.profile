@@ -14,7 +14,9 @@ fi
 #
 
 alias npmig='npm install --global'
+alias npmlg='npm list --global'
 alias npmug='npm uninstall --global'
+alias npmupg='npm update --global'
 
 #
 # https://pnpm.io

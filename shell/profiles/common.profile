@@ -29,16 +29,6 @@ alias export_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Def
 alias import_search_engines='cp ~/Desktop/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
 
 #
-# https://cloud.google.com/sdk
-#
-
-# The next line updates PATH for the Google Cloud SDK.
-[[ -f $HOME/google-cloud-sdk/path.zsh.inc ]] && . $HOME/google-cloud-sdk/path.zsh.inc
-
-# The next line enables shell command completion for gcloud.
-[[ -f $HOME/google-cloud-sdk/completion.zsh.inc ]] && . $HOME/google-cloud-sdk/completion.zsh.inc
-
-#
 # https://antigravity.google
 #
 
