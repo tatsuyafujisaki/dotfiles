@@ -1,8 +1,8 @@
 # adds "flutter" to PATH.
 [[ -d "$HOME/develop/flutter/bin" ]] && export PATH="$HOME/develop/flutter/bin:$PATH"
 
-# prioritizes the "flutter" command in the current project if present.
-export PATH=".fvm/flutter_sdk/bin:$PATH"
+# prevents the Dart MCP server in Google Antigravity from showing 'Error: exec: "dart": executable file not found in $PATH.'
+export PATH=".fvm/versions/stable/bin:$PATH"
 
 # adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>".
 # https://firebase.google.com/docs/flutter/setup
