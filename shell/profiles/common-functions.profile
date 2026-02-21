@@ -275,21 +275,24 @@ my_remove_parenthesized_one_suffix() {
 
 up() {
   # https://docs.brew.sh/Manpage
-  brew upgrade --force --greedy
+  brew upgrade --greedy
   brew cleanup --prune=all
   brew doctor
 
   # https://firebase.google.com/docs/cli#mac-linux-npm
   npm install --global firebase-tools
 
+  # https://github.com/Schniz/fnm/blob/master/docs/commands.md
   fnm default --lts
 
-  flutter upgrade --force
+  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
+  flutter upgrade
   flutter doctor
 
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
 
+  # > Note: Homebrew can use an unexpected version of Go to build the binary, so we recommend either using our binaries or ensuring the version of Go used to build.
   # https://golangci-lint.run/docs/welcome/install/local/
   curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
