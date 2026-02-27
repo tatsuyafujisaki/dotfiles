@@ -101,6 +101,7 @@
   // If smartCase is false, the search is always case-insensitive.
   // "search.smartCase": true,
   "security.workspace.trust.enabled": false,
+  "task.quickOpen.history": 0,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "telemetry.feedback.enabled": false,
