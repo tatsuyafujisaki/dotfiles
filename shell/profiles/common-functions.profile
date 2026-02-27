@@ -190,14 +190,10 @@ my_cwebp() {
 }
 
 my_cwebp_desktop() {
-  for file in ~/Desktop/*.{jpg,jpeg,png}(N)
+  for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
   do
     my_cwebp "$file"
   done
-}
-
-my_date() {
-  date +"%Y-%m-%d_%H-%M-%S"
 }
 
 my_ffmpeg() {
@@ -221,7 +217,7 @@ my_ffmpeg() {
 }
 
 my_ffmpeg_desktop() {
-  for file in ~/Desktop/*.{mov,mp4}(N)
+  for file in ~/Desktop/*.{mov,mp4,MOV,MP4}(N)
   do
     my_ffmpeg "$file"
   done
