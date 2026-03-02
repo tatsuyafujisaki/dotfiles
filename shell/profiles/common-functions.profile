@@ -2,25 +2,13 @@
 # https://git-scm.com
 #
 
-# git clean:
-#   -d is to delete untracked directories too.
-# git restore:
-#   --staged is to discard staged changes.
-#   --worktree is to discard unstaged changes.
-# git pull:
-#   --all is to fetch all remotes.
-# git fetch:
-#   --prune is to remove remote-tracking references that no longer exist on the remote.
-#   --prune-tags is to remove any local tags that no longer exist on the remote if --prune is enabled.
 gg() {
   git switch develop || git switch main || git switch master
   # "grep -v \*" excludes the current branch, which is marked with an asterisk.
   git branch | grep -v \* | xargs --no-run-if-empty git branch -D
   git clean -d --force
-  git restore --staged --worktree .
-  git pull --all --autostash --rebase --recurse-submodules
-  git fetch --force --prune --prune-tags # --force is to avoid the "would clobber existing tag" error when the remote tag is different from the local tag.
-  git gc --prune=now
+  git reset --hard
+  git pull --all --rebase --recurse-submodules
   git stash clear
 }
 
