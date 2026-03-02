@@ -25,8 +25,8 @@ alias xp='cd ~/Documents/GitHub/xcode-playground'
 # Google Chrome
 #
 
-alias export_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data ~/Desktop/'
-alias import_search_engines='cp ~/Desktop/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
+alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data ~/Desktop/'
+alias copy_chrome_search_engines='sudo cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/work/Library/Application\ Support/Google/Chrome/Default/'
 
 #
 # https://antigravity.google
@@ -97,6 +97,5 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 # Miscellaneous aliases
 #
 
-alias copy_chrome_search_engines='sudo cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/work/Library/Application\ Support/Google/Chrome/Default/'
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
