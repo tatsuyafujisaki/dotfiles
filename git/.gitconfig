@@ -60,7 +60,7 @@
     r = rebase
     ra = rebase --abort
     rc = rebase --continue
-    rd = !git pull origin develop && git rebase develop
+    rd = !git fetch --prune --prune-tags origin +develop:develop && git rebase develop
     ri = rebase --interactive
     rir = rebase --interactive --root
     rs = reset HEAD~
