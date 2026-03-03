@@ -66,6 +66,6 @@ my_flutter() {
 }
 
 my_flutter_screenshot() {
-  local timestamp=$(date +"%Y-%m-%d_%H-%M%S")
-  (cd ~/Desktop && fvm flutter screenshot --out="screenshot.png" && mv screenshot.png "${timestamp}.png" && open "${timestamp}.png")
+  local output="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M%S").png"
+  fvm flutter screenshot --out="$output" && open "$output"
 }
