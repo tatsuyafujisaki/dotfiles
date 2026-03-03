@@ -11,8 +11,6 @@
 
 alias dfa='dart fix --apply'
 alias dfd='dart format .'
-# The "--delete-conflicting-outputs" flag is not necessary.
-# https://youtu.be/6PKIv7yUKwQ?t=209
 alias drbrb='dart run build_runner build'
 alias drbrw='dart run build_runner watch'
 
@@ -20,22 +18,22 @@ alias drbrw='dart run build_runner watch'
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
 #
 
-alias fa='flutter analyze'
-alias fc='flutter clean'
-alias fcp='flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
-alias fd='flutter doctor'
-alias fds='flutter devices'
-alias fpa='flutter pub add'
-alias fpc='flutter pub cache clean --force'
-alias fpg='flutter pub get'
-alias fpo='flutter pub outdated'
-alias fpr='flutter pub remove'
-alias fpum='flutter pub upgrade --major-versions'
-alias fput='flutter pub upgrade --tighten'
-alias fra="flutter run --device-id 'sdk gphone64 arm64'"
-alias fri="flutter run --device-id ios"
-alias fu='flutter upgrade --force'
-alias fv='flutter --version'
+alias fa='fvm flutter analyze'
+alias fc='fvm flutter clean'
+alias fcp='fvm flutter create --platforms=android,ios delete_me' # useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
+alias fd='fvm flutter doctor'
+alias fds='fvm flutter devices'
+alias fpa='fvm flutter pub add'
+alias fpc='fvm flutter pub cache clean --force'
+alias fpg='fvm flutter pub get'
+alias fpo='fvm flutter pub outdated'
+alias fpr='fvm flutter pub remove'
+alias fpum='fvm flutter pub upgrade --major-versions'
+alias fput='fvm flutter pub upgrade --tighten'
+alias fra="fvm flutter run --device-id 'sdk gphone64 arm64'"
+alias fri="fvm flutter run --device-id ios"
+alias fu='fvm flutter upgrade --force'
+alias fv='fvm flutter --version'
 
 #
 # https://fvm.app
@@ -44,8 +42,8 @@ alias fv='flutter --version'
 alias my_fvm_reset='fvm remove --all && fvm use'
 
 my_flutter_clean() {
-  flutter clean && \
-  flutter pub cache clean --force
+  fvm flutter clean && \
+  fvm flutter pub cache clean --force
 }
 
 my_flutter_pub_global_activate() {
@@ -55,19 +53,19 @@ my_flutter_pub_global_activate() {
     return 1
   fi
 
-  flutter pub global activate $1
+  fvm flutter pub global activate $1
 }
 
 my_flutter() {
-  flutter pub get && \
+  fvm flutter pub get && \
   ([ ! -d "ios" ] || (cd ios && pod install)) && \
   dart run build_runner build && \
   dart fix --apply && \
   dart format . && \
-  flutter analyze # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
+  fvm flutter analyze # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
 }
 
 my_flutter_screenshot() {
   local timestamp=$(date +"%Y-%m-%d_%H-%M%S")
-  (cd ~/Desktop && flutter screenshot --out="screenshot.png" && mv screenshot.png "${timestamp}.png" && open "${timestamp}.png")
+  (cd ~/Desktop && fvm flutter screenshot --out="screenshot.png" && mv screenshot.png "${timestamp}.png" && open "${timestamp}.png")
 }
