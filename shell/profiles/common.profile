@@ -87,15 +87,9 @@ alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Developm
 alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq ".[].databaseId" | xargs -n 1 gh run delete'
 
 #
-# https://asdf-vm.com
-#
-
-# Adds tools installed via asdf to PATH.
-[[ -d "$HOME/.asdf/shims" ]] && export PATH="$HOME/.asdf/shims:$PATH"
-
-#
 # Miscellaneous aliases
 #
 
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
+alias op='oxipng --opt max --recursive --strip all --alpha .'

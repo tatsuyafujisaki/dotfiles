@@ -274,18 +274,24 @@ up() {
   brew cleanup --prune=all
   brew doctor
 
-  # https://firebase.google.com/docs/cli#mac-linux-npm
-  npm install --global firebase-tools
+  # https://rustup.rs
+  rustup update
 
   # https://github.com/Schniz/fnm/blob/master/docs/commands.md
   fnm default --lts
 
-  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
-  flutter upgrade
-  flutter doctor
+  # https://docs.npmjs.com/cli/v8/commands/npm-update
+  npm update --global
+
+  # https://docs.rs/crate/oxipng/latest
+  cargo install oxipng # updates oxipng.
 
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
+
+  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
+  flutter upgrade
+  flutter doctor
 
   # > Note: Homebrew can use an unexpected version of Go to build the binary, so we recommend either using our binaries or ensuring the version of Go used to build.
   # https://golangci-lint.run/docs/welcome/install/local/
