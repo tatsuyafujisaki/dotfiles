@@ -15,11 +15,6 @@
   "debug.openExplorerOnEnd": true,
   "debug.showVariableTypes": true,
   "debug.terminal.clearBeforeReusing": true,
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll": "always",
-  //   "source.organizeImports": "always",
-  //   "source.sortMembers": "always"
-  // },
   "editor.copyWithSyntaxHighlighting": false,
   "editor.find.history": "never",
   "editor.find.replaceHistory": "never",
@@ -28,9 +23,9 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
-  "editor.quickSuggestions": {
-    "other": false
-  },
+  // "editor.quickSuggestions": {
+  //   "other": false
+  // },
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -43,6 +38,8 @@
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "geminicodeassist.agentYoloMode": true,
+  "geminicodeassist.enableTelemetry": false,
   "git.allowForcePush": true,
   "git.allowNoVerifyCommit": true,
   "git.autofetch": true,
@@ -149,5 +146,7 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "geminicodeassist.project": "seismic-plateau-vjkxm",
+  "geminicodeassist.displayInlineContextHint": false
 }
