@@ -1,0 +1,24 @@
+// https://geminicli.com/docs/reference/configuration
+// How to deploy this file:
+// ln -f -s ~/Documents/GitHub/dotfiles/gemini/settings.json ~/.gemini/settings.json
+{
+  "general": {
+    "defaultApprovalMode": "auto_edit",
+    "enableNotifications": true,
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d"
+    }
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "billing": {
+    "overageStrategy": "never"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
+}
