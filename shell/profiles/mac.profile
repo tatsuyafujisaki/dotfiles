@@ -45,7 +45,7 @@ alias plp='plutil -p -- *.plist'
 #
 
 alias oas='open -a simulator'
-alias oios='open ios/Runner.xcworkspace'
+alias oios='cd ios && pod install && open Runner.xcworkspace'
 
 # "xcrv" stands for record video.
 # "xcrun" stands for Xcode Run.
