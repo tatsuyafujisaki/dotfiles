@@ -17,11 +17,3 @@ alias npmig='npm install --global'
 alias npmlg='npm list --global'
 alias npmug='npm uninstall --global'
 alias npmupg='npm update --global'
-
-#
-# https://pnpm.io
-#
-
-[[ -d "$HOME/Library/pnpm" ]] && export PATH="$HOME/Library/pnpm:$PATH"
-
-alias my_install_pnpm='curl -fsSL https://get.pnpm.io/install.sh | sh -'
