@@ -5,6 +5,9 @@
 # https://firebase.google.com/docs/flutter/setup
 [[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$HOME/.pub-cache/bin:$PATH"
 
+# adds "dart" to PATH so that "Error: exec: "dart": executable file not found in $PATH." does not occur in the Dart MCP server of Google Antigravity.
+[[ -d "$HOME/Documents/GitHub/flutter-playground/.fvm/flutter_sdk/bin" ]] && export PATH="$HOME/Documents/GitHub/flutter-playground/.fvm/flutter_sdk/bin:$PATH"
+
 #
 # https://dart.dev/tools/dart-tool
 #
