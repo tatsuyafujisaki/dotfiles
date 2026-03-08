@@ -40,6 +40,8 @@
   "files.trimTrailingWhitespace": true,
   "geminicodeassist.agentYoloMode": true,
   "geminicodeassist.enableTelemetry": false,
+  "geminicodeassist.inlineSuggestions.nextEditPredictions": true,
+  "geminicodeassist.inlineSuggestions.suggestionSpeed": "Fast",
   "git.allowForcePush": true,
   "git.allowNoVerifyCommit": true,
   "git.autofetch": true,
