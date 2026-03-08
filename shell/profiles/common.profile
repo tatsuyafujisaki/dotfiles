@@ -22,11 +22,20 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
-# Google Chrome
+# https://www.google.com/chrome
 #
 
 alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data ~/Desktop/'
 alias copy_chrome_search_engines='sudo cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/work/Library/Application\ Support/Google/Chrome/Default/'
+
+#
+# https://geminicli.com
+#
+
+alias geminiei='gemini extensions install --auto-update --consent'
+alias geminiel='gemini extensions list'
+alias geminieu='gemini extensions uninstall'
+alias geminiy='gemini --yolo'
 
 #
 # https://antigravity.google
@@ -92,5 +101,4 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
-alias geminiy='gemini --yolo'
 alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
