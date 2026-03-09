@@ -23,9 +23,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
-  // "editor.quickSuggestions": {
-  //   "other": false
-  // },
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -123,32 +120,7 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  // https://dartcode.org/docs/recommended-settings/
-  "[dart]": {
-    // Automatically format code on save and during typing of certain characters
-    // (like `;` and `}`).
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    // Draw a guide line at 80 characters, where Dart's formatting will wrap code.
-    "editor.rulers": [
-      80
-    ],
-    // Disables built-in highlighting of words that match your selection. Without
-    // this, all instances of the selected text will be highlighted, interfering
-    // with Dart's ability to highlight only exact references to the selected variable.
-    "editor.selectionHighlight": false,
-    // Allows pressing <TAB> to complete snippets such as `for` even when the
-    // completion list is not visible.
-    "editor.tabCompletion": "onlySnippets",
-    // By default, VS Code will populate code completion with words found in the
-    // matching documents when a language service does not provide its own completions.
-    // This results in code completion suggesting words when editing comments and
-    // strings. This setting will prevent that.
-    "editor.wordBasedSuggestions": "off"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "geminicodeassist.project": "seismic-plateau-vjkxm",
-  "geminicodeassist.displayInlineContextHint": false
+  }
 }
