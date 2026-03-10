@@ -13,10 +13,10 @@
 # https://dart.dev/tools/dart-tool
 #
 
-alias dfa='dart fix --apply'
-alias dfd='dart format .'
-alias drbrb='dart run build_runner build'
-alias drbrw='dart run build_runner watch'
+alias dfa='fvm dart fix --apply'
+alias dfd='fvm dart format .'
+alias drbrb='fvm dart run build_runner build'
+alias drbrw='fvm dart run build_runner watch'
 
 #
 # https://docs.flutter.dev/reference/flutter-cli#flutter-commands
@@ -63,9 +63,9 @@ my_flutter_pub_global_activate() {
 my_flutter() {
   fvm flutter pub get && \
   ([ ! -d "ios" ] || (cd ios && pod install)) && \
-  dart run build_runner build && \
-  dart fix --apply && \
-  dart format . && \
+  fvm dart run build_runner build && \
+  fvm dart fix --apply && \
+  fvm dart format . && \
   fvm flutter analyze # The `--suggestions` flag is not used because it triggers a false alarm for a high version of Gradle.
 }
 
