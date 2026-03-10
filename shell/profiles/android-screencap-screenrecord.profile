@@ -1,7 +1,7 @@
 alias adbm='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
 
-# stands for adb screencapture.
-adbs() {
+# stands for "adb screencapture" in png.
+adbp() {
   (
     cd ~/Desktop
     local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
