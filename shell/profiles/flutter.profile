@@ -29,7 +29,7 @@ alias fd='fvm flutter doctor'
 alias fds='fvm flutter devices'
 alias fpa='fvm flutter pub add'
 alias fpc='fvm flutter pub cache clean --force'
-alias fpg='fvm flutter pub get'
+alias fpg='rm -f pubspec.lock && fvm flutter pub get'
 alias fpo='fvm flutter pub outdated'
 alias fpr='fvm flutter pub remove'
 alias fpum='fvm flutter pub upgrade --major-versions'
@@ -40,14 +40,37 @@ alias fu='fvm flutter upgrade --force'
 alias fv='fvm flutter --version'
 
 #
+# https://developer.apple.com/xcode
+#
+
+alias oios='(cd ios && rm -f Podfile.lock && pod install && open Runner.xcworkspace)'
+
+#
 # https://fvm.app
 #
 
 alias my_fvm_reset='fvm remove --all && fvm use'
 
+#
+# https://cocoapods.org
+#
+
+# https://guides.cocoapods.org/using/getting-started.html#sudo-less-installation
+# Enables `flutter doctor` to find `CocoaPods`.
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
+alias pcc='(cd ios && rm -f Podfile.lock && pod cache clean --all)'
+alias pi='(cd ios && rm -f Podfile.lock && pod install)'
+
+#
+# Miscellaneous
+#
+
 my_flutter_clean() {
   fvm flutter clean && \
-  fvm flutter pub cache clean --force
+  fvm flutter pub cache clean --force && \
+  (cd ios && rm -f Podfile.lock && pod install)
 }
 
 my_flutter_pub_global_activate() {
@@ -61,6 +84,7 @@ my_flutter_pub_global_activate() {
 }
 
 my_flutter() {
+  rm -f pubspec.lock && \
   fvm flutter pub get && \
   ([ ! -d "ios" ] || (cd ios && pod install)) && \
   fvm dart run build_runner build && \

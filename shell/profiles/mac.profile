@@ -41,11 +41,10 @@ alias pl2xml='plutil -convert xml1 -e plist -- *.json'
 alias plp='plutil -p -- *.plist'
 
 #
-# https://developer.apple.com/xcode/
+# https://developer.apple.com/xcode
 #
 
 alias oas='open -a simulator'
-alias oios='cd ios && pod install && open Runner.xcworkspace'
 
 # "xcrv" stands for record video.
 # "xcrun" stands for Xcode Run.
@@ -56,19 +55,6 @@ xcrv() {
   my_ffmpeg "${timestamp}.mp4"
   open "${timestamp}.mp4"
 }
-
-#
-# https://cocoapods.org
-#
-
-# https://guides.cocoapods.org/using/getting-started.html#sudo-less-installation
-# Make `flutter doctor` find CocoaPods.
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-
-# [[ -d "$(gem env home)/bin" ]] && export PATH="$(gem env home)/bin:$PATH"
-
-alias pcca='pod cache clean --all'
 
 #
 # https://brew.sh
