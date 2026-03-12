@@ -94,6 +94,8 @@ my_flutter() {
 }
 
 my_flutter_screenshot() {
-  local output="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M%S").png"
-  fvm flutter screenshot --out="$output" && open "$output"
+  local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M%S").png"
+  fvm flutter screenshot --out="$file"
+  oxipng --opt max --strip all --alpha "$file"
+  open "$file"
 }

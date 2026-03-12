@@ -4,10 +4,10 @@ alias adbm='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer
 adbp() {
   (
     cd ~/Desktop
-    local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-    adb exec-out screencap -p > "${timestamp}.png"
-    oxipng --opt max --strip all --alpha "${timestamp}.png"
-    open "${timestamp}.png"
+    local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
+    adb exec-out screencap -p > "$file"
+    oxipng --opt max --strip all --alpha "$file"
+    open "$file"
   )
 }
 
@@ -15,9 +15,9 @@ adbp() {
 adbw() {
   (
     cd ~/Desktop
-    local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-    adb exec-out screencap -p > "${timestamp}.png"
-    local webp_file=$(my_cwebp "${timestamp}.png")
+    local png_file="$(date +"%Y-%m-%d_%H-%M-%S").png"
+    adb exec-out screencap -p > "$png_file"
+    local webp_file=$(my_cwebp "$png_file")
     open "$webp_file"
   )
 }
@@ -26,10 +26,10 @@ adbw() {
 adbpm() {
   (
     cd ~/Desktop
-    local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-    adb pull /sdcard/screenrecord.mp4 "${timestamp}.mp4"
+    local file="$(date +"%Y-%m-%d_%H-%M-%S").mp4"
+    adb pull /sdcard/screenrecord.mp4 "$file"
     adb shell rm /sdcard/screenrecord.mp4
-    my_ffmpeg "${timestamp}.mp4"
-    open "${timestamp}.mp4"
+    my_ffmpeg "$file"
+    open "$file"
   )
 }
