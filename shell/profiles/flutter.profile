@@ -43,7 +43,7 @@ alias fv='fvm flutter --version'
 # https://developer.apple.com/xcode
 #
 
-alias oios='(cd ios && rm -f Podfile.lock && pod install && open Runner.xcworkspace)'
+alias xcw='(cd ios && rm -f Podfile.lock && pod install && open Runner.xcworkspace)'
 
 #
 # https://fvm.app

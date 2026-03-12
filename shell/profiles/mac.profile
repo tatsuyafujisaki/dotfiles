@@ -44,7 +44,7 @@ alias plp='plutil -p -- *.plist'
 # https://developer.apple.com/xcode
 #
 
-alias oas='open -a simulator'
+alias sim='open -a simulator'
 
 # "xcrv" stands for record video.
 # "xcrun" stands for Xcode Run.
