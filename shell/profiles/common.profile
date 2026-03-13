@@ -30,12 +30,13 @@ alias copy_chrome_search_engines='sudo cp ~/Library/Application\ Support/Google/
 
 #
 # https://geminicli.com
+# https://geminicli.com/extensions/
 #
 
 alias geminiei='gemini extensions install --auto-update --consent'
 alias geminiel='gemini extensions list'
 alias geminieu='gemini extensions uninstall'
-alias geminiy='gemini --yolo'
+alias gy='gemini --yolo'
 
 #
 # https://antigravity.google
