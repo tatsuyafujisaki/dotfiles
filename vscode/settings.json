@@ -3,6 +3,9 @@
 // ln -f -s $HOME/Documents/GitHub/dotfiles/vscode/settings.json $HOME/Library/Application Support/Code/User/settings.json
 // ln -f -s $HOME/Documents/GitHub/dotfiles/vscode/settings.json $HOME/Library/Application Support/Cursor/User/settings.json
 {
+  "chat.mcp.discovery.enabled": {
+    "antigravity": false
+  },
   "chat.tools.terminal.autoApprove": {
     "dart": true,
     "go": true
@@ -122,5 +125,6 @@
   "workbench.startupEditor": "none",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "geminicodeassist.project": "seismic-plateau-vjkxm"
 }
