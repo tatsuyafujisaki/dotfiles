@@ -32,10 +32,8 @@ alias fpc='fvm flutter pub cache clean --force'
 alias fpg='rm -f pubspec.lock && fvm flutter pub get'
 alias fpo='fvm flutter pub outdated'
 alias fpr='fvm flutter pub remove'
-alias fpum='fvm flutter pub upgrade --major-versions'
-alias fput='fvm flutter pub upgrade --tighten'
-alias fra="fvm flutter run --device-id 'sdk gphone64 arm64'"
-alias fri="fvm flutter run --device-id ios"
+alias fpu='fvm flutter pub upgrade --major-versions --tighten'
+alias fri="fvm flutter run --device-id"
 alias fu='fvm flutter upgrade --force'
 alias fv='fvm flutter --version'
 
