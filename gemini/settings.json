@@ -6,8 +6,7 @@
     "defaultApprovalMode": "auto_edit",
     "enableNotifications": true,
     "sessionRetention": {
-      "enabled": true,
-      "maxAge": "30d"
+      "maxCount": 0
     }
   },
   "privacy": {
@@ -16,14 +15,14 @@
   "billing": {
     "overageStrategy": "never"
   },
+  "tools": {
+    "disableLLMCorrection": false
+  },
   "security": {
     "auth": {
       "selectedType": "oauth-personal"
     },
     "enablePermanentToolApproval": true,
     "autoAddToPolicyByDefault": true
-  },
-  "tools": {
-    "disableLLMCorrection": false
   }
 }
