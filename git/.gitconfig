@@ -1,45 +1,11 @@
-[user]
-    email = 1838962+tatsuyafujisaki@users.noreply.github.com
-    name = Tatsuya Fujisaki
 [advice]
     skippedCherryPicks = false
-[core]
-    autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
-    editor = agy --wait # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
-    excludesFile = ~/.gitignore
-[fetch]
-    prune = true
-    pruneTags = true
-    recurseSubmodules = true
-[http]
-    emptyAuth = true # prevents "remote: HTTP Basic: Accesss denied" when cloning a repository. https://docs.gitlab.com/ee/integration/kerberos.html#http-basic-access-denied-when-cloning
-[pager]
-    branch = false # makes "git branch" list branches without using a pager.
-[pull]
-    rebase = true
-[push]
-    autoSetupRemote = true
-[rebase]
-    autoSquash = true
-    autoStash = true
-[diff]
-    tool = mytool
-[difftool]
-    prompt = false
-[difftool "mytool"]
-    cmd = agy --wait --diff $LOCAL $REMOTE
-[merge]
-    tool = mytool
-[mergetool]
-    prompt = false
-[mergetool "mytool"]
-    cmd = agy --wait $MERGED
-
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     b = branch
+    bd = !git branch | grep -v "^\\*" | xargs git branch -D
     cam = commit --all --amend --no-verify -m
-    can = !git add --all && git commit --all --amend --no-edit
+    can = !git add --all && git commit --amend --no-edit
     cge = config --global --edit # opens ~/.gitconfig
     cgl = config --global --list # lists all the variables in ~/.gitconfig
     cm = commit -m
@@ -65,18 +31,52 @@
     rir = rebase --interactive --root
     rs = reset HEAD~
     rsh = reset --hard HEAD~
-    rsh2 = reset --hard HEAD~2
-    rsh3 = reset --hard HEAD~3
-    st = stash push --include-untracked # `push` cannot be used as an alias because it is
+    st = stash push --include-untracked # `push` cannot be used as an alias
     sw = switch
-# The configurations below are generated automatically upon installation of GitHub Desktop.
-# https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/about-git-large-file-storage-and-github-desktop
-# https://git-scm.com/docs/gitattributes#_filter
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+[column]
+    ui = auto
+[core]
+    autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+    editor = agy --wait # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
+    excludesFile = ~/.gitignore
+	fsmonitor = true
+[diff]
+	algorithm = histogram
+	colorMoved = dimmed-zebra
+    tool = mytool
+[difftool]
+    prompt = false
+[difftool "mytool"]
+    cmd = agy --wait --diff "$LOCAL" "$REMOTE"
+[fetch]
+    prune = true
+    pruneTags = true
+    recurseSubmodules = true
+[init]
+    defaultBranch = main
+[merge]
+    conflictStyle = zdiff3
+    tool = mytool
+[mergetool]
+    prompt = false
+[mergetool "mytool"]
+    cmd = agy --wait $MERGED
+[help]
+	autocorrect = prompt
+[pager]
+    branch = false # makes "git branch" list branches without using a pager.
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+[rerere]
+	enabled = true
+[user]
+    email = 1838962+tatsuyafujisaki@users.noreply.github.com
+    name = Tatsuya Fujisaki
 
 # It is not easy to find the default values in Git Config. Refer to the website below for more information.
 # https://git-scm.com/docs/git-config
