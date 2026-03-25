@@ -1,7 +1,6 @@
 // How to deploy this file:
-// ln -f -s $HOME/Documents/GitHub/dotfiles/vscode/settings.json $HOME/Library/Application Support/Antigravity/User/settings.json
-// ln -f -s $HOME/Documents/GitHub/dotfiles/vscode/settings.json $HOME/Library/Application Support/Code/User/settings.json
-// ln -f -s $HOME/Documents/GitHub/dotfiles/vscode/settings.json $HOME/Library/Application Support/Cursor/User/settings.json
+// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Antigravity/User"
+// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
 {
   "chat.mcp.discovery.enabled": {
     "antigravity": false

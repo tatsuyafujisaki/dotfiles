@@ -3,14 +3,14 @@
 1. Clone this repository using GitHub Desktop.
 2. Run following command.
    ```shell
-   ln -f -s ~/Documents/GitHub/dotfiles/git/.gitconfig ~
+   ln -f -s "$HOME/Documents/GitHub/dotfiles/git/.gitconfig" "$HOME"
    ```
 
 # How to create a consolidated `~/.gitignore`
 1. Run the script below.
    ```shell
    rm -f ~/.gitignore
-   
+
    for type in Cursor JetBrains macOS VisualStudioCode Xcode
    do
      {
@@ -27,7 +27,7 @@
    ```gitignore
    .idea/
    ```
-   
+
 # How to create a consolidated `.gitignore` in a project
 
 ```shell

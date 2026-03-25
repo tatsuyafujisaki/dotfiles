@@ -1,3 +1,6 @@
+# How to deploy this file:
+# ln -f -s "$HOME/Documents/GitHub/dotfiles/git/.gitconfig" "$HOME"
+
 [advice]
     skippedCherryPicks = false
 [alias]
