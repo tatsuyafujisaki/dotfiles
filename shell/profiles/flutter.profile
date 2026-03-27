@@ -76,23 +76,23 @@ my_flutter_pub_global_activate() {
 
 # Stands for "my flutter"
 myf() {
-  rm -f pubspec.lock && \
-  fvm flutter pub get && \
-  (cd ios && rm -f Podfile.lock && pod install) && \
-  (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) && \
-  fvm dart fix --apply && \
-  fvm dart format . && \
+  rm -f pubspec.lock &&
+  fvm flutter pub get &&
+  (cd ios && rm -f Podfile.lock && pod install) &&
+  (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
+  fvm dart fix --apply &&
+  fvm dart format . &&
   fvm flutter analyze
 }
 
 # Stands for "my flutter clean"
 myfc() {
-  rm -f pubspec.lock && \
-  fvm flutter pub get && \
-  (cd ios && rm -f Podfile.lock && pod cache clean --all && fvm flutter precache --ios && pod install) && \
-  (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) && \
-  fvm dart fix --apply && \
-  fvm dart format . && \
+  rm -f pubspec.lock &&
+  fvm flutter pub get &&
+  (cd ios && rm -f Podfile.lock && pod cache clean --all && fvm flutter precache --ios && pod install) &&
+  (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
+  fvm dart fix --apply &&
+  fvm dart format . &&
   fvm flutter analyze
 }
 

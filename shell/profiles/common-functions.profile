@@ -7,13 +7,12 @@ gg() {
     git switch "$1"
   else
     git switch develop || git switch main || git switch master
-  fi
-  # "grep -v \*" excludes the current branch, which is marked with an asterisk.
-  git branch | grep -v \* | xargs --no-run-if-empty git branch -D
-  git clean -d --force
-  git reset --hard
-  git pull --all --rebase --recurse-submodules
-  git submodule update --init --recursive --remote
+  fi &&
+  { git branch | grep -v \* | xargs --no-run-if-empty git branch -D || true; } &&
+  git clean -d --force &&
+  git reset --hard &&
+  git pull --all --rebase --recurse-submodules &&
+  git submodule update --init --recursive --remote &&
   git stash clear
 }
 
