@@ -6,7 +6,7 @@
 [alias]
     a = !pbpaste | git apply --ignore-space-change
     b = branch
-    bd = !git branch | grep -v "^\\*" | xargs git branch -D
+    bd = !git branch | grep -v "^\\*" | xargs --no-run-if-empty git branch -D
     cam = commit --all --amend --no-verify -m
     can = !git add --all && git commit --amend --no-edit
     cge = config --global --edit # opens ~/.gitconfig
@@ -83,3 +83,8 @@
 
 # It is not easy to find the default values in Git Config. Refer to the website below for more information.
 # https://git-scm.com/docs/git-config
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
