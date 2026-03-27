@@ -9,6 +9,7 @@ gg() {
   git clean -d --force
   git reset --hard
   git pull --all --rebase --recurse-submodules
+  git submodule update --init --recursive --remote
   git stash clear
 }
 
