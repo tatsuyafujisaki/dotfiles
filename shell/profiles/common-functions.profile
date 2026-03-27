@@ -3,7 +3,11 @@
 #
 
 gg() {
-  git switch develop || git switch main || git switch master
+  if [[ -n "$1" ]]; then
+    git switch "$1"
+  else
+    git switch develop || git switch main || git switch master
+  fi
   # "grep -v \*" excludes the current branch, which is marked with an asterisk.
   git branch | grep -v \* | xargs --no-run-if-empty git branch -D
   git clean -d --force
