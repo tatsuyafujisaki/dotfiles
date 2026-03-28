@@ -26,10 +26,10 @@ alias adbps='adb shell getconf PAGE_SIZE' # https://developer.android.com/guide/
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 # https://stackoverflow.com/a/30390647
 alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
-grep -v com.piriform.ccleaner |\
-grep -v com.blogspot.newapphorizons.fakegps |\
-grep -v com.Slack |\
-grep -v dev.firebase.appdistribution |\
+grep --invert-match com.piriform.ccleaner |\
+grep --invert-match com.blogspot.newapphorizons.fakegps |\
+grep --invert-match com.Slack |\
+grep --invert-match dev.firebase.appdistribution |\
 xargs -n 1 --no-run-if-empty --verbose adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'

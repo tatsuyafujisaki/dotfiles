@@ -8,7 +8,7 @@ gg() {
   else
     git switch develop || git switch main || git switch master
   fi &&
-  { git branch | grep -v \* | xargs --no-run-if-empty git branch -D || true; } &&
+  { git branch | grep --invert-match \* | xargs --no-run-if-empty git branch -D || true; } &&
   git clean -d --force &&
   git reset --hard &&
   git pull --all --rebase --recurse-submodules &&
