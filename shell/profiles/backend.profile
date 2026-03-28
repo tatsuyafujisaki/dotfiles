@@ -1,3 +1,12 @@
+
+#
+# https://cloud.google.com/cli
+#
+
+# The following lines were added when Google Cloud SDK was installed.
+[[ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]] && source "$HOME/google-cloud-sdk/path.zsh.inc"
+[[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]] && source "$HOME/google-cloud-sdk/completion.zsh.inc"
+
 #
 # https://www.docker.com
 #

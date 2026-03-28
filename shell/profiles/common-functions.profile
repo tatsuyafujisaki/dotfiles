@@ -273,36 +273,62 @@ my_remove_parenthesized_one_suffix() {
 }
 
 up() {
-  # https://docs.brew.sh/Manpage
-  brew upgrade --greedy
-  brew cleanup --prune=all
-  brew doctor
-
-  # https://rustup.rs
-  rustup update
-
-  # https://github.com/Schniz/fnm/blob/master/docs/commands.md
-  fnm default --lts
-
-  # https://docs.npmjs.com/cli/v8/commands/npm-update
-  npm update --global
-
-  # https://docs.rs/crate/oxipng/latest
-  cargo install oxipng # updates oxipng.
+  # https://cloud.google.com/cli
+  gcloud components update
 
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
 
-  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
-  flutter upgrade
-  flutter doctor
+  _update_brew
 
+  _update_node
+
+  _update_golang
+
+  _update_rust
+
+  _update_flutter
+
+  my_git_pull_all
+}
+
+_update_brew() {
+  # https://docs.brew.sh/Manpage
+  brew upgrade --greedy
+  brew cleanup --prune=all
+  brew doctor
+}
+
+_update_node() {
+  # https://github.com/Schniz/fnm/blob/master/docs/commands.md
+  fnm ls | grep --invert-match "system" | grep --only-matching "v[0-9.]*" | xargs --max-args=1 fnm uninstall # uninstalls all versions except system.
+  fnm install --lts
+  fnm default lts-latest
+  fnm use lts-latest
+
+  # https://docs.npmjs.com/cli/v8/commands/npm-update
+  npm update --global
+}
+
+_update_golang() {
   # > Note: Homebrew can use an unexpected version of Go to build the binary, so we recommend either using our binaries or ensuring the version of Go used to build.
   # https://golangci-lint.run/docs/welcome/install/local/
   curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
   # https://github.com/google/yamlfmt
   go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+}
 
-  my_git_pull_all
+_update_rust() {
+  # https://rustup.rs
+  rustup update
+
+  # https://docs.rs/crate/oxipng/latest
+  cargo install oxipng # updates oxipng.
+}
+
+_update_flutter() {
+  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
+  flutter upgrade
+  flutter doctor
 }
