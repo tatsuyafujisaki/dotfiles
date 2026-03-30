@@ -5,6 +5,7 @@
   "general": {
     "defaultApprovalMode": "auto_edit",
     "enableNotifications": true,
+    "preferredEditor": "antigravity",
     "sessionRetention": {
       "maxCount": 0
     }
