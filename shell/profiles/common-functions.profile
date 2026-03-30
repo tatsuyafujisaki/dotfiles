@@ -295,13 +295,13 @@ up() {
 _update_brew() {
   # https://docs.brew.sh/Manpage
   brew upgrade --greedy
-  brew cleanup --prune=all
+  brew cleanup --prune all
   brew doctor
 }
 
 _update_node() {
   # https://github.com/Schniz/fnm/blob/master/docs/commands.md
-  fnm ls | grep --invert-match "system" | grep --only-matching "v[0-9.]*" | xargs --max-args=1 fnm uninstall # uninstalls all versions except system.
+  fnm ls | grep --invert-match "system" | grep --only-matching "v[0-9.]*" | xargs --max-args 1 fnm uninstall # uninstalls all versions except system.
   fnm install --lts
   fnm default lts-latest
   fnm use lts-latest
