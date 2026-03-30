@@ -20,7 +20,7 @@ alias drbrw='fvm dart run build_runner watch'
 
 alias fa='fvm flutter analyze'
 alias fc='fvm flutter clean'
-alias fcp='fvm flutter create --platforms=android,ios delete_me' # Useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
+alias fcp='fvm flutter create --platforms android,ios delete_me' # Useful for checking the structure of modern projects and the contents of files, especially those in the android and ios folders.
 alias fd='fvm flutter doctor'
 alias fds='fvm flutter devices'
 alias fpa='fvm flutter pub add'
@@ -94,7 +94,7 @@ myfc() {
 
 my_flutter_screenshot() {
   local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M%S").png"
-  fvm flutter screenshot --out="$file"
+  fvm flutter screenshot --out "$file"
   oxipng --opt max --strip all --alpha "$file"
   open "$file"
 }
