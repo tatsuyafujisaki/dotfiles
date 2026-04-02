@@ -172,7 +172,7 @@ my_cwebp() {
   fi
 
   local output_file="${1%.*}.webp"
-  if cwebp -m 6 -mt -af "$1" -o "$output_file" && rm -f "$1"
+  if cwebp -m 6 -mt -af "$1" -o "$output_file"
   then
     echo "$output_file"
     return 0
