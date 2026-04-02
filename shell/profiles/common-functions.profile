@@ -274,7 +274,7 @@ my_remove_parenthesized_one_suffix() {
 
 up() {
   # https://cloud.google.com/cli
-  gcloud components update
+  gcloud components update --quiet
 
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
