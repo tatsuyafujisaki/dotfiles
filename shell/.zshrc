@@ -27,10 +27,7 @@ compinit
 # https://zsh.sourceforge.io/Doc/Release/Zsh-Modules.html#The-zsh_002fzutil-Module
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-for profile in ~/Documents/GitHub/dotfiles/shell/profiles/*.profile ~/Documents/GitHub/private/private.profile
-do
-  . "$profile"
-done
+for f (~/Documents/GitHub/dotfiles/shell/profiles/*.profile(N) ~/Documents/GitHub/private/private.profile(N)) source $f
 
 # https://direnv.net/docs/hook.html#zsh
 if command -v direnv >/dev/null 2>&1
