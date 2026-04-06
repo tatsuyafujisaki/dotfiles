@@ -1,4 +1,3 @@
-
 #
 # https://cloud.google.com/cli
 #
