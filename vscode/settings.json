@@ -124,6 +124,5 @@
   "workbench.startupEditor": "none",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "geminicodeassist.project": "seismic-plateau-vjkxm"
+  }
 }
