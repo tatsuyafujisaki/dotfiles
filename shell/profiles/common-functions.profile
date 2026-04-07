@@ -164,7 +164,7 @@ my_backup_desktop() {
   mkdir -p "$dir" && mv ~/Desktop/* "$dir"/
 }
 
-my_cwebp() {
+_my_cwebp() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <image>"
@@ -181,10 +181,11 @@ my_cwebp() {
   fi
 }
 
-my_cwebp_desktop() {
+# Stands for "my cwebp".
+mycw() {
   for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
   do
-    my_cwebp "$file"
+    _my_cwebp "$file"
   done
 }
 
