@@ -18,6 +18,7 @@ alias dcu='docker compose up --detach --remove-orphans --wait'
 
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
 
 #
 # https://golangci-lint.run
