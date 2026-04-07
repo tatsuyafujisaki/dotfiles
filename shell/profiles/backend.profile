@@ -28,6 +28,12 @@ export PATH="$PATH:$GOBIN"
 alias goci='golangci-lint run --fix'
 
 #
+# https://github.com/google/yamlfmt
+#
+
+alias yf='yamlfmt .'
+
+#
 # Note
 #
 
