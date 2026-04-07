@@ -312,8 +312,7 @@ _update_node() {
 }
 
 _update_golang() {
-  # > Note: Homebrew can use an unexpected version of Go to build the binary, so we recommend either using our binaries or ensuring the version of Go used to build.
-  # https://golangci-lint.run/docs/welcome/install/local/
+  # https://golangci-lint.run/docs/welcome/install/local/#:~:text=Note:%20Homebrew%20can%20use%20an%20unexpected%20version%20of%20Go%20to%20build%20the%20binary,%20so%20we%20recommend%20either%20using%20our%20binaries%20or%20ensuring%20the%20version%20of%20Go%20used%20to%20build.
   curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
   # https://github.com/google/yamlfmt
