@@ -103,3 +103,11 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
 alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
+
+b64i() {
+  base64 --input "$1" | pbcopy
+}
+
+b64o() {
+  pbpaste | base64 --decode
+}
