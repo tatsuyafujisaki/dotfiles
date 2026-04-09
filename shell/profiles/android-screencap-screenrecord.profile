@@ -17,7 +17,7 @@ adbw() {
     cd ~/Desktop
     local png_file="$(date +"%Y-%m-%d_%H-%M-%S").png"
     adb exec-out screencap -p > "$png_file"
-    local webp_file=$(my_cwebp "$png_file")
+    local webp_file=$(_my_cwebp "$png_file")
     open "$webp_file"
   )
 }
