@@ -37,7 +37,7 @@ alias fv='fvm flutter --version'
 # https://developer.apple.com/xcode
 #
 
-alias xcw='open ios/Runner.xcworkspace'
+alias xc='open *.xcworkspace 2>/dev/null || open ios/*.xcworkspace 2>/dev/null'
 
 #
 # https://fvm.app
