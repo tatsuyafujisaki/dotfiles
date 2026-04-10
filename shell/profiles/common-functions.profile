@@ -301,11 +301,21 @@ _update_brew() {
 }
 
 _update_node() {
-  # https://github.com/Schniz/fnm/blob/master/docs/commands.md
-  fnm ls | grep --invert-match "system" | grep --only-matching "v[0-9.]*" | xargs --max-args 1 fnm uninstall # uninstalls all versions except system.
+  # Captures existing global packages (excluding npm and corepack).
+  local pkgs=$(npm list --global --depth=0 --parseable | sed 's|.*/node_modules/||' | grep -v '^npm$' | grep -v '^corepack$')
+
+  # Uninstalls all versions except system.
+  fnm ls | grep --invert-match "system" | grep --only-matching "v[0-9.]*" | xargs --max-args 1 fnm uninstall
   fnm install --lts
   fnm default lts-latest
   fnm use lts-latest
+
+  # Reinstalls the captured packages
+  if [[ -n "$pkgs" ]]
+  then
+    echo "Reinstalling global packages: $pkgs"
+    echo "$pkgs" | xargs npm install --global
+  fi
 
   # https://docs.npmjs.com/cli/v8/commands/npm-update
   npm update --global
