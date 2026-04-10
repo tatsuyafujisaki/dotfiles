@@ -132,7 +132,7 @@ cw() {
 }
 
 delete_ds_store() {
-  sudo find / -type f -name .DS_Store -delete
+  sudo find "${1:-/}" -name .DS_Store -delete
 }
 
 # Stands for "Delete me".
