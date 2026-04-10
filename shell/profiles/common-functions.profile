@@ -123,6 +123,14 @@ clean_chrome() {
   )
 }
 
+# Stands for "cwebp".
+cw() {
+  for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
+  do
+    _my_cwebp "$file"
+  done
+}
+
 delete_ds_store() {
   sudo find / -type f -name .DS_Store -delete
 }
@@ -179,14 +187,6 @@ _my_cwebp() {
   else
     return 1
   fi
-}
-
-# Stands for "my cwebp".
-mycw() {
-  for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
-  do
-    _my_cwebp "$file"
-  done
 }
 
 my_ffmpeg() {
