@@ -2,6 +2,9 @@
 // How to deploy this file:
 // ln -f -s ~/Documents/GitHub/dotfiles/gemini/settings.json ~/.gemini/settings.json
 {
+  "billing": {
+    "overageStrategy": "never"
+  },
   "general": {
     "defaultApprovalMode": "auto_edit",
     "enableNotifications": true,
@@ -10,14 +13,11 @@
       "maxCount": 0
     }
   },
+  "ide": {
+    "enabled": true
+  },
   "privacy": {
     "usageStatisticsEnabled": false
-  },
-  "billing": {
-    "overageStrategy": "never"
-  },
-  "tools": {
-    "disableLLMCorrection": false
   },
   "security": {
     "auth": {
@@ -25,5 +25,8 @@
     },
     "enablePermanentToolApproval": true,
     "autoAddToPolicyByDefault": true
+  },
+  "tools": {
+    "disableLLMCorrection": false
   }
 }
