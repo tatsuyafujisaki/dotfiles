@@ -11,16 +11,6 @@ export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 
 #
-# Preferences
-#
-
-alias gnrl='open /System/Library/PreferencePanes/StartupDisk.prefPane'
-alias dsp='open /System/Library/PreferencePanes/Displays.prefPane'
-alias kb='open /System/Library/PreferencePanes/Keyboard.prefPane'
-alias nw='open /System/Library/PreferencePanes/Network.prefPane'
-alias sc='open x-apple.systempreferences:com.apple.preference.universalaccess?SpokenContent'
-
-#
 # pbcopy, pbpaste
 #
 

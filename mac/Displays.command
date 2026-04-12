@@ -1,0 +1,1 @@
+open /System/Library/PreferencePanes/Displays.prefPane
