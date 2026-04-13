@@ -3,8 +3,10 @@
 // ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
 {
   "chat.mcp.discovery.enabled": {
-    "antigravity": false
+    "claude-desktop": true,
+    "antigravity": true
   },
+  "chat.mcp.gallery.enabled": true,
   "chat.tools.terminal.autoApprove": {
     "*": true
   },
