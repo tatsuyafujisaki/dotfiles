@@ -10,6 +10,7 @@
   "chat.tools.terminal.autoApprove": {
     "*": true
   },
+  "claudeCode.preferredLocation": "panel", // same as default.
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
   "dart.flutterHotReloadOnSave": "all", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
   "dart.hotReloadOnSave": "allIfDirty",
