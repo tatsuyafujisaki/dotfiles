@@ -24,13 +24,6 @@ alias showtap='adb shell settings put system show_touches 1'
 alias adbl='adb shell am start -a android.settings.LOCALE_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adbps='adb shell getconf PAGE_SIZE' # https://developer.android.com/guide/practices/page-sizes
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
-# https://stackoverflow.com/a/30390647
-alias adbu="adb shell pm list packages -3 | cut -d: -f2 | tr '\r' ' ' |\
-grep --invert-match com.piriform.ccleaner |\
-grep --invert-match com.blogspot.newapphorizons.fakegps |\
-grep --invert-match com.Slack |\
-grep --invert-match dev.firebase.appdistribution |\
-xargs -n 1 --no-run-if-empty --verbose adb uninstall"
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 
@@ -38,6 +31,17 @@ alias layou='adb shell setprop debug.layout false'
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
 alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
 
+adbu() {
+  adb devices | grep -w "device" | cut -f1 | while read -r serial
+  do
+    adb -s "$serial" shell pm list packages -3 | cut -d: -f2 | tr -d '\r' | \
+      grep --invert-match com.piriform.ccleaner | \
+      grep --invert-match com.blogspot.newapphorizons.fakegps | \
+      grep --invert-match com.Slack | \
+      grep --invert-match dev.firebase.appdistribution | \
+      xargs -n 1 --no-run-if-empty --verbose adb -s "$serial" uninstall
+  done
+}
 
 #
 # adb
