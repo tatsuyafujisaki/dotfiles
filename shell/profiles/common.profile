@@ -42,7 +42,7 @@ alias gy='gemini --yolo'
 # https://claude.com
 #
 
-alias cld='claude --dangerously-skip-permissions'
+alias cc='claude --dangerously-skip-permissions'
 
 #
 # https://antigravity.google
