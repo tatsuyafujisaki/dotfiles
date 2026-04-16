@@ -34,6 +34,17 @@ alias goci='golangci-lint run --fix'
 alias yf='yamlfmt .'
 
 #
+# Troubleshooting for a client work
+#
+
+# Stands for backend log
+alias blog='ssh prod "tail -30 /var/log/supervisor/api-stderr---supervisor-*.log" > ~/Desktop/prod_api_stderr_logs.txt'
+
+alias sshd='ssh dev'
+alias sshs='ssh stg'
+alias sshp='ssh prod'
+
+#
 # Note
 #
 
