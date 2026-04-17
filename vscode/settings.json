@@ -2,6 +2,7 @@
 // ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Antigravity/User"
 // ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
 {
+  "$schema": "vscode://schemas/settings/user",
   "chat.mcp.discovery.enabled": {
     "claude-desktop": true,
     "antigravity": true
