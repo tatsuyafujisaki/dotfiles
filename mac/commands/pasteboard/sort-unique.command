@@ -1,0 +1,1 @@
+pbpaste | sort --unique | pbcopy

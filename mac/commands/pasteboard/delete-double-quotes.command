@@ -1,0 +1,1 @@
+pbpaste | tr -d "\"" | pbcopy

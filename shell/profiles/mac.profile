@@ -11,17 +11,6 @@ export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 
 #
-# pbcopy, pbpaste
-#
-
-alias pbl='pbpaste | sed "s/^/- /" | pbcopy' # stands for "pasteboard unordered list".
-alias pbnn='pbpaste | tr -s "\n" | pbcopy' # stands for "pasteboard removing \n\n.
-alias pbsort='pbpaste | sort --unique | grep . | pbcopy' # "grep ." excludes empty lines.
-alias pbtrim='pbpaste | tr -d '[:space:]' | pbcopy'
-alias pd='pbpaste | python3 -c "import sys, urllib.parse; print(urllib.parse.unquote_plus(sys.stdin.read().strip()))" | pbcopy' # "pd" stands for "percent decode".
-alias undq='pbpaste | tr -d "\"" | pbcopy' # deletes double quotes from the clipboard.
-
-#
 # plutil
 #
 
@@ -29,12 +18,6 @@ alias cppl='(cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && sudo cp 
 alias pl2json='plutil -convert json -r -e json -- *.plist'
 alias pl2xml='plutil -convert xml1 -e plist -- *.json'
 alias plp='plutil -p -- *.plist'
-
-#
-# https://developer.apple.com/xcode
-#
-
-alias sim='open -a simulator'
 
 # "xcrv" stands for record video.
 # "xcrun" stands for Xcode Run.
@@ -68,4 +51,3 @@ alias bug='brew upgrade --greedy'
 # USB cable speed detection
 # https://developer.android.com/studio/releases/past-releases/as-koala-feature-drop-release-notes#usb-check
 alias print_usb_speed='system_profiler SPUSBHostDataType | grep --extended-regexp "Link Speed|Product:"'
-
