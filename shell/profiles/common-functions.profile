@@ -154,6 +154,17 @@ l() {
   ls -d -F -G -h -l * 2> /dev/null
 }
 
+# Stands for "makedir and cd".
+mc() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <directory>"
+    return 1
+  fi
+
+  mkdir -p "$1" && cd "$1"
+}
+
 my_ai() {
   local query=$(pbpaste)
   local urls=(
