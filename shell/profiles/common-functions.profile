@@ -145,13 +145,8 @@ dm() {
 
 l() {
   clear
-
-  # Prints non-dotfiles and non-dotdirectories and a blank line.
-  # `.[^.]*` is a Zsh glob pattern to except `.` and `..`.
-  ls -d -F -G -h -l .[^.]* 2> /dev/null && echo
-
-  # Prints non-dotfiles and non-dotdirectories.
-  ls -d -F -G -h -l * 2> /dev/null
+  ls -dFGhl .[^.]*(N) 2>/dev/null && echo
+  ls -dFGhl *(N) 2>/dev/null
 }
 
 # Stands for "makedir and cd".
