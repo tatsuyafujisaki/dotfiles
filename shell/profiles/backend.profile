@@ -34,10 +34,18 @@ alias goci='golangci-lint run --fix'
 alias yf='yamlfmt .'
 
 #
+# https://www.python.org
+#
+
+alias activate='.venv/bin/activate'
+
+#
 # https://github.com/astral-sh/uv
 #
 
+alias uvr='uv run'
 alias uvrp='uv run python'
+alias mng='uv run python manage.py'
 
 #
 # Troubleshooting for a client work

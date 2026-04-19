@@ -14,6 +14,7 @@ alias ast='cd ~/Documents/GitHub/apps-script-toolkit'
 alias chrome_profile='cd ~/Library/Application\ Support/Google/Chrome/Default'
 alias d='cd ~/Desktop'
 alias df='cd ~/Documents/GitHub/dotfiles'
+alias dp='cd ~/Documents/GitHub/django-playground'
 alias dnp='cd ~/Documents/GitHub/deno-playground'
 alias fp='cd ~/Documents/GitHub/flutter-playground'
 alias h='cd ~/Documents/GitHub'
@@ -36,6 +37,7 @@ alias import_chrome_search_engines='sudo cp ~/Library/Application\ Support/Googl
 alias geminiei='gemini extensions install --auto-update --consent'
 alias geminiel='gemini extensions list'
 alias geminieu='gemini extensions uninstall'
+alias gmcp='gemini mcp'
 alias gy='gemini --yolo'
 
 #

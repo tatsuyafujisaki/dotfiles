@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "dart-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "/opt/homebrew/bin/dart",
+      "args": [
+        "mcp-server"
+      ],
+      "env": {}
+    },
+    "firebase-mcp-server": {
+      "command": "~.local/share/fnm/aliases/default/bin/npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "env": {}
+    },
+    "gmp-code-assist": {
+      "command": "~/.local/share/fnm/aliases/default/bin/npx",
+      "args": [
+        "-y",
+        "@googlemaps/code-assist-mcp@latest"
+      ],
+      "env": {
+        "SOURCE": "antigravity"
+      }
+    }
+  }
+}

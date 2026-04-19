@@ -29,16 +29,5 @@
   },
   "tools": {
     "disableLLMCorrection": false
-  },
-  "mcpServers": {
-    "dart": {
-      "command": "/opt/homebrew/bin/dart",
-      "args": [
-        "mcp-server"
-      ]
-    }
-  },
-  "ui": {
-    "theme": "Default Light"
   }
 }
