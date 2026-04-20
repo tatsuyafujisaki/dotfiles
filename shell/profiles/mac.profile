@@ -19,9 +19,13 @@ alias pl2json='plutil -convert json -r -e json -- *.plist'
 alias pl2xml='plutil -convert xml1 -e plist -- *.json'
 alias plp='plutil -p -- *.plist'
 
-# "xcrv" stands for record video.
-# "xcrun" stands for Xcode Run.
-# "simctl" stands for simulator control.
+#
+# https://developer.apple.com/documentation/xcode/xcode-command-line-tool-reference
+#
+
+alias simulators='xcrun simctl list devices'
+
+# "xcrv" stands for recording video.
 xcrv() {
   local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
   xcrun simctl io booted recordVideo "$timestamp.mp4"
@@ -39,9 +43,6 @@ alias bin='brew info'
 alias bl='brew list -1'
 alias bs='brew search'
 alias bu='brew uninstall --force --zap'
-# Update both formulae and casks.
-# --greedy applies only to casks.
-# Casks that have auto_updates=true such as google-chrome are not upgraded by default, but this flag updates even those casks.
 alias bug='brew upgrade --greedy'
 
 #
