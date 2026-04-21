@@ -1,24 +1,8 @@
 {
   "mcpServers": {
-    "dart-mcp-server": {
-      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
-      "command": "/opt/homebrew/bin/dart",
-      "args": [
-        "mcp-server"
-      ],
-      "env": {}
-    },
-    "firebase-mcp-server": {
-      "command": "/opt/homebrew/bin/npx",
-      "args": [
-        "-y",
-        "firebase-tools@latest",
-        "mcp"
-      ],
-      "env": {}
-    },
     "gmp-code-assist": {
-      "command": "/opt/homebrew/bin/npx",
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
       "args": [
         "-y",
         "@googlemaps/code-assist-mcp@latest"
@@ -26,6 +10,24 @@
       "env": {
         "SOURCE": "antigravity"
       }
+    },
+    "firebase-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "env": {}
+    },
+    "dart-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "dart",
+      "args": [
+        "mcp-server"
+      ],
+      "env": {}
     }
   }
 }
