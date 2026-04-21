@@ -9,7 +9,7 @@
       "env": {}
     },
     "firebase-mcp-server": {
-      "command": "~.local/share/fnm/aliases/default/bin/npx",
+      "command": "~/.local/share/fnm/aliases/default/bin/npx",
       "args": [
         "-y",
         "firebase-tools@latest",
