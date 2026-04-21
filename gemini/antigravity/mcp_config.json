@@ -9,7 +9,7 @@
       "env": {}
     },
     "firebase-mcp-server": {
-      "command": "~/.local/share/fnm/aliases/default/bin/npx",
+      "command": "/opt/homebrew/bin/npx",
       "args": [
         "-y",
         "firebase-tools@latest",
@@ -18,7 +18,7 @@
       "env": {}
     },
     "gmp-code-assist": {
-      "command": "~/.local/share/fnm/aliases/default/bin/npx",
+      "command": "/opt/homebrew/bin/npx",
       "args": [
         "-y",
         "@googlemaps/code-assist-mcp@latest"
