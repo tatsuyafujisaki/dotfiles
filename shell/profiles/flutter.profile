@@ -74,7 +74,7 @@ my_flutter_pub_global_activate() {
 myf() {
   rm -f pubspec.lock &&
   fvm flutter pub get &&
-  (cd ios && rm -f Podfile.lock && pod install) &&
+  (cd ios && pod update) &&
   (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
   fvm dart fix --apply &&
   fvm dart format . &&
@@ -85,7 +85,7 @@ myf() {
 myfc() {
   rm -f pubspec.lock &&
   fvm flutter pub get &&
-  (cd ios && rm -f Podfile.lock && pod cache clean --all && fvm flutter precache --ios && pod install) &&
+  (cd ios && pod cache clean --all && fvm flutter precache --ios && pod update) &&
   (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
   fvm dart fix --apply &&
   fvm dart format . &&
