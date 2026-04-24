@@ -24,13 +24,12 @@ alias plp='plutil -p -- *.plist'
 #
 
 alias simulators='xcrun simctl list devices'
+alias xcss='xcrun simctl screenshot booted ~/Desktop/screenshot.png'
 
-# "xcrv" stands for recording video.
 xcrv() {
-  local timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-  xcrun simctl io booted recordVideo "$timestamp.mp4"
-  my_ffmpeg "${timestamp}.mp4"
-  open "${timestamp}.mp4"
+  xcrun simctl io booted recordVideo "~/Desktop/screenrecord.mp4"
+  my_ffmpeg "~/Desktop/screenrecord.mp4"
+  open "~/Desktop/screenrecord.mp4"
 }
 
 #
