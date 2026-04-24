@@ -27,9 +27,9 @@ alias simulators='xcrun simctl list devices'
 alias xcss='xcrun simctl screenshot booted ~/Desktop/screenshot.png'
 
 xcrv() {
-  xcrun simctl io booted recordVideo "~/Desktop/screenrecord.mp4"
-  my_ffmpeg "~/Desktop/screenrecord.mp4"
-  open "~/Desktop/screenrecord.mp4"
+  xcrun simctl io booted recordVideo ~/Desktop/screenrecord.mp4
+  my_ffmpeg ~/Desktop/screenrecord.mp4
+  open ~/Desktop/screenrecord.mp4
 }
 
 #
