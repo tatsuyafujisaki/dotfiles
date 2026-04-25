@@ -45,7 +45,8 @@ alias activate='.venv/bin/activate'
 
 alias uvr='uv run'
 alias uvrp='uv run python'
-alias mng='uv run python manage.py'
+alias uvrpm='uv run python manage.py'
+alias uvrpmr='uv run python manage.py runserver && open http://localhost:8000/admin'
 
 #
 # Troubleshooting for a client work
