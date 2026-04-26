@@ -1,1 +1,1 @@
-open /System/Library/PreferencePanes/Keyboard.prefPane
+open x-apple.systempreferences:com.apple.Keyboard-Settings.extension

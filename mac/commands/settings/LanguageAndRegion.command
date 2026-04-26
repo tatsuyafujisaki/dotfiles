@@ -1,1 +1,1 @@
-open "x-apple.systempreferences:com.apple.Localization"
+open x-apple.systempreferences:com.apple.Localization

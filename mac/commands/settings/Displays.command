@@ -1,1 +1,1 @@
-open /System/Library/PreferencePanes/Displays.prefPane
+open x-apple.systempreferences:com.apple.Displays-Settings.extension

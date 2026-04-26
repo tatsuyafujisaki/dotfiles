@@ -1,1 +1,1 @@
-open "x-apple.systempreferences:com.apple.Keyboard-Settings.extension?InputSources"
+open x-apple.systempreferences:com.apple.Keyboard-Settings.extension?InputSources

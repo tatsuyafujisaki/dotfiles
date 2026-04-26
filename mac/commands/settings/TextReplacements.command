@@ -1,1 +1,1 @@
-open "x-apple.systempreferences:com.apple.Keyboard-Settings.extension?TextReplacements"
+open x-apple.systempreferences:com.apple.Keyboard-Settings.extension?TextReplacements
