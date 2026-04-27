@@ -40,7 +40,7 @@
     ui = auto
 [core]
     autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
-    editor = agy --wait # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
+    editor = "f() { if command -v agy >/dev/null; then agy --wait \"$@\"; else code --wait \"$@\"; fi; }; f" # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
     excludesFile = ~/.gitignore
     fsmonitor = true
 [credential "https://github.com"]
@@ -56,7 +56,7 @@
 [difftool]
     prompt = false
 [difftool "mytool"]
-    cmd = agy --wait --diff "$LOCAL" "$REMOTE"
+    cmd = "if command -v agy >/dev/null; then agy --wait --diff \"$LOCAL\" \"$REMOTE\"; else code --wait --diff \"$LOCAL\" \"$REMOTE\"; fi"
 [fetch]
     prune = true
     pruneTags = true
@@ -69,7 +69,7 @@
 [mergetool]
     prompt = false
 [mergetool "mytool"]
-    cmd = agy --wait $MERGED
+    cmd = "if command -v agy >/dev/null; then agy --wait \"$MERGED\"; else code --wait \"$MERGED\"; fi"
 [help]
 	autocorrect = prompt
 [pager]

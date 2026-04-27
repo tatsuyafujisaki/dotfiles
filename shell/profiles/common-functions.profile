@@ -140,7 +140,11 @@ dm() {
   local dir=~/Desktop/deleteme
   rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return 1
   [[ $# -ge 1 ]] && touch "deleteme.$1"
-  agy .
+  if command -v agy >/dev/null; then
+    agy .
+  else
+    code .
+  fi
 }
 
 l() {
