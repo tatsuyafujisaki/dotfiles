@@ -52,14 +52,13 @@ alias cc='claude --dangerously-skip-permissions'
 
 [[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
-alias a='agy .'
+alias a=agy
 
 #
 # https://code.visualstudio.com
-# https://cursor.com
 #
 
-alias c="${$(command -v cursor):-code} ."
+alias c=code
 
 #
 # https://github.com/astral-sh/uv

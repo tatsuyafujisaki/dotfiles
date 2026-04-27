@@ -86,5 +86,11 @@
 [user]
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
 # Finding default values in Git Config can be challenging. Refer to the website below for more information.
 # https://git-scm.com/docs/git-config
