@@ -42,7 +42,13 @@
     autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     editor = agy --wait # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
     excludesFile = ~/.gitignore
-	fsmonitor = true
+    fsmonitor = true
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [diff]
 	algorithm = histogram
 	colorMoved = dimmed-zebra
@@ -80,11 +86,5 @@
 [user]
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
-
-# It is not easy to find the default values in Git Config. Refer to the website below for more information.
+# Finding default values in Git Config can be challenging. Refer to the website below for more information.
 # https://git-scm.com/docs/git-config
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
