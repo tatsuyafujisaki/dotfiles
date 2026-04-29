@@ -37,7 +37,12 @@ alias fv='fvm flutter --version'
 # https://developer.apple.com/xcode
 #
 
-alias xc='open *.xcworkspace 2>/dev/null || open ios/*.xcworkspace 2>/dev/null'
+xc() {
+  (
+    cd ios 2>/dev/null
+    pod update && open *.xcworkspace
+  )
+}
 
 #
 # https://fvm.app
