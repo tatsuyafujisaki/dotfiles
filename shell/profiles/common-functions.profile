@@ -12,7 +12,8 @@ gg() {
   git clean -d --force &&
   git reset --hard &&
   git pull --all --rebase --recurse-submodules &&
-  git submodule update --init --recursive --remote &&
+  git submodule update --force --init --recursive --remote &&
+  git submodule foreach --recursive git clean --force -d &&
   git stash clear
 }
 
