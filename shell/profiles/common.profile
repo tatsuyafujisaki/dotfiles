@@ -26,8 +26,8 @@ alias xp='cd ~/Documents/GitHub/xcode-playground'
 # https://www.google.com/chrome
 #
 
-alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data ~/Desktop/'
-alias import_chrome_search_engines='sudo cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/work/Library/Application\ Support/Google/Chrome/Default/'
+alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/Shared/'
+alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
 
 #
 # https://geminicli.com
