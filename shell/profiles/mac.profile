@@ -14,7 +14,7 @@ export PATH="$(brew --prefix ruby)/bin:$PATH"
 # plutil
 #
 
-alias cppl='(cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && sudo cp *.plist /Users/work/Desktop && rm -f *.json)'
+alias cppl='(cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && sudo cp *.plist /Users/Shared && rm -f *.json)'
 alias pl2json='plutil -convert json -r -e json -- *.plist'
 alias pl2xml='plutil -convert xml1 -e plist -- *.json'
 alias plp='plutil -p -- *.plist'
