@@ -1,0 +1,1 @@
+pbpaste | sed 's/^/> /' | pbcopy
