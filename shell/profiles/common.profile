@@ -113,6 +113,7 @@ alias g=git
 alias get_image_info='sips -g all'
 alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
 alias t='date +%Y-%m-%d | pbcopy'
+alias tt='date +%Y-%m-%d_%H%M | pbcopy'
 
 my_base64() {
   pbpaste | base64 | base64 --decode | pbcopy
