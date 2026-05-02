@@ -52,13 +52,13 @@ alias cc='claude --dangerously-skip-permissions'
 
 [[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
-alias a=agy
+alias a='agy .'
 
 #
 # https://code.visualstudio.com
 #
 
-alias c=code
+alias c='code .'
 
 #
 # https://github.com/astral-sh/uv
@@ -111,6 +111,7 @@ alias deleteme='cd ~/Desktop && rm -fr deleteme && mkdir deleteme && cd deleteme
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
 alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
+alias t='date +%Y-%m-%d | pbcopy'
 
 my_base64() {
   pbpaste | base64 | base64 --decode | pbcopy
