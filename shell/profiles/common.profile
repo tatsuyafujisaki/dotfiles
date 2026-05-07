@@ -84,10 +84,17 @@ alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git
 alias p='pkill -f gradle'
 alias show_path='echo ${PATH} | tr : \\n'
 
+#
+# https://gradle.org
+#
+
+alias glaf="./gradlew :app:lintFix" # targets only the app project.
+alias glf="./gradlew lintFix" # targets all projects except the root project because the root project doesn't support the lint-related feature.
+alias glint="./gradlew lint --rerun-tasks" # targets all projects except the root project because the root project lacks the lint feature.
+alias galint="./gradlew :app:lint --rerun-tasks" # targets only the app project.
+
 # Ideally, only the line with the largest version would be kept when there are multiple lines for different versions of the same library, but this is difficult. This is because, when comparing versions in text, 1.2 is considered larger than 1.10.
-# sed -E 's/^[^[:alpha:]]*//' removes leading non-alphabetic characters.
-# sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' changes "foo:1.0 -> 2.0" to "foo:2.0".
-alias print_app_module_dependencies_as_list="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep --invert-match '(c)$' | grep --invert-match '(n)$' | grep --invert-match '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
+alias plid="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep --invert-match '(c)$' | grep --invert-match '(n)$' | grep --invert-match '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
 
 #
 # JDK (Java Development Kit)
