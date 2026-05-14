@@ -291,7 +291,11 @@ up() {
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
 
+  _update_android
+
   _update_brew
+
+  _update_flutter
 
   _update_node
 
@@ -299,9 +303,11 @@ up() {
 
   _update_rust
 
-  _update_flutter
-
   my_git_pull_all
+}
+
+_update_android() {
+  android update && android skills add --all
 }
 
 _update_brew() {
@@ -311,8 +317,20 @@ _update_brew() {
   brew doctor
 }
 
+_update_flutter() {
+  if command -v flutter >/dev/null
+  then
+    # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
+    flutter upgrade
+    flutter doctor
+  fi
+
+  # https://docs.flutter.dev/ai/agent-skills
+  npx skills add dart-lang/skills --all
+  npx skills add flutter/skills --all
+}
+
 _update_node() {
-  # Uninstalls all versions except system.
   NODE_VERSION=$(fnm list-remote | tail -1)
   fnm install $NODE_VERSION
   fnm default $NODE_VERSION
@@ -320,6 +338,9 @@ _update_node() {
 
   # https://docs.npmjs.com/cli/v8/commands/npm-update
   npm update --global
+
+  # fnm list
+  # fnm uninstall v#.#.#
 }
 
 _update_golang() {
@@ -336,10 +357,4 @@ _update_rust() {
 
   # https://docs.rs/crate/oxipng/latest
   cargo install oxipng # updates oxipng.
-}
-
-_update_flutter() {
-  # https://docs.flutter.dev/install/upgrade#upgrade-the-flutter-sdk
-  flutter upgrade
-  flutter doctor
 }
