@@ -1,3 +1,11 @@
+ai() {
+  open -a ChatGPT
+  open -a Claude
+  open -a Copilot
+  open -a Gemini
+  open -a Perplexity
+}
+
 #
 # https://git-scm.com
 #
@@ -169,11 +177,11 @@ my_ai() {
   local query=$(pbpaste)
   local urls=(
     "https://chatgpt.com/?q=$query"
-    "https://claude.ai"
+    "https://claude.ai/?q=$query"
     "https://copilot.microsoft.com/?q=$query"
     "https://grok.com/?q=$query"
-    "https://www.google.com/search?hl=en&udm=50&q=$query"
-    "https://www.perplexity.ai/search/new?q=$query"
+    "https://www.google.com/?hl=en&udm=50&q=$query"
+    "https://www.perplexity.ai/?q=$query"
   )
   open "${urls[@]}"
 }
@@ -363,7 +371,7 @@ _update_skills() {
   # npx skills remove --all --global --yes
 
   # https://firebase.google.com/docs/ai-assistance/agent-skills
-  # npx skills add firebase/agent-skills--all --global --yes
+  # npx skills add firebase/agent-skills --all --global --yes
 
   # https://github.com/google/skills
   # npx skills add google/skills --global --agent universal # You manually select "gemini-api" and "firebase-basics".
