@@ -303,6 +303,8 @@ up() {
 
   _update_rust
 
+  _update_skills
+
   my_git_pull_all
 }
 
@@ -324,10 +326,6 @@ _update_flutter() {
     flutter upgrade
     flutter doctor
   fi
-
-  # https://docs.flutter.dev/ai/agent-skills
-  npx skills add dart-lang/skills --all
-  npx skills add flutter/skills --all
 }
 
 _update_node() {
@@ -357,4 +355,23 @@ _update_rust() {
 
   # https://docs.rs/crate/oxipng/latest
   cargo install oxipng # updates oxipng.
+}
+
+# https://github.com/vercel-labs/skills
+_update_skills() {
+  # Removes all the skills.
+  # npx skills remove --all --global --yes
+
+  # https://firebase.google.com/docs/ai-assistance/agent-skills
+  # npx skills add firebase/agent-skills--all --global --yes
+
+  # https://github.com/google/skills
+  # npx skills add google/skills --global --agent universal # You manually select "gemini-api" and "firebase-basics".
+
+  # https://docs.flutter.dev/ai/agent-skills
+  # npx skills add dart-lang/skills --all --global --yes
+  # npx skills add flutter/skills --all --global --yes
+
+  # https://github.com/vercel-labs/skills
+  npx skills update --global --yes
 }
