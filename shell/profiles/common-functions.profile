@@ -298,6 +298,8 @@ up() {
 
   # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
   uv self update
+  uv python uninstall --all
+  uv python install --default
 
   _update_android
 
