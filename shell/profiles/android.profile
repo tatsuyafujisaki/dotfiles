@@ -34,7 +34,7 @@ alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.th
 adbu() {
   adb devices | awk 'NR>1 && $2=="device" {print $1}' | while read -r serial; do
     adb -s "$serial" shell pm list packages -3 | sed 's/^package://' | tr -d '\r' | \
-      grep --invert-match --extended-regexp 'com.piriform.ccleaner|com.blogspot.newapphorizons.fakegps|com.Slack|dev.firebase.appdistribution' | \
+      grep --invert-match --extended-regexp 'com.cloudflare.onedotonedotonedotone|com.piriform.ccleaner|com.blogspot.newapphorizons.fakegps|com.Slack|dev.firebase.appdistribution' | \
       xargs --max-args=1 --no-run-if-empty --verbose adb -s "$serial" uninstall
   done
 }
