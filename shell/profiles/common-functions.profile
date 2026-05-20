@@ -149,8 +149,8 @@ dm() {
   local dir=~/Desktop/deleteme
   rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return 1
   [[ $# -ge 1 ]] && touch "deleteme.$1"
-  if command -v agy >/dev/null; then
-    agy .
+  if command -v antigravity-ide >/dev/null; then
+    antigravity-ide .
   else
     code .
   fi
