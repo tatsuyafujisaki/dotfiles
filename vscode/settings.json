@@ -1,5 +1,5 @@
 // How to deploy this file:
-// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Antigravity/User"
+// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Antigravity IDE/User"
 // ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
 {
   "$schema": "vscode://schemas/settings/user",

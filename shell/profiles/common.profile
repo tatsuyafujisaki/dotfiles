@@ -50,7 +50,7 @@ alias cc='claude --dangerously-skip-permissions'
 # https://antigravity.google
 #
 
-[[ -d "$HOME/.antigravity/antigravity/bin" ]] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+[[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 alias a='agy .'
 
