@@ -4,3 +4,7 @@
 - In a repository that uses TypeScript, adhere to Google's TypeScript style guide (https://github.com/google/gts).
 - In a repository that uses TypeScript, don't use the tsx package (https://www.npmjs.com/package/tsx)
 - In a repository that uses TypeScript, ensure that Node.js is installed and versioned at 23.6 or higher. Then, execute the command "node foo.ts" to compile the TypeScript file.
+- In a repository that uses TypeScript, ensure the existence of the "README.md" file. If it's missing, create it. Subsequently, add the following line at the top of the file:
+  ```
+  [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+  ```
