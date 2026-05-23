@@ -1,6 +1,6 @@
 - Follow https://developers.google.com/style
-- In a repository that uses TypeScript or JavaScript, use "latest" for the version of each package in the "package.json" file.
 - In a repository that uses TypeScript or JavaScript, avoid defining the "scripts" section.
-- In a repository using TypeScript, adhere to Google's TypeScript style guide (https://github.com/google/gts).
-- In a repository using TypeScript, don't use the tsx package (https://www.npmjs.com/package/tsx)
-- In a repository using TypeScript, ensure that Node.js is installed and versioned at 23.6 or higher. Then, execute the command "node foo.ts" to compile the TypeScript file.
+- In a repository that uses TypeScript or JavaScript, use "latest" for the version of each package in the "package.json" file.
+- In a repository that uses TypeScript, adhere to Google's TypeScript style guide (https://github.com/google/gts).
+- In a repository that uses TypeScript, don't use the tsx package (https://www.npmjs.com/package/tsx)
+- In a repository that uses TypeScript, ensure that Node.js is installed and versioned at 23.6 or higher. Then, execute the command "node foo.ts" to compile the TypeScript file.
