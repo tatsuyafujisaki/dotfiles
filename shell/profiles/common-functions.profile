@@ -162,8 +162,12 @@ l() {
   ls -dFGhl *(N) 2>/dev/null
 }
 
-# Stands for "makedir and cd".
 mc() {
+  open ~/Documents/GitHub/dotfiles/mac/commands
+}
+
+# Stands for "makedir and cd".
+mkdircd() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <directory>"
