@@ -23,22 +23,17 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
+# https://antigravity.google/product/antigravity-cli
+#
+
+alias ac='agy --dangerously-skip-permissions'
+
+#
 # https://www.google.com/chrome
 #
 
 alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/Shared/'
 alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
-
-#
-# https://geminicli.com
-# https://geminicli.com/extensions
-#
-
-alias geminiei='gemini extensions install --auto-update --consent'
-alias geminiel='gemini extensions list'
-alias geminieu='gemini extensions uninstall'
-alias gmcp='gemini mcp'
-alias gy='gemini --yolo'
 
 #
 # https://claude.com
