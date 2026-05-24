@@ -45,6 +45,13 @@ alias bu='brew uninstall --force --zap'
 alias bug='brew upgrade --greedy'
 
 #
+# Commands
+#
+
+alias mc='open ~/Documents/GitHub/dotfiles/mac/commands'
+alias pb='open ~/Documents/GitHub/dotfiles/mac/commands/pasteboard'
+
+#
 # Miscellaneous
 #
 

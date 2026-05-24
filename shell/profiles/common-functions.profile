@@ -162,10 +162,6 @@ l() {
   ls -dFGhl *(N) 2>/dev/null
 }
 
-mc() {
-  open ~/Documents/GitHub/dotfiles/mac/commands
-}
-
 # Stands for "makedir and cd".
 mkdircd() {
   if [[ $# -lt 1 ]]
