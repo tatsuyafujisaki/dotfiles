@@ -99,6 +99,7 @@
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
+  "securecoder.enabled": true,
   // If smartCase is true, the search is case-insensitive only if the search term is all lowercase.
   // If smartCase is false, the search is always case-insensitive.
   // "search.smartCase": true,
