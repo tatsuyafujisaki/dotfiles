@@ -56,6 +56,7 @@ alias a='antigravity-ide .'
 alias c='code .'
 
 #
+# https://antigravity.google/product/antigravity-cli
 # https://github.com/astral-sh/uv
 #
 
