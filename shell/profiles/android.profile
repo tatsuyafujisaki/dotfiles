@@ -78,7 +78,12 @@ my_adb_pull_camera_image_or_video() {
 # https://developer.android.com/studio/run/emulator-commandline
 #
 
-alias emul='emulator -list-avds'
+alias ela='emulator -list-avds'
+
+eavd() {
+  emulator -avd "$@" &|
+  exit
+}
 
 #
 # Miscellaneous
