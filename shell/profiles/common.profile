@@ -47,7 +47,7 @@ alias cc='claude --dangerously-skip-permissions'
 
 [[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
-alias a='antigravity-ide .'
+alias a='command -v antigravity-ide >/dev/null 2>&1 && antigravity-ide . || code .'
 
 #
 # https://code.visualstudio.com
