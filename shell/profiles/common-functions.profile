@@ -293,27 +293,15 @@ my_remove_parenthesized_one_suffix() {
 }
 
 up() {
-  # https://cloud.google.com/cli
-  gcloud components update --quiet
-
-  # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
-  uv self update
-  uv python uninstall --all
-  uv python install --default
-
   _update_android
-
   _update_brew
-
   _update_flutter
-
-  _update_node
-
+  _update_gcloud
   _update_golang
-
+  _update_node
   _update_rust
-
   _update_skills
+  _update_uv
 
   my_git_pull_all
 }
@@ -338,6 +326,19 @@ _update_flutter() {
   fi
 }
 
+_update_gcloud() {
+  # https://cloud.google.com/cli
+  gcloud components update --quiet
+}
+
+_update_golang() {
+  # https://golangci-lint.run/docs/welcome/install/local/#:~:text=Note:%20Homebrew%20can%20use%20an%20unexpected%20version%20of%20Go%20to%20build%20the%20binary,%20so%20we%20recommend%20either%20using%20our%20binaries%20or%20ensuring%20the%20version%20of%20Go%20used%20to%20build.
+  curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
+  # https://github.com/google/yamlfmt
+  go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+}
+
 _update_node() {
   NODE_VERSION=$(fnm list-remote | tail -1)
   fnm install $NODE_VERSION
@@ -349,14 +350,6 @@ _update_node() {
 
   # fnm list
   # fnm uninstall v#.#.#
-}
-
-_update_golang() {
-  # https://golangci-lint.run/docs/welcome/install/local/#:~:text=Note:%20Homebrew%20can%20use%20an%20unexpected%20version%20of%20Go%20to%20build%20the%20binary,%20so%20we%20recommend%20either%20using%20our%20binaries%20or%20ensuring%20the%20version%20of%20Go%20used%20to%20build.
-  curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin
-
-  # https://github.com/google/yamlfmt
-  go install github.com/google/yamlfmt/cmd/yamlfmt@latest
 }
 
 _update_rust() {
@@ -384,4 +377,11 @@ _update_skills() {
 
   # https://github.com/vercel-labs/skills
   npx skills update --global --yes
+}
+
+_update_uv() {
+  # https://github.com/astral-sh/uv?tab=readme-ov-file#installation
+  uv self update
+  uv python uninstall --all
+  uv python install --default
 }
