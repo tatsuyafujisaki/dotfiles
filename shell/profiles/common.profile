@@ -36,12 +36,6 @@ alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chr
 alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
 
 #
-# https://claude.com
-#
-
-alias cc='claude --dangerously-skip-permissions'
-
-#
 # https://antigravity.google
 #
 
