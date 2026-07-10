@@ -311,7 +311,7 @@ _update_android() {
 
 _update_brew() {
   # https://docs.brew.sh/Manpage
-  brew upgrade --greedy
+  brew upgrade --greedy --yes
   brew autoremove
   brew doctor
 }
