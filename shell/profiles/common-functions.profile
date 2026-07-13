@@ -298,7 +298,6 @@ up() {
   _update_flutter
   _update_gcloud
   _update_node
-  _update_rust
   _update_skills
   _update_uv
 
@@ -342,14 +341,6 @@ _update_node() {
   # You have to uninstall the old versions manually.
   # fnm list
   # fnm uninstall v#.#.#
-}
-
-_update_rust() {
-  # https://rustup.rs
-  rustup update
-
-  # https://docs.rs/crate/oxipng/latest
-  cargo install oxipng # updates oxipng.
 }
 
 # https://github.com/vercel-labs/skills
