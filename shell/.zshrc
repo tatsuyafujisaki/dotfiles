@@ -12,5 +12,10 @@ export PROMPT_EOL_MARK=''
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+# Prevents creation of the .zsh_history file.
+export HISTFILE=/dev/null
+HISTSIZE=0
+SAVEHIST=0
+
 # Source profiles
 for f (~/Documents/GitHub/dotfiles/shell/profiles/*.profile(N) ~/Documents/GitHub/private/private.profile(N)) source $f
