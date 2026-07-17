@@ -33,7 +33,7 @@ alias fpo='fvm flutter pub outdated'
 alias fpr='fvm flutter pub remove'
 alias fpu='fvm flutter pub upgrade --major-versions --tighten'
 alias fri="fvm flutter run --device-id"
-alias fu='fvm flutter upgrade --force'
+alias fu='flutter upgrade --force' # The command 'fvm flutter upgrade --force' generates an error from FVM because it is not intended to be used with the flutter upgrade process.
 alias fv='fvm flutter --version'
 
 #
