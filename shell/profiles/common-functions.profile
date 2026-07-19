@@ -199,11 +199,6 @@ my_ai() {
   open "${urls[@]}"
 }
 
-my_backup_desktop() {
-  local dir=~/Desktop/$(date +"%Y-%m-%d_%H-%M-%S")
-  mkdir -p "$dir" && mv ~/Desktop/* "$dir"/
-}
-
 _my_cwebp() {
   if [[ $# -lt 1 ]]
   then
