@@ -41,14 +41,6 @@ alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Applica
 
 [[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
-alias a='command -v antigravity-ide >/dev/null 2>&1 && antigravity-ide . || code .'
-
-#
-# https://code.visualstudio.com
-#
-
-alias c='code .'
-
 #
 # https://antigravity.google/product/antigravity-cli
 # https://github.com/astral-sh/uv

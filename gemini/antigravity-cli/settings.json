@@ -1,0 +1,8 @@
+{
+  "agentMode": "accept-edits",
+  "allowNonWorkspaceAccess": true,
+  "enableTelemetry": false,
+  "model": "Gemini 3.1 Pro (High)",
+  "notifications": true,
+  "verbosity": "low"
+}

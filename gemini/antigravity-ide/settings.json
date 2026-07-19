@@ -1,5 +1,3 @@
-// How to deploy this file:
-// ln -f -s "$HOME/Documents/GitHub/dotfiles/antigravity-ide/settings.json" "$HOME/Library/Application Support/Antigravity IDE/User"
 {
   "chat.mcp.discovery.enabled": {
     "antigravity": true
