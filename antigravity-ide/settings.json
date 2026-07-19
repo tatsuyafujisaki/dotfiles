@@ -1,19 +1,16 @@
 // How to deploy this file:
-// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Antigravity IDE/User"
-// ln -f -s "$HOME/Documents/GitHub/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User"
+// ln -f -s "$HOME/Documents/GitHub/dotfiles/antigravity-ide/settings.json" "$HOME/Library/Application Support/Antigravity IDE/User"
 {
-  "$schema": "vscode://schemas/settings/user",
   "chat.mcp.discovery.enabled": {
-    "claude-desktop": true,
     "antigravity": true
   },
   "chat.mcp.gallery.enabled": true,
+  "chat.restoreLastPanelSession": false,
   "chat.tools.terminal.autoApprove": {
     "*": true
   },
-  "claudeCode.preferredLocation": "panel", // same as default.
   "dart.flutterGenerateLocalizationsOnSave": "allIfDirty",
-  "dart.flutterHotReloadOnSave": "all", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
+  "dart.flutterHotReloadOnSave": "allIfDirty",
   "dart.hotReloadOnSave": "allIfDirty",
   "dart.runPubGetOnNestedProjects": "both",
   "debug.console.historySuggestions": false,
@@ -40,10 +37,6 @@
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "geminicodeassist.agentYoloMode": true,
-  "geminicodeassist.enableTelemetry": false,
-  "geminicodeassist.inlineSuggestions.nextEditPredictions": true,
-  "geminicodeassist.inlineSuggestions.suggestionSpeed": "Fast",
   "git.allowForcePush": true,
   "git.allowNoVerifyCommit": true,
   "git.autofetch": true,
@@ -60,46 +53,9 @@
   "git.pullBeforeCheckout": true,
   "git.rebaseWhenSync": true,
   "git.replaceTagsWhenPull": true,
-  // https://golangci-lint.run/docs/welcome/integrations/#visual-studio-code
-  "go.lintTool": "golangci-lint-v2",
-  "go.lintFlags": [
-    "--path-mode=abs",
-    "--fast-only"
-  ],
-  "go.formatTool": "custom",
-  "go.alternateTools": {
-    "customFormatter": "golangci-lint-v2"
-  },
-  "go.formatFlags": [
-    "fmt",
-    "--stdin"
-  ],
-  // Golang settings not in https://golangci-lint.run/docs/welcome/integrations/#visual-studio-code
-  "go.inlayHints.assignVariableTypes": true,
-  "go.inlayHints.compositeLiteralFields": true,
-  "go.inlayHints.compositeLiteralTypes": true,
-  "go.inlayHints.constantValues": true,
-  "go.inlayHints.functionTypeParameters": true,
-  "go.inlayHints.ignoredError": true,
-  "go.inlayHints.parameterNames": true,
-  "go.inlayHints.rangeVariableTypes": true,
-  "go.lintOnSave": "workspace",
-  // https://marketplace.visualstudio.com/items?itemName=golang.Go#:~:text=For%20better%20syntax%20highlighting,%20we%20recommend%20enabling%20semantic%20highlighting%20by%20turning%20on%20Gopls'%20ui.semanticTokens%20setting.%20%22gopls%22:%20{%20%22ui.semanticTokens%22:%20true%20}
-  "gopls": {
-    "ui.semanticTokens": true
-  },
   "html.format.preserveNewLines": false,
-  "js/ts.inlayHints.enumMemberValues.enabled": true,
-  "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
-  "js/ts.inlayHints.parameterNames.enabled": "all",
-  "js/ts.inlayHints.parameterTypes.enabled": true,
-  "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
-  "js/ts.inlayHints.variableTypes.enabled": true,
-  "js/ts.suggest.completeFunctionCalls": true,
-  "js/ts.updateImportsOnFileMove.enabled": "always",
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
-  "securecoder.enabled": true,
   // If smartCase is true, the search is case-insensitive only if the search term is all lowercase.
   // If smartCase is false, the search is always case-insensitive.
   // "search.smartCase": true,
@@ -114,6 +70,7 @@
   "workbench.commandPalette.history": 0,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.restoreViewState": false,
+  "workbench.localHistory.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
