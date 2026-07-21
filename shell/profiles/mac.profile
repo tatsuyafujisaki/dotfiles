@@ -14,9 +14,16 @@ export PATH="$(brew --prefix ruby)/bin:$PATH"
 # plutil
 #
 
-alias plj2p='(cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && rm -f *.json)'
-alias plp2j='(cd ~/Desktop && plutil -convert json -r -e json -- *.plist && rm -f *.plist)'
 alias plp='plutil -p -- *.plist'
+
+pl() {
+  local json_files=(~/Desktop/*.json(N))
+  if (( ${#json_files} > 0 )); then
+    (cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && rm -f *.json)
+  fi
+  cp ~/Desktop/*.plist /Users/Shared/
+  open x-apple.systempreferences:com.apple.Keyboard-Settings.extension?TextReplacements
+}
 
 #
 # https://developer.apple.com/documentation/xcode/xcode-command-line-tool-reference
