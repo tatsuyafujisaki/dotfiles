@@ -25,9 +25,9 @@ alias xp='cd ~/Documents/GitHub/xcode-playground'
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
 [[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
-alias ac='agy --dangerously-skip-permissions --effort high'
-alias aci='agy --dangerously-skip-permissions --effort high --prompt-interactive'
-alias acp='agy --dangerously-skip-permissions --effort high --print'
+alias ac='agy --dangerously-skip-permissions'
+alias aci='agy --dangerously-skip-permissions --prompt-interactive'
+alias acp='agy --dangerously-skip-permissions --print'
 
 alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
 alias df='antigravity-ide ~/Documents/GitHub/dotfiles'
