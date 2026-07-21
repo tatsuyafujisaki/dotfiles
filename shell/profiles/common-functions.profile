@@ -315,6 +315,7 @@ my_remove_parenthesized_one_suffix() {
 
 up() {
   _update_android
+  _update_antigravity
   _update_brew
   _update_flutter
   _update_gcloud
@@ -327,6 +328,11 @@ up() {
 
 _update_android() {
   android update && android skills add --all
+}
+
+_update_antigravity() {
+  agy update
+  antigravity-ide --update-extensions
 }
 
 _update_brew() {
