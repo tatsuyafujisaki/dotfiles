@@ -10,12 +10,8 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 #
 
 alias ap='cd ~/Documents/GitHub/android-playground'
-alias ast='cd ~/Documents/GitHub/apps-script-toolkit'
 alias chrome_profile='cd ~/Library/Application\ Support/Google/Chrome/Default'
 alias d='cd ~/Desktop'
-alias df='cd ~/Documents/GitHub/dotfiles'
-alias dp='cd ~/Documents/GitHub/django-playground'
-alias ele='cd ~/Documents/GitHub/echonet-lite-emulator'
 alias fp='cd ~/Documents/GitHub/flutter-playground'
 alias h='cd ~/Documents/GitHub'
 alias jp='cd ~/Documents/GitHub/java-playground'
@@ -23,10 +19,20 @@ alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
-# https://antigravity.google/product/antigravity-cli
+# https://antigravity.google
 #
 
-alias ac='agy --dangerously-skip-permissions'
+[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
+[[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+alias ac='agy --dangerously-skip-permissions --effort high'
+alias aci='agy --dangerously-skip-permissions --effort high --prompt-interactive'
+alias acp='agy --dangerously-skip-permissions --effort high --print'
+
+alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
+alias df='antigravity-ide ~/Documents/GitHub/dotfiles'
+alias dp='antigravity-ide ~/Documents/GitHub/django-playground'
+alias ele='antigravity-ide ~/Documents/GitHub/echonet-lite-emulator'
 
 #
 # https://www.google.com/chrome
@@ -34,19 +40,6 @@ alias ac='agy --dangerously-skip-permissions'
 
 alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/Shared/'
 alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
-
-#
-# https://antigravity.google
-#
-
-[[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
-
-#
-# https://antigravity.google/product/antigravity-cli
-# https://github.com/astral-sh/uv
-#
-
-[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
 
 #
 # https://cli.github.com
