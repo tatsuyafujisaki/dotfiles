@@ -373,20 +373,20 @@ _update_node() {
 # https://github.com/vercel-labs/skills
 _update_skills() {
   # Removes all the skills.
-  # npx skills remove --all --global --yes
+  # npx --yes skills remove --all --global --yes
 
   # https://firebase.google.com/docs/ai-assistance/agent-skills
-  # npx skills add firebase/agent-skills --all --global --yes
+  # npx --yes skills add firebase/agent-skills --all --global --yes
 
   # https://github.com/google/skills
-  # npx skills add google/skills --global --agent universal # You manually select "gemini-api" and "firebase-basics".
+  # npx --yes skills add google/skills --global --agent universal # You manually select "gemini-api" and "firebase-basics".
 
   # https://docs.flutter.dev/ai/agent-skills
-  # npx skills add dart-lang/skills --all --global --yes
-  # npx skills add flutter/skills --all --global --yes
+  # npx --yes skills add dart-lang/skills --all --global --yes
+  # npx --yes skills add flutter/skills --all --global --yes
 
   # https://github.com/vercel-labs/skills
-  npx skills update --global --yes
+  npx --yes skills update --global --yes
 }
 
 _update_uv() {
