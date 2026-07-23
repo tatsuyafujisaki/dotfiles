@@ -54,9 +54,8 @@
   "html.format.preserveNewLines": false,
   "search.globalFindClipboard": true,
   "search.quickOpen.includeHistory": false,
-  // If smartCase is true, the search is case-insensitive only if the search term is all lowercase.
-  // If smartCase is false, the search is always case-insensitive.
-  // "search.smartCase": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.promptForRemoteFileProtocolHandling": false,
   "security.workspace.trust.enabled": false,
   "task.quickOpen.history": 0,
   "telemetry.feedback.enabled": false,
