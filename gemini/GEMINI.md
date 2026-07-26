@@ -7,6 +7,7 @@
       - name
       - repository
       - scripts
+      - type
       - version
     - Use `"latest"` for all package versions.
     - Set `"private": true`.
