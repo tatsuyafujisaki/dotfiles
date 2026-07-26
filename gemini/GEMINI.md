@@ -1,8 +1,15 @@
 - Follow the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 - For TypeScript repositories:
-  - Avoid defining a `"scripts"` section in `package.json`.
-  - Use `"latest"` for all package versions in `package.json`.
-  - Set `"private": true` in `package.json`.
+  - In `package.json`:
+    - Avoid defining the following sections in `package.json`.
+      - author
+      - license
+      - name
+      - repository
+      - scripts
+      - version
+    - Use `"latest"` for all package versions.
+    - Set `"private": true`.
   - Use [gts](https://www.npmjs.com/package/gts).
     - If `README.md` is missing, create it and add the following badge at the top:
       ```markdown
