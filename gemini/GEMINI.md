@@ -10,6 +10,7 @@
       - version
     - Use `"latest"` for all package versions.
     - Set `"private": true`.
+    - Sort all keys in alphabetical order.
   - Use [gts](https://www.npmjs.com/package/gts).
     - If `README.md` is missing, create it and add the following badge at the top:
       ```markdown
