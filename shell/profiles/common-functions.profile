@@ -357,17 +357,10 @@ _update_gcloud() {
 }
 
 _update_node() {
-  NODE_VERSION=$(fnm list-remote | tail -1)
-  fnm install $NODE_VERSION
-  fnm default $NODE_VERSION
-  fnm use $NODE_VERSION
-
-  # https://docs.npmjs.com/cli/v8/commands/npm-update
+  agy --dangerously-skip-permissions --print "Install the latest Node.js version using the fnm command, then uninstall all other versions using the fnm command."
+  
+  # https://docs.npmjs.com/cli/commands/npm-update
   npm update --global
-
-  # You have to uninstall the old versions manually.
-  # fnm list
-  # fnm uninstall v#.#.#
 }
 
 # https://github.com/vercel-labs/skills
