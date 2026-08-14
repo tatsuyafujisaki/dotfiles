@@ -17,5 +17,8 @@ export HISTFILE=/dev/null
 HISTSIZE=0
 SAVEHIST=0
 
+# https://mise.jdx.dev/cli/activate.html
+eval "$(mise activate zsh)"
+
 # Source profiles
 for f (~/Documents/GitHub/dotfiles/shell/profiles/*.profile(N) ~/Documents/GitHub/private/private.profile(N)) source $f
