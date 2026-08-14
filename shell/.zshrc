@@ -14,8 +14,8 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=
 
 # Prevents creation of the .zsh_history file.
 export HISTFILE=/dev/null
-HISTSIZE=0
 SAVEHIST=0
+# Note: "HISTSIZE=0" shouldn't be set, as it makes the previous command unavailable.
 
 # https://mise.jdx.dev/cli/activate.html
 eval "$(mise activate zsh)"
