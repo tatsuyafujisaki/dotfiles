@@ -31,6 +31,19 @@ alias layou='adb shell setprop debug.layout false'
 alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
 alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
 
+_adb_set_locale() {
+  adb shell settings put system system_locales "$1"
+  adb reboot
+}
+
+adben() {
+  _adb_set_locale en-US
+}
+
+adbja() {
+  _adb_set_locale ja-JP
+}
+
 adbu() {
   adb devices | awk 'NR>1 && $2=="device" {print $1}' | while read -r serial; do
     adb -s "$serial" shell pm list packages -3 | sed 's/^package://' | tr -d '\r' | \
@@ -47,8 +60,7 @@ adbu() {
 # https://visit-minato-city.tokyo/en/places/1260
 alias adb_emu_geo_fix_tokyo='adb emu geo fix 139.74135747 35.65809922'
 
-alias adbd='adb devices'
-alias adbi='adb install -r'
+alias adbd='adb devices' # lists connected physical devices and running emulators.
 
 # Transfers files from macOS to Android.
 alias m2a='adb push ~/Desktop/foo/. /sdcard/Download && adb shell ls /sdcard/Download'
@@ -75,15 +87,12 @@ my_adb_pull_camera_image_or_video() {
 }
 
 #
-# https://developer.android.com/studio/run/emulator-commandline
+# https://developer.android.com/tools/agents/android-cli
 #
 
-alias ela='emulator -list-avds'
-
-eavd() {
-  emulator -avd "$@" &|
-  exit
-}
+alias ael='android emulator list'
+alias aes='android emulator start --cold'
+alias ar='android run --apks *.apk'
 
 #
 # Miscellaneous

@@ -327,7 +327,9 @@ up() {
 }
 
 _update_android() {
-  android update && android skills add --all
+  android update
+  android sdk update
+  android skills add --all
 }
 
 _update_antigravity() {
@@ -358,7 +360,7 @@ _update_gcloud() {
 
 _update_node() {
   agy --dangerously-skip-permissions --print "Install the latest Node.js version using the fnm command, then uninstall all other versions using the fnm command."
-  
+
   # https://docs.npmjs.com/cli/commands/npm-update
   npm update --global
 }
