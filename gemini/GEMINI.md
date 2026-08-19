@@ -12,7 +12,6 @@
     - Use `"latest"` for all package versions.
     - Set `"private": true`.
     - Sort all keys in alphabetical order.
-  - Avoid tracking the `package-lock.json` file in Git.
   - Use [gts](https://www.npmjs.com/package/gts).
     - If `README.md` is missing, create it and add the following badge at the top:
       ```markdown
