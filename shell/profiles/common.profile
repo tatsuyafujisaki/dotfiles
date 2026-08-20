@@ -86,14 +86,21 @@ alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Developm
 alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq ".[].databaseId" | xargs --max-args 1 --max-procs 10 gh run delete'
 
 #
+# Image-related
+#
+
+alias ch='magick *.png -gravity center +append output.png' # stands for "combines horizontally"
+alias cv='magick *.png -gravity center -append output.png' # stands for "combines vertically"
+alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
+alias get_image_info='sips -g all'
+alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
+
+#
 # Miscellaneous aliases
 #
 
 alias deleteme='cd ~/Desktop && rm -fr deleteme && mkdir deleteme && cd deleteme'
-alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias g=git
-alias get_image_info='sips -g all'
-alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
 alias t='date +%Y-%m-%d_%H%M | pbcopy'
 alias us='open /Users/Shared'
 alias wattage='system_profiler SPPowerDataType | grep "Wattage"'
