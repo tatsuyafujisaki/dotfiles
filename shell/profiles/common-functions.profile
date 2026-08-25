@@ -162,7 +162,7 @@ convert_hankaku_digits_to_zenkaku_digits() {
 cw() {
   for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
   do
-    _my_cwebp "$file"
+    _my_cwebp_lossless "$file"
   done
 }
 
@@ -212,7 +212,24 @@ my_ai() {
   open "${urls[@]}"
 }
 
-_my_cwebp() {
+_my_cwebp_lossless() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <image>"
+    return 1
+  fi
+
+  local output_file="${1%.*}.webp"
+  if cwebp -z 9 -mt "$1" -o "$output_file"
+  then
+    echo "$output_file"
+    return 0
+  else
+    return 1
+  fi
+}
+
+_my_cwebp_lossy() {
   if [[ $# -lt 1 ]]
   then
     echo "Usage: $0 <image>"
