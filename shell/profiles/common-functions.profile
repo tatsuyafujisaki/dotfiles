@@ -355,10 +355,13 @@ _update_antigravity() {
 }
 
 _update_brew() {
-  # https://docs.brew.sh/Manpage
-  brew upgrade --greedy --yes
-  brew autoremove
-  brew doctor
+  if [[ "$USER" == "tatsuyafujisaki" ]]
+  then
+    # https://docs.brew.sh/Manpage
+    brew upgrade --greedy --yes
+    brew autoremove
+    brew doctor
+  fi
 }
 
 _update_flutter() {
