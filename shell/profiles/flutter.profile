@@ -1,6 +1,3 @@
-# Adds "dart" to PATH.
-[[ -d "/opt/homebrew/opt/flutter/libexec/bin" ]] && export PATH="/opt/homebrew/opt/flutter/libexec/bin:$PATH"
-
 # Adds "fvm" to PATH.
 [[ -d "$HOME/fvm/bin" ]] && export PATH="$HOME/fvm/bin:$PATH"
 
