@@ -86,14 +86,20 @@ alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Developm
 alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq ".[].databaseId" | xargs --max-args 1 --max-procs 10 gh run delete'
 
 #
-# Image-related
+# https://formulae.brew.sh/formula/oxipng
 #
 
-alias ch='magick *.png -gravity center +append output.png' # stands for "combines horizontally"
-alias cv='magick *.png -gravity center -append output.png' # stands for "combines vertically"
+alias ch='magick *.png -gravity center +append combined.png && my_oxipng combined.png' # stands for "combines horizontally"
+alias cv='magick *.png -gravity center -append combined.png && my_oxipng combined.png' # stands for "combines vertically"
+alias my_oxipng='oxipng --opt max --strip all --alpha'
+alias op='my_oxipng --recursive ~/Desktop'
+
+#
+# about images other than oxipng
+#
+
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
 alias get_image_info='sips -g all'
-alias op='oxipng --opt max --recursive --strip all --alpha ~/Desktop'
 
 #
 # Miscellaneous aliases

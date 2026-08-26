@@ -18,7 +18,7 @@ asc() {
     cd ~/Desktop
     local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
     android screen capture --output "$file"
-    oxipng --opt max --strip all --alpha "$file"
+    my_oxipng "$file"
     open "$file"
   )
 }

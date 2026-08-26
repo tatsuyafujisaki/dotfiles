@@ -100,6 +100,6 @@ myfc() {
 my_flutter_screenshot() {
   local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M%S").png"
   fvm flutter screenshot --out "$file"
-  oxipng --opt max --strip all --alpha "$file"
+  my_oxipng "$file"
   open "$file"
 }
