@@ -9,16 +9,12 @@
     bd = !git branch | grep --invert-match "^\\*" | xargs --no-run-if-empty git branch -D
     cam = commit --all --amend --no-verify -m
     can = !git add --all && git commit --amend --no-edit
-    cge = config --global --edit # opens ~/.gitconfig
-    cgl = config --global --list # lists all the variables in ~/.gitconfig
+    cge = config edit --global # opens ~/.gitconfig
+    cgl = config list --global # lists all the variables in ~/.gitconfig
     cm = commit -m
-    co = checkout
     cp = cherry-pick
     csol = config --show-origin --list
     d = !git --no-pager diff | pbcopy
-    dbn = !git --no-pager diff --name-only develop | xargs --no-run-if-empty basename | sort # prints basenames of the files that are different from the develop branch.
-    dn = --no-pager diff --name-only develop # prints the names of files that differ from those in the develop branch.
-    ds = --no-pager diff --shortstat develop # prints the number of files that have been changed, as well as the number of lines that have been added or deleted.
     empty = commit --allow-empty --allow-empty-message --no-edit
     lp = log --patch -- # takes <file> and shows the change history of the file.
     ma = merge --abort
@@ -78,14 +74,17 @@
     rebase = true
 [push]
     autoSetupRemote = true
+    useForceIfIncludes = true
 [rebase]
     autoSquash = true
     autoStash = true
 [rerere]
 	enabled = true
 [user]
-    email = 1838962+tatsuyafujisaki@users.noreply.github.com
     name = Tatsuya Fujisaki
+	email = 1838962+tatsuyafujisaki@users.noreply.github.com
+[includeIf "gitdir:/Users/work/"]
+    path = ~/.gitconfig.work
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
