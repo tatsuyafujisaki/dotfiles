@@ -84,6 +84,7 @@
     updateRefs = true
 [rerere]
     enabled = true
+    autoUpdate = true
 [user]
     name = Tatsuya Fujisaki
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
