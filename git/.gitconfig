@@ -63,6 +63,8 @@
     recurseSubmodules = true
 [init]
     defaultBranch = main
+[log]
+    follow = true
 [merge]
     autoStash = true
     conflictStyle = zdiff3
