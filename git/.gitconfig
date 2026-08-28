@@ -50,6 +50,7 @@
 [diff]
     algorithm = histogram
     colorMoved = dimmed-zebra
+    mnemonicPrefix = true
     renames = copies
     tool = mytool
 [difftool]
