@@ -41,14 +41,14 @@
     fsmonitor = true
     quotepath = false
 [credential "https://github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
 [diff]
-	algorithm = histogram
-	colorMoved = dimmed-zebra
+    algorithm = histogram
+    colorMoved = dimmed-zebra
     tool = mytool
 [difftool]
     prompt = false
@@ -68,7 +68,7 @@
 [mergetool "mytool"]
     cmd = "if command -v antigravity-ide >/dev/null; then antigravity-ide --wait \"$MERGED\"; else code --wait \"$MERGED\"; fi"
 [help]
-	autocorrect = prompt
+    autocorrect = prompt
 [pager]
     branch = false # makes "git branch" list branches without using a pager.
 [pull]
@@ -80,10 +80,10 @@
     autoSquash = true
     autoStash = true
 [rerere]
-	enabled = true
+    enabled = true
 [user]
     name = Tatsuya Fujisaki
-	email = 1838962+tatsuyafujisaki@users.noreply.github.com
+    email = 1838962+tatsuyafujisaki@users.noreply.github.com
 [includeIf "gitdir:/Users/work/"]
     path = ~/.gitconfig.work
 [filter "lfs"]
