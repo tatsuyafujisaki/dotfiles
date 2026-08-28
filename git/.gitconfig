@@ -78,6 +78,7 @@
     rebase = true
 [push]
     autoSetupRemote = true
+    followTags = true
     useForceIfIncludes = true
 [rebase]
     autoSquash = true
