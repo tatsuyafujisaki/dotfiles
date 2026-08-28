@@ -67,6 +67,7 @@
     tool = mytool
 [mergetool]
     prompt = false
+    keepBackup = false
 [mergetool "mytool"]
     cmd = antigravity-ide --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 [help]
