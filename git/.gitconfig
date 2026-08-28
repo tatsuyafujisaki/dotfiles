@@ -4,34 +4,21 @@
 [advice]
     skippedCherryPicks = false
 [alias]
-    a = !pbpaste | git apply --ignore-space-change
-    b = branch
     bd = !git branch | grep --invert-match "^\\*" | xargs --no-run-if-empty git branch -D
     cam = commit --all --amend --no-verify -m
     can = !git add --all && git commit --amend --no-edit
     cge = config edit --global # opens ~/.gitconfig
     cgl = config list --global # lists all the variables in ~/.gitconfig
-    cm = commit -m
-    cp = cherry-pick
-    csol = config --show-origin --list
-    d = !git --no-pager diff | pbcopy
+    discard = restore --staged --worktree .
     empty = commit --allow-empty --allow-empty-message --no-edit
-    lp = log --patch -- # takes <file> and shows the change history of the file.
-    ma = merge --abort
-    md = merge develop --no-edit
-    mt = mergetool
     pf = push --force-with-lease --force-if-includes
     pop = stash pop
-    r = rebase
-    ra = rebase --abort
-    rc = rebase --continue
     rd = !git fetch --prune --prune-tags origin +develop:develop && git rebase develop
+    rh = reset --hard HEAD~
     ri = rebase --interactive
     rir = rebase --interactive --root
-    rs = reset HEAD~
-    rsh = reset --hard HEAD~
     st = stash push --include-untracked # `push` cannot be used as an alias
-    sw = switch
+    uncommit = reset --soft HEAD~
 [column]
     ui = auto
 [core]
