@@ -39,6 +39,7 @@
     editor = "f() { if command -v antigravity-ide >/dev/null; then antigravity-ide --wait \"$@\"; else code --wait \"$@\"; fi; }; f" # https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
     excludesFile = ~/.gitignore
     fsmonitor = true
+    quotepath = false
 [credential "https://github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
