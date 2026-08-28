@@ -62,6 +62,7 @@
 [init]
     defaultBranch = main
 [merge]
+    autoStash = true
     conflictStyle = zdiff3
     tool = mytool
 [mergetool]
