@@ -1,9 +1,9 @@
 # How to use `.gitconfig` in this repository
 
-1. Clone this repository using GitHub Desktop.
-2. Run following command.
+1. Clone this repository.
+2. From the repository root, run the following command:
    ```shell
-   ln -f -s "$HOME/Documents/GitHub/dotfiles/git/.gitconfig" "$HOME"
+   ln -f -s "$PWD/git/.gitconfig" "$HOME"
    ```
 
 # How to create a consolidated `~/.gitignore`
