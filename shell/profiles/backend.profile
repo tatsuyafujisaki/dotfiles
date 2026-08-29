@@ -34,12 +34,6 @@ alias goci='golangci-lint run --fix'
 alias yf='yamlfmt .'
 
 #
-# https://www.python.org
-#
-
-alias activate='.venv/bin/activate'
-
-#
 # https://github.com/astral-sh/uv
 #
 
