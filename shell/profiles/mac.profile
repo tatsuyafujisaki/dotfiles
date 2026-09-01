@@ -4,9 +4,6 @@ export PATH="$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH"
 # Adds java_home to PATH.
 export PATH="/usr/libexec:$PATH"
 
-# Adds python (Pyton 3) to PATH.
-export PATH="$(brew --prefix python)/libexec/bin:$PATH"
-
 # Adds ruby (Ruby 3) to PATH.
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 
