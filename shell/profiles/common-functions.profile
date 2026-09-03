@@ -93,12 +93,9 @@ clean() {
       Pictures
     )
 
-    for folder in "${folders[@]}"
-    do
-      rm -fr "$folder"
-    done
+    rm -fr "${folders[@]}"
 
-    # Deletes in the home folder.
+    # Deletes files in the home folder.
     files=(
       .bash_history
       .CFUserTextEncoding
@@ -106,10 +103,7 @@ clean() {
       .zcompdump
       .zsh_history
     )
-    for file in "${files[@]}"
-    do
-      rm -f "$file"
-    done
+    rm -f "${files[@]}"
   )
 }
 
