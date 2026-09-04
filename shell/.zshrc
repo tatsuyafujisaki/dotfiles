@@ -9,7 +9,7 @@ setopt prompt_subst nonomatch interactive_comments
 export PROMPT_EOL_MARK=''
 
 # Completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -u
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Prevents creation of the .zsh_history file.
