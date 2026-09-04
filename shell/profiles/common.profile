@@ -92,7 +92,7 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 alias ch='magick *.png -gravity center +append combined.png && my_oxipng combined.png' # stands for "combines horizontally"
 alias cv='magick *.png -gravity center -append combined.png && my_oxipng combined.png' # stands for "combines vertically"
 alias my_oxipng='oxipng --opt max --strip all --alpha'
-alias op='my_oxipng --recursive ~/Desktop'
+alias op='my_oxipng --recursive .'
 
 #
 # about images other than oxipng
