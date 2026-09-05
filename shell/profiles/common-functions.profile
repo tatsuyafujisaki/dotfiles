@@ -139,7 +139,7 @@ clean_chrome() {
   )
 }
 
-convert_hankaku_digits_to_zenkaku_digits() {
+convert_zenkaku_digits_to_hankaku_digits() {
   pbpaste | sed -e 's/０/0/g' \
                 -e 's/１/1/g' \
                 -e 's/２/2/g' \
