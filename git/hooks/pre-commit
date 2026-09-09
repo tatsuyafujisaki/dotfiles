@@ -1,3 +1,0 @@
-fvm dart fix --apply
-fvm dart format .
-git add --all && git commit --amend --no-edit --no-verify
