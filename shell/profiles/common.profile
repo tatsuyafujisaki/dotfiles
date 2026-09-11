@@ -1,5 +1,3 @@
-unset HISTFILE # avoids creating $HISTFILE (i.e. ~/.bash_history on Bash and ~/.zsh_history on Zsh)
-
 export EDITOR=nano # makes 'crontab -e' use nano instead of vim
 export LESS=IMRS
 export LESSHISTFILE=- # avoids creating ~/.lesshst

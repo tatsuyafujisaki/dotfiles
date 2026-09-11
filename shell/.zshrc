@@ -13,7 +13,7 @@ autoload -Uz compinit && compinit -u
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Prevents creation of the .zsh_history file.
-export HISTFILE=/dev/null
+unset HISTFILE
 SAVEHIST=0
 # Note: "HISTSIZE=0" shouldn't be set, as it makes the previous command unavailable.
 
