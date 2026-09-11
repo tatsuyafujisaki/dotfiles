@@ -288,16 +288,6 @@ my_git_pull_all() {
   popd
 }
 
-my_mkdir() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <directory>"
-    return 1
-  fi
-
-  mkdir -p "$1" && cd "$1"
-}
-
 my_open_port() {
   if [[ $# -lt 1 ]]
   then
