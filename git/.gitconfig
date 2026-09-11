@@ -30,10 +30,10 @@
     quotepath = false
 [credential "https://github.com"]
     helper =
-    helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = !gh auth git-credential
 [credential "https://gist.github.com"]
     helper =
-    helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = !gh auth git-credential
 [diff]
     algorithm = histogram
     colorMoved = dimmed-zebra
@@ -81,7 +81,7 @@
 [user]
     name = Tatsuya Fujisaki
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
-[includeIf "gitdir:/Users/work/"]
+[includeIf "gitdir:~/work/"]
     path = ~/.gitconfig.work
 [filter "lfs"]
     clean = git-lfs clean -- %f
