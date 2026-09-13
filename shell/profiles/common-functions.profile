@@ -164,18 +164,6 @@ delete_ds_store() {
   sudo find "${1:-/}" -name .DS_Store -delete
 }
 
-# Stands for "Delete me".
-dm() {
-  local dir=~/Desktop/deleteme
-  rm -rf "$dir" && mkdir -p "$dir" && cd "$dir" || return 1
-  [[ $# -ge 1 ]] && touch "deleteme.$1"
-  if command -v antigravity-ide >/dev/null; then
-    antigravity-ide .
-  else
-    code .
-  fi
-}
-
 l() {
   clear
   ls -dFGhl .[^.]*(N) 2>/dev/null && echo
