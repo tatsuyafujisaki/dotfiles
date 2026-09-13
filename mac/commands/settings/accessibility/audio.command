@@ -1,1 +1,1 @@
-open x-apple.systempreferences:com.apple.preference.universalaccess?Audio
+open x-apple.systempreferences:com.apple.Accessibility-Settings.extension?Audio

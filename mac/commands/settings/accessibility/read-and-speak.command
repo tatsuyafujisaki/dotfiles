@@ -1,1 +1,1 @@
-open x-apple.systempreferences:com.apple.preference.universalaccess?SpokenContent
+open x-apple.systempreferences:com.apple.Accessibility-Settings.extension?SpokenContent
