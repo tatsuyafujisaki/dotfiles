@@ -3,7 +3,6 @@ export ANDROID_HOME=~/Library/Android/sdk
 [[ -d "$ANDROID_HOME/cmdline-tools/latest/bin" ]] && export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 [[ -d "$ANDROID_HOME/emulator" ]] && export PATH="$ANDROID_HOME/emulator:$PATH"
 [[ -d "$ANDROID_HOME/platform-tools" ]] && export PATH="$ANDROID_HOME/platform-tools:$PATH"
-[[ -d "$ANDROID_HOME/tools/bin" ]] && export PATH="$ANDROID_HOME/tools/bin:$PATH"
 
 #
 # https://developer.android.com/tools/adb
