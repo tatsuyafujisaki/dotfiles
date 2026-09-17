@@ -39,6 +39,80 @@ a() {
 }
 
 #
+# https://developers.google.com/speed/webp
+#
+
+cw() {
+  setopt local_options extended_glob
+
+  for file in (#i)*.(jpg|jpeg|png)(N)
+  do
+    _cwebp_lossless "$file"
+  done
+}
+
+dw() {
+  setopt local_options extended_glob
+
+  for file in (#i)*.webp(N)
+  do
+    _dwebp "$file"
+  done
+}
+
+
+_cwebp_lossless() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <image>"
+    return 1
+  fi
+
+  local output_file="${1%.*}.webp"
+  if cwebp -z 9 -mt "$1" -o "$output_file"
+  then
+    echo "$output_file"
+    return 0
+  else
+    return 1
+  fi
+}
+
+_cwebp_lossy() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <image>"
+    return 1
+  fi
+
+  local output_file="${1%.*}.webp"
+  if cwebp -m 6 -mt -af "$1" -o "$output_file"
+  then
+    echo "$output_file"
+    return 0
+  else
+    return 1
+  fi
+}
+
+_dwebp() {
+  if [[ $# -lt 1 ]]
+  then
+    echo "Usage: $0 <image>"
+    return 1
+  fi
+
+  local output_file="${1%.*}.png"
+  if dwebp -mt "$1" -o "$output_file"
+  then
+    echo "$output_file"
+    return 0
+  else
+    return 1
+  fi
+}
+
+#
 # Misc functions
 #
 
@@ -152,14 +226,6 @@ convert_zenkaku_digits_to_hankaku_digits() {
                 -e 's/９/9/g' | pbcopy
 }
 
-# Stands for "cwebp".
-cw() {
-  for file in ~/Desktop/*.{jpg,jpeg,png,JPG,JPEG,PNG}(N)
-  do
-    _my_cwebp_lossless "$file"
-  done
-}
-
 delete_ds_store() {
   sudo find "${1:-/}" -name .DS_Store -delete
 }
@@ -192,40 +258,6 @@ my_ai() {
     "https://www.perplexity.ai/?q=$query"
   )
   open "${urls[@]}"
-}
-
-_my_cwebp_lossless() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <image>"
-    return 1
-  fi
-
-  local output_file="${1%.*}.webp"
-  if cwebp -z 9 -mt "$1" -o "$output_file"
-  then
-    echo "$output_file"
-    return 0
-  else
-    return 1
-  fi
-}
-
-_my_cwebp_lossy() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <image>"
-    return 1
-  fi
-
-  local output_file="${1%.*}.webp"
-  if cwebp -m 6 -mt -af "$1" -o "$output_file"
-  then
-    echo "$output_file"
-    return 0
-  else
-    return 1
-  fi
 }
 
 my_ffmpeg() {
