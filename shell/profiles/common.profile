@@ -105,6 +105,5 @@ alias get_image_info='sips -g all'
 
 alias dm='rm -fr ~/Desktop/deleteme && mkdir ~/Desktop/deleteme && touch ~/Desktop/deleteme/deleteme.txt && antigravity-ide ~/Desktop/deleteme'
 alias g=git
-alias t='date +%Y-%m-%d_%H%M | pbcopy'
 alias us='cd /Users/Shared'
 alias wattage='system_profiler SPPowerDataType | grep "Wattage"'

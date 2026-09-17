@@ -21,12 +21,25 @@ pl() {
 #
 
 alias simulators='xcrun simctl list devices'
-alias xcss='xcrun simctl screenshot booted ~/Desktop/screenshot.png'
+
+xcss() {
+  (
+    cd ~/Desktop
+    local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
+    xcrun simctl screenshot booted "$file"
+    my_oxipng "$file"
+    open "$file"
+  )
+}
 
 xcrv() {
-  xcrun simctl io booted recordVideo ~/Desktop/screenrecord.mp4
-  my_ffmpeg ~/Desktop/screenrecord.mp4
-  open ~/Desktop/screenrecord.mp4
+  (
+    cd ~/Desktop
+    local file="$(date +"%Y-%m-%d_%H-%M-%S").mp4"
+    xcrun simctl io booted recordVideo "$file"
+    my_ffmpeg "$file"
+    open "$file"
+  )
 }
 
 #
