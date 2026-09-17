@@ -18,6 +18,7 @@
     ri = rebase --interactive
     rir = rebase --interactive --root
     st = stash push --include-untracked # `push` cannot be used as an alias
+    sub = "!git submodule foreach --recursive git clean --force --force -d -x && git submodule update --init --force --recursive"
     uncommit = reset --soft HEAD~
 [column]
     ui = auto
