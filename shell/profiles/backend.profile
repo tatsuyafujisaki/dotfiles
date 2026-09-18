@@ -13,21 +13,6 @@
 alias dcu='docker compose up --detach --remove-orphans --wait'
 
 #
-# https://go.dev
-#
-
-export GOPATH="$HOME/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
-
-#
-# https://golangci-lint.run
-#
-
-# https://golangci-lint.run/docs/welcome/quick-start/#linting
-alias goci='golangci-lint run --fix'
-
-#
 # https://github.com/google/yamlfmt
 #
 
@@ -52,12 +37,3 @@ alias blog='ssh prod "tail -30 /var/log/supervisor/api-stderr---supervisor-*.log
 alias sshd='ssh dev'
 alias sshs='ssh stg'
 alias sshp='ssh prod'
-
-#
-# Note
-#
-
-# You don't have to install `goimports` separately if you are using the modern Go language server, `gopls` because `gopls` integrates `goimports`.
-
-# There is no official way to upgrade the Go programming language in Terminal.
-# https://go.dev/doc/install
