@@ -9,6 +9,18 @@ export ANDROID_HOME=~/Library/Android/sdk
 #
 
 #
+# adb shell cmd
+#
+
+# Settings > Display & touch > Dark theme
+alias dark='adb shell cmd uimode night yes'
+alias dar='adb shell cmd uimode night no'
+
+# Settings > Display & touch > Navigation mode
+alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
+alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
+
+#
 # adb shell settings
 #
 
@@ -25,10 +37,6 @@ alias adbps='adb shell getconf PAGE_SIZE' # https://developer.android.com/guide/
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
-
-# Settings > System > Gestures > System navigation or 3-button navigation
-alias gstr='adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural'
-alias 3btn='adb shell cmd overlay enable com.android.internal.systemui.navbar.threebutton'
 
 _adb_set_locale() {
   adb shell settings put system system_locales "$1"
