@@ -70,12 +70,6 @@ alias galint="./gradlew :app:lint --rerun-tasks" # targets only the app project.
 alias plid="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep --invert-match '(c)$' | grep --invert-match '(n)$' | grep --invert-match '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
 
 #
-# JDK (Java Development Kit)
-#
-
-alias jh='/usr/libexec/java_home --verbose' # takes the version of Java Development Kit (JDK).
-
-#
 # https://github.com/features/actions
 #
 

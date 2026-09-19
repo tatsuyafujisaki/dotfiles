@@ -1,6 +1,3 @@
-# Adds java_home to PATH.
-export PATH="/usr/libexec:$PATH"
-
 #
 # plutil
 #
