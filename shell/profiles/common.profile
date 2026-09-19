@@ -55,7 +55,7 @@ alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git
 
 # https://man.freebsd.org/cgi/man.cgi?query=pkill
 alias p='pkill -f gradle'
-alias show_path='echo ${PATH} | tr : \\n'
+alias paths='print -l $path'
 
 #
 # https://gradle.org
