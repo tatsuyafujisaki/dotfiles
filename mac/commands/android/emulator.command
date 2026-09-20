@@ -1,1 +1,1 @@
-nohup emulator -avd $(emulator -list-avds | tail -1) &
+nohup android emulator start $(android emulator list | tail -1) &
