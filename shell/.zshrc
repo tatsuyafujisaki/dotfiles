@@ -7,6 +7,7 @@ PS1=$'%B%F{green}%~%f%b ${vcs_info_msg_0_}\n%(?.%F{green}.%F{red})$%f '
 # Shell Options
 setopt prompt_subst nonomatch interactive_comments
 export PROMPT_EOL_MARK=''
+typeset -U path PATH
 
 # Completion
 autoload -Uz compinit && compinit -u
