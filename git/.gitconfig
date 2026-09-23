@@ -46,6 +46,7 @@
 [difftool "mytool"]
     cmd = antigravity-ide --wait --diff "$LOCAL" "$REMOTE"
 [fetch]
+    all = true
     prune = true
     pruneTags = true
     recurseSubmodules = true
