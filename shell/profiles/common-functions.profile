@@ -214,16 +214,7 @@ clean_chrome() {
 }
 
 convert_zenkaku_digits_to_hankaku_digits() {
-  pbpaste | sed -e 's/０/0/g' \
-                -e 's/１/1/g' \
-                -e 's/２/2/g' \
-                -e 's/３/3/g' \
-                -e 's/４/4/g' \
-                -e 's/５/5/g' \
-                -e 's/６/6/g' \
-                -e 's/７/7/g' \
-                -e 's/８/8/g' \
-                -e 's/９/9/g' | pbcopy
+  pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy
 }
 
 delete_ds_store() {
