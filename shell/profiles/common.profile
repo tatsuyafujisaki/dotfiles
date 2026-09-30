@@ -12,7 +12,6 @@ alias chrome_profile='cd ~/Library/Application\ Support/Google/Chrome/Default'
 alias d='cd ~/Desktop'
 alias fp='cd ~/Documents/GitHub/flutter-playground'
 alias h='cd ~/Documents/GitHub'
-alias jp='cd ~/Documents/GitHub/java-playground'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
