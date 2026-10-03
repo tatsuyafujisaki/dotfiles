@@ -99,7 +99,15 @@ my_adb_pull_camera_image_or_video() {
 
 alias ael='android emulator list'
 alias aes='android emulator start --cold'
-alias ar='android run --apks *.apk'
+
+ar() {
+  if [[ $# -lt 1 ]]
+  then
+    android run --apks *.apk
+  else
+    android run --apks "$@"
+  fi
+}
 
 #
 # Screen capture & screen record
