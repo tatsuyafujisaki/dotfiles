@@ -117,7 +117,7 @@ _dwebp() {
 #
 
 clean() {
-  sudo find ~ -type f -name .DS_Store -delete
+  delete_ds_store ~
 
   # Deletes Chrome RLZ.
   rm -fr "$HOME/Library/Application Support/Google/RLZ"
@@ -218,7 +218,13 @@ convert_zenkaku_digits_to_hankaku_digits() {
 }
 
 delete_ds_store() {
-  sudo find "${1:-/}" -name .DS_Store -delete
+  local target="${1:-/}"
+  target="${target/#\~/$HOME}"
+  if [[ -w "$target" ]]; then
+    find "$target" -type f -name .DS_Store -delete 2>/dev/null
+  else
+    sudo find "$target" -type f -name .DS_Store -delete 2>/dev/null
+  fi
 }
 
 l() {
