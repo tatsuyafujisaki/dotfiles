@@ -213,10 +213,6 @@ clean_chrome() {
   )
 }
 
-convert_zenkaku_digits_to_hankaku_digits() {
-  pbpaste | tr '０１２３４５６７８９' '0123456789' | pbcopy
-}
-
 delete_ds_store() {
   local target="${1:-/}"
   target="${target/#\~/$HOME}"
