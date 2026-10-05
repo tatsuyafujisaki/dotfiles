@@ -1,1 +1,1 @@
-Instead of defining a shell alias, create a `.command` file if the command requires no input, produces no output, and is independent of the current directory.
+If a command requires no input, produces no output, and doesn't depend on the current directory, create a `.command` file instead of a shell alias.
