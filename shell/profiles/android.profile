@@ -120,10 +120,12 @@ adbp() {
   (
     cd ~/Desktop
     local file="$(date +"%Y-%m-%d_%H-%M-%S").mp4"
-    adb pull /sdcard/screenrecord.mp4 "$file"
-    adb shell rm /sdcard/screenrecord.mp4
-    my_ffmpeg "$file"
-    open "$file"
+    if adb pull /sdcard/screenrecord.mp4 "$file"
+    then
+      adb shell rm /sdcard/screenrecord.mp4
+      my_ffmpeg "$file"
+      open "$file"
+    fi
   )
 }
 
