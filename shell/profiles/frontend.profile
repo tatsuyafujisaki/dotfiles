@@ -10,13 +10,6 @@ fi
 alias tsc='npx tsc --noEmit'
 
 #
-# https://github.com/google/gts
-#
-
-alias gtsf='npx gts fix'
-alias gtsl='npx gts check'
-
-#
 # https://www.npmjs.com
 #
 
