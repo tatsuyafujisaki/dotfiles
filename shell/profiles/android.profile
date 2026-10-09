@@ -141,9 +141,3 @@ asc() {
     fi
   )
 }
-
-#
-# Miscellaneous
-#
-
-alias keytool_list='keytool -list -keystore' # takes the path of .store or .jks
