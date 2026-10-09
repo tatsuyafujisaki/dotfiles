@@ -132,9 +132,11 @@ asc() {
   (
     cd ~/Desktop
     local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
-    android screen capture --output "$file"
-    my_oxipng "$file"
-    open "$file"
+    if android screen capture --output "$file"
+    then
+      my_oxipng "$file"
+      open "$file"
+    fi
   )
 }
 
