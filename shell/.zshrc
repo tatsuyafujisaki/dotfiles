@@ -22,4 +22,5 @@ SAVEHIST=0
 eval "$(mise activate zsh)"
 
 # Source profiles
-for f (~/Documents/GitHub/dotfiles/shell/profiles/*.profile(N) ~/Documents/GitHub/private/private.profile(N)) source $f
+DOTFILES_DIR="${DOTFILES_DIR:-${${(%):-%N}:A:h:h}}"
+for f ($DOTFILES_DIR/shell/profiles/*.profile(N) ${DOTFILES_DIR:h}/private/private.profile(N)) source $f
