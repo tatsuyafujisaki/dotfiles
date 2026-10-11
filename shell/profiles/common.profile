@@ -27,7 +27,7 @@ alias aci='agy --dangerously-skip-permissions --prompt-interactive'
 alias acp='agy --dangerously-skip-permissions --print'
 
 alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
-alias df='antigravity-ide ~/Documents/GitHub/dotfiles'
+alias df='antigravity-ide "$DOTFILES_DIR"'
 alias dp='antigravity-ide ~/Documents/GitHub/django-playground'
 alias ele='antigravity-ide ~/Documents/GitHub/echonet-lite-emulator'
 
