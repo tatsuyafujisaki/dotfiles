@@ -30,12 +30,7 @@ gg() {
 #
 
 a() {
-  if [ $# -eq 0 ]
-  then
-    antigravity-ide .
-  else
-    antigravity-ide "$@"
-  fi
+  antigravity-ide "${@:-.}"
 }
 
 #

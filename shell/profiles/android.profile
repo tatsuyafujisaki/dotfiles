@@ -101,12 +101,7 @@ alias ael='android emulator list'
 alias aes='android emulator start --cold'
 
 ar() {
-  if [[ $# -lt 1 ]]
-  then
-    android run --apks *.apk
-  else
-    android run --apks "$@"
-  fi
+  android run --apks ${@:-*.apk}
 }
 
 #
