@@ -19,6 +19,21 @@ pl() {
 
 alias simulators='xcrun simctl list devices'
 
+# stands for "ios screen capture"
+isc() {
+  local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M-%S").png"
+  local device_id="${1:-$(xcrun devicectl list devices --columns Identifier --hide-default-columns --hide-headers --filter 'Reality = "physical"' 2>/dev/null | awk '{print $1}' | head -n 1)}"
+
+  if [[ -n "$device_id" ]]; then
+    xcrun devicectl device capture screenshot --device "$device_id" --destination "$file" &&
+    my_oxipng "$file" &&
+    open "$file"
+  else
+    echo "No connected physical iOS device found."
+    return 1
+  fi
+}
+
 xcss() {
   (
     cd ~/Desktop

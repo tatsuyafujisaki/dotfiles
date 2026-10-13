@@ -92,9 +92,3 @@ myfc() {
   fvm flutter analyze
 }
 
-my_flutter_screenshot() {
-  local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M-%S").png"
-  fvm flutter screenshot --out "$file"
-  my_oxipng "$file"
-  open "$file"
-}

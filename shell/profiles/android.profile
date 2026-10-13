@@ -124,7 +124,7 @@ adbp() {
   )
 }
 
-# stands for "android screen capture" in png.
+# stands for "android screen capture"
 asc() {
   (
     cd ~/Desktop
