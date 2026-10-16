@@ -1,1 +1,1 @@
-open -a simulator
+open -a Simulator
