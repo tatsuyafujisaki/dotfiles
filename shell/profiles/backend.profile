@@ -26,14 +26,3 @@ alias uvr='uv run'
 alias uvrp='uv run python'
 alias uvrpm='uv run python manage.py'
 alias uvrpmr='uv run python manage.py runserver && open http://localhost:8000/admin'
-
-#
-# Troubleshooting for a client work
-#
-
-# Stands for backend log
-alias blog='ssh prod "tail -30 /var/log/supervisor/api-stderr---supervisor-*.log" > ~/Desktop/prod_api_stderr_logs.txt'
-
-alias sshd='ssh dev'
-alias sshs='ssh stg'
-alias sshp='ssh prod'
