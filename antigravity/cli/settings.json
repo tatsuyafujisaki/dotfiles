@@ -2,7 +2,7 @@
   "agentMode": "accept-edits",
   "allowNonWorkspaceAccess": true,
   "enableTelemetry": false,
-  "model": "Gemini 3.8 Flash (High)",
+  "model": "Gemini 4 Argon (Medium)",
   "notifications": true,
   "verbosity": "low"
 }
