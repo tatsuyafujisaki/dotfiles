@@ -331,7 +331,7 @@ _update_antigravity() {
 }
 
 _update_brew() {
-  if [[ "$USER" == "tatsuyafujisaki" ]]
+  if [[ -w "${HOMEBREW_PREFIX:-/opt/homebrew}" ]]
   then
     # https://docs.brew.sh/Manpage
     brew upgrade --greedy --yes
