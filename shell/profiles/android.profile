@@ -34,6 +34,7 @@ alias showtap='adb shell settings put system show_touches 1'
 
 alias adbl='adb shell am start -a android.settings.LOCALE_SETTINGS' # https://developer.android.com/about/versions/12/reference/common-intents-31
 alias adb3='adb shell pm list package -3 | sort' # -3 is to show only third party packages.
+alias ap='adb shell input text "$(pbpaste)"'
 alias layout='adb shell setprop debug.layout true'
 alias layou='adb shell setprop debug.layout false'
 
@@ -66,7 +67,7 @@ adbu() {
 # https://visit-minato-city.tokyo/en/places/1260
 alias adb_emu_geo_fix_tokyo='adb emu geo fix 139.74135747 35.65809922'
 
-alias adbd='adb devices' # lists connected physical devices and running emulators.
+alias ad='adb devices' # lists connected physical devices and running emulators.
 
 # Transfers files from macOS to Android.
 alias m2a='adb push ~/Desktop/foo/. /sdcard/Download && adb shell ls /sdcard/Download'

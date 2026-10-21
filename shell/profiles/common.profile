@@ -7,7 +7,6 @@ export NODE_REPL_HISTORY='' # avoids creating ~/.node_repl_history
 # cd-related
 #
 
-alias ap='cd ~/Documents/GitHub/android-playground'
 alias chrome_profile='cd ~/Library/Application\ Support/Google/Chrome/Default'
 alias d='cd ~/Desktop'
 alias fp='cd ~/Documents/GitHub/flutter-playground'
