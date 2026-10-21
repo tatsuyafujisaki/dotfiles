@@ -48,7 +48,6 @@ alias ghprv='gh pr view --web'
 alias ghrl='gh release list'
 alias ghrv='gh repo view --web'
 
-# "build" means Flutter's build directory.
 # https://man.freebsd.org/cgi/man.cgi?query=grep
 alias mygrep='grep --ignore-case --line-number --recursive -I --exclude-dir .git'
 
