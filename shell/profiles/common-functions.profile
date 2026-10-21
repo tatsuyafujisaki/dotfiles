@@ -73,22 +73,12 @@ _cwebp_lossless() {
   fi
 }
 
-_cwebp_lossy() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <image>"
-    return 1
-  fi
-
-  local output_file="${1%.*}.webp"
-  if cwebp -m 6 -mt -af "$1" -o "$output_file"
-  then
-    echo "$output_file"
-    return 0
-  else
-    return 1
-  fi
-}
+# Best options for lossy WebP (kept as a cheat sheet; not wired up to any function):
+#   cwebp -m 6 -mt -af input.png -o output.webp
+#     -m 6  slowest and best compression method
+#     -mt   multi-threading
+#     -af   auto-adjusts the filter strength to hit the target size/quality
+#   Add `-q <0-100>` to change quality (default: 75).
 
 _dwebp() {
   if [[ $# -lt 1 ]]
