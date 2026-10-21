@@ -37,27 +37,16 @@ a() {
 # https://developers.google.com/speed/webp
 #
 
+# With no arguments, converts every JPEG/PNG under the current directory recursively.
+# With arguments, converts the given files.
 cw() {
   setopt local_options extended_glob
 
-  my_cwebp (#i)**/*.(jpg|jpeg|png)(N)
-}
-
-dw() {
-  setopt local_options extended_glob
-
-  my_dwebp (#i)**/*.webp(N)
-}
-
-my_cwebp() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <image>..."
-    return 1
-  fi
+  local files=("$@")
+  (( $# )) || files=((#i)**/*.(jpg|jpeg|png)(N))
 
   local file output_file
-  for file in "$@"
+  for file in "${files[@]}"
   do
     output_file="${file%.*}.webp"
     cwebp -quiet -z 9 -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
@@ -71,15 +60,16 @@ my_cwebp() {
 #     -af   auto-adjusts the filter strength to hit the target size/quality
 #   Add `-q <0-100>` to change quality (default: 75).
 
-my_dwebp() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <image>..."
-    return 1
-  fi
+# With no arguments, converts every WebP under the current directory recursively.
+# With arguments, converts the given files.
+dw() {
+  setopt local_options extended_glob
+
+  local files=("$@")
+  (( $# )) || files=((#i)**/*.webp(N))
 
   local file output_file
-  for file in "$@"
+  for file in "${files[@]}"
   do
     output_file="${file%.*}.png"
     dwebp -quiet -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"

@@ -26,7 +26,7 @@ isc() {
 
   if [[ -n "$device_id" ]]; then
     xcrun devicectl device capture screenshot --device "$device_id" --destination "$file" &&
-    my_oxipng "$file" &&
+    op "$file" &&
     open "$file"
   else
     echo "No connected physical iOS device found."
@@ -39,7 +39,7 @@ xcss() {
     cd ~/Desktop
     local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
     xcrun simctl screenshot booted "$file"
-    my_oxipng "$file"
+    op "$file"
     open "$file"
   )
 }

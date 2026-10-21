@@ -78,14 +78,16 @@ alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json dat
 # https://formulae.brew.sh/formula/oxipng
 #
 
-alias ch='magick *.png -gravity center +append combined.png && my_oxipng combined.png' # stands for "combines horizontally"
-alias cv='magick *.png -gravity center -append combined.png && my_oxipng combined.png' # stands for "combines vertically"
-alias op='my_oxipng --recursive .'
-
+alias ch='magick *.png -gravity center +append combined.png && op combined.png' # stands for "combines horizontally"
+alias cv='magick *.png -gravity center -append combined.png && op combined.png' # stands for "combines vertically"
 # Keep this as a function, not an alias. Zsh expands aliases when a function is defined, not when it runs.
 # Profiles are sourced alphabetically, so functions in earlier profiles (e.g., asc in android.profile)
-# would fail with "command not found: my_oxipng" if this were an alias.
-my_oxipng() {
+# would fail with "command not found: op" if this were an alias.
+#
+# With no arguments, optimizes PNGs under the current directory recursively.
+# With arguments, passes them to oxipng as they are.
+op() {
+  (( $# )) || set -- --recursive .
   oxipng --opt max --strip all --alpha "$@"
 }
 

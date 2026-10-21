@@ -131,7 +131,7 @@ asc() {
     local file="$(date +"%Y-%m-%d_%H-%M-%S").png"
     if android screen capture --output "$file"
     then
-      my_oxipng "$file"
+      op "$file"
       open "$file"
     fi
   )
