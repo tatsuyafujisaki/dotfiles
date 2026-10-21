@@ -324,7 +324,10 @@ _update_gcloud() {
 }
 
 _update_node() {
-  agy --dangerously-skip-permissions --print "Install the latest Node.js version using the fnm command, then uninstall all other versions using the fnm command."
+  # https://github.com/Schniz/fnm
+  fnm install --latest
+  fnm default latest
+  fnm list | awk '$2 ~ /^v[0-9]/ && !/default/ {print $2}' | xargs --no-run-if-empty -n 1 fnm uninstall
 
   # https://docs.npmjs.com/cli/commands/npm-update
   npm update --global
