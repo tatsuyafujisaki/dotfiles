@@ -4,10 +4,10 @@
   - After making any changes, run `dart fix --apply && dart format . && flutter analyze` and fix all analysis issues.
   - Use `fvm flutter` and `fvm dart` instead of the bare `flutter` and `dart` commands.
   - Unless a device is specified, take screenshots using the first available device in the following order:
-    - Physical iPhone
-    - iOS Simulator
     - Physical Android device
     - Android Emulator
+    - Physical iPhone
+    - iOS Simulator
 - For Python repositories hosted at https://github.com/tatsuyafujisaki:
   - Use [Ruff](https://pypi.org/project/ruff/).
   - Do not pin dependency versions so the latest versions are always used.
