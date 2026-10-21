@@ -40,37 +40,28 @@ a() {
 cw() {
   setopt local_options extended_glob
 
-  for file in (#i)*.(jpg|jpeg|png)(N)
-  do
-    _cwebp_lossless "$file"
-  done
+  my_cwebp (#i)**/*.(jpg|jpeg|png)(N)
 }
 
 dw() {
   setopt local_options extended_glob
 
-  for file in (#i)*.webp(N)
-  do
-    _dwebp "$file"
-  done
+  my_dwebp (#i)**/*.webp(N)
 }
 
-
-_cwebp_lossless() {
+my_cwebp() {
   if [[ $# -lt 1 ]]
   then
-    echo "Usage: $0 <image>"
+    echo "Usage: $0 <image>..."
     return 1
   fi
 
-  local output_file="${1%.*}.webp"
-  if cwebp -z 9 -mt "$1" -o "$output_file"
-  then
-    echo "$output_file"
-    return 0
-  else
-    return 1
-  fi
+  local file output_file
+  for file in "$@"
+  do
+    output_file="${file%.*}.webp"
+    cwebp -quiet -z 9 -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
+  done
 }
 
 # Best options for lossy WebP (kept as a cheat sheet; not wired up to any function):
@@ -80,21 +71,19 @@ _cwebp_lossless() {
 #     -af   auto-adjusts the filter strength to hit the target size/quality
 #   Add `-q <0-100>` to change quality (default: 75).
 
-_dwebp() {
+my_dwebp() {
   if [[ $# -lt 1 ]]
   then
-    echo "Usage: $0 <image>"
+    echo "Usage: $0 <image>..."
     return 1
   fi
 
-  local output_file="${1%.*}.png"
-  if dwebp -mt "$1" -o "$output_file"
-  then
-    echo "$output_file"
-    return 0
-  else
-    return 1
-  fi
+  local file output_file
+  for file in "$@"
+  do
+    output_file="${file%.*}.png"
+    dwebp -quiet -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
+  done
 }
 
 #
