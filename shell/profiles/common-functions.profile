@@ -53,13 +53,6 @@ cw() {
   done
 }
 
-# Best options for lossy WebP (kept as a cheat sheet; not wired up to any function):
-#   cwebp -m 6 -mt -af input.png -o output.webp
-#     -m 6  slowest and best compression method
-#     -mt   multi-threading
-#     -af   auto-adjusts the filter strength to hit the target size/quality
-#   Add `-q <0-100>` to change quality (default: 75).
-
 # With no arguments, converts every WebP under the current directory recursively.
 # With arguments, converts the given files.
 dw() {
