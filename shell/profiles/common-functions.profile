@@ -48,7 +48,7 @@ cw() {
   local file output_file
   for file in "${files[@]}"
   do
-    output_file="${file%.*}.webp"
+    output_file="${file:r}.webp"
     cwebp -quiet -z 9 -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
   done
 }
@@ -64,7 +64,7 @@ dw() {
   local file output_file
   for file in "${files[@]}"
   do
-    output_file="${file%.*}.png"
+    output_file="${file:r}.png"
     dwebp -quiet -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
   done
 }
