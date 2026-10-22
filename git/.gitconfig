@@ -49,6 +49,7 @@
     prune = true
     pruneTags = true
     recurseSubmodules = true
+    writeCommitGraph = true
 [init]
     defaultBranch = main
 [log]
