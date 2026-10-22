@@ -70,19 +70,7 @@ my_flutter_pub_global_activate() {
   fvm flutter pub global activate $1
 }
 
-# Stands for "my flutter"
-myf() {
-  rm -f pubspec.lock &&
-  fvm flutter pub get &&
-  (! [ -d ios ] || (cd ios && pod update)) &&
-  (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
-  fvm dart fix --apply &&
-  fvm dart format . &&
-  fvm flutter analyze
-}
-
-# Stands for "my flutter clean"
-myfc() {
+ff() {
   rm -f pubspec.lock &&
   fvm flutter pub get &&
   (! [ -d ios ] || (cd ios && pod cache clean --all && fvm flutter precache --ios && pod update)) &&
