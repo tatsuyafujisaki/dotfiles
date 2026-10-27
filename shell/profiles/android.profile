@@ -108,7 +108,7 @@ ar() {
 # Screen capture & screen record
 #
 
-alias adbsr='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
+alias sr='adb shell screenrecord /sdcard/screenrecord.mp4' # https://developer.android.com/tools/adb#screenrecord
 
 # stands for "adb pull".
 adbp() {
