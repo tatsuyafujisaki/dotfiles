@@ -8,6 +8,7 @@
     can = !git add --all && git commit --amend --no-edit
     cge = config edit --global # opens ~/.gitconfig
     cgl = config list --global # lists all the variables in ~/.gitconfig
+    cp = cherry-pick
     discard = restore --staged --worktree .
     empty = commit --allow-empty --allow-empty-message --no-edit
     pf = push --force-with-lease --force-if-includes
