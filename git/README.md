@@ -6,10 +6,11 @@
    ln -f -s "$PWD/git/.gitconfig" "$HOME"
    ```
 
-# How to create a consolidated `~/.gitignore`
+# How to create a consolidated `~/.config/git/ignore`
 1. Run the script below.
    ```shell
-   rm -f ~/.gitignore
+   mkdir -p ~/.config/git
+   rm -f ~/.config/git/ignore
 
    for type in Cursor JetBrains macOS VisualStudioCode Xcode
    do
@@ -20,7 +21,7 @@
        echo ""
        curl --location --silent "https://raw.githubusercontent.com/github/gitignore/main/Global/$type.gitignore"
        echo ""
-     } >> ~/.gitignore
+     } >> ~/.config/git/ignore
    done
    ```
 2. Append the following.

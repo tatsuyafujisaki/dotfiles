@@ -25,7 +25,6 @@
 [core]
     autocrlf = input # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
     editor = antigravity-ide --wait
-    excludesFile = ~/.gitignore
     fsmonitor = true
     quotepath = false
 [credential "https://gist.github.com"]
