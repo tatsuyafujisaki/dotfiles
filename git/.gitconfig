@@ -27,12 +27,11 @@
     editor = antigravity-ide --wait
     excludesFile = ~/.gitignore
     fsmonitor = true
-    precomposeunicode = true
     quotepath = false
-[credential "https://github.com"]
+[credential "https://gist.github.com"]
     helper =
     helper = !gh auth git-credential
-[credential "https://gist.github.com"]
+[credential "https://github.com"]
     helper =
     helper = !gh auth git-credential
 [diff]
@@ -51,6 +50,15 @@
     pruneTags = true
     recurseSubmodules = true
     writeCommitGraph = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
+[help]
+    autocorrect = prompt
+[includeIf "gitdir:/Users/work/"] # Don't use a tilde (~) because GitHub Desktop doesn't recognize it.
+    path = ~/.gitconfig.work
 [init]
     defaultBranch = main
 [log]
@@ -60,12 +68,10 @@
     conflictStyle = zdiff3
     tool = mytool
 [mergetool]
-    prompt = false
     keepBackup = false
+    prompt = false
 [mergetool "mytool"]
     cmd = antigravity-ide --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-[help]
-    autocorrect = prompt
 [pager]
     branch = false # makes "git branch" list branches without using a pager.
 [pull]
@@ -79,18 +85,11 @@
     autoStash = true
     updateRefs = true
 [rerere]
-    enabled = true
     autoUpdate = true
+    enabled = true
 [user]
-    name = Tatsuya Fujisaki
     email = 1838962+tatsuyafujisaki@users.noreply.github.com
-[includeIf "gitdir:/Users/work/"] # Don't use a tilde (~) because GitHub Desktop doesn't recognize it.
-    path = ~/.gitconfig.work
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+    name = Tatsuya Fujisaki
 
 # Finding default values in Git Config can be challenging. Refer to the website below for more information.
 # https://git-scm.com/docs/git-config
