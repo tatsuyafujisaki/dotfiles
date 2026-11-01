@@ -6,7 +6,8 @@ alias plp='plutil -p -- *.plist'
 
 pl() {
   local json_files=(~/Desktop/*.json(N))
-  if (( ${#json_files} > 0 )); then
+  if (( ${#json_files} > 0 ))
+  then
     (cd ~/Desktop && plutil -convert xml1 -e plist -- *.json && rm -f *.json)
   fi
   cp ~/Desktop/*.plist /Users/Shared/
@@ -24,7 +25,8 @@ isc() {
   local file="$HOME/Desktop/$(date +"%Y-%m-%d_%H-%M-%S").png"
   local device_id="${1:-$(xcrun devicectl list devices --columns Identifier --hide-default-columns --hide-headers --filter 'Reality = "physical"' 2>/dev/null | awk '{print $1}' | head -n 1)}"
 
-  if [[ -n "$device_id" ]]; then
+  if [[ -n "$device_id" ]]
+  then
     xcrun devicectl device capture screenshot --device "$device_id" --destination "$file" &&
     op "$file" &&
     open "$file"

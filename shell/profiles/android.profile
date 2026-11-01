@@ -52,7 +52,8 @@ adbja() {
 }
 
 adbu() {
-  adb devices | awk 'NR>1 && $2=="device" {print $1}' | while read -r serial; do
+  adb devices | awk 'NR>1 && $2=="device" {print $1}' | while read -r serial
+  do
     adb -s "$serial" shell pm list packages -3 | sed 's/^package://' | tr -d '\r' | \
       grep --invert-match --extended-regexp 'com.cloudflare.onedotonedotonedotone|com.piriform.ccleaner|com.Slack|dev.firebase.appdistribution' | \
       xargs --max-args=1 --no-run-if-empty --verbose adb -s "$serial" uninstall

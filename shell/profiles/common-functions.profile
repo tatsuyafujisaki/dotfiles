@@ -11,7 +11,8 @@ ai() {
 #
 
 gg() {
-  if [[ -n "$1" ]]; then
+  if [[ -n "$1" ]]
+  then
     git switch "$1"
   else
     git switch develop || git switch main || git switch master
@@ -155,7 +156,8 @@ clean_chrome() {
       "Top Sites"
       "Visited Links"
     )
-    for file in "${files[@]}"; do
+    for file in "${files[@]}"
+    do
       rm -f "$file"
     done
 
@@ -164,7 +166,8 @@ clean_chrome() {
       GPUCache
       Sessions
     )
-    for dir in "${dirs[@]}"; do
+    for dir in "${dirs[@]}"
+    do
       rm -fr "$dir"
     done
   )
@@ -173,7 +176,8 @@ clean_chrome() {
 delete_ds_store() {
   local target="${1:-/}"
   target="${target/#\~/$HOME}"
-  if [[ -w "$target" ]]; then
+  if [[ -w "$target" ]]
+  then
     find "$target" -type f -name .DS_Store -delete 2>/dev/null
   else
     sudo find "$target" -type f -name .DS_Store -delete 2>/dev/null
