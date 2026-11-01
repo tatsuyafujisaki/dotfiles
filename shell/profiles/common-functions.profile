@@ -156,20 +156,14 @@ clean_chrome() {
       "Top Sites"
       "Visited Links"
     )
-    for file in "${files[@]}"
-    do
-      rm -f "$file"
-    done
+    rm -f "${files[@]}"
 
     dirs=(
       AutofillAiModelCache
       GPUCache
       Sessions
     )
-    for dir in "${dirs[@]}"
-    do
-      rm -fr "$dir"
-    done
+    rm -fr "${dirs[@]}"
   )
 }
 
