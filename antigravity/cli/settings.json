@@ -1,8 +1,12 @@
 {
   "agentMode": "accept-edits",
   "allowNonWorkspaceAccess": true,
-  "enableTelemetry": false,
-  "model": "Gemini 4 Argon",
+  "artifactReviewPolicy": "always-proceed",
+  "enableTerminalSandbox": false,
   "notifications": true,
+  "queuedMessages": "send-immediately",
+  "showFeedbackSurvey": false,
+  "showTips": false,
+  "toolPermission": "always-proceed",
   "verbosity": "low"
 }
