@@ -27,6 +27,7 @@ alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
 alias df='antigravity-ide "$DOTFILES_DIR"'
 alias dp='antigravity-ide ~/Documents/GitHub/django-playground'
 alias ele='antigravity-ide ~/Documents/GitHub/echonet-lite-emulator'
+alias sc='antigravity-ide ~/Documents/GitHub/sc-study'
 
 #
 # https://www.google.com/chrome
