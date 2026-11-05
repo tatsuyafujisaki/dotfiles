@@ -31,7 +31,7 @@
   "explorer.confirmPasteNative": false,
   "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
-  "files.autoSave": "afterDelay", // https://docs.flutter.dev/tools/hot-reload#how-to-perform-a-hot-reload
+  "files.autoSave": "afterDelay",
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
