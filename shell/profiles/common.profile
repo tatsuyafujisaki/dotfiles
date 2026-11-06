@@ -33,8 +33,7 @@ alias sc='antigravity-ide ~/Documents/GitHub/sc-study'
 # https://www.google.com/chrome
 #
 
-alias export_chrome_search_engines='cp ~/Library/Application\ Support/Google/Chrome/Default/Web\ Data /Users/Shared/'
-alias import_chrome_search_engines='cp /Users/Shared/Web\ Data ~/Library/Application\ Support/Google/Chrome/Default/'
+alias export_chrome_search_engines='cp "$HOME/Library/Application Support/Google/Chrome/Default/Web Data" ~/Desktop'
 
 #
 # https://cli.github.com
