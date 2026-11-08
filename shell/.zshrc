@@ -18,9 +18,6 @@ unset HISTFILE
 SAVEHIST=0
 # Note: "HISTSIZE=0" shouldn't be set, as it makes the previous command unavailable.
 
-# https://mise.jdx.dev/cli/activate.html
-eval "$(mise activate zsh)"
-
 # Source profiles
 DOTFILES_DIR="${DOTFILES_DIR:-${${(%):-%N}:A:h:h}}"
 for f ($DOTFILES_DIR/shell/profiles/*.profile(N) ${DOTFILES_DIR:h}/private/private.profile(N)) source $f
