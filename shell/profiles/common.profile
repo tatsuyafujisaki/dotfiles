@@ -73,6 +73,19 @@ alias plid="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep --i
 alias my_bulk_delete_github_actions_history='gh run list --limit 1000 --json databaseId --jq ".[].databaseId" | xargs --max-args 1 --max-procs 10 gh run delete'
 
 #
+# https://formulae.brew.sh/formula/jpegoptim
+#
+
+# With no arguments, optimizes JPEGs under the current directory recursively.
+# With arguments, passes them to jpegoptim as they are.
+jo() {
+  setopt local_options extended_glob
+  (( $# )) || set -- (#i)**/*.(jpg|jpeg)(N)
+  (( $# )) || return 0
+  jpegoptim --all-progressive --strip-all --totals "$@"
+}
+
+#
 # https://formulae.brew.sh/formula/oxipng
 #
 
@@ -90,7 +103,7 @@ op() {
 }
 
 #
-# about images other than oxipng
+# about images other than jpegoptim and oxipng
 #
 
 alias delmedia='(cd ~/Desktop && rm -f *.{gif,jpeg,jpg,mp4,png,svg,webm,webp} .DS_Store 2>/dev/null)'
