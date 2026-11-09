@@ -1,9 +1,11 @@
-# Adds "fvm" to PATH.
-[[ -d "$HOME/fvm/bin" ]] && export PATH="$HOME/fvm/bin:$PATH"
-
-# Adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>".
-# https://firebase.google.com/docs/flutter/setup
-[[ -d "$HOME/.pub-cache/bin" ]] && export PATH="$HOME/.pub-cache/bin:$PATH"
+path=(
+  # Adds executables such as "flutterfire", which is installed via "dart pub global activate <package_name>".
+  # https://firebase.google.com/docs/flutter/setup
+  "$HOME/.pub-cache/bin"(N-/)
+  # Adds "fvm" to PATH.
+  "$HOME/fvm/bin"(N-/)
+  $path
+)
 
 #
 # https://dart.dev/tools/dart-tool
@@ -54,7 +56,7 @@ my_fvm_use() {
 # https://guides.cocoapods.org/using/getting-started.html#sudo-less-installation
 # Enables `flutter doctor` to find `CocoaPods`.
 export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
+path=("$GEM_HOME/bin"(N-/) $path)
 
 #
 # Miscellaneous

@@ -18,8 +18,11 @@ alias xp='cd ~/Documents/GitHub/xcode-playground'
 # https://antigravity.google
 #
 
-[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
-[[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]] && export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+path=(
+  "$HOME/.antigravity-ide/antigravity-ide/bin"(N-/)
+  "$HOME/.local/bin"(N-/)
+  $path
+)
 
 alias ac='agy --dangerously-skip-permissions'
 
