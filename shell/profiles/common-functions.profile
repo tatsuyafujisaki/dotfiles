@@ -84,7 +84,7 @@ clean() {
   rm -fr "$HOME/Library/Application Support/Cursor/User/workspaceStorage"
 
   # Deletes folders and files for Android development.
-  find ~/.android/avd -type f -name cache.img* -delete
+  find ~/.android/avd -type f -name 'cache.img*' -delete
   rm -f ~/.android/*.lock
   rm -f ~/.android/modem-nv-ram-*
   rm -f ~/.emulator_console_auth_token
