@@ -316,12 +316,11 @@ _update_gcloud() {
 
 _update_node() {
   # https://github.com/Schniz/fnm
-  fnm install --latest
-  fnm default latest
-  fnm list | awk '$2 ~ /^v[0-9]/ && !/default/ {print $2}' | xargs --no-run-if-empty -n 1 fnm uninstall
-
-  # https://docs.npmjs.com/cli/commands/npm-update
-  npm update --global
+  fnm install --lts --use &&
+    fnm default lts-latest &&
+    fnm list | awk '$2 ~ /^v[0-9]/ && !/default/ {print $2}' | xargs --no-run-if-empty -n 1 fnm uninstall
+  # https://docs.npmjs.com/cli/commands/npm-install
+  npm install --global @google/clasp@latest firebase-tools@latest
 }
 
 # https://github.com/vercel-labs/skills
