@@ -1,5 +1,4 @@
 - Follow the [Google Developer Documentation Style Guide](https://developers.google.com/style).
-- Unless explicitly requested, do not run any tests.
 - For Flutter repositories:
   - After making any changes, run `dart fix --apply && dart format . && flutter analyze` and fix all analysis issues.
   - Use `fvm flutter` and `fvm dart` instead of the bare `flutter` and `dart` commands.
