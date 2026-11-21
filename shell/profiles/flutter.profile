@@ -39,7 +39,8 @@ alias fv='fvm flutter --version'
 # https://developer.apple.com/xcode
 #
 
-alias xc='(cd ios && pod update && open *.xcworkspace)'
+alias xc='open ios/*.xcworkspace'
+alias xc_cocoapods='(cd ios && pod update && open *.xcworkspace)' # For Flutter projects that still use CocoaPods.
 
 #
 # https://fvm.app
@@ -81,4 +82,3 @@ ff() {
   fvm dart format . &&
   fvm flutter analyze
 }
-
