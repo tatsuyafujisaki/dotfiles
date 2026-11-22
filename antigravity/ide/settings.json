@@ -31,7 +31,6 @@
   "explorer.confirmPasteNative": false,
   "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
-  "files.autoSave": "afterDelay",
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
