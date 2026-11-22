@@ -12,6 +12,7 @@ alias d='cd ~/Desktop'
 alias fp='cd ~/Documents/GitHub/flutter-playground'
 alias h='cd ~/Documents/GitHub'
 alias kp='cd ~/Documents/GitHub/kotlin-playground'
+alias tp='cd ~/Documents/GitHub/typescript-playground'
 alias xp='cd ~/Documents/GitHub/xcode-playground'
 
 #
@@ -28,7 +29,6 @@ alias ac='agy --dangerously-skip-permissions'
 
 alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
 alias df='antigravity-ide "$DOTFILES_DIR"'
-alias dp='antigravity-ide ~/Documents/GitHub/django-playground'
 alias ele='antigravity-ide ~/Documents/GitHub/echonet-lite-emulator'
 alias sc='antigravity-ide ~/Documents/GitHub/sc-study'
 
