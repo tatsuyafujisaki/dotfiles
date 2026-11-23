@@ -1,6 +1,6 @@
 - Follow the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 - For Flutter repositories:
-  - After making any changes, run `dart fix --apply && dart format . && flutter analyze` and fix all analysis issues.
+  - After making any changes, run `dart fix --apply && dart format . && flutter analyze && test ! -s lib/l10n/untranslated.txt` and fix all issues.
   - Use `fvm flutter` and `fvm dart` instead of the bare `flutter` and `dart` commands.
   - Unless a device is specified, take screenshots using the first available device in the following order:
     - Physical Android device
