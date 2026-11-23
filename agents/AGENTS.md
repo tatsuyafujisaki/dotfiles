@@ -1,5 +1,6 @@
 - Follow the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 - For Flutter repositories:
+  - After upgrading the Flutter or Dart SDK, run `dart migrate --apply` on a clean working tree.
   - After making any changes, run `dart fix --apply && dart format . && flutter analyze && test ! -s lib/l10n/untranslated.txt` and fix all issues.
   - Use `fvm flutter` and `fvm dart` instead of the bare `flutter` and `dart` commands.
   - Unless a device is specified, take screenshots using the first available device in the following order:
