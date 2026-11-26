@@ -25,7 +25,10 @@ path=(
   $path
 )
 
+# The CLI replaces ~/.gemini/antigravity-cli/settings.json on every write, so a symlink doesn't survive.
+# Passing the settings per session keeps the file in this repository as the source of truth.
 alias ac='agy --dangerously-skip-permissions'
+alias agy='agy --settings "$DOTFILES_DIR/antigravity/cli/settings.json"'
 
 alias ast='antigravity-ide ~/Documents/GitHub/apps-script-toolkit'
 alias df='antigravity-ide "$DOTFILES_DIR"'
