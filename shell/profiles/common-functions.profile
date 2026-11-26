@@ -92,7 +92,6 @@ clean() {
   rm -fr ~/Library/Android/sdk/.temp
 
   # Deletes folders and files for iOS development.
-  rm -fr ~/.cocoapods
   rm -fr ~/.swiftpm
 
   # Deletes folders and files for Dart development.

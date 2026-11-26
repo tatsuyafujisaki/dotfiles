@@ -30,7 +30,7 @@ alias fpcg='fvm flutter pub cache gc --force'
 alias fpg='rm -f pubspec.lock && fvm flutter pub get'
 alias fpo='fvm flutter pub outdated'
 alias fpr='fvm flutter pub remove'
-alias fpu='fvm flutter pub upgrade --major-versions --tighten && (! [ -d ios ] || (cd ios && pod update))'
+alias fpu='fvm flutter pub upgrade --major-versions --tighten'
 alias fri="fvm flutter run --device-id"
 alias fu='flutter upgrade --force' # The command 'fvm flutter upgrade --force' generates an error from FVM because it is not intended to be used with the flutter upgrade process.
 alias fv='fvm flutter --version'
@@ -40,7 +40,6 @@ alias fv='fvm flutter --version'
 #
 
 alias xc='open ios/*.xcworkspace'
-alias xc_cocoapods='(cd ios && pod update && open *.xcworkspace)' # For Flutter projects that still use CocoaPods.
 
 #
 # https://fvm.app
@@ -49,15 +48,6 @@ alias xc_cocoapods='(cd ios && pod update && open *.xcworkspace)' # For Flutter 
 my_fvm_use() {
   fvm remove --all && fvm use "$@" && fvm flutter clean
 }
-
-#
-# https://cocoapods.org
-#
-
-# https://guides.cocoapods.org/using/getting-started.html#sudo-less-installation
-# Enables `flutter doctor` to find `CocoaPods`.
-export GEM_HOME=$HOME/.gem
-path=("$GEM_HOME/bin"(N-/) $path)
 
 #
 # Miscellaneous
@@ -76,7 +66,6 @@ my_flutter_pub_global_activate() {
 ff() {
   rm -f pubspec.lock &&
   fvm flutter pub get &&
-  (! [ -d ios ] || (cd ios && pod cache clean --all && fvm flutter precache --ios && pod update)) &&
   (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
   fvm dart fix --apply &&
   fvm dart format . &&
