@@ -65,7 +65,7 @@ alias glint="./gradlew lint --rerun-tasks" # targets all projects except the roo
 alias galint="./gradlew :app:lint --rerun-tasks" # targets only the app project.
 
 # Ideally, only the line with the largest version would be kept when there are multiple lines for different versions of the same library, but this is difficult. This is because, when comparing versions in text, 1.2 is considered larger than 1.10.
-alias plid="./gradlew app:dependencies | grep -- '---' | grep '[0-9]' | grep --invert-match '(c)$' | grep --invert-match '(n)$' | grep --invert-match '(\*)$' | sed -E 's/^[^[:alpha:]]*//' | sed -E 's/(.*):[0-9.]+ -> ([0-9.]+)$/\1:\2/' | sort --unique"
+alias gdeps="./gradlew app:dependencies | sed -nE '/---/!d; /[0-9]/!d; /\([cn*]\)\$/d; s/^[^[:alpha:]]*//; s/(.*):[0-9.]+ -> ([0-9.]+)\$/\1:\2/; p' | sort --unique"
 
 #
 # https://github.com/features/actions
