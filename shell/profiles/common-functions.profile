@@ -42,12 +42,10 @@ a() {
 # With arguments, converts the given files.
 cw() {
   setopt local_options extended_glob
-
-  local files=("$@")
-  (( $# )) || files=((#i)**/*.(jpg|jpeg|png)(N))
+  (( $# )) || set -- (#i)**/*.(jpg|jpeg|png)(N)
 
   local file output_file
-  for file in "${files[@]}"
+  for file in "$@"
   do
     output_file="${file:r}.webp"
     cwebp -quiet -z 9 -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
@@ -58,12 +56,10 @@ cw() {
 # With arguments, converts the given files.
 dw() {
   setopt local_options extended_glob
-
-  local files=("$@")
-  (( $# )) || files=((#i)**/*.webp(N))
+  (( $# )) || set -- (#i)**/*.webp(N)
 
   local file output_file
-  for file in "${files[@]}"
+  for file in "$@"
   do
     output_file="${file:r}.png"
     dwebp -quiet -mt "$file" -o "$output_file" && rm "$file" && echo "$output_file"
