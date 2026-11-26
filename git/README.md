@@ -12,7 +12,7 @@
    mkdir -p ~/.config/git
    rm -f ~/.config/git/ignore
 
-   for type in Cursor JetBrains macOS VisualStudioCode Xcode
+   for type in JetBrains macOS VisualStudioCode Xcode
    do
      {
        echo "#"
