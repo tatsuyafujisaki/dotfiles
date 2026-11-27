@@ -164,7 +164,6 @@ clean_chrome() {
 
 delete_ds_store() {
   local target="${1:-/}"
-  target="${target/#\~/$HOME}"
   if [[ -w "$target" ]]
   then
     find "$target" -type f -name .DS_Store -delete 2>/dev/null
