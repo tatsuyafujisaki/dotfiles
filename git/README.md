@@ -1,14 +1,5 @@
 # Git
 
-## How to use `.gitconfig` in this repository
-
-1. Clone this repository.
-2. From the repository root, run the following command:
-
-   ```shell
-   ln -f -s "$PWD/git/.gitconfig" "$HOME"
-   ```
-
 ## How to create a consolidated `~/.config/git/ignore`
 
 1. Run the script below.
