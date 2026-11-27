@@ -1,13 +1,18 @@
-# How to use `.gitconfig` in this repository
+# Git
+
+## How to use `.gitconfig` in this repository
 
 1. Clone this repository.
 2. From the repository root, run the following command:
+
    ```shell
    ln -f -s "$PWD/git/.gitconfig" "$HOME"
    ```
 
-# How to create a consolidated `~/.config/git/ignore`
+## How to create a consolidated `~/.config/git/ignore`
+
 1. Run the script below.
+
    ```shell
    mkdir -p ~/.config/git
    rm -f ~/.config/git/ignore
@@ -25,11 +30,12 @@
    done
    ```
 2. Append the following.
+
    ```gitignore
    .idea/
    ```
 
-# How to create a consolidated `.gitignore` in a project
+## How to create a consolidated `.gitignore` in a project
 
 ```shell
 rm -f .gitignore
@@ -48,7 +54,8 @@ do
 done
 ```
 
-# How to create a single `.gitignore` in a Node.js project
+## How to create a single `.gitignore` in a Node.js project
+
 ```shell
 curl --location --silent --output .gitignore https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 ```
