@@ -53,16 +53,6 @@ my_fvm_use() {
 # Miscellaneous
 #
 
-my_flutter_pub_global_activate() {
-  if [[ $# -lt 1 ]]
-  then
-    echo "Usage: $0 <package>"
-    return 1
-  fi
-
-  fvm flutter pub global activate $1
-}
-
 ff() {
   rm -f pubspec.lock ios/Runner.xcworkspace/xcshareddata/swiftpm/Package.resolved &&
   fvm flutter pub get &&
