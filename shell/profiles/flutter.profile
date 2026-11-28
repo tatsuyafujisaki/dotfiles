@@ -64,7 +64,7 @@ my_flutter_pub_global_activate() {
 }
 
 ff() {
-  rm -f pubspec.lock &&
+  rm -f pubspec.lock ios/Runner.xcworkspace/xcshareddata/swiftpm/Package.resolved &&
   fvm flutter pub get &&
   (! grep --quiet "build_runner:" pubspec.yaml || fvm dart run build_runner build) &&
   fvm dart fix --apply &&
